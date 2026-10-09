@@ -1,0 +1,57 @@
+{%- comment -%}
+  Chi tiết bài viết: ảnh bìa, nội dung, tag, chia sẻ, bài trước/sau và bình luận (nếu blog bật bình luận).
+{%- endcomment -%}
+<nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <a href="{{ blog.url }}">{{ blog.title }}</a> › <span>{{ article.title }}</span></nav>
+<article class="container article">
+  <header class="article__head">
+    <h1 class="page-title">{{ article.title }}</h1>
+    <p class="article__meta"><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%d/%m/%Y' }}</time>{% if section.settings.show_author %} · {{ article.author }}{% endif %}</p>
+  </header>
+  {%- if article.image -%}<div class="article__cover">{{ article.image | image_url: width: 1200 | image_tag: alt: article.title }}</div>{%- endif -%}
+  <div class="article__content rte">{{ article.content }}</div>
+
+  {%- if article.tags.size > 0 -%}
+    <div class="tabs">{%- for tag in article.tags -%}<a class="tab" href="{{ blog.url }}/tagged/{{ tag | handleize }}">#{{ tag }}</a>{%- endfor -%}</div>
+  {%- endif -%}
+
+  <div class="article__share">
+    <b>Chia sẻ:</b>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url | append: article.url | url_encode }}" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://zalo.me/share?u={{ shop.url | append: article.url | url_encode }}" target="_blank" rel="noopener">Zalo</a>
+  </div>
+
+  {%- if blog.previous_article or blog.next_article -%}
+    <nav class="article__nav" aria-label="Bài viết khác">
+      {%- if blog.previous_article -%}<a href="{{ blog.previous_article.url }}">‹ {{ blog.previous_article.title }}</a>{%- else -%}<span></span>{%- endif -%}
+      {%- if blog.next_article -%}<a href="{{ blog.next_article.url }}">{{ blog.next_article.title }} ›</a>{%- endif -%}
+    </nav>
+  {%- endif -%}
+
+  {%- if blog.comments_enabled? -%}
+    <section class="article__comments">
+      <h2 class="sec__title">Bình luận ({{ article.comments_count }})</h2>
+      {%- paginate article.comments by 10 -%}
+        {%- for comment in article.comments -%}
+          <div class="comment"><b>{{ comment.author }}</b> <time>{{ comment.created_at | date: '%d/%m/%Y' }}</time><div>{{ comment.content }}</div></div>
+        {%- endfor -%}
+        {%- if paginate.pages > 1 -%}<div class="center pager">{{ paginate | default_pagination: next: 'Sau ›', previous: '‹ Trước' }}</div>{%- endif -%}
+      {%- endpaginate -%}
+      {%- form 'new_comment', article, class: 'comment-form' -%}
+        {%- if form.posted_successfully? -%}<p class="note">{% if blog.moderated? %}Bình luận đang chờ duyệt.{% else %}Đã đăng bình luận.{% endif %}</p>{%- endif -%}
+        {{ form.errors | default_errors }}
+        <input class="field" name="comment[author]" value="{{ form.author }}" placeholder="Họ tên" aria-label="Họ tên" required>
+        <input class="field" type="email" name="comment[email]" value="{{ form.email }}" placeholder="Email" aria-label="Email" required>
+        <textarea class="field" name="comment[body]" rows="4" placeholder="Nội dung bình luận" aria-label="Nội dung" required>{{ form.body }}</textarea>
+        <button class="btn" type="submit">Gửi bình luận</button>
+      {%- endform -%}
+    </section>
+  {%- endif -%}
+</article>
+{% schema %}
+{
+  "name": "Bài viết",
+  "settings": [
+    { "type": "checkbox", "id": "show_author", "label": "Hiện tác giả", "default": true }
+  ]
+}
+{% endschema %}
