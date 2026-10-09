@@ -1,0 +1,54 @@
+<section class="container sec">
+  <div class="homecard">
+    <div><h1 style="margin:0;font-size:28px">{{ section.settings.title }}</h1><p style="margin:6px 0 0;opacity:.9">{{ section.settings.sub }}</p></div>
+    {%- if customer -%}<a class="btn btn--orange" href="{{ routes.account_url }}">Tài khoản của tôi</a>
+    {%- else -%}<a class="btn btn--orange" href="{{ routes.account_register_url }}">Đăng ký miễn phí</a>{%- endif -%}
+  </div>
+
+  <div class="sec__head" style="margin-top:32px"><h2 class="sec__title">Cách tích điểm</h2></div>
+  <div class="steps">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'step' -%}
+        <div class="step" {{ block.shopify_attributes }}><b>{{ forloop.index }}</b><h3>{{ block.settings.title }}</h3><p>{{ block.settings.text }}</p></div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="sec__head" style="margin-top:32px"><h2 class="sec__title">Hạng thành viên</h2></div>
+  <div class="tiers">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'tier' -%}
+        <div class="tier" style="--tier:{{ block.settings.color }}" {{ block.shopify_attributes }}>
+          <h3>{{ block.settings.name }}</h3>
+          <small>{{ block.settings.condition }}</small>
+          <div class="rte">{{ block.settings.perks }}</div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+  <p class="coupons__note">{{ section.settings.footnote }}</p>
+</section>
+
+{% schema %}
+{
+  "name": "Trang thành viên",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Thành viên: mua càng nhiều, ưu đãi càng lớn" },
+    { "type": "text", "id": "sub", "label": "Mô tả", "default": "Đăng ký bằng số điện thoại, không cần thẻ nhựa." },
+    { "type": "text", "id": "footnote", "label": "Ghi chú cuối", "default": "Điểm được cộng sau khi đơn hàng giao thành công. Hạng được xét lại mỗi năm." }
+  ],
+  "blocks": [
+    { "type": "step", "name": "Bước", "settings": [
+      { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Đăng ký" },
+      { "type": "text", "id": "text", "label": "Mô tả", "default": "Tạo tài khoản bằng số điện thoại." }
+    ]},
+    { "type": "tier", "name": "Hạng", "settings": [
+      { "type": "text", "id": "name", "label": "Tên hạng", "default": "Thành viên" },
+      { "type": "text", "id": "condition", "label": "Điều kiện", "default": "Khi đăng ký" },
+      { "type": "richtext", "id": "perks", "label": "Quyền lợi", "default": "<p>Tích 1 điểm cho mỗi 10.000₫</p>" },
+      { "type": "color", "id": "color", "label": "Màu", "default": "#0066b3" }
+    ]}
+  ],
+  "presets": [{ "name": "Trang thành viên" }]
+}
+{% endschema %}

@@ -376,3 +376,26 @@ button{cursor:pointer}
   .pdp{grid-template-columns:1fr}
   .buybox{position:static}
 }
+
+/* ---- Coupon, đánh giá, thành viên ---- */
+.coupon__meta{display:flex;gap:6px 10px;flex-wrap:wrap;font-size:12px;color:var(--hp-mute)}
+.coupon__meta code{background:#fff;border:1px dashed var(--hp-blue);color:var(--hp-blue);border-radius:4px;padding:0 6px;font-weight:600}
+.coupon__terms{font-size:12px}.coupon__terms summary{cursor:pointer;text-decoration:underline}.coupon__terms p{margin:4px 0 0}
+.coupons--grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))!important;grid-auto-flow:row!important;overflow:visible!important}
+.coupons__note{font-size:12px;color:var(--hp-mute);margin:10px 0 0}
+.reviews__sum{display:flex;gap:32px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.reviews__score{display:grid;justify-items:center;gap:2px;min-width:120px}
+.reviews__score b{font-size:40px;color:var(--hp-head);line-height:1}.reviews__score span{color:var(--hp-mute)}
+.reviews__score .stars{font-size:20px}.reviews__score small{color:var(--hp-mute)}
+.reviews__bars{list-style:none;margin:0;padding:0;display:grid;gap:6px;flex:1;min-width:220px;max-width:420px;font-size:13px}
+.reviews__bars li{display:grid;grid-template-columns:28px 1fr 36px;gap:8px;align-items:center}
+.reviews__bars i{height:8px;border-radius:4px;background:var(--hp-soft);overflow:hidden}
+.reviews__bars em{display:block;height:100%;background:var(--hp-orange)}
+.reviews__empty{color:var(--hp-mute)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
+.step{background:var(--hp-sky);border-radius:var(--r-card);padding:18px}
+.step b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--hp-blue);color:#fff}
+.step h3{margin:10px 0 4px;color:var(--hp-head)}.step p{margin:0}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap)}
+.tier{border:1px solid var(--hp-line);border-top:6px solid var(--tier);border-radius:var(--r-card);padding:18px}
+.tier h3{margin:0;color:var(--tier);font-size:22px}.tier small{color:var(--hp-mute)}

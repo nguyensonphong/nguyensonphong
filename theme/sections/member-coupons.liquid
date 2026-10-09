@@ -1,56 +1,71 @@
+{%- comment -%}
+  Thanh thành viên + coupon. Dùng ở trang chủ và trang "Kho mã giảm giá" (template page.coupon).
+  Shopify chỉ áp dụng 1 mã giảm giá cho mỗi đơn, nên nút "Dùng mã" đổi mã đang áp dụng
+  (qua /discount/MÃ) chứ không cộng dồn.
+{%- endcomment -%}
 <section class="container sec">
+  {%- if section.settings.show_member -%}
   <div class="member">
     <div>
       {%- if customer -%}<span>Xin chào</span><b>{{ customer.first_name }}</b>
       {%- else -%}<span>Xin chào</span><span><a href="{{ routes.account_login_url }}">Đăng nhập</a> | <a href="{{ routes.account_register_url }}">Đăng ký</a></span>{%- endif -%}
     </div>
-    <div><span>Mã giảm giá của bạn</span><b data-coupon-count>0 mã</b></div>
-    <div><span>Thẻ thành viên</span><a href="{{ section.settings.card_link }}">Liên kết / đăng ký thẻ thành viên</a></div>
-    <div><span>Ví của bạn</span><b>{{ customer.metafields.custom.wallet | default: 0 }}₫</b></div>
+    <div><span>Mã đang áp dụng</span><b data-coupon-current>Chưa có</b></div>
+    <div><span>Thành viên</span><a href="{{ section.settings.card_link }}">Quyền lợi thành viên</a></div>
+    <div><span>Điểm tích lũy</span><b>{{ customer.metafields.custom.points | default: 0 }} điểm</b></div>
   </div>
+  {%- endif -%}
 
-  <div class="sec__head" style="margin-top:20px">
+  <div class="sec__head" {% if section.settings.show_member %}style="margin-top:20px"{% endif %}>
     <h2 class="sec__title" style="font-size:20px">{{ section.settings.title }}</h2>
-    <a class="sec__more" href="{{ section.settings.more_link }}">Xem thêm ›</a>
+    {%- if section.settings.more_link != blank -%}<a class="sec__more" href="{{ section.settings.more_link }}">Xem tất cả ›</a>{%- endif -%}
   </div>
-  <div class="coupons">
+  <div class="coupons{% if section.settings.grid %} coupons--grid{% endif %}">
     {%- for block in section.blocks -%}
-      <div class="coupon" {{ block.shopify_attributes }}>
+      <div class="coupon" data-coupon-card="{{ block.settings.code | escape }}" {{ block.shopify_attributes }}>
         <div class="coupon__val">{{ block.settings.value }}<small>Giảm</small></div>
         <div class="coupon__body">
           <p>{{ block.settings.text }}</p>
+          <div class="coupon__meta">
+            {%- if block.settings.code != blank -%}<code>{{ block.settings.code }}</code>{%- endif -%}
+            {%- if block.settings.expiry != blank -%}<span>HSD {{ block.settings.expiry }}</span>{%- endif -%}
+            {%- if block.settings.note != blank -%}<span>{{ block.settings.note }}</span>{%- endif -%}
+          </div>
           <div class="coupon__act">
-            <a href="{{ block.settings.terms }}">Điều kiện</a>
-            <button class="btn btn--sm" type="button" data-coupon="{{ block.settings.code | escape }}">Lưu</button>
+            <details class="coupon__terms"><summary>Điều kiện</summary>{{ block.settings.terms }}</details>
+            {%- if block.settings.code != blank -%}<button class="btn btn--sm" type="button" data-coupon="{{ block.settings.code | escape }}">Dùng mã</button>{%- endif -%}
           </div>
         </div>
       </div>
     {%- endfor -%}
   </div>
+  <p class="coupons__note">Mỗi đơn hàng áp dụng 1 mã. Mã đã chọn sẽ tự điền khi thanh toán.</p>
 </section>
 
 {% schema %}
 {
   "name": "Thành viên & Coupon",
   "settings": [
+    { "type": "checkbox", "id": "show_member", "label": "Hiện thanh thành viên", "default": true },
+    { "type": "checkbox", "id": "grid", "label": "Hiện dạng lưới (cho trang kho mã)", "default": false },
     { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Còn nhiều mã giảm giá đang chờ bạn" },
     { "type": "url", "id": "more_link", "label": "Link xem thêm" },
-    { "type": "url", "id": "card_link", "label": "Link Home Card" }
+    { "type": "url", "id": "card_link", "label": "Link trang thành viên" }
   ],
   "blocks": [
     { "type": "coupon", "name": "Coupon", "settings": [
       { "type": "text", "id": "value", "label": "Giá trị", "default": "10%" },
-      { "type": "text", "id": "text", "label": "Điều kiện", "default": "cho đơn từ 1 triệu" },
-      { "type": "text", "id": "code", "label": "Mã giảm giá Shopify", "info": "Khi bấm Lưu, mã được lưu và tự áp dụng lúc thanh toán." },
-      { "type": "url", "id": "terms", "label": "Link điều kiện" }
+      { "type": "text", "id": "text", "label": "Mô tả", "default": "Giảm 10% cho đơn từ 1 triệu" },
+      { "type": "text", "id": "code", "label": "Mã giảm giá Shopify", "info": "Phải trùng với mã đã tạo trong Discounts." },
+      { "type": "text", "id": "expiry", "label": "Hạn dùng", "default": "31/12" },
+      { "type": "text", "id": "note", "label": "Ghi chú ngắn", "info": "Ví dụ: Mỗi khách 1 lần" },
+      { "type": "richtext", "id": "terms", "label": "Điều kiện chi tiết", "default": "<p>Áp dụng cho mọi sản phẩm. Không cộng dồn với mã khác.</p>" }
     ]}
   ],
-  "max_blocks": 8,
+  "max_blocks": 24,
   "presets": [{ "name": "Thành viên & Coupon", "blocks": [
     { "type": "coupon", "settings": { "value": "10%", "text": "Giảm 10% cho đơn từ 1 triệu" } },
-    { "type": "coupon", "settings": { "value": "5%", "text": "Giảm 5% cho đơn từ 3 triệu" } },
-    { "type": "coupon", "settings": { "value": "1TR", "text": "Giảm 1 triệu cho đơn từ 100 triệu" } },
-    { "type": "coupon", "settings": { "value": "100K", "text": "Giảm 100K cho đơn từ 500K" } }
+    { "type": "coupon", "settings": { "value": "5%", "text": "Giảm 5% cho đơn từ 3 triệu" } }
   ]}]
 }
 {% endschema %}

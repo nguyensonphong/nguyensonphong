@@ -2,8 +2,18 @@
   "sections": {
     "main": {
       "type": "main-product",
-      "settings": { "addon_product": "thao-lap-may-lanh-cu", "bundle_collection": "dich-vu" }
+      "settings": {
+        "addon_product": "thao-lap-may-lanh-cu",
+        "bundle_collection": "dich-vu"
+      }
+    },
+    "reviews": {
+      "type": "product-reviews",
+      "settings": {}
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "reviews"
+  ]
 }

@@ -1,0 +1,46 @@
+{%- comment -%}
+  Khu đánh giá. Điểm và số lượt đọc từ metafield chuẩn của Shopify (reviews.rating, reviews.rating_count),
+  do app đánh giá (Judge.me, Shopify Product Reviews…) tự ghi. Phân bố sao đọc từ custom.rating_breakdown
+  ("5:40,4:6,3:2,2:0,1:1") nếu có. Thêm khối "App" để chèn widget của app đánh giá bên dưới.
+{%- endcomment -%}
+{%- assign r = product.metafields.reviews.rating.value -%}
+{%- assign count = product.metafields.reviews.rating_count.value | default: 0 -%}
+<section class="container sec" id="reviews">
+  <div class="pdp__box reviews">
+    <h2 class="pdp__h">Đánh giá sản phẩm</h2>
+    {%- if r and count > 0 -%}
+      <div class="reviews__sum">
+        <div class="reviews__score">
+          <b>{{ r.rating | round: 1 }}</b><span>/ {{ r.scale_max | round }}</span>
+          {%- assign full = r.rating | round -%}
+          <div class="stars" aria-label="{{ r.rating }} sao">{%- for i in (1..5) -%}{% if i <= full %}★{% else %}☆{% endif %}{%- endfor -%}</div>
+          <small>{{ count }} đánh giá</small>
+        </div>
+        {%- assign bd = product.metafields.custom.rating_breakdown | split: ',' -%}
+        {%- if bd.size == 5 -%}
+          <ul class="reviews__bars">
+            {%- for item in bd -%}
+              {%- assign kv = item | split: ':' -%}
+              {%- assign n = kv[1] | plus: 0 -%}
+              {%- assign pct = n | times: 100 | divided_by: count -%}
+              <li><span>{{ kv[0] }}★</span><i><em style="width:{{ pct }}%"></em></i><span>{{ n }}</span></li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </div>
+    {%- else -%}
+      <p class="reviews__empty">Chưa có đánh giá. Hãy là người đầu tiên chia sẻ trải nghiệm sau khi mua.</p>
+    {%- endif -%}
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}{%- when '@app' -%}{% render block %}{%- endcase -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Đánh giá sản phẩm",
+  "blocks": [{ "type": "@app" }],
+  "templates": ["product"]
+}
+{% endschema %}

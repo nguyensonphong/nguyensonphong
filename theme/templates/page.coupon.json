@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "coupons": {
+      "type": "member-coupons",
+      "settings": {
+        "grid": true,
+        "title": "Kho mã giảm giá",
+        "card_link": "/pages/thanh-vien"
+      },
+      "blocks": {
+        "c0": {
+          "type": "coupon",
+          "settings": {
+            "value": "10%",
+            "text": "Giảm 10% cho đơn từ 1 triệu",
+            "code": "GIAM10",
+            "expiry": "31/12",
+            "note": "Mỗi khách 1 lần"
+          }
+        },
+        "c1": {
+          "type": "coupon",
+          "settings": {
+            "value": "5%",
+            "text": "Giảm 5% cho đơn từ 3 triệu",
+            "code": "GIAM5",
+            "expiry": "31/12",
+            "note": "Mỗi khách 1 lần"
+          }
+        },
+        "c2": {
+          "type": "coupon",
+          "settings": {
+            "value": "1TR",
+            "text": "Giảm 1 triệu cho đơn từ 100 triệu",
+            "code": "GIAM1TR",
+            "expiry": "31/12",
+            "note": "Mỗi khách 1 lần"
+          }
+        },
+        "c3": {
+          "type": "coupon",
+          "settings": {
+            "value": "100K",
+            "text": "Giảm 100K cho đơn từ 500K",
+            "code": "GIAM100K",
+            "expiry": "31/12",
+            "note": "Mỗi khách 1 lần"
+          }
+        }
+      },
+      "block_order": [
+        "c0",
+        "c1",
+        "c2",
+        "c3"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "coupons"
+  ]
+}

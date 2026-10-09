@@ -86,21 +86,28 @@
     tick();
   });
 
-  // Coupon: lưu mã giảm giá vào phiên Shopify (/discount/CODE) để tự áp dụng khi thanh toán
+  // Coupon: Shopify áp dụng 1 mã mỗi đơn. "Dùng mã" gọi /discount/MÃ để gắn mã vào phiên thanh toán.
+  let current = null;
+  try { current = localStorage.getItem('coupon'); } catch (e) {}
+  const markCoupon = () => {
+    $$('[data-coupon]').forEach((b) => {
+      const on = b.dataset.coupon === current;
+      b.textContent = on ? 'Đang dùng' : 'Dùng mã';
+      b.classList.toggle('is-done', on);
+    });
+    $$('[data-coupon-current]').forEach((el) => (el.textContent = current || 'Chưa có'));
+  };
   $$('[data-coupon]').forEach((b) =>
     b.addEventListener('click', async () => {
       const code = b.dataset.coupon;
-      if (code) {
-        try { await fetch(`/discount/${encodeURIComponent(code)}`, { credentials: 'same-origin' }); } catch (e) {}
-      }
-      b.textContent = 'Đã lưu';
-      b.classList.add('is-done');
-      b.disabled = true;
-      const cnt = $('[data-coupon-count]');
-      if (cnt) cnt.textContent = `${parseInt(cnt.textContent, 10) + 1 || 1} mã`;
-      toast('Đã lưu mã');
+      try { await fetch(`/discount/${encodeURIComponent(code)}`, { credentials: 'same-origin' }); } catch (e) {}
+      current = code;
+      try { localStorage.setItem('coupon', code); } catch (e) {}
+      markCoupon();
+      toast(`Đã chọn mã ${code}. Mã sẽ tự áp dụng khi thanh toán`);
     })
   );
+  markCoupon();
 
   // Thêm vào giỏ bằng AJAX
   $$('[data-add-form]').forEach((f) =>
