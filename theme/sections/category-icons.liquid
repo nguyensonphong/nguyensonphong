@@ -1,0 +1,38 @@
+<section class="block container">
+  <h2 class="block__title">{{ section.settings.title }}</h2>
+  <div class="cats">
+    {%- for block in section.blocks -%}
+      {%- assign c = block.settings.collection -%}
+      <a class="cat" href="{% if c %}{{ c.url }}{% else %}#{% endif %}" {{ block.shopify_attributes }}>
+        <span class="cat__img">
+          {%- if block.settings.image -%}{{ block.settings.image | image_url: width: 200 | image_tag }}
+          {%- elsif c.image -%}{{ c.image | image_url: width: 200 | image_tag }}
+          {%- else -%}{% render 'icon', name: block.settings.icon %}{%- endif -%}
+        </span>
+        <span class="cat__name">{{ block.settings.label | default: c.title }}</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Danh mục (icon)",
+  "settings": [{ "type": "text", "id": "title", "label": "Tiêu đề", "default": "หมวดหมู่สินค้า" }],
+  "blocks": [
+    { "type": "cat", "name": "Danh mục", "settings": [
+      { "type": "collection", "id": "collection", "label": "Collection" },
+      { "type": "text", "id": "label", "label": "Tên hiển thị" },
+      { "type": "image_picker", "id": "image", "label": "Ảnh icon" },
+      { "type": "select", "id": "icon", "label": "Icon mặc định", "default": "sofa", "options": [
+        { "value": "sofa", "label": "Nội thất" }, { "value": "ac", "label": "Điện máy" },
+        { "value": "pot", "label": "Nhà bếp" }, { "value": "bath", "label": "Phòng tắm" },
+        { "value": "tool", "label": "Dụng cụ" }, { "value": "bulb", "label": "Đèn" },
+        { "value": "leaf", "label": "Sân vườn" }, { "value": "brick", "label": "Vật liệu" },
+        { "value": "bed", "label": "Phòng ngủ" }, { "value": "paint", "label": "Sơn" }
+      ]}
+    ]}
+  ],
+  "presets": [{ "name": "Danh mục (icon)" }]
+}
+{% endschema %}

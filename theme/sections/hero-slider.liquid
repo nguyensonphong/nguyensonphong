@@ -1,0 +1,57 @@
+<section class="hero container">
+  <div class="hero__main slider" data-slider>
+    <div class="slider__track" data-track>
+      {%- for block in section.blocks -%}
+        <a class="slide" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+          {%- if block.settings.image -%}
+            {{ block.settings.image | image_url: width: 1600 | image_tag: loading: 'eager', sizes: '(min-width: 990px) 66vw, 100vw' }}
+          {%- else -%}
+            <div class="slide__ph" style="background:{{ block.settings.bg }}">
+              <small>{{ block.settings.eyebrow }}</small>
+              <strong>{{ block.settings.title }}</strong>
+              <span>{{ block.settings.sub }}</span>
+            </div>
+          {%- endif -%}
+        </a>
+      {%- endfor -%}
+    </div>
+    <button class="slider__btn slider__btn--prev" data-prev aria-label="Trước">‹</button>
+    <button class="slider__btn slider__btn--next" data-next aria-label="Sau">›</button>
+    <div class="slider__dots" data-dots></div>
+  </div>
+  <div class="hero__side">
+    {%- for i in (1..2) -%}
+      {%- assign img = section.settings['side_image_' | append: i] -%}
+      {%- assign url = section.settings['side_link_' | append: i] -%}
+      <a class="hero__side-item" href="{{ url }}">
+        {%- if img -%}{{ img | image_url: width: 800 | image_tag }}{%- else -%}
+          <div class="slide__ph slide__ph--sm" style="background:{% if i == 1 %}#ffd200;color:#222{% else %}#1d3c78{% endif %}"><strong>{% if i == 1 %}คูปองลดเพิ่ม{% else %}HomePro Service{% endif %}</strong><span>{% if i == 1 %}เก็บคูปองก่อนช้อป{% else %}บริการติดตั้งถึงบ้าน{% endif %}</span></div>
+        {%- endif -%}
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner trượt",
+  "settings": [
+    { "type": "image_picker", "id": "side_image_1", "label": "Banner phụ 1" },
+    { "type": "url", "id": "side_link_1", "label": "Link banner phụ 1" },
+    { "type": "image_picker", "id": "side_image_2", "label": "Banner phụ 2" },
+    { "type": "url", "id": "side_link_2", "label": "Link banner phụ 2" }
+  ],
+  "blocks": [
+    { "type": "slide", "name": "Slide", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Ảnh (1600×600)" },
+      { "type": "url", "id": "link", "label": "Link" },
+      { "type": "text", "id": "eyebrow", "label": "Dòng nhỏ", "default": "HomePro" },
+      { "type": "text", "id": "title", "label": "Tiêu đề", "default": "MEGA SALE" },
+      { "type": "text", "id": "sub", "label": "Mô tả", "default": "ลดสูงสุด 70%" },
+      { "type": "color", "id": "bg", "label": "Màu nền (khi chưa có ảnh)", "default": "#e4002b" }
+    ]}
+  ],
+  "max_blocks": 8,
+  "presets": [{ "name": "Banner trượt", "blocks": [{ "type": "slide" }, { "type": "slide" }] }]
+}
+{% endschema %}

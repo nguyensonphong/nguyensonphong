@@ -1,0 +1,54 @@
+<header class="header" data-header>
+  <div class="container header__main">
+    <button class="header__burger" aria-label="Menu" data-menu-toggle>☰</button>
+    <a class="header__logo" href="{{ routes.root_url }}">
+      {%- if section.settings.logo -%}
+        {{ section.settings.logo | image_url: width: 360 | image_tag: alt: shop.name, width: 180 }}
+      {%- else -%}
+        <span class="logo-text">Home<b>Pro</b></span>
+      {%- endif -%}
+    </a>
+    <form class="header__search" action="{{ routes.search_url }}" method="get" role="search">
+      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ section.settings.search_placeholder }}" aria-label="Tìm kiếm">
+      <input type="hidden" name="type" value="product">
+      <button type="submit" aria-label="Tìm kiếm">{% render 'icon', name: 'search' %}</button>
+    </form>
+    <div class="header__icons">
+      <a href="{{ section.settings.store_link }}" class="hicon hide-sm">{% render 'icon', name: 'pin' %}<span>ค้นหาสาขา</span></a>
+      <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="hicon">{% render 'icon', name: 'user' %}<span>{% if customer %}{{ customer.first_name }}{% else %}เข้าสู่ระบบ{% endif %}</span></a>
+      <a href="{{ routes.cart_url }}" class="hicon hicon--cart">{% render 'icon', name: 'cart' %}<span>ตะกร้า</span><em class="cart-count" data-cart-count>{{ cart.item_count }}</em></a>
+    </div>
+  </div>
+
+  <nav class="nav" data-menu>
+    <div class="container nav__inner">
+      <div class="nav__all">
+        <button class="nav__all-btn" data-mega-toggle>☰ หมวดหมู่สินค้าทั้งหมด</button>
+        <div class="mega" data-mega>
+          {%- for link in linklists[section.settings.mega_menu].links -%}
+            <div class="mega__col">
+              <a class="mega__title" href="{{ link.url }}">{{ link.title }}</a>
+              {%- for child in link.links -%}<a href="{{ child.url }}">{{ child.title }}</a>{%- endfor -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      {%- for link in linklists[section.settings.main_menu].links -%}
+        <a class="nav__link{% if link.active %} is-active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+      {%- endfor -%}
+    </div>
+  </nav>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo" },
+    { "type": "text", "id": "search_placeholder", "label": "Gợi ý ô tìm kiếm", "default": "ค้นหาสินค้า แบรนด์ หรือรหัสสินค้า" },
+    { "type": "link_list", "id": "mega_menu", "label": "Menu danh mục (mega menu)", "default": "main-menu" },
+    { "type": "link_list", "id": "main_menu", "label": "Menu ngang", "default": "main-menu" },
+    { "type": "url", "id": "store_link", "label": "Trang tìm chi nhánh" }
+  ]
+}
+{% endschema %}
