@@ -7,32 +7,15 @@
         "s0": {
           "type": "store",
           "settings": {
-            "name": "Cửa hàng mẫu Quận 7",
-            "region": "TP. Hồ Chí Minh",
-            "address": "Thay bằng địa chỉ thật, Quận 7, TP. Hồ Chí Minh"
-          }
-        },
-        "s1": {
-          "type": "store",
-          "settings": {
-            "name": "Cửa hàng mẫu Thủ Đức",
-            "region": "TP. Hồ Chí Minh",
-            "address": "Thay bằng địa chỉ thật, TP. Thủ Đức, TP. Hồ Chí Minh"
-          }
-        },
-        "s2": {
-          "type": "store",
-          "settings": {
-            "name": "Cửa hàng mẫu Biên Hòa",
-            "region": "Đồng Nai",
-            "address": "Thay bằng địa chỉ thật, Biên Hòa, Đồng Nai"
+            "name": "Cửa hàng chính",
+            "region": "Cửa hàng",
+            "address": "Xem vị trí trên Google Maps",
+            "map_url": "https://maps.app.goo.gl/ziwcr55TAqvtwysM7"
           }
         }
       },
       "block_order": [
-        "s0",
-        "s1",
-        "s2"
+        "s0"
       ]
     }
   },
