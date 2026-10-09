@@ -143,3 +143,26 @@
 
   window.HP = { toast };
 })();
+
+// Trang chi tiết: đổi ảnh khi bấm thumbnail
+document.querySelectorAll('[data-thumb]').forEach((b) => b.addEventListener('click', () => {
+  const img = document.querySelector('[data-stage]');
+  if (img) { img.src = b.dataset.thumb; img.removeAttribute('srcset'); }
+}));
+// Trang danh mục: tự áp dụng khi đổi bộ lọc / sắp xếp, "Xem thêm", mở bộ lọc trên điện thoại
+const filterForm = document.querySelector('[data-filters]');
+if (filterForm) {
+  const submit = () => {
+    const params = new URLSearchParams(new FormData(filterForm));
+    for (const [k, v] of [...params]) if (v === '') params.delete(k);
+    location.search = params.toString();
+  };
+  filterForm.addEventListener('change', (e) => { if (e.target.type === 'checkbox') submit(); });
+  filterForm.addEventListener('submit', (e) => { e.preventDefault(); submit(); });
+  document.querySelectorAll('[data-sort]').forEach((s) => s.addEventListener('change', submit));
+  filterForm.querySelectorAll('[data-more]').forEach((b) => b.addEventListener('click', () => {
+    const f = b.closest('.facet'); f.classList.toggle('is-expanded');
+    b.textContent = f.classList.contains('is-expanded') ? 'Thu gọn' : 'Xem thêm';
+  }));
+  document.querySelectorAll('[data-filter-toggle]').forEach((b) => b.addEventListener('click', () => filterForm.classList.toggle('is-open')));
+}

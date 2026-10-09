@@ -1,27 +1,148 @@
+{%- comment -%}
+  Trang chi tiết: cột trái là ảnh + tab nội dung, cột phải là khung mua.
+  Metafield dùng (namespace custom, đều tuỳ chọn):
+    sold (text, "1.2k+"), extra_offer (text), specs (nhiều dòng "Tên: Giá trị"), highlights (nhiều dòng)
+  Tag dùng: free-install, free-shipping, best-price
+{%- endcomment -%}
 {%- assign v = product.selected_or_first_available_variant -%}
-<section class="container product">
-  <div class="product__media">
-    {%- if product.featured_media -%}{{ product.featured_media | image_url: width: 1000 | image_tag: loading: 'eager' }}{%- else -%}<div class="pcard__img">{% render 'icon', name: 'box' %}</div>{%- endif -%}
-  </div>
-  <div>
-    <div class="pcard__vendor">{{ product.vendor }}</div>
-    <h1>{{ product.title }}</h1>
-    <div class="price" style="font-size:28px">{{ v.price | money_without_trailing_zeros }}
-      {%- if v.compare_at_price > v.price -%}<s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
+{%- assign addon = section.settings.addon_product -%}
+<nav class="container crumbs" aria-label="Breadcrumb">
+  <a href="{{ routes.root_url }}">Trang chủ</a> ›
+  {%- if collection -%}<a href="{{ collection.url }}">{{ collection.title }}</a> ›{%- elsif product.collections.size > 0 -%}<a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a> ›{%- endif -%}
+  <span>{{ product.title }}</span>
+</nav>
+
+<section class="container pdp">
+  <div class="pdp__main">
+    <div class="pdp__gallery" data-gallery>
+      <div class="pdp__stage">
+        {%- if product.featured_media -%}
+          {{ product.featured_media | image_url: width: 1200 | image_tag: loading: 'eager', data-stage: '' }}
+        {%- else -%}<div class="pcard__img">{% render 'icon', name: 'box' %}</div>{%- endif -%}
+      </div>
+      {%- if product.media.size > 1 -%}
+        <div class="pdp__thumbs">
+          {%- for m in product.media limit: 8 -%}
+            <button type="button" data-thumb="{{ m | image_url: width: 1200 }}" aria-label="Ảnh {{ forloop.index }}">{{ m | image_url: width: 120 | image_tag }}</button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
     </div>
-    {%- form 'product', product, data-add-form: '' -%}
+
+    {%- assign bundle = section.settings.bundle_collection -%}
+    {%- if bundle and bundle.products_count > 0 -%}
+      <div class="pdp__box">
+        <h2 class="pdp__h">Sản phẩm mua kèm</h2>
+        <div class="row-scroll">
+          {%- for p in bundle.products limit: 8 -%}{%- unless p.id == product.id -%}{% render 'product-card', product: p %}{%- endunless -%}{%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <div class="pdp__box" data-tabs>
+      <div class="tabs" role="tablist">
+        <button class="tab is-active" type="button" data-tab="1">Mô tả</button>
+        <button class="tab" type="button" data-tab="2">Thông số</button>
+        <button class="tab" type="button" data-tab="3">Điều kiện lắp đặt</button>
+      </div>
+      <div class="rte" data-panel="1">{{ product.description | default: '<p>Chưa có mô tả.</p>' }}</div>
+      <div data-panel="2" hidden>
+        {%- assign specs = product.metafields.custom.specs.value | default: product.metafields.custom.specs -%}
+        {%- if specs != blank -%}
+          <table class="specs">
+            <tr><th>SKU</th><td>{{ v.sku | default: '—' }}</td></tr>
+            <tr><th>Thương hiệu</th><td>{{ product.vendor }}</td></tr>
+            {%- assign lines = specs | newline_to_br | split: '<br />' -%}
+            {%- for line in lines -%}
+              {%- assign kv = line | strip | split: ':' -%}
+              {%- if kv.size > 1 -%}<tr><th>{{ kv[0] | strip }}</th><td>{{ line | strip | remove_first: kv[0] | remove_first: ':' | strip }}</td></tr>{%- endif -%}
+            {%- endfor -%}
+          </table>
+        {%- else -%}
+          <table class="specs"><tr><th>SKU</th><td>{{ v.sku | default: '—' }}</td></tr><tr><th>Thương hiệu</th><td>{{ product.vendor }}</td></tr><tr><th>Loại</th><td>{{ product.type }}</td></tr></table>
+        {%- endif -%}
+      </div>
+      <div class="rte" data-panel="3" hidden>{{ section.settings.install_terms }}</div>
+    </div>
+  </div>
+
+  <aside class="buybox">
+    <a class="pcard__vendor" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+    <h1 class="buybox__title">{{ product.title }}</h1>
+    <div class="buybox__meta">
+      {%- if v.sku != blank -%}<span>SKU: {{ v.sku }}</span>{%- endif -%}
+      <span>Bán bởi: <b>{{ shop.name }}</b></span>
+      {%- if product.metafields.custom.sold != blank -%}<span>Đã bán {{ product.metafields.custom.sold }}</span>{%- endif -%}
+    </div>
+    <div class="chips">
+      {%- if product.tags contains 'free-install' -%}<span class="chip">Lắp đặt miễn phí</span>{%- endif -%}
+      {%- if product.tags contains 'free-shipping' -%}<span class="chip">Freeship</span>{%- endif -%}
+      {%- if product.tags contains 'best-price' -%}<span class="chip chip--hot">Best Price</span>{%- endif -%}
+    </div>
+
+    <div class="buybox__price">
+      <span class="price" data-price>{{ v.price | money_without_trailing_zeros }}</span>
+      {%- if v.compare_at_price > v.price -%}
+        {%- assign save = v.compare_at_price | minus: v.price -%}
+        {%- assign pct = save | times: 100 | divided_by: v.compare_at_price | round -%}
+        <s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>
+        <div class="buybox__save">Bạn tiết kiệm {{ save | money_without_trailing_zeros }} (-{{ pct }}%)</div>
+      {%- endif -%}
+      {%- if product.metafields.custom.extra_offer != blank -%}<div class="pcard__extra">{{ product.metafields.custom.extra_offer }}</div>{%- endif -%}
+    </div>
+
+    {%- assign hl = product.metafields.custom.highlights.value | default: product.metafields.custom.highlights -%}
+    {%- if hl != blank -%}<ul class="buybox__hl">{%- assign hls = hl | newline_to_br | split: '<br />' -%}{%- for h in hls -%}{%- if h != blank -%}<li>{{ h | strip }}</li>{%- endif -%}{%- endfor -%}</ul>{%- endif -%}
+
+    <form method="post" action="{{ routes.cart_add_url }}" data-add-form>
       {%- unless product.has_only_default_variant -%}
-        <select name="id" style="width:100%;padding:10px;margin:16px 0;border:1px solid var(--hp-line);border-radius:8px">
+        <label class="buybox__label" for="variant-{{ section.id }}">Phiên bản</label>
+        <select id="variant-{{ section.id }}" name="items[0][id]" class="field">
           {%- for variant in product.variants -%}<option value="{{ variant.id }}" {% if variant == v %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>{{ variant.title }} — {{ variant.price | money_without_trailing_zeros }}</option>{%- endfor -%}
         </select>
-      {%- else -%}<input type="hidden" name="id" value="{{ v.id }}">{%- endunless -%}
-      <div style="display:flex;gap:10px;margin:16px 0">
-        <input type="number" name="quantity" value="1" min="1" aria-label="Số lượng" style="width:80px;padding:10px;border:1px solid var(--hp-line);border-radius:8px">
-        <button class="btn" type="submit" {% unless v.available %}disabled{% endunless %} style="flex:1">{% if v.available %}Thêm vào giỏ{% else %}Hết hàng{% endif %}</button>
+      {%- else -%}<input type="hidden" name="items[0][id]" value="{{ v.id }}">{%- endunless -%}
+
+      {%- if product.tags contains 'free-install' or addon -%}
+        <div class="buybox__services">
+          <div class="buybox__label">Dịch vụ đi kèm</div>
+          {%- if product.tags contains 'free-install' -%}<div class="svc">{% render 'icon', name: 'tools' %}<span>Lắp đặt miễn phí theo tiêu chuẩn cửa hàng</span><b>0₫</b></div>{%- endif -%}
+          {%- if addon and addon.available -%}
+            <label class="svc svc--opt"><input type="checkbox" name="items[1][id]" value="{{ addon.selected_or_first_available_variant.id }}"><span>{{ addon.title }}</span><b>+{{ addon.price | money_without_trailing_zeros }}</b></label>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="buybox__qty">
+        <label class="buybox__label" for="qty-{{ section.id }}">Số lượng</label>
+        <input id="qty-{{ section.id }}" class="field" type="number" name="items[0][quantity]" value="1" min="1">
+        {%- if v.inventory_management == 'shopify' and v.inventory_quantity > 0 -%}<small>Còn {{ v.inventory_quantity }} sản phẩm</small>{%- endif -%}
       </div>
-    {%- endform -%}
-    <div class="chips" style="margin-bottom:16px"><span class="chip">Trả góp 0% 10 tháng</span><span class="chip">Nhận tại cửa hàng</span><span class="chip">Miễn phí giao hàng cho đơn từ 1 triệu</span></div>
-    <div>{{ product.description }}</div>
-  </div>
+      <div class="buybox__actions">
+        <button class="btn btn--lg" type="submit" {% unless v.available %}disabled{% endunless %}>{% if v.available %}Thêm vào giỏ{% else %}Hết hàng{% endif %}</button>
+        {%- if section.settings.installment_link != blank -%}<a class="btn btn--outline btn--lg" href="{{ section.settings.installment_link }}">Trả góp 0%</a>{%- endif -%}
+      </div>
+    </form>
+
+    <div class="buybox__ship">
+      <div class="buybox__label">Hình thức giao hàng</div>
+      <ul>
+        <li>{% render 'icon', name: 'bolt' %}<span><b>Giao ngay</b> trong ngày (07:30–20:00)</span></li>
+        <li>{% render 'icon', name: 'truck' %}<span><b>Giao ngày mai</b> khi đặt trước 20:30</span></li>
+        <li>{% render 'icon', name: 'box' %}<span><b>Giao tiêu chuẩn</b> 2–5 ngày</span></li>
+        <li>{% render 'icon', name: 'store' %}<span><b>Nhận tại cửa hàng</b> sau 1 giờ</span></li>
+      </ul>
+    </div>
+  </aside>
 </section>
-{% schema %}{ "name": "Chi tiết sản phẩm" }{% endschema %}
+
+{% schema %}
+{
+  "name": "Chi tiết sản phẩm",
+  "settings": [
+    { "type": "product", "id": "addon_product", "label": "Dịch vụ cộng thêm (tuỳ chọn)", "info": "Ví dụ: sản phẩm 'Tháo lắp máy cũ'. Khách tick để mua kèm." },
+    { "type": "collection", "id": "bundle_collection", "label": "Sản phẩm mua kèm" },
+    { "type": "url", "id": "installment_link", "label": "Link trang trả góp" },
+    { "type": "richtext", "id": "install_terms", "label": "Điều kiện lắp đặt", "default": "<p>Lắp đặt miễn phí trong bán kính 40 km tính từ cửa hàng gần nhất. Phí phát sinh (ống đồng dài thêm, giá đỡ, đục tường) được báo giá trước khi thi công. Bảo hành lắp đặt 12 tháng.</p>" }
+  ]
+}
+{% endschema %}

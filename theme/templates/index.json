@@ -887,7 +887,9 @@
         "x3",
         "x4"
       ],
-      "settings": {}
+      "settings": {
+        "more_link": "/collections/dich-vu"
+      }
     },
     "seo": {
       "type": "seo-text",

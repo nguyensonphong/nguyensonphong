@@ -1,10 +1,73 @@
+{%- comment -%}
+  Danh sách sản phẩm: breadcrumb, chip danh mục con, bộ lọc bên trái (dùng bộ lọc chuẩn của Shopify,
+  bật trong app "Search & Discovery"), thanh sắp xếp và lưới sản phẩm.
+{%- endcomment -%}
+{%- assign per_page = section.settings.per_page -%}
+<nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>{{ collection.title }}</span></nav>
 <section class="container">
   <h1 class="page-title">{{ collection.title }}</h1>
-  {%- paginate collection.products by 24 -%}
-    <div class="grid-products">
-      {%- for product in collection.products -%}{% render 'product-card', product: product, style: 'popular' %}{%- else -%}<p>Danh mục này chưa có sản phẩm</p>{%- endfor -%}
+  {%- assign sub = linklists[section.settings.sub_menu].links | where: 'url', collection.url | first -%}
+  {%- if sub and sub.links.size > 0 -%}
+    <div class="tabs">{%- for l in sub.links -%}<a class="tab" href="{{ l.url }}">{{ l.title }}</a>{%- endfor -%}</div>
+  {%- endif -%}
+
+  {%- paginate collection.products by per_page -%}
+  <div class="plp">
+    <form class="plp__filters" id="filters" data-filters>
+      <div class="plp__fhead"><b>Bộ lọc</b><a href="{{ collection.url }}?sort_by={{ collection.sort_by | default: collection.default_sort_by }}">Xóa tất cả</a></div>
+      {%- for filter in collection.filters -%}
+        <details class="facet" open>
+          <summary>{{ filter.label }}</summary>
+          {%- case filter.type -%}
+            {%- when 'price_range' -%}
+              <div class="facet__price">
+                <input class="field" type="number" name="{{ filter.min_value.param_name }}" value="{{ filter.min_value.value | divided_by: 100 }}" placeholder="Từ" aria-label="Giá từ">
+                <span>–</span>
+                <input class="field" type="number" name="{{ filter.max_value.param_name }}" value="{{ filter.max_value.value | divided_by: 100 }}" placeholder="Đến" aria-label="Giá đến">
+              </div>
+            {%- when 'boolean' -%}
+              {%- for value in filter.values -%}
+                <label class="facet__opt"><input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" {% if value.active %}checked{% endif %}>{% if filter.param_name contains 'availability' %}Chỉ hàng còn bán{% else %}{{ value.label }}{% endif %}<em>{{ value.count }}</em></label>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for value in filter.values -%}
+                <label class="facet__opt{% if forloop.index > 6 %} is-more{% endif %}"><input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" {% if value.active %}checked{% endif %} {% if value.count == 0 and value.active == false %}disabled{% endif %}>{{ value.label }}<em>{{ value.count }}</em></label>
+              {%- endfor -%}
+              {%- if filter.values.size > 6 -%}<button class="facet__more" type="button" data-more>Xem thêm</button>{%- endif -%}
+          {%- endcase -%}
+        </details>
+      {%- else -%}
+        <p class="facet__empty">Bật bộ lọc trong app <b>Search &amp; Discovery</b> của Shopify (Thương hiệu, Loại, Giá, Còn hàng…).</p>
+      {%- endfor -%}
+      <button class="btn" type="submit">Áp dụng</button>
+    </form>
+
+    <div class="plp__main">
+      <div class="plp__bar">
+        <button class="btn btn--outline btn--sm plp__toggle" type="button" data-filter-toggle>Bộ lọc</button>
+        <span><b>{{ collection.products_count }}</b> sản phẩm</span>
+        <label class="plp__sort">Sắp xếp
+          <select class="field" form="filters" name="sort_by" data-sort>
+            {%- assign current = collection.sort_by | default: collection.default_sort_by -%}
+            {%- for o in collection.sort_options -%}<option value="{{ o.value }}" {% if o.value == current %}selected{% endif %}>{{ o.name }}</option>{%- endfor -%}
+          </select>
+        </label>
+      </div>
+      <div class="grid-products">
+        {%- for product in collection.products -%}{% render 'product-card', product: product, style: 'popular' %}{%- else -%}<p>Không có sản phẩm phù hợp. <a href="{{ collection.url }}" style="color:var(--hp-blue)">Xóa bộ lọc</a></p>{%- endfor -%}
+      </div>
+      {%- if paginate.pages > 1 -%}<div class="center pager">{{ paginate | default_pagination: next: 'Sau ›', previous: '‹ Trước' }}</div>{%- endif -%}
     </div>
-    {%- if paginate.pages > 1 -%}<div class="center">{{ paginate | default_pagination }}</div>{%- endif -%}
+  </div>
   {%- endpaginate -%}
 </section>
-{% schema %}{ "name": "Danh sách sản phẩm" }{% endschema %}
+
+{% schema %}
+{
+  "name": "Danh sách sản phẩm",
+  "settings": [
+    { "type": "range", "id": "per_page", "label": "Sản phẩm mỗi trang", "min": 12, "max": 48, "step": 4, "default": 24 },
+    { "type": "link_list", "id": "sub_menu", "label": "Menu để lấy danh mục con" }
+  ]
+}
+{% endschema %}
