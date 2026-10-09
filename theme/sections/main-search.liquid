@@ -1,5 +1,5 @@
 <section class="container">
-  <h1 class="page-title">{% if search.performed %}ผลการค้นหา "{{ search.terms }}" ({{ search.results_count }}){% else %}ค้นหา{% endif %}</h1>
+  <h1 class="page-title">{% if search.performed %}Kết quả cho "{{ search.terms }}" ({{ search.results_count }}){% else %}Tìm kiếm{% endif %}</h1>
   {%- paginate search.results by 24 -%}
     <div class="grid-products">
       {%- for item in search.results -%}

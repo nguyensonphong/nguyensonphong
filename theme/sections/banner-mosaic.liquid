@@ -1,8 +1,8 @@
-{%- comment -%} Dùng cho: เทรนด์สินค้ายอดฮิต, New @HomePro, Better Health. Block đầu tiên là banner lớn. {%- endcomment -%}
+{%- comment -%} Dùng cho: Xu hướng nổi bật, Hàng mới về, Better Health. Block đầu tiên là banner lớn. {%- endcomment -%}
 <section class="container sec">
   <div class="sec__head">
     <h2 class="sec__title">{{ section.settings.title }}</h2>
-    {%- if section.settings.more_link != blank -%}<a class="sec__more" href="{{ section.settings.more_link }}">ดูเพิ่มเติม ›</a>{%- endif -%}
+    {%- if section.settings.more_link != blank -%}<a class="sec__more" href="{{ section.settings.more_link }}">Xem thêm ›</a>{%- endif -%}
   </div>
   <div class="mosaic{% if section.settings.big_left %} mosaic--left-big{% endif %}">
     {%- for block in section.blocks limit: 5 -%}
@@ -17,7 +17,7 @@
 {
   "name": "Banner ghép (1 lớn + 4 nhỏ)",
   "settings": [
-    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "เทรนด์สินค้ายอดฮิต" },
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Xu hướng nổi bật" },
     { "type": "url", "id": "more_link", "label": "Link xem thêm" },
     { "type": "checkbox", "id": "big_left", "label": "Banner lớn nằm bên trái", "default": false }
   ],
@@ -33,23 +33,23 @@
   "max_blocks": 5,
   "presets": [
     { "name": "Xu hướng (lũ lụt)", "blocks": [
-      { "type": "banner", "settings": { "title": "สู้ภัยน้ำท่วม", "sub": "รวมสินค้าจำเป็นทุกช่วง", "bg": "#0b2e59" } },
-      { "type": "banner", "settings": { "title": "เตรียมบ้านให้พร้อมรับมือน้ำท่วม", "bg": "#2b8ad8" } },
-      { "type": "banner", "settings": { "title": "อุปกรณ์จำเป็นรับมือน้ำท่วม", "bg": "#0066b3" } },
-      { "type": "banner", "settings": { "title": "คืนความสะอาดให้บ้านหลังน้ำลด", "bg": "#1a9e5c" } },
-      { "type": "banner", "settings": { "title": "ปรับปรุงบ้านหลังน้ำลด", "bg": "#f7931e" } } ] },
-    { "name": "New @HomePro", "settings": { "title": "New @HomePro", "big_left": true }, "blocks": [
-      { "type": "banner", "settings": { "title": "NEW ARRIVAL", "sub": "TOTO Scene of four seasons", "bg": "#0b2e59" } },
+      { "type": "banner", "settings": { "title": "Mùa mưa bão", "sub": "Tất cả sản phẩm cần thiết", "bg": "#0b2e59" } },
+      { "type": "banner", "settings": { "title": "Chuẩn bị nhà cửa mùa mưa bão", "bg": "#2b8ad8" } },
+      { "type": "banner", "settings": { "title": "Thiết bị cần thiết mùa lũ", "bg": "#0066b3" } },
+      { "type": "banner", "settings": { "title": "Dọn dẹp nhà sau mưa lũ", "bg": "#1a9e5c" } },
+      { "type": "banner", "settings": { "title": "Sửa sang nhà sau mưa lũ", "bg": "#f7931e" } } ] },
+    { "name": "Hàng mới về", "settings": { "title": "Hàng mới về", "big_left": true }, "blocks": [
+      { "type": "banner", "settings": { "title": "NEW ARRIVAL", "sub": "Bộ sưu tập mới nhất", "bg": "#0b2e59" } },
       { "type": "banner", "settings": { "title": "Pre Sale", "bg": "#e6007e" } },
       { "type": "banner", "settings": { "title": "Get it now", "bg": "#0066b3" } },
       { "type": "banner", "settings": { "title": "Halloween", "bg": "#f7931e" } },
-      { "type": "banner", "settings": { "title": "ไฟ LED 499.-", "bg": "#2b8ad8" } } ] },
-    { "name": "Better Health & Longevity", "settings": { "title": "Better Health & Longevity", "big_left": true }, "blocks": [
-      { "type": "banner", "settings": { "title": "สุขภาพดี ชีวิตมีความสุข", "bg": "#1a9e5c" } },
-      { "type": "banner", "settings": { "title": "นอนหลับ", "bg": "#6b4fbb" } },
-      { "type": "banner", "settings": { "title": "อากาศสะอาด", "bg": "#2b8ad8" } },
-      { "type": "banner", "settings": { "title": "สุขภาพปัง", "bg": "#f7931e" } },
-      { "type": "banner", "settings": { "title": "เสริมความแข็งแรง", "bg": "#e4002b" } } ] }
+      { "type": "banner", "settings": { "title": "Đèn LED 99K", "bg": "#2b8ad8" } } ] },
+    { "name": "Sống khỏe mỗi ngày", "settings": { "title": "Sống khỏe mỗi ngày", "big_left": true }, "blocks": [
+      { "type": "banner", "settings": { "title": "Sống khỏe, sống vui", "bg": "#1a9e5c" } },
+      { "type": "banner", "settings": { "title": "Giấc ngủ", "bg": "#6b4fbb" } },
+      { "type": "banner", "settings": { "title": "Không khí sạch", "bg": "#2b8ad8" } },
+      { "type": "banner", "settings": { "title": "Khỏe mạnh", "bg": "#f7931e" } },
+      { "type": "banner", "settings": { "title": "Tăng cường thể lực", "bg": "#e4002b" } } ] }
   ]
 }
 {% endschema %}

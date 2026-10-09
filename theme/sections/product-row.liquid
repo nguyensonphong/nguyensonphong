@@ -1,5 +1,5 @@
 {%- comment -%}
-  Dải sản phẩm dùng cho: FLASH SALE, DOUBLE SHOCK!, สินค้ายอดนิยม, สินค้าใหม่.
+  Dải sản phẩm dùng cho: FLASH SALE, DOUBLE SHOCK!, Sản phẩm phổ biến, Sản phẩm mới.
   Không có block "tab" → dùng collection chính. Có block "tab" → hiện thanh tab, mỗi tab một collection.
 {%- endcomment -%}
 {%- assign st = section.settings.style -%}
@@ -8,14 +8,14 @@
     <div class="strip strip--{{ st }}">
       <h3>{% if st == 'flash' %}⚡ {% endif %}{{ section.settings.title }}</h3>
       {%- if st == 'flash' and section.settings.ends_at != blank -%}
-        <div class="countdown" data-countdown="{{ section.settings.ends_at }}">จบใน <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></div>
+        <div class="countdown" data-countdown="{{ section.settings.ends_at }}">Kết thúc sau <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></div>
       {%- endif -%}
-      {%- if section.settings.collection -%}<a href="{{ section.settings.collection.url }}">ดูเพิ่มเติม &gt;&gt;</a>{%- endif -%}
+      {%- if section.settings.collection -%}<a href="{{ section.settings.collection.url }}">Xem thêm &gt;&gt;</a>{%- endif -%}
     </div>
   {%- else -%}
     <div class="sec__head">
       <h2 class="sec__title">{{ section.settings.title }}</h2>
-      {%- if section.settings.collection -%}<a class="sec__more" href="{{ section.settings.collection.url }}">ดูทั้งหมด ›</a>{%- endif -%}
+      {%- if section.settings.collection -%}<a class="sec__more" href="{{ section.settings.collection.url }}">Xem tất cả ›</a>{%- endif -%}
     </div>
   {%- endif -%}
 
@@ -70,9 +70,9 @@
   "presets": [
     { "name": "Flash Sale", "settings": { "title": "FLASH SALE", "style": "flash" } },
     { "name": "Double Shock", "settings": { "title": "DOUBLE SHOCK!", "style": "shock" } },
-    { "name": "Sản phẩm phổ biến", "settings": { "title": "สินค้ายอดนิยม", "style": "popular" }, "blocks": [
-      { "type": "tab", "settings": { "label": "สินค้าแนะนำ" } }, { "type": "tab", "settings": { "label": "เครื่องใช้ไฟฟ้า" } }, { "type": "tab", "settings": { "label": "เครื่องใช้ไฟฟ้าเล็ก" } } ] },
-    { "name": "Sản phẩm mới", "settings": { "title": "สินค้าใหม่", "style": "new" } }
+    { "name": "Sản phẩm phổ biến", "settings": { "title": "Sản phẩm phổ biến", "style": "popular" }, "blocks": [
+      { "type": "tab", "settings": { "label": "Đề xuất" } }, { "type": "tab", "settings": { "label": "Điện máy" } }, { "type": "tab", "settings": { "label": "Đồ gia dụng nhỏ" } } ] },
+    { "name": "Sản phẩm mới", "settings": { "title": "Sản phẩm mới", "style": "new" } }
   ]
 }
 {% endschema %}

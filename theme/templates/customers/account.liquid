@@ -1,3 +1,3 @@
-<section class="container"><h1 class="page-title">บัญชีของฉัน</h1><p>{{ customer.first_name }} {{ customer.last_name }} · {{ customer.email }}</p>
+<section class="container"><h1 class="page-title">Tài khoản của tôi</h1><p>{{ customer.first_name }} {{ customer.last_name }} · {{ customer.email }}</p>
 {%- for order in customer.orders -%}<p><a href="{{ order.customer_url }}" style="color:var(--hp-blue)">{{ order.name }}</a> · {{ order.created_at | date: '%d/%m/%Y' }} · {{ order.total_price | money }}</p>{%- endfor -%}
-<a href="{{ routes.account_logout_url }}">ออกจากระบบ</a></section>
+<a href="{{ routes.account_logout_url }}">Đăng xuất</a></section>

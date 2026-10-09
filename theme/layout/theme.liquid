@@ -21,12 +21,12 @@
   {{ content_for_header }}
 </head>
 <body>
-  <a class="visually-hidden" href="#main">ข้ามไปเนื้อหา</a>
+  <a class="visually-hidden" href="#main">Chuyển đến nội dung</a>
   {% sections 'header-group' %}
   <main id="main">{{ content_for_layout }}</main>
   {% sections 'footer-group' %}
   {%- if settings.chat_url != blank -%}
-    <a class="chatfab" href="{{ settings.chat_url }}"><i>🤖</i>แชท</a>
+    <a class="chatfab" href="{{ settings.chat_url }}"><i>🤖</i>Chat</a>
   {%- endif -%}
   <div class="toast" role="status" data-toast></div>
   <script src="{{ 'theme.js' | asset_url }}" defer></script>

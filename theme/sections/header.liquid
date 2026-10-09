@@ -6,7 +6,7 @@
 <div class="header-wrap" data-header>
   <header class="header">
     <div class="container header__main">
-      <button class="burger" type="button" aria-label="เมนู" data-mega-toggle>☰</button>
+      <button class="burger" type="button" aria-label="Menu" data-mega-toggle>☰</button>
       <a class="logo" href="{{ routes.root_url }}">
         {%- if section.settings.logo -%}
           {{ section.settings.logo | image_url: width: 320 | image_tag: alt: shop.name, width: 160, style: 'height:auto' }}
@@ -14,26 +14,26 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M2 11 12 3l10 8M5 9v11h14V9"/></svg>{{ shop.name }}
         {%- endif -%}
       </a>
-      <a class="loc" href="{{ routes.account_addresses_url }}"><span>ที่อยู่จัดส่ง</span><b>เลือกที่อยู่จัดส่ง ▾</b></a>
-      <a class="loc" href="{{ section.settings.store_link }}"><span>รับที่สาขา</span><b>เลือกสาขา ▾</b></a>
+      <a class="loc" href="{{ routes.account_addresses_url }}"><span>Giao đến</span><b>Chọn địa chỉ ▾</b></a>
+      <a class="loc" href="{{ section.settings.store_link }}"><span>Nhận tại cửa hàng</span><b>Chọn cửa hàng ▾</b></a>
       <form class="search" action="{{ routes.search_url }}" method="get" role="search">
-        <select name="type" aria-label="ขอบเขตการค้นหา"><option value="product,article,page">ทั้งหมด</option><option value="product">สินค้า</option><option value="article">บทความ</option></select>
-        <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="ค้นหา" aria-label="ค้นหา">
-        <button type="submit" aria-label="ค้นหา">{% render 'icon', name: 'search' %}</button>
+        <select name="type" aria-label="Phạm vi tìm kiếm"><option value="product,article,page">Tất cả</option><option value="product">Sản phẩm</option><option value="article">Bài viết</option></select>
+        <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+        <button type="submit" aria-label="Tìm kiếm">{% render 'icon', name: 'search' %}</button>
       </form>
       <div class="hicons">
         <a class="hicon hide-sm" href="{{ routes.search_url }}" aria-label="AI search">{% render 'icon', name: 'ai' %}</a>
-        <a class="hicon hide-sm" href="{{ section.settings.notify_link }}" aria-label="การแจ้งเตือน">{% render 'icon', name: 'bell' %}</a>
-        <a class="hicon hide-sm" href="{{ section.settings.deals_link }}" aria-label="โปรโมชั่น">{% render 'icon', name: 'tag' %}</a>
-        <a class="hicon" href="{{ routes.cart_url }}" aria-label="ตะกร้า">{% render 'icon', name: 'cart' %}<span class="badge" data-cart-count>{{ cart.item_count }}</span></a>
-        <a class="hicon" href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" aria-label="บัญชี">{% render 'icon', name: 'user' %}</a>
+        <a class="hicon hide-sm" href="{{ section.settings.notify_link }}" aria-label="Thông báo">{% render 'icon', name: 'bell' %}</a>
+        <a class="hicon hide-sm" href="{{ section.settings.deals_link }}" aria-label="Khuyến mãi">{% render 'icon', name: 'tag' %}</a>
+        <a class="hicon" href="{{ routes.cart_url }}" aria-label="Giỏ hàng">{% render 'icon', name: 'cart' %}<span class="badge" data-cart-count>{{ cart.item_count }}</span></a>
+        <a class="hicon" href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" aria-label="Tài khoản">{% render 'icon', name: 'user' %}</a>
       </div>
     </div>
   </header>
 
-  <nav class="nav" aria-label="เมนูหลัก">
+  <nav class="nav" aria-label="Menu chính">
     <div class="container nav__inner">
-      <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ เลือกหมวดสินค้า</button>
+      <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ Danh mục sản phẩm</button>
       {%- for link in linklists[section.settings.main_menu].links -%}
         <a class="nav__item" href="{{ link.url }}">{{ link.title }}</a>
       {%- endfor -%}
@@ -73,7 +73,7 @@
   "name": "Header",
   "settings": [
     { "type": "image_picker", "id": "logo", "label": "Logo (trắng, nền trong suốt)" },
-    { "type": "link_list", "id": "main_menu", "label": "Menu chính", "info": "ช้อปตามห้อง, ช้อปตามแบรนด์, HomePro Mall, โปรเด็ด…" },
+    { "type": "link_list", "id": "main_menu", "label": "Menu chính", "info": "Mua theo phòng, Mua theo thương hiệu, Mall, Ưu đãi…" },
     { "type": "link_list", "id": "shortcut_menu", "label": "Thanh phím tắt danh mục" },
     { "type": "link_list", "id": "mega_menu", "label": "Mega menu (3 cấp)" },
     { "type": "textarea", "id": "mega_icons", "label": "Icon nhóm theo thứ tự", "default": "ac,box,sofa,tv,box,bath,pipe,pot,tile,brick,tools,bulb,door,shield,leaf,bed,paint,ball,health,phone,beauty,car,pet,baby", "info": "Tên icon: ac, box, sofa, tv, bath, pipe, pot, tile, brick, tools, bulb, door, shield, leaf, bed, paint, ball, health, phone, beauty, car, pet, baby" },

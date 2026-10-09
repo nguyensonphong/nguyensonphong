@@ -13,8 +13,8 @@
           {%- if block.settings.logo -%}{{ block.settings.logo | image_url: width: 128 | image_tag: style: 'width:100%;height:100%;border-radius:50%;object-fit:cover' }}{%- else -%}{{ block.settings.name | slice: 0, 2 | upcase }}{%- endif -%}
         </i>
         <b>{{ block.settings.name }}</b>
-        <small>★ {{ block.settings.rating }} · {{ block.settings.followers }} ผู้ติดตาม</small>
-        <a class="btn btn--sm" href="{{ block.settings.link }}">ดูร้านค้า →</a>
+        <small>★ {{ block.settings.rating }} · {{ block.settings.followers }} người theo dõi</small>
+        <a class="btn btn--sm" href="{{ block.settings.link }}">Xem shop →</a>
       </div>
     {%- endfor -%}
   </div>
@@ -24,10 +24,10 @@
 {
   "name": "Cửa hàng đề xuất",
   "settings": [
-    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "ร้านค้าแนะนำ" },
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Cửa hàng đề xuất" },
     { "type": "image_picker", "id": "banner_1", "label": "Banner 1" }, { "type": "text", "id": "banner_1_title", "label": "Tiêu đề 1", "default": "Spalding" }, { "type": "url", "id": "banner_1_link", "label": "Link 1" },
-    { "type": "image_picker", "id": "banner_2", "label": "Banner 2" }, { "type": "text", "id": "banner_2_title", "label": "Tiêu đề 2", "default": "Camel ลด 50%" }, { "type": "url", "id": "banner_2_link", "label": "Link 2" },
-    { "type": "image_picker", "id": "banner_3", "label": "Banner 3" }, { "type": "text", "id": "banner_3_title", "label": "Tiêu đề 3", "default": "uPVC ลด 35%" }, { "type": "url", "id": "banner_3_link", "label": "Link 3" }
+    { "type": "image_picker", "id": "banner_2", "label": "Banner 2" }, { "type": "text", "id": "banner_2_title", "label": "Tiêu đề 2", "default": "Camel giảm 50%" }, { "type": "url", "id": "banner_2_link", "label": "Link 2" },
+    { "type": "image_picker", "id": "banner_3", "label": "Banner 3" }, { "type": "text", "id": "banner_3_title", "label": "Tiêu đề 3", "default": "uPVC giảm 35%" }, { "type": "url", "id": "banner_3_link", "label": "Link 3" }
   ],
   "blocks": [
     { "type": "store", "name": "Cửa hàng", "settings": [

@@ -11,8 +11,8 @@
           </div>
         {%- endfor -%}
       </div>
-      <button class="slider__btn slider__btn--prev" type="button" data-prev aria-label="ก่อนหน้า">‹</button>
-      <button class="slider__btn slider__btn--next" type="button" data-next aria-label="ถัดไป">›</button>
+      <button class="slider__btn slider__btn--prev" type="button" data-prev aria-label="Trước">‹</button>
+      <button class="slider__btn slider__btn--next" type="button" data-next aria-label="Sau">›</button>
       <div class="slider__dots" data-dots></div>
     </div>
     <div class="hero__side">
@@ -30,10 +30,10 @@
   </div>
   {%- if section.settings.show_delivery -%}
   <div class="delivery">
-    <div>{% render 'icon', name: 'bolt' %}<span>ส่งทันที<small>ภายในวัน</small></span></div>
-    <div>{% render 'icon', name: 'truck' %}<span>ส่งวันถัดไป<small>สั่งไม่เกิน 20.30 น.</small></span></div>
-    <div>{% render 'icon', name: 'box' %}<span>ส่งปกติ<small>ทั่วประเทศ</small></span></div>
-    <div>{% render 'icon', name: 'store' %}<span>รับที่สาขา<small>ภายใน 1 ชั่วโมง</small></span></div>
+    <div>{% render 'icon', name: 'bolt' %}<span>Giao ngay<small>Trong ngày</small></span></div>
+    <div>{% render 'icon', name: 'truck' %}<span>Giao ngày mai<small>Đặt trước 20:30</small></span></div>
+    <div>{% render 'icon', name: 'box' %}<span>Giao tiêu chuẩn<small>Toàn quốc</small></span></div>
+    <div>{% render 'icon', name: 'store' %}<span>Nhận tại cửa hàng<small>Trong 1 giờ</small></span></div>
   </div>
   {%- endif -%}
 </section>
@@ -45,23 +45,23 @@
     { "type": "range", "id": "autoplay", "label": "Tự chuyển (giây, 0 = tắt)", "min": 0, "max": 10, "step": 1, "default": 5 },
     { "type": "header", "content": "Ô 1" },
     { "type": "image_picker", "id": "tile_1_image", "label": "Ảnh" },
-    { "type": "text", "id": "tile_1_title", "label": "Tiêu đề", "default": "ช้อปก่อน จ่ายทีหลัง" },
+    { "type": "text", "id": "tile_1_title", "label": "Tiêu đề", "default": "Mua trước, trả sau" },
     { "type": "text", "id": "tile_1_sub", "label": "Mô tả", "default": "SPayLater · ascend" },
     { "type": "url", "id": "tile_1_link", "label": "Link" },
     { "type": "header", "content": "Ô 2" },
     { "type": "image_picker", "id": "tile_2_image", "label": "Ảnh" },
-    { "type": "text", "id": "tile_2_title", "label": "Tiêu đề", "default": "รับส่วนลดทันที 3%" },
-    { "type": "text", "id": "tile_2_sub", "label": "Mô tả", "default": "สมัครเลย..คลิก" },
+    { "type": "text", "id": "tile_2_title", "label": "Tiêu đề", "default": "Giảm ngay 3%" },
+    { "type": "text", "id": "tile_2_sub", "label": "Mô tả", "default": "Đăng ký ngay" },
     { "type": "url", "id": "tile_2_link", "label": "Link" },
     { "type": "header", "content": "Ô 3" },
     { "type": "image_picker", "id": "tile_3_image", "label": "Ảnh" },
-    { "type": "text", "id": "tile_3_title", "label": "Tiêu đề", "default": "ผ่อนสบาย 0% 10 เดือน" },
-    { "type": "text", "id": "tile_3_sub", "label": "Mô tả", "default": "บัตรเครดิตที่ร่วมรายการ" },
+    { "type": "text", "id": "tile_3_title", "label": "Tiêu đề", "default": "Trả góp 0% 10 tháng" },
+    { "type": "text", "id": "tile_3_sub", "label": "Mô tả", "default": "Thẻ tín dụng tham gia" },
     { "type": "url", "id": "tile_3_link", "label": "Link" },
     { "type": "header", "content": "Ô 4" },
     { "type": "image_picker", "id": "tile_4_image", "label": "Ảnh" },
-    { "type": "text", "id": "tile_4_title", "label": "Tiêu đề", "default": "ลดเพิ่มสูงสุด 20,000.-" },
-    { "type": "text", "id": "tile_4_sub", "label": "Mô tả", "default": "เมื่อชำระผ่านบัตร" },
+    { "type": "text", "id": "tile_4_title", "label": "Tiêu đề", "default": "Giảm thêm đến 2 triệu" },
+    { "type": "text", "id": "tile_4_sub", "label": "Mô tả", "default": "Khi thanh toán qua thẻ" },
     { "type": "url", "id": "tile_4_link", "label": "Link" },
     { "type": "checkbox", "id": "show_delivery", "label": "Hiện dải hình thức giao hàng", "default": true }
   ],
@@ -72,15 +72,15 @@
       { "type": "text", "id": "eyebrow", "label": "Dòng nhỏ" },
       { "type": "text", "id": "title", "label": "Tiêu đề", "default": "10.10 Double Day" },
       { "type": "text", "id": "sub", "label": "Mô tả" },
-      { "type": "text", "id": "button", "label": "Nút", "default": "ช้อปเลย" },
+      { "type": "text", "id": "button", "label": "Nút", "default": "Mua ngay" },
       { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#0066b3" }
     ]}
   ],
   "max_blocks": 10,
   "presets": [{ "name": "Banner chính", "blocks": [
-    { "type": "slide", "settings": { "title": "10.10 Double Day", "sub": "ลดแรงทั้งเว็บ" } },
-    { "type": "slide", "settings": { "title": "SHOCK PRICE", "sub": "สินค้าราคาแรง", "bg": "#e4002b" } },
-    { "type": "slide", "settings": { "title": "Washer & Dryer Fair", "sub": "เครื่องซักผ้า 5,990.- | เครื่องอบผ้า 9,990.-", "bg": "#0b2e59" } }
+    { "type": "slide", "settings": { "title": "10.10 Double Day", "sub": "Giảm sâu toàn web" } },
+    { "type": "slide", "settings": { "title": "SHOCK PRICE", "sub": "Giá sốc", "bg": "#e4002b" } },
+    { "type": "slide", "settings": { "title": "Washer & Dryer Fair", "sub": "Máy giặt từ 5,99 triệu | Máy sấy từ 9,99 triệu", "bg": "#0b2e59" } }
   ]}]
 }
 {% endschema %}

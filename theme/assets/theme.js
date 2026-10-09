@@ -26,7 +26,7 @@
     for (let k = 0; k < slides.length; k++) {
       const d = document.createElement('button');
       d.type = 'button';
-      d.setAttribute('aria-label', `สไลด์ ${k + 1}`);
+      d.setAttribute('aria-label', `Slide ${k + 1}`);
       d.addEventListener('click', () => go(k));
       dots.appendChild(d);
     }
@@ -93,12 +93,12 @@
       if (code) {
         try { await fetch(`/discount/${encodeURIComponent(code)}`, { credentials: 'same-origin' }); } catch (e) {}
       }
-      b.textContent = 'เก็บแล้ว';
+      b.textContent = 'Đã lưu';
       b.classList.add('is-done');
       b.disabled = true;
       const cnt = $('[data-coupon-count]');
-      if (cnt) cnt.textContent = `${parseInt(cnt.textContent, 10) + 1 || 1} ใบ`;
-      toast('เก็บคูปองแล้ว');
+      if (cnt) cnt.textContent = `${parseInt(cnt.textContent, 10) + 1 || 1} mã`;
+      toast('Đã lưu mã');
     })
   );
 
@@ -112,9 +112,9 @@
         if (!res.ok) throw new Error((await res.json()).description || 'error');
         const cart = await (await fetch('/cart.js')).json();
         $$('[data-cart-count]').forEach((c) => (c.textContent = cart.item_count));
-        toast('เพิ่มลงตะกร้าแล้ว');
+        toast('Đã thêm vào giỏ');
       } catch (err) {
-        toast(err.message === 'error' ? 'เพิ่มสินค้าไม่สำเร็จ ลองอีกครั้ง' : err.message);
+        toast(err.message === 'error' ? 'Không thêm được sản phẩm, hãy thử lại' : err.message);
       }
     })
   );
@@ -137,7 +137,7 @@
     b.addEventListener('click', () => {
       const c = b.previousElementSibling;
       const open = c.classList.toggle('clamp');
-      b.textContent = open ? 'อ่านทั้งหมด' : 'ย่อ';
+      b.textContent = open ? 'Đọc tiếp' : 'Thu gọn';
     })
   );
 

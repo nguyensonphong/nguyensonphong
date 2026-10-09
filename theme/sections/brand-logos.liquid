@@ -1,7 +1,7 @@
 <section class="container sec">
   <div class="sec__head">
     <h2 class="sec__title">{{ section.settings.title }}</h2>
-    {%- if section.settings.more_link != blank -%}<a class="sec__more" href="{{ section.settings.more_link }}">ดูทั้งหมด ›</a>{%- endif -%}
+    {%- if section.settings.more_link != blank -%}<a class="sec__more" href="{{ section.settings.more_link }}">Xem tất cả ›</a>{%- endif -%}
   </div>
   <div class="row-scroll logos">
     {%- for block in section.blocks -%}
@@ -16,7 +16,7 @@
 {
   "name": "Thương hiệu nổi bật",
   "settings": [
-    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "แบรนด์ยอดนิยม" },
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Thương hiệu nổi bật" },
     { "type": "url", "id": "more_link", "label": "Link xem tất cả" }
   ],
   "blocks": [

@@ -4,9 +4,9 @@
       <a href="{{ block.settings.link }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
     {%- endfor -%}
     <div class="topbar__help">
-      <a href="{{ section.settings.help_link }}">ศูนย์ช่วยเหลือ ▾</a>
+      <a href="{{ section.settings.help_link }}">Trung tâm hỗ trợ ▾</a>
       <ul>
-        <li><a href="tel:1284">โทร. 1284</a></li>
+        <li><a href="tel:1284">Hotline</a></li>
         {%- for link in linklists[section.settings.help_menu].links -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}
       </ul>
     </div>
@@ -27,18 +27,18 @@
   "name": "Thanh trên cùng",
   "settings": [
     { "type": "url", "id": "help_link", "label": "Link trung tâm hỗ trợ" },
-    { "type": "link_list", "id": "help_menu", "label": "Menu con hỗ trợ (สอบถาม / ร้องเรียน …)" }
+    { "type": "link_list", "id": "help_menu", "label": "Menu con hỗ trợ (Hỏi đáp / Khiếu nại …)" }
   ],
   "blocks": [
     { "type": "link", "name": "Liên kết", "settings": [
-      { "type": "text", "id": "label", "label": "Nhãn", "default": "ค้นหาสาขา" },
+      { "type": "text", "id": "label", "label": "Nhãn", "default": "Tìm cửa hàng" },
       { "type": "url", "id": "link", "label": "Link" }
     ]}
   ],
   "default": { "blocks": [
-    { "type": "link", "settings": { "label": "โฮมการ์ด" } },
-    { "type": "link", "settings": { "label": "สมัครเป็นผู้ขาย" } },
-    { "type": "link", "settings": { "label": "ค้นหาสาขา" } }
+    { "type": "link", "settings": { "label": "Thẻ thành viên" } },
+    { "type": "link", "settings": { "label": "Trở thành người bán" } },
+    { "type": "link", "settings": { "label": "Tìm cửa hàng" } }
   ]}
 }
 {% endschema %}

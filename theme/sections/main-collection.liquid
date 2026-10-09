@@ -2,7 +2,7 @@
   <h1 class="page-title">{{ collection.title }}</h1>
   {%- paginate collection.products by 24 -%}
     <div class="grid-products">
-      {%- for product in collection.products -%}{% render 'product-card', product: product, style: 'popular' %}{%- else -%}<p>ยังไม่มีสินค้าในหมวดนี้</p>{%- endfor -%}
+      {%- for product in collection.products -%}{% render 'product-card', product: product, style: 'popular' %}{%- else -%}<p>Danh mục này chưa có sản phẩm</p>{%- endfor -%}
     </div>
     {%- if paginate.pages > 1 -%}<div class="center">{{ paginate | default_pagination }}</div>{%- endif -%}
   {%- endpaginate -%}

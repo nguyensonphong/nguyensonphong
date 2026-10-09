@@ -18,17 +18,17 @@
     {%- elsif style == 'popular' and product.tags contains 'best-price' -%}<span class="pcard__tag">Best Price</span>
     {%- elsif off > 0 -%}<span class="pcard__tag">-{{ off }}%</span>{%- endif -%}
     {%- if style == 'shock' -%}<span class="pcard__brand">{{ product.vendor }}</span>
-    {%- else -%}<button class="pcard__fav" type="button" aria-label="ถูกใจ" data-fav>{% render 'icon', name: 'heart' %}</button>{%- endif -%}
+    {%- else -%}<button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav>{% render 'icon', name: 'heart' %}</button>{%- endif -%}
     {%- if style == 'popular' -%}<span class="pcard__vendor">{{ product.vendor }}</span>{%- endif -%}
     <a href="{{ product.url }}"><h3 class="pcard__title">{{ product.title }}</h3></a>
     {%- if style == 'popular' -%}
       <div class="pcard__meta">
         {%- if product.metafields.reviews.rating.value -%}<span class="stars">★★★★★</span> {{ product.metafields.reviews.rating.value.rating }}{%- endif -%}
-        {%- if product.metafields.custom.sold != blank -%}<span>ขายแล้ว {{ product.metafields.custom.sold }} ชิ้น</span>{%- endif -%}
+        {%- if product.metafields.custom.sold != blank -%}<span>Đã bán {{ product.metafields.custom.sold }} sp</span>{%- endif -%}
       </div>
       <div class="chips">
-        {%- if product.tags contains 'free-install' -%}<span class="chip">ฟรีติดตั้ง</span>{%- endif -%}
-        {%- if product.tags contains 'free-shipping' -%}<span class="chip">จัดส่งฟรี</span>{%- endif -%}
+        {%- if product.tags contains 'free-install' -%}<span class="chip">Lắp đặt miễn phí</span>{%- endif -%}
+        {%- if product.tags contains 'free-shipping' -%}<span class="chip">Freeship</span>{%- endif -%}
       </div>
     {%- endif -%}
     <div class="pcard__price">
@@ -38,17 +38,17 @@
       </div>
       <form method="post" action="{{ routes.cart_add_url }}" data-add-form>
         <input type="hidden" name="id" value="{{ v.id }}">
-        <button class="addcart" type="submit" aria-label="เพิ่มลงตะกร้า" {% unless v.available %}disabled{% endunless %}>{% render 'icon', name: 'cart' %}</button>
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" {% unless v.available %}disabled{% endunless %}>{% render 'icon', name: 'cart' %}</button>
       </form>
     </div>
-    {%- if product.metafields.custom.final_price != blank -%}<div class="pcard__final">ราคาสุดท้าย* {{ product.metafields.custom.final_price | money_without_trailing_zeros }}</div>{%- endif -%}
+    {%- if product.metafields.custom.final_price != blank -%}<div class="pcard__final">Giá cuối* {{ product.metafields.custom.final_price | money_without_trailing_zeros }}</div>{%- endif -%}
     {%- if product.metafields.custom.extra_offer != blank -%}<div class="pcard__extra">{{ product.metafields.custom.extra_offer }}</div>{%- endif -%}
   </article>
 {%- else -%}
   <article class="pcard">
     <div class="pcard__img">{% render 'icon', name: 'box' %}</div>
     <span class="pcard__tag">-30%</span>
-    <h3 class="pcard__title">ชื่อสินค้าตัวอย่าง (เพิ่มสินค้าในคอลเลกชัน)</h3>
-    <div class="pcard__price"><div class="price">฿1,990<s>฿2,890</s></div><span class="addcart">{% render 'icon', name: 'cart' %}</span></div>
+    <h3 class="pcard__title">Sản phẩm mẫu (thêm sản phẩm vào collection)</h3>
+    <div class="pcard__price"><div class="price">1.990.000₫<s>2.890.000₫</s></div><span class="addcart">{% render 'icon', name: 'cart' %}</span></div>
   </article>
 {%- endif -%}

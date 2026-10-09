@@ -13,7 +13,8 @@
       "settings": {
         "main_menu": "main-menu",
         "shortcut_menu": "category-shortcuts",
-        "mega_menu": "all-categories"
+        "mega_menu": "all-categories",
+        "mega_icons": "ac,pot,tv,sofa,bed,bath,brick,tools,bulb,shield,leaf"
       }
     }
   },

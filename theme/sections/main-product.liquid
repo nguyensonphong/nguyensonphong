@@ -16,11 +16,11 @@
         </select>
       {%- else -%}<input type="hidden" name="id" value="{{ v.id }}">{%- endunless -%}
       <div style="display:flex;gap:10px;margin:16px 0">
-        <input type="number" name="quantity" value="1" min="1" aria-label="จำนวน" style="width:80px;padding:10px;border:1px solid var(--hp-line);border-radius:8px">
-        <button class="btn" type="submit" {% unless v.available %}disabled{% endunless %} style="flex:1">{% if v.available %}เพิ่มลงตะกร้า{% else %}สินค้าหมด{% endif %}</button>
+        <input type="number" name="quantity" value="1" min="1" aria-label="Số lượng" style="width:80px;padding:10px;border:1px solid var(--hp-line);border-radius:8px">
+        <button class="btn" type="submit" {% unless v.available %}disabled{% endunless %} style="flex:1">{% if v.available %}Thêm vào giỏ{% else %}Hết hàng{% endif %}</button>
       </div>
     {%- endform -%}
-    <div class="chips" style="margin-bottom:16px"><span class="chip">ผ่อน 0% 10 เดือน</span><span class="chip">รับที่สาขา</span><span class="chip">จัดส่งฟรี เมื่อช้อปครบ ฿1,000</span></div>
+    <div class="chips" style="margin-bottom:16px"><span class="chip">Trả góp 0% 10 tháng</span><span class="chip">Nhận tại cửa hàng</span><span class="chip">Miễn phí giao hàng cho đơn từ 1 triệu</span></div>
     <div>{{ product.description }}</div>
   </div>
 </section>

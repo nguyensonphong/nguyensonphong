@@ -3,7 +3,7 @@
   { "name": "Màu sắc", "settings": [
     { "type": "color", "id": "color_primary", "label": "Màu chính (header, nút)", "default": "#0066B3" },
     { "type": "color", "id": "color_footer", "label": "Màu footer", "default": "#0065B2" },
-    { "type": "color", "id": "color_accent", "label": "Màu nhấn (ดูทั้งหมด, ติดตาม)", "default": "#F7931E" },
+    { "type": "color", "id": "color_accent", "label": "Màu nhấn (Xem tất cả, Đăng ký)", "default": "#F7931E" },
     { "type": "color", "id": "color_price", "label": "Màu giá bán", "default": "#E4002B" },
     { "type": "color", "id": "color_soft", "label": "Nền xanh nhạt", "default": "#EAF4FC" }
   ]},

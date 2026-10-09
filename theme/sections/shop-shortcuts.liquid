@@ -4,7 +4,7 @@
     {%- for block in section.blocks -%}
       <div class="shop" {% if block.settings.image %}style="background-image:linear-gradient(135deg,rgba(0,102,179,.85),rgba(29,132,214,.6)),url({{ block.settings.image | image_url: width: 600 }});background-size:cover"{% endif %} {{ block.shopify_attributes }}>
         <h4>{{ block.settings.title }}</h4>
-        <a class="btn btn--orange btn--sm" href="{{ block.settings.link }}">ช้อปเลย</a>
+        <a class="btn btn--orange btn--sm" href="{{ block.settings.link }}">Mua ngay</a>
       </div>
     {%- endfor -%}
   </div>
@@ -13,7 +13,7 @@
 {% schema %}
 {
   "name": "Lối tắt cửa hàng",
-  "settings": [{ "type": "text", "id": "title", "label": "Tiêu đề", "default": "ทางลัดค้นหาสินค้าทุกเรื่องบ้าน" }],
+  "settings": [{ "type": "text", "id": "title", "label": "Tiêu đề", "default": "Lối tắt mua sắm cho ngôi nhà" }],
   "blocks": [
     { "type": "shop", "name": "Cửa hàng", "settings": [
       { "type": "text", "id": "title", "label": "Tên", "default": "DAILY USED SHOP" },
