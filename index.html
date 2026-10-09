@@ -1,0 +1,276 @@
+<title>HomePro Encore</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800;900&family=IBM+Plex+Sans+Thai:wght@400;600&display=swap">
+<style>
+/* Layout: Spotify shell — thư viện bên trái, nội dung dạng "shelf" cuộn ngang, thanh giỏ hàng cố định dưới như thanh Now Playing */
+:root{
+  --base:#121212; --elev:#181818; --elev2:#242424; --hi:#2a2a2a;
+  --fg:#ffffff; --sub:#b3b3b3; --mute:#7a7a7a;
+  --accent:#e4002b;      /* đỏ HomePro thay cho xanh Spotify */
+  --accent-hi:#ff2a4f; --ok:#1ed760;
+  --display:"Figtree","IBM Plex Sans Thai",system-ui,sans-serif;
+  --body:"Figtree","IBM Plex Sans Thai",system-ui,sans-serif;
+  --r:8px; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:#000;color:var(--fg);font-family:var(--body);font-size:14px;margin:0}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+a{color:inherit;text-decoration:none}
+.app{display:grid;grid-template-columns:300px minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto;gap:8px;height:100%;padding:8px}
+/* sidebar */
+.side{display:flex;flex-direction:column;gap:8px;min-height:0}
+.panel{background:var(--base);border-radius:var(--r)}
+.nav{padding:12px}
+.nav a{display:flex;align-items:center;gap:16px;padding:10px 12px;font-weight:700;color:var(--sub);border-radius:6px}
+.nav a.on,.nav a:hover{color:var(--fg)}
+.logo{display:flex;align-items:center;gap:8px;padding:8px 12px 14px;font-weight:900;font-size:20px;letter-spacing:-.02em}
+.logo b{background:var(--accent);border-radius:6px;padding:2px 8px}
+.lib{flex:1;min-height:0;display:flex;flex-direction:column;padding:8px}
+.lib h3{display:flex;align-items:center;gap:12px;margin:8px 12px 12px;font-size:15px;color:var(--sub)}
+.chips{display:flex;gap:8px;padding:0 8px 8px;flex-wrap:wrap}
+.chip{background:var(--elev2);border-radius:999px;padding:6px 12px;font-size:13px}
+.chip.on{background:var(--fg);color:#000}
+.libl{overflow:auto;flex:1}
+.li{display:flex;gap:12px;align-items:center;padding:8px;border-radius:6px}
+.li:hover{background:var(--hi)}
+.li .th{width:48px;height:48px;border-radius:4px;flex:none;display:grid;place-items:center}
+.li p{margin:0;font-weight:500}.li small{color:var(--sub)}
+/* main */
+main{overflow:auto;position:relative;background:var(--base)}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:12px 24px;background:rgba(18,18,18,.85);backdrop-filter:blur(12px)}
+.search{flex:1;max-width:460px;display:flex;align-items:center;gap:10px;background:var(--elev2);border-radius:999px;padding:10px 16px;border:1px solid transparent}
+.search:focus-within{border-color:var(--fg)}
+.search input{flex:1;min-width:0;background:none;border:0;color:var(--fg);font:inherit;font-size:15px;outline:none}
+.pill{background:var(--fg);color:#000;font-weight:700;border-radius:999px;padding:8px 16px}
+.circ{width:32px;height:32px;border-radius:50%;background:#000;display:grid;place-items:center}
+.hero{padding:24px 24px 28px;background:linear-gradient(180deg,#8a0a1d 0%,var(--base) 100%)}
+.hero .row{display:flex;gap:24px;align-items:flex-end;flex-wrap:wrap}
+.cover{width:220px;aspect-ratio:1;max-width:100%;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,.6);background:linear-gradient(135deg,#ff5a36,#e4002b 55%,#5b0011);display:grid;place-items:center;position:relative;overflow:hidden}
+.cover span{font-weight:900;font-size:64px;letter-spacing:-.05em;line-height:.85;text-align:center}
+.eyebrow{font-size:13px;font-weight:700}
+.hero h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,7vw,88px);letter-spacing:-.04em;line-height:.95;margin:8px 0 14px;text-wrap:balance}
+.meta{color:var(--sub)}.meta b{color:var(--fg)}
+.actions{display:flex;align-items:center;gap:24px;padding:20px 24px}
+.play{width:56px;height:56px;border-radius:50%;background:var(--accent);display:grid;place-items:center;transition:transform .15s,background .15s}
+.play:hover{transform:scale(1.05);background:var(--accent-hi)}
+.ghost{color:var(--sub)}.ghost:hover{color:var(--fg)}
+section.shelf{padding:8px 24px 24px}
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.sh h2{font-size:24px;font-weight:800;letter-spacing:-.02em;margin:8px 0 12px}
+.sh a{color:var(--sub);font-weight:700;font-size:13px}.sh a:hover{text-decoration:underline}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:8px}
+.card{background:transparent;padding:12px;border-radius:6px;transition:background .2s;position:relative;text-align:left}
+.card:hover{background:var(--elev)}
+.art{aspect-ratio:1;max-width:100%;border-radius:6px;margin-bottom:10px;display:grid;place-items:center;position:relative;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.art svg{width:46%;height:46%;opacity:.95}
+.card.round .art{border-radius:50%}
+.fab{position:absolute;right:8px;bottom:8px;width:48px;height:48px;border-radius:50%;background:var(--accent);display:grid;place-items:center;opacity:0;transform:translateY(8px);transition:.2s;box-shadow:0 8px 8px rgba(0,0,0,.3)}
+.card:hover .fab,.card:focus-within .fab{opacity:1;transform:none}
+.card h4{margin:0 0 4px;font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card p{margin:0;color:var(--sub);font-size:13px;line-height:1.4}
+.price{font-variant-numeric:tabular-nums;color:var(--fg)!important;font-weight:700}
+.price s{color:var(--mute);font-weight:400;margin-left:6px}
+.tag{position:absolute;left:8px;top:8px;background:var(--accent);font-size:11px;font-weight:800;padding:3px 7px;border-radius:4px;letter-spacing:.04em}
+.quick{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;padding:0 24px 16px}
+.q{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden;font-weight:700;height:56px;position:relative}
+.q:hover{background:rgba(255,255,255,.14)}
+.q i{width:56px;height:56px;flex:none;display:grid;place-items:center}
+/* tracklist */
+.tl{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.tl th{color:var(--sub);font-weight:400;text-align:left;padding:8px 12px;border-bottom:1px solid var(--hi);font-size:13px}
+.tl td{padding:8px 12px;color:var(--sub)}
+.tl tr.r:hover td{background:var(--elev2)}
+.tl tr.r td:first-child{border-radius:4px 0 0 4px}.tl tr.r td:last-child{border-radius:0 4px 4px 0}
+.tl .t{display:flex;gap:12px;align-items:center;color:var(--fg)}
+.tl .t i{width:40px;height:40px;border-radius:4px;flex:none;display:grid;place-items:center}
+.tl .add{border:1px solid var(--mute);border-radius:999px;padding:4px 12px;color:var(--fg);font-size:12px;font-weight:700}
+.tl .add:hover{border-color:var(--fg);transform:scale(1.04)}
+.tblw{overflow-x:auto}
+footer{padding:32px 24px 48px;color:var(--sub);border-top:1px solid var(--hi);margin:24px 24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px}
+footer h5{color:var(--fg);margin:0 0 8px;font-size:14px}
+footer a{display:block;padding:3px 0}footer a:hover{color:var(--fg);text-decoration:underline}
+/* now-playing → giỏ hàng */
+.bar{grid-column:1/-1;display:grid;grid-template-columns:1fr minmax(0,1.3fr) 1fr;align-items:center;gap:16px;padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));background:#000}
+.np{display:flex;gap:12px;align-items:center;min-width:0}
+.np i{width:56px;height:56px;border-radius:4px;flex:none;display:grid;place-items:center}
+.np p{margin:0;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.np small{color:var(--sub)}
+.ctr{display:flex;flex-direction:column;align-items:center;gap:6px}
+.steps{display:flex;gap:6px;font-size:12px;color:var(--sub);width:100%;align-items:center}
+.prog{flex:1;height:4px;background:#4d4d4d;border-radius:2px;overflow:hidden}
+.prog b{display:block;height:100%;background:var(--fg);transition:width .4s}
+.ctr .btns{display:flex;gap:16px;align-items:center}
+.ck{background:var(--fg);color:#000;border-radius:999px;padding:8px 20px;font-weight:800}
+.ck:hover{transform:scale(1.04)}
+.rt{display:flex;justify-content:flex-end;align-items:center;gap:14px;color:var(--sub);font-variant-numeric:tabular-nums}
+.rt strong{color:var(--fg);font-size:16px}
+.toast{position:fixed;left:50%;bottom:110px;transform:translate(-50%,20px);background:#2e77d0;padding:10px 18px;border-radius:8px;font-weight:700;opacity:0;transition:.25s;pointer-events:none;z-index:20;max-width:calc(100% - 32px)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:900px){
+  .app{grid-template-columns:1fr;padding:0;gap:0}
+  .side{display:none}
+  main{border-radius:0}
+  .top,.hero,.actions,section.shelf,.quick{padding-left:16px;padding-right:16px}
+  footer{margin-inline:16px;padding-inline:0}
+  .bar{grid-template-columns:minmax(0,1fr) auto;padding-inline:16px}
+  .ctr .steps,.rt span{display:none}.ctr{order:2}.rt{display:none}
+  .cover{width:160px}.cover span{font-size:46px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hide-m{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="#fff" d="M7 4.5v15l13-7.5z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 2 11.5h3V21h5.5v-6h3v6H19v-9.5h3z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" d="M10.5 3a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15zM16 16l5 5"/></symbol>
+  <symbol id="i-lib" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h2v18H3zm5 0h2v18H8zm5.5.5 1.9-.6 5.6 17.2-1.9.6z"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path fill="#fff" d="M4 10V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3a2 2 0 0 1 2 2v6h-2v2h-2v-2H6v2H4v-2H2v-6a2 2 0 0 1 2-2zm2 0a2 2 0 0 1 2 2v2h8v-2a2 2 0 0 1 2-2V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/></symbol>
+  <symbol id="i-ac" viewBox="0 0 24 24"><path fill="#fff" d="M2 5h20v8H2zm3 5h14v1H5zM6 16l-1 4M12 16v4M18 16l1 4" stroke="#fff" stroke-width="1.6"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path fill="#fff" d="M21 7.5a5 5 0 0 1-6.6 4.7l-8 8a2 2 0 0 1-2.8-2.8l8-8A5 5 0 0 1 17.5 3l-3 3 .5 3 3 .5z"/></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><path fill="#fff" d="M4 12V5a3 3 0 0 1 6 0h-2a1 1 0 0 0-2 0v7h16v2a6 6 0 0 1-4 5.7V21h-2v-1H8v1H6v-1.3A6 6 0 0 1 2 14v-2z"/></symbol>
+  <symbol id="i-pot" viewBox="0 0 24 24"><path fill="#fff" d="M3 9h18v2h-1v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6H3zm5-5h8v3H8z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="#fff" d="M20 3S8 2 5 10c-1.5 4 0 7 0 7L3 21h2l1.5-3c3 1 7.5.5 10-3C20 10 20 3 20 3zM8 16c2-4 5-6 8-8-3 3-5 5-6.5 8z"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a7 7 0 0 1 4 12.7V17H8v-2.3A7 7 0 0 1 12 2zM9 19h6v2H9z"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path fill="#fff" d="M2 5h2v7h7V8h8a3 3 0 0 1 3 3v8h-2v-3H4v3H2zm5 1a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path fill="#fff" d="M4 20l7-7m2-2 3-3m-1-4 5 5-3 3-5-5z" stroke="#fff" stroke-width="2"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path fill="#fff" d="M1 5h13v10h1V8h4l4 4v5h-2a2.5 2.5 0 0 1-5 0H9a2.5 2.5 0 0 1-5 0H1z"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path fill="currentColor" d="M2 3h3l2.6 11h11l2-8H7V4h16l-3 12H6L3.4 5H2zm6 15a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm10 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></symbol>
+</svg>
+
+<div class="app">
+  <aside class="side">
+    <div class="panel nav">
+      <div class="logo"><b>Home</b>Pro</div>
+      <a class="on" href="#"><svg width="24" height="24"><use href="#i-home"/></svg>Trang chủ</a>
+      <a href="#"><svg width="24" height="24"><use href="#i-search"/></svg>Tìm kiếm</a>
+    </div>
+    <div class="panel lib">
+      <h3><svg width="24" height="24"><use href="#i-lib"/></svg>Danh mục của bạn</h3>
+      <div class="chips"><button class="chip on">Phòng</button><button class="chip">Thương hiệu</button><button class="chip">Đã lưu</button></div>
+      <div class="libl" id="lib"></div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="top">
+      <label class="search" for="q"><svg width="20" height="20" style="color:var(--sub)"><use href="#i-search"/></svg><input id="q" placeholder="Bạn muốn sửa gì trong nhà hôm nay?"></label>
+      <div style="flex:1" class="hide-m"></div>
+      <button class="ghost hide-m" style="font-weight:700">Theo dõi đơn hàng</button>
+      <button class="pill">Đăng nhập</button>
+    </div>
+
+    <header class="hero">
+      <div class="row">
+        <div class="cover" aria-hidden="true"><span>MEGA<br>SALE</span></div>
+        <div style="min-width:0">
+          <div class="eyebrow">Chiến dịch · 10.10</div>
+          <h1>Mega Home Sale</h1>
+          <div class="meta"><b>HomePro</b> · 3.200+ sản phẩm · giảm tới 70% · trả góp 0% 10 tháng</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="actions">
+      <button class="play" aria-label="Xem toàn bộ ưu đãi"><svg width="22" height="22"><use href="#i-play"/></svg></button>
+      <button class="ghost" aria-label="Lưu"><svg width="32" height="32"><use href="#i-heart"/></svg></button>
+      <span class="meta">Kết thúc sau <b id="cd" style="font-variant-numeric:tabular-nums">--:--:--</b></span>
+    </div>
+
+    <div class="quick" id="quick"></div>
+
+    <section class="shelf">
+      <div class="sh"><h2>Flash Sale hôm nay</h2><a href="#">Hiện tất cả</a></div>
+      <div class="grid" id="flash"></div>
+    </section>
+
+    <section class="shelf">
+      <div class="sh"><h2>Mua theo phòng</h2><a href="#">Hiện tất cả</a></div>
+      <div class="grid" id="rooms"></div>
+    </section>
+
+    <section class="shelf">
+      <div class="sh"><h2>Thương hiệu nổi bật</h2><a href="#">Hiện tất cả</a></div>
+      <div class="grid" id="brands"></div>
+    </section>
+
+    <section class="shelf">
+      <div class="sh"><h2>Bán chạy tuần này</h2><a href="#">Xem bảng xếp hạng</a></div>
+      <div class="tblw"><table class="tl">
+        <thead><tr><th>#</th><th>Sản phẩm</th><th class="hide-m">Danh mục</th><th style="text-align:right">Giá (฿)</th><th></th></tr></thead>
+        <tbody id="top"></tbody>
+      </table></div>
+    </section>
+
+    <section class="shelf">
+      <div class="sh"><h2>Dịch vụ HomePro</h2></div>
+      <div class="grid" id="svc"></div>
+    </section>
+
+    <footer>
+      <div><h5>Về HomePro</h5><a href="#">Hệ thống 100+ chi nhánh</a><a href="#">Tuyển dụng</a><a href="#">Nhà đầu tư</a></div>
+      <div><h5>Hỗ trợ</h5><a href="#">Hotline 1284</a><a href="#">Đổi trả trong 30 ngày</a><a href="#">Bảo hành</a></div>
+      <div><h5>Thành viên</h5><a href="#">HomePro Member</a><a href="#">Tích điểm The 1</a><a href="#">Trả góp 0%</a></div>
+      <div><h5>Ứng dụng</h5><a href="#">iOS</a><a href="#">Android</a><a href="#">LINE @homepro</a></div>
+    </footer>
+  </main>
+
+  <div class="bar">
+    <div class="np"><i id="npi" style="background:#333"><svg width="26" height="26"><use href="#i-cart"/></svg></i><div style="min-width:0"><p id="npt">Giỏ hàng trống</p><small id="nps">Nhấn ▶ trên sản phẩm để thêm</small></div></div>
+    <div class="ctr">
+      <div class="btns"><button class="ck" id="ck">Thanh toán</button></div>
+      <div class="steps"><span>Giỏ</span><div class="prog"><b id="pg" style="width:0%"></b></div><span id="ship">Freeship từ ฿1,000</span></div>
+    </div>
+    <div class="rt"><span id="cnt">0 món</span><strong id="tot">฿0</strong></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const G=[["#e4002b","#7a0016"],["#1e3264","#0b1530"],["#e8115b","#5c0a26"],["#148a08","#06380a"],["#8d67ab","#3a2550"],["#e1118c","#4f0732"],["#509bf5","#1a3b63"],["#ba5d07","#4a2502"],["#27856a","#0d3a2d"],["#477d95","#1b3340"]];
+const bg=i=>`linear-gradient(135deg,${G[i%G.length][0]},${G[i%G.length][1]})`;
+const ico=(n,s=24)=>`<svg width="${s}" height="${s}"><use href="#i-${n}"/></svg>`;
+const fmt=n=>"฿"+n.toLocaleString("en-US");
+
+const rooms=[["Phòng khách","sofa"],["Phòng ngủ","bed"],["Nhà bếp","pot"],["Phòng tắm","bath"],["Sân vườn","leaf"],["Đèn & điện","bulb"],["Dụng cụ","tool"],["Điều hoà","ac"]];
+const flash=[
+ {n:"Điều hoà Inverter 12,000 BTU",b:"Mitsubishi Electric",p:15990,o:21900,i:"ac"},
+ {n:"Sofa vải 3 chỗ Scandi",b:"Furdini",p:8990,o:14990,i:"sofa"},
+ {n:"Khoan pin 18V kèm 2 pin",b:"Bosch",p:2490,o:3590,i:"tool"},
+ {n:"Bồn cầu 1 khối Eco",b:"American Standard",p:5490,o:7990,i:"bath"},
+ {n:"Nồi chiên không dầu 5.5L",b:"Philips",p:2990,o:4290,i:"pot"},
+ {n:"Bộ đèn LED trần 24W",b:"Philips",p:390,o:690,i:"bulb"}];
+const brands=["Bosch","Panasonic","COTTO","Philips","Makita","Samsung"];
+const top=[["Quạt đứng 16 inch","Điện gia dụng",990,"ac"],["Sơn nước ngoại thất 9L","Vật liệu",1890,"tool"],["Vòi sen nhiệt độ","Phòng tắm",1290,"bath"],["Nệm lò xo túi 5ft","Phòng ngủ",6990,"bed"],["Bộ chậu cây gốm","Sân vườn",450,"leaf"]];
+const svc=[["Lắp đặt tận nhà","Thợ HomePro lắp điều hoà, máy nước nóng, đèn","wrench"],["Giao hàng nhanh","Nhận trong 3 giờ tại Bangkok","truck"],["Vệ sinh điều hoà","Từ ฿600/máy, đặt lịch online","ac"],["Sửa chữa nhà","Khảo sát miễn phí, báo giá trong 24h","tool"]];
+
+const $=id=>document.getElementById(id);
+$("lib").innerHTML=rooms.map((r,i)=>`<a class="li" href="#"><span class="th" style="background:${bg(i)}">${ico(r[1])}</span><div><p>${r[0]}</p><small>Danh mục · ${(i*137+240)} sản phẩm</small></div></a>`).join("");
+$("quick").innerHTML=rooms.slice(0,6).map((r,i)=>`<a class="q" href="#"><i style="background:${bg(i)}">${ico(r[1])}</i>${r[0]}</a>`).join("");
+$("flash").innerHTML=flash.map((f,i)=>`<div class="card"><div class="art" style="background:${bg(i)}">${ico(f.i)}<span class="tag">-${Math.round((1-f.p/f.o)*100)}%</span><button class="fab" data-i="${i}" aria-label="Thêm ${f.n} vào giỏ">${ico("play",20)}</button></div><h4>${f.n}</h4><p>${f.b}</p><p class="price">${fmt(f.p)}<s>${fmt(f.o)}</s></p></div>`).join("");
+$("rooms").innerHTML=rooms.slice(0,6).map((r,i)=>`<a class="card" href="#"><div class="art" style="background:${bg(i+3)}">${ico(r[1])}</div><h4>${r[0]}</h4><p>Ý tưởng, bộ sưu tập và combo ưu đãi</p></a>`).join("");
+$("brands").innerHTML=brands.map((b,i)=>`<a class="card round" href="#"><div class="art" style="background:${bg(i+5)}"><b style="font-size:22px;font-weight:900;letter-spacing:-.03em">${b}</b></div><h4>${b}</h4><p>Thương hiệu</p></a>`).join("");
+$("top").innerHTML=top.map((t,i)=>`<tr class="r"><td>${i+1}</td><td><div class="t"><i style="background:${bg(i+2)}">${ico(t[3],20)}</i>${t[0]}</div></td><td class="hide-m">${t[1]}</td><td style="text-align:right">${t[2].toLocaleString("en-US")}</td><td><button class="add" data-t="${i}">+ Giỏ</button></td></tr>`).join("");
+$("svc").innerHTML=svc.map((s,i)=>`<a class="card" href="#"><div class="art" style="background:${bg(i+6)}">${ico(s[2])}</div><h4>${s[0]}</h4><p>${s[1]}</p></a>`).join("");
+
+let cart=[];
+function add(item){
+  cart.push(item);
+  const tot=cart.reduce((a,c)=>a+c.p,0);
+  $("npt").textContent=item.n; $("nps").textContent=item.b;
+  $("npi").style.background=bg(item.k); $("npi").innerHTML=ico(item.i,26);
+  $("cnt").textContent=cart.length+" món"; $("tot").textContent=fmt(tot);
+  $("pg").style.width=Math.min(100,tot/10)+"%";
+  $("ship").textContent=tot>=1000?"Đủ điều kiện freeship":"Còn "+fmt(1000-tot)+" để freeship";
+  const t=$("toast"); t.textContent="Đã thêm vào giỏ hàng"; t.classList.add("on"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("on"),1600);
+}
+document.addEventListener("click",e=>{
+  const f=e.target.closest(".fab"); if(f){const x=flash[f.dataset.i];add({...x,k:+f.dataset.i});return}
+  const a=e.target.closest(".add"); if(a){const x=top[a.dataset.t];add({n:x[0],b:x[1],p:x[2],i:x[3],k:+a.dataset.t+2})}
+});
+$("ck").onclick=()=>{const t=$("toast");t.textContent=cart.length?"Bản demo: chưa kết nối thanh toán":"Giỏ hàng đang trống";t.classList.add("on");setTimeout(()=>t.classList.remove("on"),1800)};
+const end=new Date();end.setHours(23,59,59,0);
+(function tick(){let s=Math.max(0,(end-new Date())/1000|0);$("cd").textContent=[s/3600|0,(s/60|0)%60,s%60].map(v=>String(v).padStart(2,"0")).join(":");setTimeout(tick,1000)})();
+</script>
