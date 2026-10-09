@@ -1,23 +1,85 @@
+{%- assign threshold = section.settings.freeship | times: 100 -%}
+<nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>Giỏ hàng</span></nav>
 <section class="container">
-  <h1 class="page-title">Giỏ hàng</h1>
+  <h1 class="page-title">Giỏ hàng {% if cart.item_count > 0 %}<small class="muted">({{ cart.item_count }} sản phẩm)</small>{% endif %}</h1>
   {%- if cart.item_count > 0 -%}
-    <form action="{{ routes.cart_url }}" method="post">
+  <form class="cart" action="{{ routes.cart_url }}" method="post" data-cart-form>
+    <div class="cart__lines">
+      {%- if threshold > 0 -%}
+        {%- assign left = threshold | minus: cart.total_price -%}
+        {%- assign pct = cart.total_price | times: 100 | divided_by: threshold | at_most: 100 -%}
+        <div class="freeship">
+          {%- if left > 0 -%}<span>Mua thêm <b>{{ left | money_without_trailing_zeros }}</b> để được miễn phí giao hàng</span>
+          {%- else -%}<span>{% render 'icon', name: 'truck' %} Đơn hàng được <b>miễn phí giao hàng</b></span>{%- endif -%}
+          <i><em style="width:{{ pct }}%"></em></i>
+        </div>
+      {%- endif -%}
       {%- for item in cart.items -%}
-        <div style="display:flex;gap:16px;align-items:center;border-bottom:1px solid var(--hp-line);padding:12px 0">
-          {%- if item.image -%}{{ item.image | image_url: width: 120 | image_tag: style: 'width:80px;border-radius:8px' }}{%- endif -%}
-          <a href="{{ item.url }}" style="flex:1;color:var(--hp-head)">{{ item.product.title }}<br><small>{{ item.variant.title }}</small></a>
-          <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" aria-label="Số lượng" style="width:70px;padding:6px">
-          <b class="price" style="font-size:16px">{{ item.final_line_price | money_without_trailing_zeros }}</b>
+        <div class="cline">
+          <a class="cline__img" href="{{ item.url }}">
+            {%- if item.image -%}{{ item.image | image_url: width: 200 | image_tag: alt: item.product.title }}{%- else -%}{% render 'icon', name: 'box' %}{%- endif -%}
+          </a>
+          <div class="cline__info">
+            <span class="pcard__vendor">{{ item.vendor }}</span>
+            <a class="cline__title" href="{{ item.url }}">{{ item.product.title }}</a>
+            {%- unless item.product.has_only_default_variant -%}<small>{{ item.variant.title }}</small>{%- endunless -%}
+            <div class="chips">
+              {%- if item.product.tags contains 'free-install' -%}<span class="chip">Lắp đặt miễn phí</span>{%- endif -%}
+              {%- if item.product.type == 'Dịch vụ' -%}<span class="chip">Dịch vụ</span>{%- endif -%}
+            </div>
+            <a class="cline__remove" href="{{ item.url_to_remove }}">Xóa</a>
+          </div>
+          <div class="cline__qty">
+            <button type="button" data-step="-1" aria-label="Giảm">−</button>
+            <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" aria-label="Số lượng {{ item.product.title }}" data-qty>
+            <button type="button" data-step="1" aria-label="Tăng">+</button>
+          </div>
+          <div class="cline__price">
+            <b class="price">{{ item.final_line_price | money_without_trailing_zeros }}</b>
+            {%- if item.original_line_price > item.final_line_price -%}<s>{{ item.original_line_price | money_without_trailing_zeros }}</s>
+            {%- elsif item.variant.compare_at_price > item.variant.price -%}<s>{{ item.variant.compare_at_price | times: item.quantity | money_without_trailing_zeros }}</s>{%- endif -%}
+          </div>
         </div>
       {%- endfor -%}
-      <div style="display:flex;justify-content:flex-end;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap">
-        <span>Tổng <b class="price">{{ cart.total_price | money_without_trailing_zeros }}</b></span>
-        <button class="btn btn--outline" type="submit" name="update">Cập nhật</button>
-        <button class="btn btn--orange" type="submit" name="checkout">Thanh toán</button>
-      </div>
-    </form>
+      <button class="btn btn--outline btn--sm cart__update" type="submit" name="update">Cập nhật giỏ hàng</button>
+    </div>
+
+    <aside class="cart__sum">
+      <h2>Tóm tắt đơn hàng</h2>
+      <div class="cart__row"><span>Tạm tính</span><b>{{ cart.items_subtotal_price | money_without_trailing_zeros }}</b></div>
+      {%- for d in cart.cart_level_discount_applications -%}
+        <div class="cart__row cart__row--save"><span>{{ d.title }}</span><b>−{{ d.total_allocated_amount | money_without_trailing_zeros }}</b></div>
+      {%- endfor -%}
+      <div class="cart__row"><span>Mã giảm giá</span><b data-coupon-current>Chưa có</b></div>
+      <a class="cart__coupon" href="{{ section.settings.coupon_link }}">Chọn mã giảm giá ›</a>
+      <div class="cart__row cart__row--total"><span>Tổng cộng</span><b class="price">{{ cart.total_price | money_without_trailing_zeros }}</b></div>
+      <small class="muted">Phí giao hàng và mã giảm giá được tính ở bước thanh toán.</small>
+      <label class="cart__note" for="cart-note">Ghi chú cho đơn hàng</label>
+      <textarea class="field" id="cart-note" name="note" rows="2" placeholder="Ví dụ: giao giờ hành chính, gọi trước 30 phút">{{ cart.note }}</textarea>
+      <button class="btn btn--orange btn--lg" type="submit" name="checkout">Thanh toán</button>
+      <a class="cart__continue" href="{{ routes.all_products_collection_url }}">‹ Tiếp tục mua sắm</a>
+      <ul class="cart__trust">
+        <li>{% render 'icon', name: 'shield' %}Thanh toán an toàn</li>
+        <li>{% render 'icon', name: 'recycle' %}Đổi trả trong 7 ngày</li>
+        <li>{% render 'icon', name: 'tools' %}Lắp đặt tận nhà</li>
+      </ul>
+    </aside>
+  </form>
   {%- else -%}
-    <p>Giỏ hàng của bạn đang trống <a href="{{ routes.all_products_collection_url }}" style="color:var(--hp-blue)">Mua sắm ngay</a></p>
+    <div class="cart-empty">
+      {% render 'icon', name: 'cart' %}
+      <p>Giỏ hàng của bạn đang trống.</p>
+      <a class="btn btn--lg" href="{{ routes.all_products_collection_url }}">Mua sắm ngay</a>
+    </div>
   {%- endif -%}
 </section>
-{% schema %}{ "name": "Giỏ hàng" }{% endschema %}
+
+{% schema %}
+{
+  "name": "Giỏ hàng",
+  "settings": [
+    { "type": "number", "id": "freeship", "label": "Ngưỡng miễn phí giao hàng (₫)", "default": 1000000, "info": "Để 0 để ẩn thanh tiến độ. Phí thật đặt trong Settings → Shipping." },
+    { "type": "url", "id": "coupon_link", "label": "Link trang mã giảm giá" }
+  ]
+}
+{% endschema %}

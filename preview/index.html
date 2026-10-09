@@ -415,12 +415,59 @@ button{cursor:pointer}
 .contact__form{display:flex;flex-direction:column;gap:6px}.contact__form label{font-weight:600;color:var(--hp-head);font-size:13px;margin-top:6px}.contact__form .btn{margin-top:10px}
 .contact__ok{background:#eefaf3;color:#1a7a48;padding:10px;border-radius:8px;margin:0}.contact__err{background:#fdecee;color:var(--hp-red);padding:10px;border-radius:8px;margin:0}
 @media (max-width:760px){.contact{grid-template-columns:1fr}}
+
+/* ---- Giỏ hàng ---- */
+.muted{color:var(--hp-mute);font-weight:400;font-size:.6em}
+small.muted{font-size:12px}
+.cart{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.cart__lines{display:flex;flex-direction:column;gap:12px;min-width:0}
+.freeship{background:var(--hp-sky);border-radius:var(--r-card);padding:12px 14px;display:grid;gap:8px;color:var(--hp-head);font-size:14px}
+.freeship span{display:flex;align-items:center;gap:6px}.freeship svg{width:20px;height:20px;color:var(--hp-blue)}
+.freeship i{height:8px;border-radius:4px;background:#fff;overflow:hidden}.freeship em{display:block;height:100%;background:var(--hp-blue);border-radius:4px;transition:width .3s}
+.cline{display:grid;grid-template-columns:96px minmax(0,1fr) auto auto;gap:16px;align-items:center;border:1px solid var(--hp-line);border-radius:var(--r-card);padding:12px}
+.cline__img{width:96px;height:96px;border-radius:8px;background:var(--hp-soft);display:grid;place-items:center;overflow:hidden;color:#c3c9d1}
+.cline__img img{width:100%;height:100%;object-fit:contain}.cline__img svg{width:50%;height:50%}
+.cline__info{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cline__title{color:var(--hp-head);font-weight:500;line-height:1.35}.cline__title:hover{color:var(--hp-blue)}
+.cline__info small{color:var(--hp-mute)}
+.cline__remove{font-size:12px;color:var(--hp-mute);text-decoration:underline;align-self:flex-start}.cline__remove:hover{color:var(--hp-red)}
+.cline__qty{display:flex;border:1px solid var(--hp-line);border-radius:8px;overflow:hidden}
+.cline__qty button{width:34px;border:0;background:var(--hp-soft);font-size:18px;color:var(--hp-head)}.cline__qty button:hover{background:var(--hp-sky)}
+.cline__qty input{width:44px;border:0;text-align:center;-moz-appearance:textfield}
+.cline__qty input::-webkit-outer-spin-button,.cline__qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.cline__price{text-align:right;min-width:110px}.cline__price s{display:block;color:var(--hp-mute);font-size:12px}
+.cart__update{align-self:flex-end}
+.cart__sum{position:sticky;top:150px;border:1px solid var(--hp-line);border-radius:var(--r-card);padding:18px;display:flex;flex-direction:column;gap:10px}
+.cart__sum h2{margin:0 0 4px;font-size:18px;color:var(--hp-head)}
+.cart__row{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.cart__row--save b{color:#1a9e5c}
+.cart__row--total{border-top:1px solid var(--hp-line);padding-top:10px;align-items:baseline}.cart__row--total .price{font-size:24px}
+.cart__coupon{color:var(--hp-blue);font-size:13px;font-weight:600}
+.cart__note{font-weight:600;color:var(--hp-head);font-size:13px}
+.cart__sum .btn--lg{width:100%}
+.cart__continue{text-align:center;color:var(--hp-blue);font-size:13px}
+.cart__trust{list-style:none;margin:6px 0 0;padding:10px 0 0;border-top:1px solid var(--hp-line);display:grid;gap:6px;font-size:12px}
+.cart__trust li{display:flex;gap:8px;align-items:center}.cart__trust svg{width:16px;height:16px;color:var(--hp-blue)}
+.cart-empty{display:grid;justify-items:center;gap:12px;padding:60px 16px;text-align:center}
+.cart-empty svg{width:72px;height:72px;color:var(--hp-line)}
+@media (max-width:900px){.cart{grid-template-columns:1fr}.cart__sum{position:static}}
+@media (max-width:560px){.cline{grid-template-columns:72px minmax(0,1fr);grid-template-areas:"img info" "qty price"}.cline__img{width:72px;height:72px;grid-area:img}.cline__info{grid-area:info}.cline__qty{grid-area:qty;justify-self:start}.cline__price{grid-area:price;min-width:0}}
+/* ---- Mega menu trên điện thoại: dạng accordion ---- */
+@media (max-width:760px){
+  .mega{position:fixed;top:0;bottom:0;left:0;right:0;overflow:auto}
+  .mega__inner{max-height:none;padding:0}
+  .mega__list li .mega__panel{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:8px 16px 16px 46px;background:var(--hp-soft)}
+  .mega__close{display:flex}
+}
+.mega__close{display:none;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--hp-blue);color:#fff;font-weight:600}
+.mega__close button{border:0;background:none;color:#fff;font-size:22px}
+@media (max-width:760px){.chatfab{padding:6px;bottom:calc(14px + env(safe-area-inset-bottom,0px));right:14px;font-size:0;gap:0}.slider{aspect-ratio:16/9}}
 </style>
 <div class="topbar">
   <div class="container topbar__inner"><a href="" >Thẻ thành viên</a><a href="" >Trở thành người bán</a><a href="" >Tìm cửa hàng</a><div class="topbar__help">
       <a href="">Trung tâm hỗ trợ ▾</a>
       <ul>
-        <li><a href="tel:1284">Hotline</a></li><li><a href="#">สอบถาม</a></li><li><a href="#">ร้องเรียน</a></li><li><a href="#">ติดต่อกรรมการตรวจสอบ</a></li></ul>
+        <li><a href="tel:1284">Hotline</a></li><li><a href="#">Hỏi đáp</a></li><li><a href="#">Khiếu nại</a></li><li><a href="#">Theo dõi đơn hàng</a></li></ul>
     </div></div>
 </div>
 
@@ -429,7 +476,7 @@ button{cursor:pointer}
   <header class="header">
     <div class="container header__main">
       <button class="burger" type="button" aria-label="Menu" data-mega-toggle>☰</button>
-      <a class="logo" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M2 11 12 3l10 8M5 9v11h14V9"/></svg>HomeStyle</a>
+      <a class="logo" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M2 11 12 3l10 8M5 9v11h14V9"/></svg>Gia Khang</a>
       <a class="loc" href="/account/addresses"><span>Giao đến</span><b>Chọn địa chỉ ▾</b></a>
       <a class="loc" href=""><span>Nhận tại cửa hàng</span><b>Chọn cửa hàng ▾</b></a>
       <form class="search" action="/search" method="get" role="search">
@@ -455,39 +502,27 @@ button{cursor:pointer}
 
   <nav class="nav" aria-label="Menu chính">
     <div class="container nav__inner">
-      <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ Danh mục sản phẩm</button><a class="nav__item" href="#">ช้อปตามห้อง</a><a class="nav__item" href="#">ช้อปตามแบรนด์</a><a class="nav__item" href="#">Mall</a><a class="nav__item" href="#">สินค้าช่าง-งาน D.I.Y</a><a class="nav__item" href="#">โฮมกูรู</a><a class="nav__item" href="#">ช่างมืออาชีพ</a><a class="nav__item" href="#">โปรเด็ด</a><a class="nav__item" href="#">บริการพิเศษ</a></div>
+      <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ Danh mục sản phẩm</button><a class="nav__item" href="#">Mua theo phòng</a><a class="nav__item" href="#">Thương hiệu</a><a class="nav__item" href="#">Flash Sale</a><a class="nav__item" href="#">Double Shock</a><a class="nav__item" href="#">Sản phẩm mới</a><a class="nav__item" href="#">Bán chạy</a><a class="nav__item" href="#">Dịch vụ lắp đặt</a><a class="nav__item" href="#">Ưu đãi hot</a></div>
   </nav>
   <div class="shortcuts">
-    <div class="container"><a href="#">เครื่องใช้ไฟฟ้า</a><a href="#">เครื่องใช้ไฟฟ้าขนาดเล็ก</a><a href="#">เฟอร์นิเจอร์และของแต่งบ้าน</a><a href="#">ทีวี เครื่องเสียง เกม</a><a href="#">จัดเก็บและของใช้ในบ้าน</a><a href="#">ห้องน้ำ</a><a href="#">งานระบบประปา</a><a href="#">ห้องครัวและอุปกรณ์</a><a href="#">วัสดุปูพื้นและผนัง</a><a href="#">วัสดุก่อสร้าง</a><a href="#">เครื่องมือช่างและฮาร์ดแวร์</a></div>
+    <div class="container"><a href="#">Điện máy</a><a href="#">Đồ gia dụng</a><a href="#">Tivi & âm thanh</a><a href="#">Nội thất</a><a href="#">Phòng ngủ & chăn ga</a><a href="#">Phòng tắm</a><a href="#">Vật liệu xây dựng</a><a href="#">Dụng cụ</a><a href="#">Đèn & bóng đèn</a><a href="#">Thiết bị an ninh</a><a href="#">Sân vườn</a></div>
   </div>
 
   <div class="mega" data-mega>
+    <div class="mega__close"><span>Danh mục sản phẩm</span><button type="button" data-mega-close aria-label="Đóng">×</button></div>
     <div class="container mega__inner">
       <ul class="mega__list"><li><button type="button" data-mega-tab="1" class="is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="8" rx="1.5"/><path d="M6 10h12M7 16l-1 3M12 16v3M17 16l1 3"/></svg>
-เครื่องใช้ไฟฟ้า</button></li><li><button type="button" data-mega-tab="2" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18M5 9v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V9M9 9V6h6v3M1 11h2M21 11h2"/></svg>
-เครื่องใช้ไฟฟ้าขนาดเล็ก</button></li><li><button type="button" data-mega-tab="3" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
-เฟอร์นิเจอร์และของแต่งบ้าน</button></li><li><button type="button" data-mega-tab="4" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 12a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v6H3zM5 18v2M19 18v2"/></svg>
-ทีวี เครื่องเสียง เกม</button></li><li><button type="button" data-mega-tab="5" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6v14M3 16h18v4M3 12h18v4M21 12v-1a3 3 0 0 0-3-3h-7v4"/><circle cx="7" cy="10" r="1.6"/></svg>
-จัดเก็บและของใช้ในบ้าน</button></li><li><button type="button" data-mega-tab="6" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></svg>
-ห้องน้ำ</button></li><li><button type="button" data-mega-tab="7" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3zM3 9.7h18M3 14.3h18M9 5v4.7M15 5v4.7M6 9.7v4.6M12 9.7v4.6M18 9.7v4.6M9 14.3V19M15 14.3V19"/></svg>
-งานระบบประปา</button></li><li><button type="button" data-mega-tab="8" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19l-3 1 1-3 7.5-7.5zM4 4l6 6M3 7l4-4"/></svg>
-ห้องครัวและอุปกรณ์</button></li><li><button type="button" data-mega-tab="9" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/></svg>
-วัสดุปูพื้นและผนัง</button></li><li><button type="button" data-mega-tab="10" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
-วัสดุก่อสร้าง</button></li><li><button type="button" data-mega-tab="11" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4S8 3 5 11c-1.4 3.8.5 7 .5 7S15 19 18 11c1.5-4 2-7 2-7zM4 21c3-5 6-8 11-11"/></svg>
-เครื่องมือช่างและฮาร์ดแวร์</button></li><li><button type="button" data-mega-tab="12" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-โคมไฟและหลอดไฟ</button></li><li><button type="button" data-mega-tab="13" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-ประตูและหน้าต่าง</button></li><li><button type="button" data-mega-tab="14" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-ระบบไฟฟ้าและความปลอดภัย</button></li><li><button type="button" data-mega-tab="15" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-เฟอร์นิเจอร์นอกบ้าน & งานสวน</button></li><li><button type="button" data-mega-tab="16" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-ห้องนอนและเครื่องนอน</button></li><li><button type="button" data-mega-tab="17" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-สีและอุปกรณ์ทาสี</button></li><li><button type="button" data-mega-tab="18" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-กีฬาและท่องเที่ยว</button></li><li><button type="button" data-mega-tab="19" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-สุขภาพ</button></li><li><button type="button" data-mega-tab="20" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-มือถือ ไอที แกดเจ็ต</button></li><li><button type="button" data-mega-tab="21" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-ความงามและของใช้ส่วนตัว</button></li><li><button type="button" data-mega-tab="22" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-ยานยนต์</button></li><li><button type="button" data-mega-tab="23" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-อาหารและอุปกรณ์สัตว์เลี้ยง</button></li><li><button type="button" data-mega-tab="24" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-แม่และเด็ก</button></li></ul><div class="mega__panel" data-mega-panel="1" ><div><h4><a href="#">เครื่องปรับอากาศ</a></h4><a href="#">ติดผนัง</a><a href="#">ตั้งพื้น</a><a href="#">แขวน</a><a href="#">เคลื่อนที่</a><a href="#">ฝัง</a><a href="#">ซ่อนเพดาน</a><a href="#">ตู้ตั้ง</a><a href="#">แผ่นกรองอากาศ</a><a href="#">อุปกรณ์ติดตั้งแอร์</a></div><div><h4><a href="#">เครื่องซักผ้าและอบผ้า</a></h4><a href="#">ฝาหน้า</a><a href="#">ฝาบน</a><a href="#">2 ถัง</a><a href="#">ซักอบผ้า</a><a href="#">อบผ้าฝาหน้า</a><a href="#">ซักอบผ้า ทาวเวอร์</a><a href="#">อบทำความสะอาดผ้า</a><a href="#">อุปกรณ์เสริม</a></div><div><h4><a href="#">ตู้เย็น</a></h4><a href="#">1 ประตู</a><a href="#">2 ประตู</a><a href="#">Side by Side</a><a href="#">Multi Door</a><a href="#">บิวท์อิน</a><a href="#">อุปกรณ์จัดเก็บ</a><a href="#">ถาดทำน้ำแข็ง</a></div><div><h4><a href="#">ตู้แช่ไวน์ และเครื่องแช่ไวน์</a></h4></div><div><h4><a href="#">ตู้น้ำดื่ม</a></h4></div><div><h4><a href="#">ตู้แช่เค้ก</a></h4></div></div><div class="mega__panel" data-mega-panel="2" hidden><div><h4><a href="#">เครื่องใช้ไฟฟ้าในครัว</a></h4><a href="#">เตาอบ & ไมโครเวฟ</a><a href="#">หม้อหุงข้าว</a><a href="#">เครื่องชงกาแฟ & ชา</a><a href="#">หม้อทอด</a></div><div><h4><a href="#">เครื่องใช้ในบ้าน</a></h4><a href="#">พัดลม</a><a href="#">เครื่องฟอกอากาศ</a><a href="#">เครื่องดูดฝุ่น</a></div></div><div class="mega__panel" data-mega-panel="3" hidden><div><h4><a href="#">เฟอร์นิเจอร์และของแต่งบ้าน</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="4" hidden><div><h4><a href="#">ทีวี เครื่องเสียง เกม</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="5" hidden><div><h4><a href="#">จัดเก็บและของใช้ในบ้าน</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="6" hidden><div><h4><a href="#">ห้องน้ำ</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="7" hidden><div><h4><a href="#">งานระบบประปา</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="8" hidden><div><h4><a href="#">ห้องครัวและอุปกรณ์</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="9" hidden><div><h4><a href="#">วัสดุปูพื้นและผนัง</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="10" hidden><div><h4><a href="#">วัสดุก่อสร้าง</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="11" hidden><div><h4><a href="#">เครื่องมือช่างและฮาร์ดแวร์</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="12" hidden><div><h4><a href="#">โคมไฟและหลอดไฟ</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="13" hidden><div><h4><a href="#">ประตูและหน้าต่าง</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="14" hidden><div><h4><a href="#">ระบบไฟฟ้าและความปลอดภัย</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="15" hidden><div><h4><a href="#">เฟอร์นิเจอร์นอกบ้าน & งานสวน</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="16" hidden><div><h4><a href="#">ห้องนอนและเครื่องนอน</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="17" hidden><div><h4><a href="#">สีและอุปกรณ์ทาสี</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="18" hidden><div><h4><a href="#">กีฬาและท่องเที่ยว</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="19" hidden><div><h4><a href="#">สุขภาพ</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="20" hidden><div><h4><a href="#">มือถือ ไอที แกดเจ็ต</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="21" hidden><div><h4><a href="#">ความงามและของใช้ส่วนตัว</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="22" hidden><div><h4><a href="#">ยานยนต์</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="23" hidden><div><h4><a href="#">อาหารและอุปกรณ์สัตว์เลี้ยง</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div><div class="mega__panel" data-mega-panel="24" hidden><div><h4><a href="#">แม่และเด็ก</a></h4><a href="#">สินค้าแนะนำ</a><a href="#">สินค้าขายดี</a><a href="#">สินค้าใหม่</a></div></div></div>
+Điện máy</button></li><li><button type="button" data-mega-tab="2" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18M5 9v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V9M9 9V6h6v3M1 11h2M21 11h2"/></svg>
+Đồ gia dụng</button></li><li><button type="button" data-mega-tab="3" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+Tivi & âm thanh</button></li><li><button type="button" data-mega-tab="4" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 12a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v6H3zM5 18v2M19 18v2"/></svg>
+Nội thất</button></li><li><button type="button" data-mega-tab="5" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6v14M3 16h18v4M3 12h18v4M21 12v-1a3 3 0 0 0-3-3h-7v4"/><circle cx="7" cy="10" r="1.6"/></svg>
+Phòng ngủ & chăn ga</button></li><li><button type="button" data-mega-tab="6" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></svg>
+Phòng tắm</button></li><li><button type="button" data-mega-tab="7" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3zM3 9.7h18M3 14.3h18M9 5v4.7M15 5v4.7M6 9.7v4.6M12 9.7v4.6M18 9.7v4.6M9 14.3V19M15 14.3V19"/></svg>
+Vật liệu xây dựng</button></li><li><button type="button" data-mega-tab="8" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19l-3 1 1-3 7.5-7.5zM4 4l6 6M3 7l4-4"/></svg>
+Dụng cụ</button></li><li><button type="button" data-mega-tab="9" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/></svg>
+Đèn & bóng đèn</button></li><li><button type="button" data-mega-tab="10" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+Thiết bị an ninh</button></li><li><button type="button" data-mega-tab="11" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4S8 3 5 11c-1.4 3.8.5 7 .5 7S15 19 18 11c1.5-4 2-7 2-7zM4 21c3-5 6-8 11-11"/></svg>
+Sân vườn</button></li></ul><div class="mega__panel" data-mega-panel="1" ><div><h4><a href="#">Máy lạnh</a></h4><a href="#">Treo tường</a><a href="#">Âm trần</a><a href="#">Di động</a><a href="#">Phụ kiện lắp đặt</a></div><div><h4><a href="#">Máy giặt & máy sấy</a></h4><a href="#">Cửa trước</a><a href="#">Cửa trên</a><a href="#">Máy sấy</a></div><div><h4><a href="#">Tủ lạnh</a></h4><a href="#">2 cửa</a><a href="#">Side by Side</a><a href="#">Multi Door</a></div></div><div class="mega__panel" data-mega-panel="2" hidden><div><h4><a href="#">Nhà bếp</a></h4><a href="#">Nồi chiên không dầu</a><a href="#">Nồi cơm điện</a><a href="#">Máy pha cà phê</a></div><div><h4><a href="#">Vệ sinh & không khí</a></h4><a href="#">Robot hút bụi</a><a href="#">Máy lọc không khí</a><a href="#">Quạt</a></div></div><div class="mega__panel" data-mega-panel="3" hidden><div><h4><a href="#">Tivi</a></h4><a href="#">Smart TV</a><a href="#">Tivi 4K</a></div><div><h4><a href="#">Âm thanh</a></h4><a href="#">Loa thanh</a><a href="#">Loa bluetooth</a></div></div><div class="mega__panel" data-mega-panel="4" hidden><div><h4><a href="#">Phòng khách</a></h4><a href="#">Sofa</a><a href="#">Kệ & tủ</a></div><div><h4><a href="#">Lưu trữ</a></h4><a href="#">Kệ giày</a><a href="#">Tủ đồ</a></div></div><div class="mega__panel" data-mega-panel="5" hidden><div><h4><a href="#">Nệm</a></h4><a href="#">Nệm lò xo</a><a href="#">Nệm foam</a></div><div><h4><a href="#">Chăn ga gối</a></h4></div></div><div class="mega__panel" data-mega-panel="6" hidden><div><h4><a href="#">Thiết bị vệ sinh</a></h4><a href="#">Bồn cầu</a><a href="#">Lavabo</a></div><div><h4><a href="#">Sen & vòi</a></h4><a href="#">Sen cây</a><a href="#">Vòi lavabo</a></div></div><div class="mega__panel" data-mega-panel="7" hidden><div><h4><a href="#">Gạch ốp lát</a></h4><a href="#">Gạch lát nền</a><a href="#">Gạch ốp tường</a></div><div><h4><a href="#">Sơn</a></h4><a href="#">Sơn nội thất</a><a href="#">Sơn ngoại thất</a></div></div><div class="mega__panel" data-mega-panel="8" hidden><div><h4><a href="#">Dụng cụ điện</a></h4><a href="#">Máy khoan</a><a href="#">Máy mài</a></div><div><h4><a href="#">Dụng cụ cầm tay</a></h4><a href="#">Bộ dụng cụ</a></div></div><div class="mega__panel" data-mega-panel="9" hidden><div><h4><a href="#">Đèn trong nhà</a></h4><a href="#">Đèn âm trần</a><a href="#">Đèn trang trí</a></div></div><div class="mega__panel" data-mega-panel="10" hidden><div><h4><a href="#">Khóa cửa</a></h4><a href="#">Khóa vân tay</a></div><div><h4><a href="#">Camera</a></h4></div></div><div class="mega__panel" data-mega-panel="11" hidden><div><h4><a href="#">Nội thất ngoài trời</a></h4><a href="#">Bàn ghế sân vườn</a></div></div></div>
   </div>
 </div>
 
@@ -672,8 +707,8 @@ button{cursor:pointer}
 <section class="container sec" data-tabs><div class="strip strip--shock">
       <h3>DOUBLE SHOCK!</h3><a href="#">Xem thêm &gt;&gt;</a></div><div class="row-scroll"><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-28%</span><span class="pcard__brand">Haier</span><a href="#"><h3 class="pcard__title">แอร์ผนัง HAIER 12000 BTU อินเวอร์เตอร์</h3></a><div class="pcard__price">
-      <div class="price">฿12,990<s>฿17,990</s></div>
+</a><span class="pcard__tag">-21%</span><span class="pcard__brand">CoolAir</span><a href="#"><h3 class="pcard__title">Máy lạnh Inverter 1.5 HP lọc bụi mịn</h3></a><div class="pcard__price">
+      <div class="price">10.990.000₫<s>13.990.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -681,8 +716,8 @@ button{cursor:pointer}
       </form>
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-42%</span><span class="pcard__brand">PHILIPS</span><a href="#"><h3 class="pcard__title">เตารีดไอน้ำแยกหม้อต้ม PHILIPS PSG6066</h3></a><div class="pcard__price">
-      <div class="price">฿1,899<s>฿3,290</s></div>
+</a><span class="pcard__tag">-22%</span><span class="pcard__brand">FrostLine</span><a href="#"><h3 class="pcard__title">Tủ lạnh 2 cửa 256 lít ngăn đông mềm</h3></a><div class="pcard__price">
+      <div class="price">6.490.000₫<s>8.290.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -690,8 +725,8 @@ button{cursor:pointer}
       </form>
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-52%</span><span class="pcard__brand">BOSCH</span><a href="#"><h3 class="pcard__title">เครื่องชงกาแฟอัตโนมัติ BOSCH TIE20119</h3></a><div class="pcard__price">
-      <div class="price">฿2,890<s>฿5,990</s></div>
+</a><span class="pcard__tag">-20%</span><span class="pcard__brand">WashPro</span><a href="#"><h3 class="pcard__title">Máy sấy quần áo 8 kg thông hơi</h3></a><div class="pcard__price">
+      <div class="price">5.990.000₫<s>7.490.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -699,8 +734,8 @@ button{cursor:pointer}
       </form>
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-42%</span><span class="pcard__brand">Xiaomi</span><a href="#"><h3 class="pcard__title">เครื่องดูดฝุ่นหุ่นยนต์ XIAOMI X20+</h3></a><div class="pcard__price">
-      <div class="price">฿1,449<s>฿2,490</s></div>
+</a><span class="pcard__tag">-28%</span><span class="pcard__brand">BrewLab</span><a href="#"><h3 class="pcard__title">Máy pha cà phê espresso</h3></a><div class="pcard__price">
+      <div class="price">3.290.000₫<s>4.590.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -708,8 +743,8 @@ button{cursor:pointer}
       </form>
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-26%</span><span class="pcard__brand">Electrolux</span><a href="#"><h3 class="pcard__title">ตู้เย็น 2 ประตู ELECTROLUX 12 คิว</h3></a><div class="pcard__price">
-      <div class="price">฿13,990<s>฿18,990</s></div>
+</a><span class="pcard__tag">-29%</span><span class="pcard__brand">CleanBot</span><a href="#"><h3 class="pcard__title">Robot hút bụi lau nhà tự động</h3></a><div class="pcard__price">
+      <div class="price">4.990.000₫<s>6.990.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -717,8 +752,8 @@ button{cursor:pointer}
       </form>
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-25%</span><span class="pcard__brand">MITSUBISHI</span><a href="#"><h3 class="pcard__title">ตู้เย็น MITSUBISHI Multi Door</h3></a><div class="pcard__price">
-      <div class="price">฿29,990<s>฿39,990</s></div>
+</a><span class="pcard__tag">-31%</span><span class="pcard__brand">CasaNova</span><a href="#"><h3 class="pcard__title">Sofa vải 3 chỗ phong cách Bắc Âu</h3></a><div class="pcard__price">
+      <div class="price">8.990.000₫<s>12.990.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -728,11 +763,11 @@ button{cursor:pointer}
 
 
 <section class="container sec" data-tabs><div class="strip strip--flash">
-      <h3>⚡ FLASH SALE</h3><div class="countdown" data-countdown="2026-10-11T17:36:56.161Z">Kết thúc sau <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></div><a href="#">Xem thêm &gt;&gt;</a></div><div class="row-scroll"><article class="pcard">
+      <h3>⚡ FLASH SALE</h3><div class="countdown" data-countdown="2026-10-11T17:44:29.665Z">Kết thúc sau <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></div><a href="#">Xem thêm &gt;&gt;</a></div><div class="row-scroll"><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-59%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">บ้านสัตว์เลี้ยง DPETT สีเทา-ฟ้า</h3></a><div class="pcard__price">
-      <div class="price">⚡฿2,690<s>฿6,500</s></div>
+</a><span class="pcard__tag">-24%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><a href="#"><h3 class="pcard__title">Máy lạnh Inverter 1 HP tiết kiệm điện</h3></a><div class="pcard__price">
+      <div class="price">⚡7.990.000₫<s>10.490.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -740,9 +775,49 @@ button{cursor:pointer}
       </form>
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-40%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">สุขภัณฑ์ 1 ชิ้น COTTO C1006H EXC. 3/4.5 ลิตร</h3></a><div class="pcard__price">
-      <div class="price">⚡฿5,390<s>฿8,990</s></div>
+</a><span class="pcard__tag">-25%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><a href="#"><h3 class="pcard__title">Máy giặt cửa trước 9 kg Inverter</h3></a><div class="pcard__price">
+      <div class="price">⚡7.490.000₫<s>9.990.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-29%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><a href="#"><h3 class="pcard__title">Tivi 55 inch 4K Smart</h3></a><div class="pcard__price">
+      <div class="price">⚡9.990.000₫<s>13.990.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-35%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><a href="#"><h3 class="pcard__title">Nồi chiên không dầu 6 lít</h3></a><div class="pcard__price">
+      <div class="price">⚡1.290.000₫<s>1.990.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-27%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><a href="#"><h3 class="pcard__title">Bồn cầu một khối xả xoáy</h3></a><div class="pcard__price">
+      <div class="price">⚡4.590.000₫<s>6.290.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-27%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><a href="#"><h3 class="pcard__title">Gạch lát nền porcelain 60x60 vân đá</h3></a><div class="pcard__price">
+      <div class="price">⚡189.000₫<s>259.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -751,48 +826,8 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">-31%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">กระเบื้องพื้น 60x60 ซม. TARA เอด้า ขาว</h3></a><div class="pcard__price">
-      <div class="price">⚡฿319<s>฿459</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-28%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">ตู้เหล็กบานเปิด BANTEX BJ7603</h3></a><div class="pcard__price">
-      <div class="price">⚡฿4,499<s>฿6,290</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-31%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">เตา BBQ แก๊ส 3 หัว SPRING NOVA</h3></a><div class="pcard__price">
-      <div class="price">⚡฿17,900<s>฿25,900</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-44%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">ทีวี LG 65" QNED 4K</h3></a><div class="pcard__price">
-      <div class="price">⚡฿18,490<s>฿32,990</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-19%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">แอร์ผนัง MITSUBISHI 18000 BTU อินเวอร์เตอร์</h3></a><div class="pcard__price">
-      <div class="price">⚡฿33,955<s>฿41,900</s></div>
+</button><a href="#"><h3 class="pcard__title">Máy khoan pin 18V kèm 2 pin</h3></a><div class="pcard__price">
+      <div class="price">⚡1.590.000₫<s>2.290.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -936,9 +971,9 @@ button{cursor:pointer}
       <h2 class="sec__title">Sản phẩm phổ biến</h2></div><div class="tabs" role="tablist"><button class="tab is-active" type="button" role="tab" data-tab="1" >Đề xuất</button><button class="tab" type="button" role="tab" data-tab="2" >Điện máy</button><button class="tab" type="button" role="tab" data-tab="3" >Đồ gia dụng nhỏ</button><button class="tab" type="button" role="tab" data-tab="4" >Phòng tắm</button></div><div class="row-scroll" data-panel="1" ><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">Best Price</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">TARA</span><a href="#"><h3 class="pcard__title">กระเบื้องพื้นพอร์ซเลน 60x60 ซม. TARA แกรนิโต้ เบจ</h3></a><div class="pcard__meta"><span class="stars">★★★★★</span> 4.89<span>Đã bán 78k+ sp</span></div>
+</button><span class="pcard__vendor">StoneArt</span><a href="#"><h3 class="pcard__title">Gạch lát nền porcelain 60x60 vân đá</h3></a><div class="pcard__meta"><span>Đã bán 78k+ sp</span></div>
       <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿269<s>฿419</s></div>
+      <div class="price">189.000₫<s>259.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -947,9 +982,75 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">Best Price</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">TARA</span><a href="#"><h3 class="pcard__title">กระเบื้องพื้นพอร์ซเลน 60x60 ซม. TARA ซูก้า เบจ</h3></a><div class="pcard__meta"><span class="stars">★★★★★</span> 5<span>Đã bán 16k+ sp</span></div>
+</button><span class="pcard__vendor">KitchenJoy</span><a href="#"><h3 class="pcard__title">Nồi chiên không dầu 6 lít</h3></a><div class="pcard__meta"><span>Đã bán 25k+ sp</span></div>
       <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿223<s>฿399</s></div>
+      <div class="price">1.290.000₫<s>1.990.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div><div class="pcard__extra">Tặng giấy lót 50 tờ</div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-24%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">CoolAir</span><a href="#"><h3 class="pcard__title">Máy lạnh Inverter 1 HP tiết kiệm điện</h3></a><div class="pcard__meta"><span>Đã bán 12k+ sp</span></div>
+      <div class="chips"><span class="chip">Lắp đặt miễn phí</span></div><div class="pcard__price">
+      <div class="price">7.990.000₫<s>10.490.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div><div class="pcard__extra">Trả góp 0%, tặng ống đồng 3m</div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">Best Price</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">KitchenJoy</span><a href="#"><h3 class="pcard__title">Nồi cơm điện tử 1.8 lít</h3></a><div class="pcard__meta"><span>Đã bán 18k+ sp</span></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">990.000₫<s>1.490.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">Best Price</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">CasaNova</span><a href="#"><h3 class="pcard__title">Kệ giày 5 tầng có cửa</h3></a><div class="pcard__meta"><span>Đã bán 15k+ sp</span></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">590.000₫<s>890.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-30%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">AquaLux</span><a href="#"><h3 class="pcard__title">Sen tắm cây nóng lạnh</h3></a><div class="pcard__meta"><span>Đã bán 4k+ sp</span></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">1.890.000₫<s>2.690.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article></div><div class="row-scroll" data-panel="2" hidden><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-21%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">CoolAir</span><a href="#"><h3 class="pcard__title">Máy lạnh Inverter 1.5 HP lọc bụi mịn</h3></a><div class="pcard__meta"></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">10.990.000₫<s>13.990.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-22%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">FrostLine</span><a href="#"><h3 class="pcard__title">Tủ lạnh 2 cửa 256 lít ngăn đông mềm</h3></a><div class="pcard__meta"></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">6.490.000₫<s>8.290.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -958,53 +1059,20 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">-20%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">MITSUBISHI</span><a href="#"><h3 class="pcard__title">แอร์ผนัง MITSUBISHI MSY-KA13VF 12283 BTU อินเวอร์เตอร์</h3></a><div class="pcard__meta"></div>
-      <div class="chips"><span class="chip">Lắp đặt miễn phí</span></div><div class="pcard__price">
-      <div class="price">฿17,785<s>฿22,300</s></div>
+</button><span class="pcard__vendor">WashPro</span><a href="#"><h3 class="pcard__title">Máy sấy quần áo 8 kg thông hơi</h3></a><div class="pcard__meta"></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">5.990.000₫<s>7.490.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
 </button>
       </form>
-    </div><div class="pcard__final">Giá cuối* ฿13,523.93</div><div class="pcard__extra">ลดเพิ่ม 8%, มีผ่อน 0%, ของแถม</div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-13%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">MITSUBISHI</span><a href="#"><h3 class="pcard__title">แอร์ผนัง MITSUBISHI MSY-GZ18VF 17742 BTU อินเวอร์เตอร์</h3></a><div class="pcard__meta"></div>
-      <div class="chips"><span class="chip">Lắp đặt miễn phí</span></div><div class="pcard__price">
-      <div class="price">฿33,955<s>฿38,900</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div><div class="pcard__final">Giá cuối* ฿26,984.04</div><div class="pcard__extra">ลดเพิ่ม 8%, มีผ่อน 0%, ของแถม</div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-40%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">midea</span><a href="#"><h3 class="pcard__title">แอร์ผนัง MIDEA CHIONE SERIES 18000 BTU อินเวอร์เตอร์</h3></a><div class="pcard__meta"></div>
-      <div class="chips"><span class="chip">Freeship</span></div><div class="pcard__price">
-      <div class="price">฿13,300<s>฿21,990</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div><div class="pcard__final">Giá cuối* ฿12,125</div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-31%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">TOSHIBA</span><a href="#"><h3 class="pcard__title">ไมโครเวฟ TOSHIBA 20 ลิตร</h3></a><div class="pcard__meta"></div>
-      <div class="chips"><span class="chip">Freeship</span></div><div class="pcard__price">
-      <div class="price">฿1,790<s>฿2,590</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article></div><div class="row-scroll" data-panel="2" hidden><article class="pcard">
+    </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">-28%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">Haier</span><a href="#"><h3 class="pcard__title">แอร์ผนัง HAIER 12000 BTU อินเวอร์เตอร์</h3></a><div class="pcard__meta"></div>
+</button><span class="pcard__vendor">BrewLab</span><a href="#"><h3 class="pcard__title">Máy pha cà phê espresso</h3></a><div class="pcard__meta"></div>
       <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿12,990<s>฿17,990</s></div>
+      <div class="price">3.290.000₫<s>4.590.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1012,10 +1080,10 @@ button{cursor:pointer}
       </form>
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-42%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">PHILIPS</span><a href="#"><h3 class="pcard__title">เตารีดไอน้ำแยกหม้อต้ม PHILIPS PSG6066</h3></a><div class="pcard__meta"></div>
+</a><span class="pcard__tag">-29%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">CleanBot</span><a href="#"><h3 class="pcard__title">Robot hút bụi lau nhà tự động</h3></a><div class="pcard__meta"></div>
       <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿1,899<s>฿3,290</s></div>
+      <div class="price">4.990.000₫<s>6.990.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1023,43 +1091,10 @@ button{cursor:pointer}
       </form>
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-52%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">BOSCH</span><a href="#"><h3 class="pcard__title">เครื่องชงกาแฟอัตโนมัติ BOSCH TIE20119</h3></a><div class="pcard__meta"></div>
+</a><span class="pcard__tag">-31%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">CasaNova</span><a href="#"><h3 class="pcard__title">Sofa vải 3 chỗ phong cách Bắc Âu</h3></a><div class="pcard__meta"></div>
       <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿2,890<s>฿5,990</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-42%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">Xiaomi</span><a href="#"><h3 class="pcard__title">เครื่องดูดฝุ่นหุ่นยนต์ XIAOMI X20+</h3></a><div class="pcard__meta"></div>
-      <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿1,449<s>฿2,490</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-26%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">Electrolux</span><a href="#"><h3 class="pcard__title">ตู้เย็น 2 ประตู ELECTROLUX 12 คิว</h3></a><div class="pcard__meta"></div>
-      <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿13,990<s>฿18,990</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-25%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">MITSUBISHI</span><a href="#"><h3 class="pcard__title">ตู้เย็น MITSUBISHI Multi Door</h3></a><div class="pcard__meta"></div>
-      <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿29,990<s>฿39,990</s></div>
+      <div class="price">8.990.000₫<s>12.990.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1067,54 +1102,54 @@ button{cursor:pointer}
       </form>
     </div></article></div><div class="row-scroll" data-panel="3" hidden><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-29%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">VisionMax</span><a href="#"><h3 class="pcard__title">Tivi 55 inch 4K Smart</h3></a><div class="pcard__meta"></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">9.990.000₫<s>13.990.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-35%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">KitchenJoy</span><a href="#"><h3 class="pcard__title">Nồi chiên không dầu 6 lít</h3></a><div class="pcard__meta"></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">1.290.000₫<s>1.990.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-27%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">AquaLux</span><a href="#"><h3 class="pcard__title">Bồn cầu một khối xả xoáy</h3></a><div class="pcard__meta"></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">4.590.000₫<s>6.290.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+</a><span class="pcard__tag">-27%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">StoneArt</span><a href="#"><h3 class="pcard__title">Gạch lát nền porcelain 60x60 vân đá</h3></a><div class="pcard__meta"></div>
+      <div class="chips"></div><div class="pcard__price">
+      <div class="price">189.000₫<s>259.000₫</s></div>
+      <form method="post" action="" data-add-form>
+        <input type="hidden" name="id" value="1">
+        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
+</button>
+      </form>
+    </div></article><article class="pcard">
+    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">-31%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">TARA</span><a href="#"><h3 class="pcard__title">กระเบื้องพื้น 60x60 ซม. TARA เอด้า ขาว</h3></a><div class="pcard__meta"></div>
+</button><span class="pcard__vendor">ToolMaster</span><a href="#"><h3 class="pcard__title">Máy khoan pin 18V kèm 2 pin</h3></a><div class="pcard__meta"></div>
       <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿319<s>฿459</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-28%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">BANTEX</span><a href="#"><h3 class="pcard__title">ตู้เหล็กบานเปิด BANTEX BJ7603</h3></a><div class="pcard__meta"></div>
-      <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿4,499<s>฿6,290</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-31%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">SPRING</span><a href="#"><h3 class="pcard__title">เตา BBQ แก๊ส 3 หัว SPRING NOVA</h3></a><div class="pcard__meta"></div>
-      <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿17,900<s>฿25,900</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-44%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">LG</span><a href="#"><h3 class="pcard__title">ทีวี LG 65" QNED 4K</h3></a><div class="pcard__meta"></div>
-      <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿18,490<s>฿32,990</s></div>
-      <form method="post" action="" data-add-form>
-        <input type="hidden" name="id" value="1">
-        <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
-</button>
-      </form>
-    </div></article><article class="pcard">
-    <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-19%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">MITSUBISHI</span><a href="#"><h3 class="pcard__title">แอร์ผนัง MITSUBISHI 18000 BTU อินเวอร์เตอร์</h3></a><div class="pcard__meta"></div>
-      <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿33,955<s>฿41,900</s></div>
+      <div class="price">1.590.000₫<s>2.290.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1123,9 +1158,9 @@ button{cursor:pointer}
     </div></article></div><div class="row-scroll" data-panel="4" hidden><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">Best Price</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">TARA</span><a href="#"><h3 class="pcard__title">กระเบื้องพื้นพอร์ซเลน 60x60 ซม. TARA แกรนิโต้ เบจ</h3></a><div class="pcard__meta"><span class="stars">★★★★★</span> 4.89<span>Đã bán 78k+ sp</span></div>
+</button><span class="pcard__vendor">StoneArt</span><a href="#"><h3 class="pcard__title">Gạch lát nền porcelain 60x60 vân đá</h3></a><div class="pcard__meta"><span>Đã bán 78k+ sp</span></div>
       <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿269<s>฿419</s></div>
+      <div class="price">189.000₫<s>259.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1134,26 +1169,26 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">Best Price</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">TARA</span><a href="#"><h3 class="pcard__title">กระเบื้องพื้นพอร์ซเลน 60x60 ซม. TARA ซูก้า เบจ</h3></a><div class="pcard__meta"><span class="stars">★★★★★</span> 5<span>Đã bán 16k+ sp</span></div>
+</button><span class="pcard__vendor">KitchenJoy</span><a href="#"><h3 class="pcard__title">Nồi chiên không dầu 6 lít</h3></a><div class="pcard__meta"><span>Đã bán 25k+ sp</span></div>
       <div class="chips"></div><div class="pcard__price">
-      <div class="price">฿223<s>฿399</s></div>
+      <div class="price">1.290.000₫<s>1.990.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
 </button>
       </form>
-    </div></article><article class="pcard">
+    </div><div class="pcard__extra">Tặng giấy lót 50 tờ</div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-</a><span class="pcard__tag">-20%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><span class="pcard__vendor">MITSUBISHI</span><a href="#"><h3 class="pcard__title">แอร์ผนัง MITSUBISHI MSY-KA13VF 12283 BTU อินเวอร์เตอร์</h3></a><div class="pcard__meta"></div>
+</a><span class="pcard__tag">-24%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
+</button><span class="pcard__vendor">CoolAir</span><a href="#"><h3 class="pcard__title">Máy lạnh Inverter 1 HP tiết kiệm điện</h3></a><div class="pcard__meta"><span>Đã bán 12k+ sp</span></div>
       <div class="chips"><span class="chip">Lắp đặt miễn phí</span></div><div class="pcard__price">
-      <div class="price">฿17,785<s>฿22,300</s></div>
+      <div class="price">7.990.000₫<s>10.490.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
 </button>
       </form>
-    </div><div class="pcard__final">Giá cuối* ฿13,523.93</div><div class="pcard__extra">ลดเพิ่ม 8%, มีผ่อน 0%, ของแถม</div></article></div></section>
+    </div><div class="pcard__extra">Trả góp 0%, tặng ống đồng 3m</div></article></div></section>
 
 
 <section class="container sec">
@@ -1177,8 +1212,8 @@ button{cursor:pointer}
       <h2 class="sec__title">Sản phẩm mới</h2><a class="sec__more" href="#">Xem tất cả ›</a></div><div class="row-scroll"><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag pcard__tag--new">NEW</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">จอมอนิเตอร์ 32 นิ้ว SAMSUNG LS32H800</h3></a><div class="pcard__price">
-      <div class="price">฿8,990</div>
+</button><a href="#"><h3 class="pcard__title">Loa thanh soundbar 2.1 kênh</h3></a><div class="pcard__price">
+      <div class="price">2.490.000₫<s>3.490.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1187,8 +1222,8 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag pcard__tag--new">NEW</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">จอมอนิเตอร์ 27 นิ้ว SAMSUNG LS27HG510</h3></a><div class="pcard__price">
-      <div class="price">฿3,490</div>
+</button><a href="#"><h3 class="pcard__title">Robot hút bụi lau nhà tự động</h3></a><div class="pcard__price">
+      <div class="price">4.990.000₫<s>6.990.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1197,8 +1232,8 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag pcard__tag--new">NEW</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">กล้องดิจิทัลพกพา พร้อมจอพับเซลฟี่ สีขาว</h3></a><div class="pcard__price">
-      <div class="price">฿599<s>฿990</s></div>
+</button><a href="#"><h3 class="pcard__title">Máy lọc không khí phòng 40m²</h3></a><div class="pcard__price">
+      <div class="price">2.790.000₫<s>3.590.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1207,8 +1242,8 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag pcard__tag--new">NEW</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">เครื่องปริ้นเตอร์มัลติฟังก์ชันอิงค์เจ็ท BROTHER</h3></a><div class="pcard__price">
-      <div class="price">฿8,990</div>
+</button><a href="#"><h3 class="pcard__title">Đèn LED âm trần 12W (bộ 4)</h3></a><div class="pcard__price">
+      <div class="price">399.000₫<s>599.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1217,8 +1252,8 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag pcard__tag--new">NEW</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">สายชาร์จ USB TYPE-C TO USB TYPE-C RIZZ</h3></a><div class="pcard__price">
-      <div class="price">฿159</div>
+</button><a href="#"><h3 class="pcard__title">Khóa cửa vân tay thông minh</h3></a><div class="pcard__price">
+      <div class="price">3.490.000₫<s>4.990.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1227,8 +1262,8 @@ button{cursor:pointer}
     </div></article><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag pcard__tag--new">NEW</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg>
-</button><a href="#"><h3 class="pcard__title">แผ่นเกม NINTENDO SWITCH 2</h3></a><div class="pcard__price">
-      <div class="price">฿1,590</div>
+</button><a href="#"><h3 class="pcard__title">Bàn ghế sân vườn 4 chỗ</h3></a><div class="pcard__price">
+      <div class="price">3.990.000₫<s>5.490.000₫</s></div>
       <form method="post" action="" data-add-form>
         <input type="hidden" name="id" value="1">
         <button class="addcart" type="submit" aria-label="Thêm vào giỏ" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h10.8L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>
@@ -1329,29 +1364,29 @@ button{cursor:pointer}
   <div class="container">
     <div class="footer__cols"><div >
           <h4>Hỗ trợ</h4>
-          <ul><li><a href="#">วิธีการช้อปออนไลน์</a></li><li><a href="#">คำถามที่พบบ่อย</a></li><li><a href="#">การเปลี่ยน คืน เคลมสินค้า</a></li><li><a href="#">ติดตามสินค้า</a></li></ul>
+          <ul><li><a href="#">Hướng dẫn mua online</a></li><li><a href="#">Câu hỏi thường gặp</a></li><li><a href="#">Đổi trả & bảo hành</a></li><li><a href="#">Theo dõi đơn hàng</a></li></ul>
         </div><div >
           <h4>Quyền lợi</h4>
-          <ul><li><a href="#">สมาชิก Home Card</a></li><li><a href="#">บัตรเครดิตร่วม</a></li><li><a href="#">บัตรผ่อนชำระ</a></li></ul>
+          <ul><li><a href="#">Thành viên</a></li><li><a href="#">Trả góp 0%</a></li><li><a href="#">Ưu đãi thẻ</a></li></ul>
         </div><div >
           <h4>Chính sách</h4>
-          <ul><li><a href="#">เงื่อนไขการใช้งาน</a></li><li><a href="#">การส่งสินค้า</a></li><li><a href="#">นโยบายความเป็นส่วนตัว</a></li><li><a href="#">เอกสารการใช้คุกกี้</a></li><li><a href="#">คำร้องขอใช้สิทธิ</a></li></ul>
+          <ul><li><a href="#">Điều khoản sử dụng</a></li><li><a href="#">Chính sách giao hàng</a></li><li><a href="#">Chính sách bảo mật</a></li><li><a href="#">Chính sách đổi trả</a></li></ul>
         </div><div >
           <h4>Về chúng tôi</h4>
-          <ul><li><a href="#">ประวัติบริษัท</a></li><li><a href="#">สาขาของเรา</a></li><li><a href="#">นักลงทุนสัมพันธ์</a></li><li><a href="#">ข่าวสารและกิจกรรม</a></li><li><a href="#">สมัครงาน</a></li><li><a href="#">ติดต่อเรา</a></li><li><a href="#">Call Center 1284</a></li></ul>
+          <ul><li><a href="#">Giới thiệu</a></li><li><a href="#">Hệ thống cửa hàng</a></li><li><a href="#">Tuyển dụng</a></li><li><a href="#">Liên hệ</a></li></ul>
         </div><div>
         <h4>Đăng ký nhận tin khuyến mãi</h4><form class="news" onsubmit="event.preventDefault()"><input type="hidden" name="contact[tags]" value="newsletter">
           <input type="email" name="contact[email]" placeholder="Email của bạn" required aria-label="Email">
           <button class="btn btn--orange" type="submit" style="border-radius:0">Đăng ký</button></form><div class="social"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="LINE">L</a><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="X">X</a></div>
         <div class="apps"></div>
       </div>
-    </div><div class="footer__copy">Copyright © 2026 HomeStyle. All rights reserved.</div>
+    </div><div class="footer__copy">Copyright © 2026 Gia Khang. All rights reserved.</div>
   </div>
 </footer>
 
 
 
-<a class="chatfab" href="#"><i>🤖</i>แชท</a>
+<a class="chatfab" href="#"><i>🤖</i>Chat</a>
 <div class="toast" role="status" data-toast></div>
 <script>// Bản xem trước: giả lập giỏ hàng vì không có máy chủ Shopify
 (function(){let n=0;const f=window.fetch;window.fetch=async(u,o)=>{u=String(u);if(u.startsWith('/cart/add')){n++;return new Response('{}',{status:200})}if(u.startsWith('/cart.js'))return new Response(JSON.stringify({item_count:n}));if(u.startsWith('/discount/'))return new Response('');return f(u,o)};document.addEventListener('click',e=>{const a=e.target.closest('a[href="#"],a[href^="/"]');if(a)e.preventDefault()})})();</script>
@@ -1537,4 +1572,26 @@ document.querySelectorAll('[data-region-tabs]').forEach((bar) => bar.addEventLis
   bar.querySelectorAll('[data-region]').forEach((x) => x.classList.toggle('is-active', x === b));
   document.querySelectorAll('[data-store-region]').forEach((c) => { c.hidden = !!b.dataset.region && c.dataset.storeRegion !== b.dataset.region; });
 }));
+
+// Giỏ hàng: nút +/- rồi tự cập nhật
+document.querySelectorAll('[data-cart-form] [data-step]').forEach((b) => b.addEventListener('click', () => {
+  const input = b.parentElement.querySelector('[data-qty]');
+  input.value = Math.max(0, (parseInt(input.value, 10) || 0) + Number(b.dataset.step));
+  clearTimeout(window.__cartT);
+  window.__cartT = setTimeout(() => { const f = b.closest('form'); const u = document.createElement('input'); u.type = 'hidden'; u.name = 'update'; u.value = '1'; f.appendChild(u); f.submit(); }, 500);
+}));
+// Mega menu trên điện thoại: bấm nhóm thì mở danh mục con ngay bên dưới
+(() => {
+  const mq = matchMedia('(max-width:760px)');
+  document.querySelectorAll('[data-mega-tab]').forEach((b) => b.addEventListener('click', () => {
+    if (!mq.matches) return;
+    const panel = document.querySelector(`[data-mega-panel="${b.dataset.megaTab}"]`);
+    if (!panel) return;
+    const li = b.closest('li');
+    const open = panel.parentElement === li && !panel.hidden;
+    document.querySelectorAll('[data-mega-panel]').forEach((p) => (p.hidden = true));
+    if (!open) { li.appendChild(panel); panel.hidden = false; }
+  }));
+  document.querySelectorAll('[data-mega-close]').forEach((b) => b.addEventListener('click', () => document.querySelector('[data-mega]')?.classList.remove('is-open')));
+})();
 </script>

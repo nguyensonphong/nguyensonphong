@@ -413,3 +413,50 @@ button{cursor:pointer}
 .contact__form{display:flex;flex-direction:column;gap:6px}.contact__form label{font-weight:600;color:var(--hp-head);font-size:13px;margin-top:6px}.contact__form .btn{margin-top:10px}
 .contact__ok{background:#eefaf3;color:#1a7a48;padding:10px;border-radius:8px;margin:0}.contact__err{background:#fdecee;color:var(--hp-red);padding:10px;border-radius:8px;margin:0}
 @media (max-width:760px){.contact{grid-template-columns:1fr}}
+
+/* ---- Giỏ hàng ---- */
+.muted{color:var(--hp-mute);font-weight:400;font-size:.6em}
+small.muted{font-size:12px}
+.cart{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;align-items:start}
+.cart__lines{display:flex;flex-direction:column;gap:12px;min-width:0}
+.freeship{background:var(--hp-sky);border-radius:var(--r-card);padding:12px 14px;display:grid;gap:8px;color:var(--hp-head);font-size:14px}
+.freeship span{display:flex;align-items:center;gap:6px}.freeship svg{width:20px;height:20px;color:var(--hp-blue)}
+.freeship i{height:8px;border-radius:4px;background:#fff;overflow:hidden}.freeship em{display:block;height:100%;background:var(--hp-blue);border-radius:4px;transition:width .3s}
+.cline{display:grid;grid-template-columns:96px minmax(0,1fr) auto auto;gap:16px;align-items:center;border:1px solid var(--hp-line);border-radius:var(--r-card);padding:12px}
+.cline__img{width:96px;height:96px;border-radius:8px;background:var(--hp-soft);display:grid;place-items:center;overflow:hidden;color:#c3c9d1}
+.cline__img img{width:100%;height:100%;object-fit:contain}.cline__img svg{width:50%;height:50%}
+.cline__info{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cline__title{color:var(--hp-head);font-weight:500;line-height:1.35}.cline__title:hover{color:var(--hp-blue)}
+.cline__info small{color:var(--hp-mute)}
+.cline__remove{font-size:12px;color:var(--hp-mute);text-decoration:underline;align-self:flex-start}.cline__remove:hover{color:var(--hp-red)}
+.cline__qty{display:flex;border:1px solid var(--hp-line);border-radius:8px;overflow:hidden}
+.cline__qty button{width:34px;border:0;background:var(--hp-soft);font-size:18px;color:var(--hp-head)}.cline__qty button:hover{background:var(--hp-sky)}
+.cline__qty input{width:44px;border:0;text-align:center;-moz-appearance:textfield}
+.cline__qty input::-webkit-outer-spin-button,.cline__qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.cline__price{text-align:right;min-width:110px}.cline__price s{display:block;color:var(--hp-mute);font-size:12px}
+.cart__update{align-self:flex-end}
+.cart__sum{position:sticky;top:150px;border:1px solid var(--hp-line);border-radius:var(--r-card);padding:18px;display:flex;flex-direction:column;gap:10px}
+.cart__sum h2{margin:0 0 4px;font-size:18px;color:var(--hp-head)}
+.cart__row{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.cart__row--save b{color:#1a9e5c}
+.cart__row--total{border-top:1px solid var(--hp-line);padding-top:10px;align-items:baseline}.cart__row--total .price{font-size:24px}
+.cart__coupon{color:var(--hp-blue);font-size:13px;font-weight:600}
+.cart__note{font-weight:600;color:var(--hp-head);font-size:13px}
+.cart__sum .btn--lg{width:100%}
+.cart__continue{text-align:center;color:var(--hp-blue);font-size:13px}
+.cart__trust{list-style:none;margin:6px 0 0;padding:10px 0 0;border-top:1px solid var(--hp-line);display:grid;gap:6px;font-size:12px}
+.cart__trust li{display:flex;gap:8px;align-items:center}.cart__trust svg{width:16px;height:16px;color:var(--hp-blue)}
+.cart-empty{display:grid;justify-items:center;gap:12px;padding:60px 16px;text-align:center}
+.cart-empty svg{width:72px;height:72px;color:var(--hp-line)}
+@media (max-width:900px){.cart{grid-template-columns:1fr}.cart__sum{position:static}}
+@media (max-width:560px){.cline{grid-template-columns:72px minmax(0,1fr);grid-template-areas:"img info" "qty price"}.cline__img{width:72px;height:72px;grid-area:img}.cline__info{grid-area:info}.cline__qty{grid-area:qty;justify-self:start}.cline__price{grid-area:price;min-width:0}}
+/* ---- Mega menu trên điện thoại: dạng accordion ---- */
+@media (max-width:760px){
+  .mega{position:fixed;top:0;bottom:0;left:0;right:0;overflow:auto}
+  .mega__inner{max-height:none;padding:0}
+  .mega__list li .mega__panel{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:8px 16px 16px 46px;background:var(--hp-soft)}
+  .mega__close{display:flex}
+}
+.mega__close{display:none;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--hp-blue);color:#fff;font-weight:600}
+.mega__close button{border:0;background:none;color:#fff;font-size:22px}
+@media (max-width:760px){.chatfab{padding:6px;bottom:calc(14px + env(safe-area-inset-bottom,0px));right:14px;font-size:0;gap:0}.slider{aspect-ratio:16/9}}

@@ -180,3 +180,25 @@ document.querySelectorAll('[data-region-tabs]').forEach((bar) => bar.addEventLis
   bar.querySelectorAll('[data-region]').forEach((x) => x.classList.toggle('is-active', x === b));
   document.querySelectorAll('[data-store-region]').forEach((c) => { c.hidden = !!b.dataset.region && c.dataset.storeRegion !== b.dataset.region; });
 }));
+
+// Giỏ hàng: nút +/- rồi tự cập nhật
+document.querySelectorAll('[data-cart-form] [data-step]').forEach((b) => b.addEventListener('click', () => {
+  const input = b.parentElement.querySelector('[data-qty]');
+  input.value = Math.max(0, (parseInt(input.value, 10) || 0) + Number(b.dataset.step));
+  clearTimeout(window.__cartT);
+  window.__cartT = setTimeout(() => { const f = b.closest('form'); const u = document.createElement('input'); u.type = 'hidden'; u.name = 'update'; u.value = '1'; f.appendChild(u); f.submit(); }, 500);
+}));
+// Mega menu trên điện thoại: bấm nhóm thì mở danh mục con ngay bên dưới
+(() => {
+  const mq = matchMedia('(max-width:760px)');
+  document.querySelectorAll('[data-mega-tab]').forEach((b) => b.addEventListener('click', () => {
+    if (!mq.matches) return;
+    const panel = document.querySelector(`[data-mega-panel="${b.dataset.megaTab}"]`);
+    if (!panel) return;
+    const li = b.closest('li');
+    const open = panel.parentElement === li && !panel.hidden;
+    document.querySelectorAll('[data-mega-panel]').forEach((p) => (p.hidden = true));
+    if (!open) { li.appendChild(panel); panel.hidden = false; }
+  }));
+  document.querySelectorAll('[data-mega-close]').forEach((b) => b.addEventListener('click', () => document.querySelector('[data-mega]')?.classList.remove('is-open')));
+})();
