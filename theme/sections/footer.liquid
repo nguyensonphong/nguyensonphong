@@ -13,8 +13,8 @@
           <input type="hidden" name="contact[tags]" value="newsletter">
           <input type="email" name="contact[email]" placeholder="Email của bạn" required aria-label="Email">
           <button class="btn btn--orange" type="submit" style="border-radius:0">Đăng ký</button>
+          {%- if form.posted_successfully? -%}<p style="margin:6px 0 0;padding:0 8px;color:var(--hp-text)">Cảm ơn bạn đã đăng ký</p>{%- endif -%}
         {%- endform -%}
-        {%- if form.posted_successfully? -%}<p>Cảm ơn bạn đã đăng ký</p>{%- endif -%}
         <div class="social">
           {%- if settings.social_facebook != blank -%}<a href="{{ settings.social_facebook }}" aria-label="Facebook">f</a>{%- endif -%}
           {%- if settings.social_line != blank -%}<a href="{{ settings.social_line }}" aria-label="LINE">L</a>{%- endif -%}
