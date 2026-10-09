@@ -1,13 +1,64 @@
+<nav class="container crumbs"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>Tìm kiếm</span></nav>
 <section class="container">
-  <h1 class="page-title">{% if search.performed %}Kết quả cho "{{ search.terms }}" ({{ search.results_count }}){% else %}Tìm kiếm{% endif %}</h1>
-  {%- paginate search.results by 24 -%}
-    <div class="grid-products">
-      {%- for item in search.results -%}
-        {%- if item.object_type == 'product' -%}{% render 'product-card', product: item %}
-        {%- else -%}<a class="cat" href="{{ item.url }}">{{ item.title }}</a>{%- endif -%}
-      {%- endfor -%}
+  <form class="search search--page" action="{{ routes.search_url }}" method="get" role="search">
+    <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Bạn cần tìm gì cho ngôi nhà?" aria-label="Tìm kiếm">
+    <input type="hidden" name="type" value="product">
+    <button type="submit" aria-label="Tìm kiếm">{% render 'icon', name: 'search' %}</button>
+  </form>
+  {%- if search.performed -%}
+    <h1 class="page-title">{{ search.results_count }} kết quả cho “{{ search.terms }}”</h1>
+    {%- paginate search.results by 24 -%}
+    <div class="plp">
+      <form class="plp__filters" id="filters" data-filters>
+        <input type="hidden" name="q" value="{{ search.terms | escape }}"><input type="hidden" name="type" value="product">
+        <div class="plp__fhead"><b>Bộ lọc</b><a href="{{ routes.search_url }}?q={{ search.terms | url_encode }}&type=product">Xóa tất cả</a></div>
+        {%- for filter in search.filters -%}
+          <details class="facet" open><summary>{{ filter.label }}</summary>
+            {%- if filter.type == 'price_range' -%}
+              <div class="facet__price">
+                <input class="field" type="number" name="{{ filter.min_value.param_name }}" value="{{ filter.min_value.value | divided_by: 100 }}" placeholder="Từ" aria-label="Giá từ"><span>–</span>
+                <input class="field" type="number" name="{{ filter.max_value.param_name }}" value="{{ filter.max_value.value | divided_by: 100 }}" placeholder="Đến" aria-label="Giá đến">
+              </div>
+            {%- else -%}
+              {%- for value in filter.values -%}
+                <label class="facet__opt{% if forloop.index > 6 %} is-more{% endif %}"><input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" {% if value.active %}checked{% endif %}>{% if filter.param_name contains 'availability' %}Chỉ hàng còn bán{% else %}{{ value.label }}{% endif %}<em>{{ value.count }}</em></label>
+              {%- endfor -%}
+              {%- if filter.values.size > 6 -%}<button class="facet__more" type="button" data-more>Xem thêm</button>{%- endif -%}
+            {%- endif -%}
+          </details>
+        {%- endfor -%}
+        <button class="btn" type="submit">Áp dụng</button>
+      </form>
+      <div class="plp__main">
+        <div class="plp__bar">
+          <button class="btn btn--outline btn--sm plp__toggle" type="button" data-filter-toggle>Bộ lọc</button>
+          <label class="plp__sort">Sắp xếp
+            <select class="field" form="filters" name="sort_by" data-sort>
+              {%- for o in search.sort_options -%}<option value="{{ o.value }}" {% if o.value == search.sort_by %}selected{% endif %}>{{ o.name }}</option>{%- endfor -%}
+            </select>
+          </label>
+        </div>
+        <div class="grid-products">
+          {%- for item in search.results -%}
+            {%- if item.object_type == 'product' -%}{% render 'product-card', product: item, style: 'popular' %}{%- endif -%}
+          {%- else -%}
+            <div class="cart-empty">{% render 'icon', name: 'search' %}<p>Không tìm thấy sản phẩm phù hợp. Thử từ khóa ngắn hơn, ví dụ “máy lạnh”, “nồi chiên”.</p></div>
+          {%- endfor -%}
+        </div>
+        {%- if paginate.pages > 1 -%}<div class="center pager">{{ paginate | default_pagination: next: 'Sau ›', previous: '‹ Trước' }}</div>{%- endif -%}
+      </div>
     </div>
-    {%- if paginate.pages > 1 -%}<div class="center">{{ paginate | default_pagination }}</div>{%- endif -%}
-  {%- endpaginate -%}
+    {%- endpaginate -%}
+  {%- else -%}
+    <h1 class="page-title">Tìm kiếm</h1>
+  {%- endif -%}
+  {%- if section.settings.suggest != blank -%}
+    <div class="suggest"><b>Tìm nhiều:</b>
+      {%- assign kws = section.settings.suggest | split: ',' -%}
+      {%- for k in kws -%}<a class="tab" href="{{ routes.search_url }}?q={{ k | strip | url_encode }}&type=product">{{ k | strip }}</a>{%- endfor -%}
+    </div>
+  {%- endif -%}
 </section>
-{% schema %}{ "name": "Kết quả tìm kiếm" }{% endschema %}
+{% schema %}
+{ "name": "Kết quả tìm kiếm", "settings": [ { "type": "text", "id": "suggest", "label": "Từ khóa gợi ý (cách nhau dấu phẩy)", "default": "máy lạnh, nồi chiên, tủ lạnh, gạch lát nền, máy khoan, sofa" } ] }
+{% endschema %}

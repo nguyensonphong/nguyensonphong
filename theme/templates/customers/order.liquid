@@ -1,0 +1,33 @@
+<nav class="container crumbs"><a href="{{ routes.account_url }}">Tài khoản</a> › <span>Đơn {{ order.name }}</span></nav>
+<section class="container acct acct--single">
+  <div class="acct__main">
+    <h1 class="page-title">Đơn hàng {{ order.name }} <small class="muted">{{ order.created_at | date: '%d/%m/%Y %H:%M' }}</small></h1>
+    {%- if order.cancelled -%}<p class="contact__err">Đơn đã hủy ngày {{ order.cancelled_at | date: '%d/%m/%Y' }}.</p>{%- endif -%}
+    <div class="steps-track">
+      {%- assign st = order.fulfillment_status -%}
+      <span class="is-done">Đã đặt</span>
+      <span class="{% if order.financial_status == 'paid' %}is-done{% endif %}">Đã thanh toán</span>
+      <span class="{% if st == 'partial' or st == 'fulfilled' %}is-done{% endif %}">Đang giao</span>
+      <span class="{% if st == 'fulfilled' %}is-done{% endif %}">Hoàn tất</span>
+    </div>
+    {%- for item in order.line_items -%}
+      <div class="cline">
+        <a class="cline__img" href="{{ item.url }}">{%- if item.image -%}{{ item.image | image_url: width: 200 | image_tag }}{%- else -%}{% render 'icon', name: 'box' %}{%- endif -%}</a>
+        <div class="cline__info"><a class="cline__title" href="{{ item.url }}">{{ item.title }}</a><small>SKU {{ item.sku | default: '—' }} · SL {{ item.quantity }}</small>
+          {%- for f in item.fulfillment.tracking_numbers -%}<small>Mã vận đơn: <a href="{{ item.fulfillment.tracking_url }}">{{ f }}</a></small>{%- endfor -%}</div>
+        <div></div>
+        <div class="cline__price"><b class="price">{{ item.final_line_price | money_without_trailing_zeros }}</b></div>
+      </div>
+    {%- endfor -%}
+    <div class="order-sum">
+      <div class="cart__row"><span>Tạm tính</span><b>{{ order.line_items_subtotal_price | money_without_trailing_zeros }}</b></div>
+      {%- for d in order.cart_level_discount_applications -%}<div class="cart__row cart__row--save"><span>{{ d.title }}</span><b>−{{ d.total_allocated_amount | money_without_trailing_zeros }}</b></div>{%- endfor -%}
+      <div class="cart__row"><span>Phí giao hàng</span><b>{{ order.shipping_price | money_without_trailing_zeros }}</b></div>
+      <div class="cart__row cart__row--total"><span>Tổng cộng</span><b class="price">{{ order.total_price | money_without_trailing_zeros }}</b></div>
+    </div>
+    <div class="order-addr">
+      <div><h3>Giao đến</h3>{{ order.shipping_address | format_address }}</div>
+      <div><h3>Thanh toán</h3>{{ order.billing_address | format_address }}</div>
+    </div>
+  </div>
+</section>

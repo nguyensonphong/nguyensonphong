@@ -1,0 +1,17 @@
+<nav class="container crumbs"><a href="{{ routes.root_url }}">Trang chủ</a> › <a href="{{ blog.url }}">{{ blog.title }}</a> › <span>{{ article.title }}</span></nav>
+<article class="container article">
+  <header>
+    {%- if article.tags.size > 0 -%}<small class="article__tag">{{ article.tags | join: ' · ' }}</small>{%- endif -%}
+    <h1>{{ article.title }}</h1>
+    <span class="muted">{{ article.published_at | date: '%d/%m/%Y' }}{% if article.author %} · {{ article.author }}{% endif %}</span>
+  </header>
+  {%- if article.image -%}<div class="article__hero">{{ article.image | image_url: width: 1400 | image_tag: loading: 'eager' }}</div>{%- endif -%}
+  <div class="rte article__body">{{ article.content }}</div>
+  {%- assign rel = section.settings.collection -%}
+  {%- if rel and rel.products_count > 0 -%}
+    <div class="pdp__box"><h2 class="pdp__h">Sản phẩm gợi ý</h2>
+      <div class="row-scroll">{%- for p in rel.products limit: 8 -%}{% render 'product-card', product: p %}{%- endfor -%}</div></div>
+  {%- endif -%}
+  <a class="btn btn--outline" href="{{ blog.url }}">‹ Xem thêm bài viết</a>
+</article>
+{% schema %}{ "name": "Bài viết", "settings": [ { "type": "collection", "id": "collection", "label": "Sản phẩm gợi ý dưới bài" } ] }{% endschema %}

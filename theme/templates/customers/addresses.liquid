@@ -1,0 +1,25 @@
+<nav class="container crumbs"><a href="{{ routes.account_url }}">Tài khoản</a> › <span>Địa chỉ</span></nav>
+<section class="container acct acct--single">
+  <div class="acct__main">
+    <h1 class="page-title">Sổ địa chỉ</h1>
+    <div class="stores-grid">
+      {%- for address in customer.addresses -%}
+        <article class="store-card">
+          {%- if address == customer.default_address -%}<small>Mặc định</small>{%- endif -%}
+          <h3>{{ address.name }}</h3>
+          <div>{{ address | format_address }}</div>
+          <div class="store-card__act">
+            <details><summary class="auth__link">Sửa</summary>
+              {%- form 'customer_address', address, class: 'auth__form' -%}{% render 'address-fields', address: address, prefix: address.id %}<button class="btn" type="submit">Lưu</button>{%- endform -%}
+            </details>
+            <form method="post" action="/account/addresses/{{ address.id }}"><input type="hidden" name="_method" value="delete"><button class="auth__link" type="submit">Xóa</button></form>
+          </div>
+        </article>
+      {%- endfor -%}
+      <article class="store-card">
+        <h3>Thêm địa chỉ mới</h3>
+        {%- form 'customer_address', customer.new_address, class: 'auth__form' -%}{% render 'address-fields', address: form, prefix: 'new' %}<button class="btn" type="submit">Thêm địa chỉ</button>{%- endform -%}
+      </article>
+    </div>
+  </div>
+</section>

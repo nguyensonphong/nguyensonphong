@@ -1,3 +1,27 @@
-<section class="container"><h1 class="page-title">Tài khoản của tôi</h1><p>{{ customer.first_name }} {{ customer.last_name }} · {{ customer.email }}</p>
-{%- for order in customer.orders -%}<p><a href="{{ order.customer_url }}" style="color:var(--hp-blue)">{{ order.name }}</a> · {{ order.created_at | date: '%d/%m/%Y' }} · {{ order.total_price | money }}</p>{%- endfor -%}
-<a href="{{ routes.account_logout_url }}">Đăng xuất</a></section>
+<nav class="container crumbs"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>Tài khoản</span></nav>
+<section class="container acct">
+  <aside class="acct__side">
+    <div class="acct__hello"><span class="acct__avatar">{{ customer.first_name | default: customer.email | slice: 0 | upcase }}</span><div><b>{{ customer.name | default: customer.email }}</b><small>{{ customer.email }}</small></div></div>
+    <a class="is-active" href="{{ routes.account_url }}">{% render 'icon', name: 'box' %}Đơn hàng</a>
+    <a href="{{ routes.account_addresses_url }}">{% render 'icon', name: 'pin' %}Địa chỉ ({{ customer.addresses_count }})</a>
+    <a href="/pages/ma-giam-gia">{% render 'icon', name: 'coupon' %}Mã giảm giá</a>
+    <a href="/pages/thanh-vien">{% render 'icon', name: 'card' %}Thành viên · {{ customer.metafields.custom.points | default: 0 }} điểm</a>
+    <a href="{{ routes.account_logout_url }}">{% render 'icon', name: 'user' %}Đăng xuất</a>
+  </aside>
+  <div class="acct__main">
+    <h1 class="page-title">Đơn hàng của tôi</h1>
+    {%- paginate customer.orders by 10 -%}
+      {%- for order in customer.orders -%}
+        <a class="order-row" href="{{ order.customer_url }}">
+          <div><b>{{ order.name }}</b><small>{{ order.created_at | date: '%d/%m/%Y' }} · {{ order.line_items.size }} sản phẩm</small></div>
+          <span class="badge-st st-{{ order.fulfillment_status | default: 'unfulfilled' }}">{{ order.fulfillment_status_label }}</span>
+          <span class="badge-st st-pay">{{ order.financial_status_label }}</span>
+          <b class="price">{{ order.total_price | money_without_trailing_zeros }}</b>
+        </a>
+      {%- else -%}
+        <div class="cart-empty">{% render 'icon', name: 'box' %}<p>Bạn chưa có đơn hàng nào.</p><a class="btn" href="{{ routes.all_products_collection_url }}">Mua sắm ngay</a></div>
+      {%- endfor -%}
+      {%- if paginate.pages > 1 -%}<div class="center pager">{{ paginate | default_pagination }}</div>{%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</section>

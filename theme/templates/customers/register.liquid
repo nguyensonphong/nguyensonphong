@@ -1,6 +1,25 @@
-<section class="container" style="max-width:420px;padding-block:40px"><h1 class="page-title">Đăng ký</h1>
-{%- form 'create_customer' -%}{{ form.errors | default_errors }}
-<input name="customer[first_name]" placeholder="Tên" style="width:100%;padding:10px;margin-bottom:10px;border:1px solid var(--hp-line);border-radius:8px">
-<input type="email" name="customer[email]" placeholder="Email" required style="width:100%;padding:10px;margin-bottom:10px;border:1px solid var(--hp-line);border-radius:8px">
-<input type="password" name="customer[password]" placeholder="Mật khẩu" required style="width:100%;padding:10px;margin-bottom:10px;border:1px solid var(--hp-line);border-radius:8px">
-<button class="btn" type="submit" style="width:100%">Tạo tài khoản</button>{%- endform -%}</section>
+<section class="container auth">
+  <div class="auth__card">
+    <h1 class="page-title">Tạo tài khoản</h1>
+    {%- form 'create_customer', class: 'auth__form' -%}
+      {%- if form.errors -%}<p class="contact__err">{{ form.errors | default_errors }}</p>{%- endif -%}
+      <div class="auth__row">
+        <div><label for="g-last">Họ</label><input class="field" id="g-last" name="customer[last_name]" autocomplete="family-name"></div>
+        <div><label for="g-first">Tên</label><input class="field" id="g-first" name="customer[first_name]" autocomplete="given-name" required></div>
+      </div>
+      <label for="g-email">Email</label><input class="field" id="g-email" type="email" name="customer[email]" autocomplete="email" required>
+      <label for="g-pass">Mật khẩu</label><input class="field" id="g-pass" type="password" name="customer[password]" autocomplete="new-password" minlength="6" required>
+      <label class="facet__opt"><input type="checkbox" name="customer[accepts_marketing]" value="true" checked>Nhận tin khuyến mãi qua email</label>
+      <button class="btn btn--lg" type="submit">Đăng ký</button>
+    {%- endform -%}
+    <p class="auth__alt">Đã có tài khoản? <a href="{{ routes.account_login_url }}">Đăng nhập</a></p>
+  </div>
+  <aside class="auth__perks">
+    <h2>Đăng ký miễn phí, nhận ngay</h2>
+    <ul>
+      <li>{% render 'icon', name: 'coupon' %}Mã giảm giá chào mừng</li>
+      <li>{% render 'icon', name: 'gift' %}Tích điểm từ đơn đầu tiên</li>
+      <li>{% render 'icon', name: 'bell' %}Báo trước Flash Sale</li>
+    </ul>
+  </aside>
+</section>

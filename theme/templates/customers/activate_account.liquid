@@ -1,0 +1,10 @@
+<section class="container auth"><div class="auth__card">
+  <h1 class="page-title">Kích hoạt tài khoản</h1>
+  <p>Đặt mật khẩu để hoàn tất kích hoạt.</p>
+  {%- form 'activate_customer_password', class: 'auth__form' -%}
+    {%- if form.errors -%}<p class="contact__err">{{ form.errors | default_errors }}</p>{%- endif -%}
+    <label for="a-pass">Mật khẩu</label><input class="field" id="a-pass" type="password" name="customer[password]" autocomplete="new-password" required>
+    <label for="a-pass2">Nhập lại mật khẩu</label><input class="field" id="a-pass2" type="password" name="customer[password_confirmation]" autocomplete="new-password" required>
+    <button class="btn btn--lg" type="submit">Kích hoạt</button>
+  {%- endform -%}
+</div></section>

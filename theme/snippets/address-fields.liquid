@@ -1,0 +1,10 @@
+<div class="auth__row">
+  <div><label for="ln-{{ prefix }}">Họ</label><input class="field" id="ln-{{ prefix }}" name="address[last_name]" value="{{ address.last_name }}"></div>
+  <div><label for="fn-{{ prefix }}">Tên</label><input class="field" id="fn-{{ prefix }}" name="address[first_name]" value="{{ address.first_name }}" required></div>
+</div>
+<label for="ph-{{ prefix }}">Số điện thoại</label><input class="field" id="ph-{{ prefix }}" type="tel" name="address[phone]" value="{{ address.phone }}" required>
+<label for="a1-{{ prefix }}">Số nhà, tên đường</label><input class="field" id="a1-{{ prefix }}" name="address[address1]" value="{{ address.address1 }}" required>
+<label for="a2-{{ prefix }}">Phường / Xã</label><input class="field" id="a2-{{ prefix }}" name="address[address2]" value="{{ address.address2 }}">
+<label for="ct-{{ prefix }}">Quận / Huyện, Tỉnh / Thành phố</label><input class="field" id="ct-{{ prefix }}" name="address[city]" value="{{ address.city }}" required>
+<input type="hidden" name="address[country]" value="{{ address.country | default: 'Vietnam' }}">
+<label class="facet__opt"><input type="checkbox" name="address[default]" value="1" {% if address.default %}checked{% endif %}>Đặt làm mặc định</label>

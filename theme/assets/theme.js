@@ -202,3 +202,11 @@ document.querySelectorAll('[data-cart-form] [data-step]').forEach((b) => b.addEv
   }));
   document.querySelectorAll('[data-mega-close]').forEach((b) => b.addEventListener('click', () => document.querySelector('[data-mega]')?.classList.remove('is-open')));
 })();
+
+// Đăng nhập ⇄ quên mật khẩu
+(() => {
+  const box = document.querySelector('[data-auth]'); if (!box) return;
+  const show = (w) => { box.querySelector('[data-auth-login]').hidden = w !== 'login'; box.querySelector('[data-auth-recover]').hidden = w !== 'recover'; };
+  box.querySelectorAll('[data-auth-show]').forEach((b) => b.addEventListener('click', () => show(b.dataset.authShow)));
+  if (location.hash === '#recover' || box.querySelector('[data-auth-recover] .contact__ok')) show('recover');
+})();

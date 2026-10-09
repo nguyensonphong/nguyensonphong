@@ -1,6 +1,33 @@
-<section class="container" style="max-width:420px;padding-block:40px"><h1 class="page-title">Đăng nhập</h1>
-{%- form 'customer_login' -%}{{ form.errors | default_errors }}
-<input type="email" name="customer[email]" placeholder="Email" required style="width:100%;padding:10px;margin-bottom:10px;border:1px solid var(--hp-line);border-radius:8px">
-<input type="password" name="customer[password]" placeholder="Mật khẩu" required style="width:100%;padding:10px;margin-bottom:10px;border:1px solid var(--hp-line);border-radius:8px">
-<button class="btn" type="submit" style="width:100%">Đăng nhập</button>{%- endform -%}
-<p class="center"><a href="{{ routes.account_register_url }}" style="color:var(--hp-blue)">Đăng ký</a></p></section>
+<section class="container auth">
+  <div class="auth__card" data-auth>
+    <div data-auth-login {% if form.posted_successfully? %}hidden{% endif %}>
+      <h1 class="page-title">Đăng nhập</h1>
+      {%- form 'customer_login', class: 'auth__form' -%}
+        {%- if form.errors -%}<p class="contact__err">Email hoặc mật khẩu chưa đúng.</p>{%- endif -%}
+        <label for="l-email">Email</label><input class="field" id="l-email" type="email" name="customer[email]" autocomplete="email" required>
+        <label for="l-pass">Mật khẩu</label><input class="field" id="l-pass" type="password" name="customer[password]" autocomplete="current-password" required>
+        <button class="auth__link" type="button" data-auth-show="recover">Quên mật khẩu?</button>
+        <button class="btn btn--lg" type="submit">Đăng nhập</button>
+      {%- endform -%}
+      <p class="auth__alt">Chưa có tài khoản? <a href="{{ routes.account_register_url }}">Đăng ký</a></p>
+    </div>
+    <div data-auth-recover hidden>
+      <h1 class="page-title">Đặt lại mật khẩu</h1>
+      {%- form 'recover_customer_password', class: 'auth__form' -%}
+        {%- if form.posted_successfully? -%}<p class="contact__ok">Đã gửi email hướng dẫn đặt lại mật khẩu.</p>{%- endif -%}
+        <label for="r-email">Email đã đăng ký</label><input class="field" id="r-email" type="email" name="email" autocomplete="email" required>
+        <button class="btn btn--lg" type="submit">Gửi email</button>
+      {%- endform -%}
+      <button class="auth__link" type="button" data-auth-show="login">‹ Quay lại đăng nhập</button>
+    </div>
+  </div>
+  <aside class="auth__perks">
+    <h2>Quyền lợi thành viên</h2>
+    <ul>
+      <li>{% render 'icon', name: 'coupon' %}Nhận mã giảm giá riêng cho thành viên</li>
+      <li>{% render 'icon', name: 'gift' %}Tích điểm mỗi đơn hàng, đổi ưu đãi</li>
+      <li>{% render 'icon', name: 'truck' %}Theo dõi đơn và lịch lắp đặt</li>
+      <li>{% render 'icon', name: 'shield' %}Lưu địa chỉ, thanh toán nhanh hơn</li>
+    </ul>
+  </aside>
+</section>
