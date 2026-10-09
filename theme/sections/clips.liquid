@@ -1,0 +1,47 @@
+<section class="container sec">
+  <div class="sec__head">
+    <h2 class="sec__title">{{ section.settings.title }}</h2>
+    <a class="sec__more" href="{{ section.settings.more_link }}">ดูเพิ่มเติม ›</a>
+  </div>
+  <div class="clips">
+    {%- for block in section.blocks -%}
+      <a class="clip" href="{{ block.settings.link }}" style="background:{{ block.settings.bg }}" {{ block.shopify_attributes }}>
+        {%- if block.settings.video -%}
+          {{ block.settings.video | video_tag: autoplay: false, muted: true, loop: true, playsinline: true, image_size: '600x', style: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover' }}
+        {%- elsif block.settings.image -%}
+          {{ block.settings.image | image_url: width: 600 | image_tag: style: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover' }}
+        {%- endif -%}
+        <span class="clip__views">▶ {{ block.settings.views }}</span>
+        <span class="clip__play">{% render 'icon', name: 'play' %}</span>
+        <span class="clip__by" style="position:relative"><i>HP</i>{{ block.settings.title }}</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Clips & Click",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "CLIPS & CLICK" },
+    { "type": "url", "id": "more_link", "label": "Link xem thêm" }
+  ],
+  "blocks": [
+    { "type": "clip", "name": "Video", "settings": [
+      { "type": "video", "id": "video", "label": "Video (tải lên Shopify)" },
+      { "type": "image_picker", "id": "image", "label": "Ảnh bìa (nếu không có video)" },
+      { "type": "text", "id": "title", "label": "Tiêu đề", "default": "HomePro" },
+      { "type": "text", "id": "views", "label": "Lượt xem", "default": "12.3K" },
+      { "type": "url", "id": "link", "label": "Link sản phẩm" },
+      { "type": "color", "id": "bg", "label": "Màu nền", "default": "#0b2e59" }
+    ]}
+  ],
+  "max_blocks": 8,
+  "presets": [{ "name": "Clips & Click", "blocks": [
+    { "type": "clip", "settings": { "title": "เครื่องลดความชื้น NIKITO", "views": "25.1K", "bg": "#2b8ad8" } },
+    { "type": "clip", "settings": { "title": "ชั้นวางรองเท้า STACKO", "views": "18.4K", "bg": "#0b2e59" } },
+    { "type": "clip", "settings": { "title": "กลอนดิจิทัล AZLE FL-22", "views": "9.8K", "bg": "#f7931e" } },
+    { "type": "clip", "settings": { "title": "ถังเก็บน้ำ DEXZON", "views": "31.2K", "bg": "#0066b3" } }
+  ]}]
+}
+{% endschema %}

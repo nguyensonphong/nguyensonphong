@@ -1,0 +1,55 @@
+{%- comment -%} Dùng cho: เทรนด์สินค้ายอดฮิต, New @HomePro, Better Health. Block đầu tiên là banner lớn. {%- endcomment -%}
+<section class="container sec">
+  <div class="sec__head">
+    <h2 class="sec__title">{{ section.settings.title }}</h2>
+    {%- if section.settings.more_link != blank -%}<a class="sec__more" href="{{ section.settings.more_link }}">ดูเพิ่มเติม ›</a>{%- endif -%}
+  </div>
+  <div class="mosaic{% if section.settings.big_left %} mosaic--left-big{% endif %}">
+    {%- for block in section.blocks limit: 5 -%}
+      <a href="{{ block.settings.link }}" class="{% if forloop.first %}is-big{% endif %}" {{ block.shopify_attributes }}>
+        {% render 'placeholder', image: block.settings.image, title: block.settings.title, sub: block.settings.sub, bg: block.settings.bg, width: 1000 %}
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner ghép (1 lớn + 4 nhỏ)",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "เทรนด์สินค้ายอดฮิต" },
+    { "type": "url", "id": "more_link", "label": "Link xem thêm" },
+    { "type": "checkbox", "id": "big_left", "label": "Banner lớn nằm bên trái", "default": false }
+  ],
+  "blocks": [
+    { "type": "banner", "name": "Banner", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Ảnh" },
+      { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Banner" },
+      { "type": "text", "id": "sub", "label": "Mô tả" },
+      { "type": "url", "id": "link", "label": "Link" },
+      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#0066b3" }
+    ]}
+  ],
+  "max_blocks": 5,
+  "presets": [
+    { "name": "Xu hướng (lũ lụt)", "blocks": [
+      { "type": "banner", "settings": { "title": "สู้ภัยน้ำท่วม", "sub": "รวมสินค้าจำเป็นทุกช่วง", "bg": "#0b2e59" } },
+      { "type": "banner", "settings": { "title": "เตรียมบ้านให้พร้อมรับมือน้ำท่วม", "bg": "#2b8ad8" } },
+      { "type": "banner", "settings": { "title": "อุปกรณ์จำเป็นรับมือน้ำท่วม", "bg": "#0066b3" } },
+      { "type": "banner", "settings": { "title": "คืนความสะอาดให้บ้านหลังน้ำลด", "bg": "#1a9e5c" } },
+      { "type": "banner", "settings": { "title": "ปรับปรุงบ้านหลังน้ำลด", "bg": "#f7931e" } } ] },
+    { "name": "New @HomePro", "settings": { "title": "New @HomePro", "big_left": true }, "blocks": [
+      { "type": "banner", "settings": { "title": "NEW ARRIVAL", "sub": "TOTO Scene of four seasons", "bg": "#0b2e59" } },
+      { "type": "banner", "settings": { "title": "Pre Sale", "bg": "#e6007e" } },
+      { "type": "banner", "settings": { "title": "Get it now", "bg": "#0066b3" } },
+      { "type": "banner", "settings": { "title": "Halloween", "bg": "#f7931e" } },
+      { "type": "banner", "settings": { "title": "ไฟ LED 499.-", "bg": "#2b8ad8" } } ] },
+    { "name": "Better Health & Longevity", "settings": { "title": "Better Health & Longevity", "big_left": true }, "blocks": [
+      { "type": "banner", "settings": { "title": "สุขภาพดี ชีวิตมีความสุข", "bg": "#1a9e5c" } },
+      { "type": "banner", "settings": { "title": "นอนหลับ", "bg": "#6b4fbb" } },
+      { "type": "banner", "settings": { "title": "อากาศสะอาด", "bg": "#2b8ad8" } },
+      { "type": "banner", "settings": { "title": "สุขภาพปัง", "bg": "#f7931e" } },
+      { "type": "banner", "settings": { "title": "เสริมความแข็งแรง", "bg": "#e4002b" } } ] }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,125 @@
+{
+  "sections": {
+    "hero": { "type": "hero", "blocks": {
+      "s1": { "type": "slide", "settings": { "title": "10.10 Double Day", "sub": "ลดแรงทั้งเว็บ", "button": "ช้อปเลย", "bg": "#0066b3" } },
+      "s2": { "type": "slide", "settings": { "title": "SHOCK PRICE", "sub": "สินค้าราคาแรง", "button": "ช้อปเลย", "bg": "#e4002b" } },
+      "s3": { "type": "slide", "settings": { "title": "Washer & Dryer Fair", "sub": "เครื่องซักผ้า 5,990.- | เครื่องอบผ้า 9,990.- | ฝาหน้า 7,990.-", "button": "ช้อปเลย", "bg": "#0b2e59" } }
+    }, "block_order": ["s1", "s2", "s3"], "settings": {} },
+    "icons": { "type": "icon-grid", "blocks": {
+      "a": { "type": "item", "settings": { "label": "ลดล้างสต๊อก", "icon": "tag", "color": "#e4002b" } },
+      "b": { "type": "item", "settings": { "label": "คูปองส่วนลด", "icon": "coupon", "color": "#f7931e" } },
+      "c": { "type": "item", "settings": { "label": "Mall", "icon": "store", "color": "#0066b3" } },
+      "d": { "type": "item", "settings": { "label": "สินค้าแลกเก่าเพื่อโลกใหม่", "icon": "recycle", "color": "#1a9e5c" } },
+      "e": { "type": "item", "settings": { "label": "บัตรสมาชิก", "icon": "card", "color": "#0b2e59" } },
+      "f": { "type": "item", "settings": { "label": "ฟรีติดตั้ง ฟรีประกอบ", "icon": "tools", "color": "#2b8ad8" } },
+      "g": { "type": "item", "settings": { "label": "รวมโปรเด็ด", "icon": "gift", "color": "#e6007e" } },
+      "h": { "type": "item", "settings": { "label": "ศูนย์ซ่อมสินค้า", "icon": "wrench", "color": "#6b4fbb" } },
+      "i": { "type": "item", "settings": { "label": "Circular Economy", "icon": "leaf", "color": "#3aa335" } },
+      "j": { "type": "item", "settings": { "label": "สร้างรายได้กับเรา", "icon": "home", "color": "#f7931e" } }
+    }, "block_order": ["a","b","c","d","e","f","g","h","i","j"], "settings": {} },
+    "coupons": { "type": "member-coupons", "blocks": {
+      "c1": { "type": "coupon", "settings": { "value": "10%", "text": "ลด 10% เมื่อช้อปครบ ฿1,000" } },
+      "c2": { "type": "coupon", "settings": { "value": "5%", "text": "ลด 5% เมื่อช้อปครบ ฿3,000" } },
+      "c3": { "type": "coupon", "settings": { "value": "฿1000", "text": "ลด ฿1,000 เมื่อช้อปครบ ฿100,000" } },
+      "c4": { "type": "coupon", "settings": { "value": "฿100", "text": "ลด ฿100 เมื่อช้อปครบ ฿500" } }
+    }, "block_order": ["c1","c2","c3","c4"], "settings": {} },
+    "brands_deal": { "type": "brand-deals", "blocks": {
+      "b1": { "type": "brand", "settings": { "name": "Electrolux", "off": 38 } },
+      "b2": { "type": "brand", "settings": { "name": "Samsung", "off": 42 } },
+      "b3": { "type": "brand", "settings": { "name": "Haier", "off": 26 } },
+      "b4": { "type": "brand", "settings": { "name": "MEX", "off": 50 } },
+      "b5": { "type": "brand", "settings": { "name": "Bosch", "off": 30 } },
+      "b6": { "type": "brand", "settings": { "name": "Toshiba", "off": 35 } },
+      "b7": { "type": "brand", "settings": { "name": "TOTO", "off": 25 } },
+      "b8": { "type": "brand", "settings": { "name": "Karcher", "off": 30 } },
+      "b9": { "type": "brand", "settings": { "name": "Duragres", "off": 40 } },
+      "b10": { "type": "brand", "settings": { "name": "Lockin", "off": 20 } },
+      "b11": { "type": "brand", "settings": { "name": "PlanToys", "off": 30 } },
+      "b12": { "type": "brand", "settings": { "name": "Patara", "off": 50 } }
+    }, "block_order": ["b1","b2","b3","b4","b5","b6","b7","b8","b9","b10","b11","b12"], "settings": {} },
+    "shock": { "type": "product-row", "settings": { "title": "DOUBLE SHOCK!", "style": "shock" } },
+    "flash": { "type": "product-row", "settings": { "title": "FLASH SALE", "style": "flash" } },
+    "clips": { "type": "clips", "blocks": {
+      "v1": { "type": "clip", "settings": { "title": "เครื่องลดความชื้น NIKITO", "views": "25.1K", "bg": "#2b8ad8" } },
+      "v2": { "type": "clip", "settings": { "title": "ชั้นวางรองเท้า STACKO", "views": "18.4K", "bg": "#0b2e59" } },
+      "v3": { "type": "clip", "settings": { "title": "กลอนดิจิทัล AZLE FL-22", "views": "9.8K", "bg": "#f7931e" } },
+      "v4": { "type": "clip", "settings": { "title": "ถังเก็บน้ำ DEXZON", "views": "31.2K", "bg": "#0066b3" } }
+    }, "block_order": ["v1","v2","v3","v4"], "settings": {} },
+    "trends": { "type": "banner-mosaic", "blocks": {
+      "t1": { "type": "banner", "settings": { "title": "สู้ภัยน้ำท่วม", "sub": "รวมสินค้าจำเป็นทุกช่วง", "bg": "#0b2e59" } },
+      "t2": { "type": "banner", "settings": { "title": "เตรียมบ้านให้พร้อมรับมือน้ำท่วม", "bg": "#2b8ad8" } },
+      "t3": { "type": "banner", "settings": { "title": "อุปกรณ์จำเป็นรับมือน้ำท่วม", "bg": "#0066b3" } },
+      "t4": { "type": "banner", "settings": { "title": "คืนความสะอาดให้บ้านหลังน้ำลด", "bg": "#1a9e5c" } },
+      "t5": { "type": "banner", "settings": { "title": "ปรับปรุงบ้านหลังน้ำลด", "bg": "#f7931e" } }
+    }, "block_order": ["t1","t2","t3","t4","t5"], "settings": { "title": "เทรนด์สินค้ายอดฮิต" } },
+    "cats": { "type": "category-grid", "blocks": {
+      "k1": { "type": "cat", "settings": { "label": "เครื่องใช้ไฟฟ้า", "icon": "ac" } },
+      "k2": { "type": "cat", "settings": { "label": "เครื่องใช้ไฟฟ้าเล็ก", "icon": "pot" } },
+      "k3": { "type": "cat", "settings": { "label": "ทีวีและเครื่องเสียง", "icon": "tv" } },
+      "k4": { "type": "cat", "settings": { "label": "โคมไฟและหลอดไฟ", "icon": "bulb" } },
+      "k5": { "type": "cat", "settings": { "label": "ห้องนอนและเครื่องนอน", "icon": "bed" } },
+      "k6": { "type": "cat", "settings": { "label": "ห้องน้ำ", "icon": "bath" } },
+      "k7": { "type": "cat", "settings": { "label": "ห้องครัวและอุปกรณ์", "icon": "pot" } },
+      "k8": { "type": "cat", "settings": { "label": "สวนและอุปกรณ์ตกแต่ง", "icon": "leaf" } }
+    }, "block_order": ["k1","k2","k3","k4","k5","k6","k7","k8"], "settings": {} },
+    "shops": { "type": "shop-shortcuts", "blocks": {
+      "p1": { "type": "shop", "settings": { "title": "PREMIUM & CUSTOMIZE SHOP" } },
+      "p2": { "type": "shop", "settings": { "title": "HOME SOLAR SHOP" } },
+      "p3": { "type": "shop", "settings": { "title": "IT GADGET SHOP" } },
+      "p4": { "type": "shop", "settings": { "title": "FOODSUPPLEMENT SHOP" } },
+      "p5": { "type": "shop", "settings": { "title": "COFFEE & BAKERY" } },
+      "p6": { "type": "shop", "settings": { "title": "TRAVEL & CAMPING" } },
+      "p7": { "type": "shop", "settings": { "title": "OFFICE & STATIONERY" } },
+      "p8": { "type": "shop", "settings": { "title": "DAILY USED SHOP" } }
+    }, "block_order": ["p1","p2","p3","p4","p5","p6","p7","p8"], "settings": {} },
+    "logos": { "type": "brand-logos", "blocks": {
+      "l1": { "type": "brand", "settings": { "name": "LG" } }, "l2": { "type": "brand", "settings": { "name": "Samsung" } },
+      "l3": { "type": "brand", "settings": { "name": "Electrolux" } }, "l4": { "type": "brand", "settings": { "name": "Mitsubishi Electric" } },
+      "l5": { "type": "brand", "settings": { "name": "Haier" } }, "l6": { "type": "brand", "settings": { "name": "Cabin" } },
+      "l7": { "type": "brand", "settings": { "name": "Bosch" } }, "l8": { "type": "brand", "settings": { "name": "TOTO" } },
+      "l9": { "type": "brand", "settings": { "name": "COTTO" } }
+    }, "block_order": ["l1","l2","l3","l4","l5","l6","l7","l8","l9"], "settings": {} },
+    "promo": { "type": "promo-deals", "blocks": {
+      "m1": { "type": "promo", "settings": { "title": "ซื้อ 1 แถม 1" } },
+      "m2": { "type": "promo", "settings": { "title": "ฟรี ของแถม" } },
+      "m3": { "type": "promo", "settings": { "title": "ลด สูงสุด 80%" } }
+    }, "block_order": ["m1","m2","m3"], "settings": {} },
+    "popular": { "type": "product-row", "blocks": {
+      "r1": { "type": "tab", "settings": { "label": "สินค้าแนะนำ" } },
+      "r2": { "type": "tab", "settings": { "label": "เครื่องใช้ไฟฟ้า" } },
+      "r3": { "type": "tab", "settings": { "label": "เครื่องใช้ไฟฟ้าเล็ก" } },
+      "r4": { "type": "tab", "settings": { "label": "ระบบประปา" } }
+    }, "block_order": ["r1","r2","r3","r4"], "settings": { "title": "สินค้ายอดนิยม", "style": "popular" } },
+    "new_banners": { "type": "banner-mosaic", "blocks": {
+      "n1": { "type": "banner", "settings": { "title": "NEW ARRIVAL", "sub": "คอลเลกชันใหม่ล่าสุด", "bg": "#0b2e59" } },
+      "n2": { "type": "banner", "settings": { "title": "Pre Sale", "bg": "#e6007e" } },
+      "n3": { "type": "banner", "settings": { "title": "Get it now", "bg": "#0066b3" } },
+      "n4": { "type": "banner", "settings": { "title": "Halloween", "bg": "#f7931e" } },
+      "n5": { "type": "banner", "settings": { "title": "ไฟ LED 499.-", "bg": "#2b8ad8" } }
+    }, "block_order": ["n1","n2","n3","n4","n5"], "settings": { "title": "New Arrivals", "big_left": true } },
+    "new_products": { "type": "product-row", "settings": { "title": "สินค้าใหม่", "style": "new" } },
+    "health": { "type": "banner-mosaic", "blocks": {
+      "h1": { "type": "banner", "settings": { "title": "สุขภาพดี ชีวิตมีความสุข", "bg": "#1a9e5c" } },
+      "h2": { "type": "banner", "settings": { "title": "นอนหลับ", "bg": "#6b4fbb" } },
+      "h3": { "type": "banner", "settings": { "title": "อากาศสะอาด", "bg": "#2b8ad8" } },
+      "h4": { "type": "banner", "settings": { "title": "สุขภาพปัง", "bg": "#f7931e" } },
+      "h5": { "type": "banner", "settings": { "title": "เสริมความแข็งแรง", "bg": "#e4002b" } }
+    }, "block_order": ["h1","h2","h3","h4","h5"], "settings": { "title": "Better Health & Longevity", "big_left": true } },
+    "stores": { "type": "store-list", "blocks": {
+      "z1": { "type": "store", "settings": { "name": "tengugaminggears", "color": "#0b2e59" } },
+      "z2": { "type": "store", "settings": { "name": "HIP Global", "color": "#e4002b" } },
+      "z3": { "type": "store", "settings": { "name": "Worcraft", "color": "#f7931e" } },
+      "z4": { "type": "store", "settings": { "name": "Sportsynology", "color": "#1a9e5c" } },
+      "z5": { "type": "store", "settings": { "name": "MAAI Design", "color": "#6b4fbb" } },
+      "z6": { "type": "store", "settings": { "name": "EVE Kitchen", "color": "#2b8ad8" } }
+    }, "block_order": ["z1","z2","z3","z4","z5","z6"], "settings": {} },
+    "services": { "type": "services", "blocks": {
+      "x1": { "type": "service", "settings": { "title": "บริการปรับปรุงห้องครัว", "bg": "#f7931e" } },
+      "x2": { "type": "service", "settings": { "title": "บริการปรับปรุงห้องน้ำ", "bg": "#2b8ad8" } },
+      "x3": { "type": "service", "settings": { "title": "บริการติดตั้งระบบน้ำ", "bg": "#0b2e59" } },
+      "x4": { "type": "service", "settings": { "title": "บริการล้างแอร์", "bg": "#1a9e5c" } }
+    }, "block_order": ["x1","x2","x3","x4"], "settings": {} },
+    "seo": { "type": "seo-text", "settings": {} }
+  },
+  "order": ["hero","icons","coupons","brands_deal","shock","flash","clips","trends","cats","shops","logos","promo","popular","new_banners","new_products","health","stores","services","seo"]
+}

@@ -1,0 +1,36 @@
+<section class="container sec">
+  <div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>
+  <div class="shops">
+    {%- for block in section.blocks -%}
+      <div class="shop" {% if block.settings.image %}style="background-image:linear-gradient(135deg,rgba(0,102,179,.85),rgba(29,132,214,.6)),url({{ block.settings.image | image_url: width: 600 }});background-size:cover"{% endif %} {{ block.shopify_attributes }}>
+        <h4>{{ block.settings.title }}</h4>
+        <a class="btn btn--orange btn--sm" href="{{ block.settings.link }}">ช้อปเลย</a>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lối tắt cửa hàng",
+  "settings": [{ "type": "text", "id": "title", "label": "Tiêu đề", "default": "ทางลัดค้นหาสินค้าทุกเรื่องบ้าน" }],
+  "blocks": [
+    { "type": "shop", "name": "Cửa hàng", "settings": [
+      { "type": "text", "id": "title", "label": "Tên", "default": "DAILY USED SHOP" },
+      { "type": "image_picker", "id": "image", "label": "Ảnh nền" },
+      { "type": "url", "id": "link", "label": "Link" }
+    ]}
+  ],
+  "max_blocks": 12,
+  "presets": [{ "name": "Lối tắt cửa hàng", "blocks": [
+    { "type": "shop", "settings": { "title": "PREMIUM & CUSTOMIZE SHOP" } },
+    { "type": "shop", "settings": { "title": "HOME SOLAR SHOP" } },
+    { "type": "shop", "settings": { "title": "IT GADGET SHOP" } },
+    { "type": "shop", "settings": { "title": "FOODSUPPLEMENT SHOP" } },
+    { "type": "shop", "settings": { "title": "COFFEE & BAKERY" } },
+    { "type": "shop", "settings": { "title": "TRAVEL & CAMPING" } },
+    { "type": "shop", "settings": { "title": "OFFICE & STATIONERY" } },
+    { "type": "shop", "settings": { "title": "DAILY USED SHOP" } }
+  ]}]
+}
+{% endschema %}

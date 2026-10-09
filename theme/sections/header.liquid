@@ -1,54 +1,85 @@
-<header class="header" data-header>
-  <div class="container header__main">
-    <button class="header__burger" aria-label="Menu" data-menu-toggle>☰</button>
-    <a class="header__logo" href="{{ routes.root_url }}">
-      {%- if section.settings.logo -%}
-        {{ section.settings.logo | image_url: width: 360 | image_tag: alt: shop.name, width: 180 }}
-      {%- else -%}
-        <span class="logo-text">Home<b>Pro</b></span>
-      {%- endif -%}
-    </a>
-    <form class="header__search" action="{{ routes.search_url }}" method="get" role="search">
-      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ section.settings.search_placeholder }}" aria-label="Tìm kiếm">
-      <input type="hidden" name="type" value="product">
-      <button type="submit" aria-label="Tìm kiếm">{% render 'icon', name: 'search' %}</button>
-    </form>
-    <div class="header__icons">
-      <a href="{{ section.settings.store_link }}" class="hicon hide-sm">{% render 'icon', name: 'pin' %}<span>ค้นหาสาขา</span></a>
-      <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="hicon">{% render 'icon', name: 'user' %}<span>{% if customer %}{{ customer.first_name }}{% else %}เข้าสู่ระบบ{% endif %}</span></a>
-      <a href="{{ routes.cart_url }}" class="hicon hicon--cart">{% render 'icon', name: 'cart' %}<span>ตะกร้า</span><em class="cart-count" data-cart-count>{{ cart.item_count }}</em></a>
-    </div>
-  </div>
-
-  <nav class="nav" data-menu>
-    <div class="container nav__inner">
-      <div class="nav__all">
-        <button class="nav__all-btn" data-mega-toggle>☰ หมวดหมู่สินค้าทั้งหมด</button>
-        <div class="mega" data-mega>
-          {%- for link in linklists[section.settings.mega_menu].links -%}
-            <div class="mega__col">
-              <a class="mega__title" href="{{ link.url }}">{{ link.title }}</a>
-              {%- for child in link.links -%}<a href="{{ child.url }}">{{ child.title }}</a>{%- endfor -%}
-            </div>
-          {%- endfor -%}
-        </div>
+{%- comment -%}
+  Mega menu: menu "mega_menu" có 3 cấp — cấp 1 = nhóm (danh sách bên trái), cấp 2 = tiêu đề cột, cấp 3 = link.
+  Icon của nhóm: đặt theo thứ tự trong ô "Icon nhóm" (phân cách bằng dấu phẩy).
+{%- endcomment -%}
+{%- assign mega_icons = section.settings.mega_icons | split: ',' -%}
+<div class="header-wrap" data-header>
+  <header class="header">
+    <div class="container header__main">
+      <button class="burger" type="button" aria-label="เมนู" data-mega-toggle>☰</button>
+      <a class="logo" href="{{ routes.root_url }}">
+        {%- if section.settings.logo -%}
+          {{ section.settings.logo | image_url: width: 320 | image_tag: alt: shop.name, width: 160, style: 'height:auto' }}
+        {%- else -%}
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M2 11 12 3l10 8M5 9v11h14V9"/></svg>{{ shop.name }}
+        {%- endif -%}
+      </a>
+      <a class="loc" href="{{ routes.account_addresses_url }}"><span>ที่อยู่จัดส่ง</span><b>เลือกที่อยู่จัดส่ง ▾</b></a>
+      <a class="loc" href="{{ section.settings.store_link }}"><span>รับที่สาขา</span><b>เลือกสาขา ▾</b></a>
+      <form class="search" action="{{ routes.search_url }}" method="get" role="search">
+        <select name="type" aria-label="ขอบเขตการค้นหา"><option value="product,article,page">ทั้งหมด</option><option value="product">สินค้า</option><option value="article">บทความ</option></select>
+        <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="ค้นหา" aria-label="ค้นหา">
+        <button type="submit" aria-label="ค้นหา">{% render 'icon', name: 'search' %}</button>
+      </form>
+      <div class="hicons">
+        <a class="hicon hide-sm" href="{{ routes.search_url }}" aria-label="AI search">{% render 'icon', name: 'ai' %}</a>
+        <a class="hicon hide-sm" href="{{ section.settings.notify_link }}" aria-label="การแจ้งเตือน">{% render 'icon', name: 'bell' %}</a>
+        <a class="hicon hide-sm" href="{{ section.settings.deals_link }}" aria-label="โปรโมชั่น">{% render 'icon', name: 'tag' %}</a>
+        <a class="hicon" href="{{ routes.cart_url }}" aria-label="ตะกร้า">{% render 'icon', name: 'cart' %}<span class="badge" data-cart-count>{{ cart.item_count }}</span></a>
+        <a class="hicon" href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" aria-label="บัญชี">{% render 'icon', name: 'user' %}</a>
       </div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="เมนูหลัก">
+    <div class="container nav__inner">
+      <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ เลือกหมวดสินค้า</button>
       {%- for link in linklists[section.settings.main_menu].links -%}
-        <a class="nav__link{% if link.active %} is-active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+        <a class="nav__item" href="{{ link.url }}">{{ link.title }}</a>
       {%- endfor -%}
     </div>
   </nav>
-</header>
+  <div class="shortcuts">
+    <div class="container">
+      {%- for link in linklists[section.settings.shortcut_menu].links -%}<a href="{{ link.url }}">{{ link.title }}</a>{%- endfor -%}
+    </div>
+  </div>
+
+  <div class="mega" data-mega>
+    <div class="container mega__inner">
+      <ul class="mega__list">
+        {%- for group in linklists[section.settings.mega_menu].links -%}
+          {%- assign ic = mega_icons[forloop.index0] | strip | default: 'box' -%}
+          <li><button type="button" data-mega-tab="{{ forloop.index }}" {% if forloop.first %}class="is-active"{% endif %}>{% render 'icon', name: ic %}{{ group.title }}</button></li>
+        {%- endfor -%}
+      </ul>
+      {%- for group in linklists[section.settings.mega_menu].links -%}
+        <div class="mega__panel" data-mega-panel="{{ forloop.index }}" {% unless forloop.first %}hidden{% endunless %}>
+          {%- for col in group.links -%}
+            <div><h4><a href="{{ col.url }}">{{ col.title }}</a></h4>
+              {%- for item in col.links -%}<a href="{{ item.url }}">{{ item.title }}</a>{%- endfor -%}
+            </div>
+          {%- else -%}
+            <div><h4><a href="{{ group.url }}">{{ group.title }}</a></h4></div>
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {
   "name": "Header",
   "settings": [
-    { "type": "image_picker", "id": "logo", "label": "Logo" },
-    { "type": "text", "id": "search_placeholder", "label": "Gợi ý ô tìm kiếm", "default": "ค้นหาสินค้า แบรนด์ หรือรหัสสินค้า" },
-    { "type": "link_list", "id": "mega_menu", "label": "Menu danh mục (mega menu)", "default": "main-menu" },
-    { "type": "link_list", "id": "main_menu", "label": "Menu ngang", "default": "main-menu" },
-    { "type": "url", "id": "store_link", "label": "Trang tìm chi nhánh" }
+    { "type": "image_picker", "id": "logo", "label": "Logo (trắng, nền trong suốt)" },
+    { "type": "link_list", "id": "main_menu", "label": "Menu chính", "info": "ช้อปตามห้อง, ช้อปตามแบรนด์, HomePro Mall, โปรเด็ด…" },
+    { "type": "link_list", "id": "shortcut_menu", "label": "Thanh phím tắt danh mục" },
+    { "type": "link_list", "id": "mega_menu", "label": "Mega menu (3 cấp)" },
+    { "type": "textarea", "id": "mega_icons", "label": "Icon nhóm theo thứ tự", "default": "ac,box,sofa,tv,box,bath,pipe,pot,tile,brick,tools,bulb,door,shield,leaf,bed,paint,ball,health,phone,beauty,car,pet,baby", "info": "Tên icon: ac, box, sofa, tv, bath, pipe, pot, tile, brick, tools, bulb, door, shield, leaf, bed, paint, ball, health, phone, beauty, car, pet, baby" },
+    { "type": "url", "id": "store_link", "label": "Trang chọn chi nhánh" },
+    { "type": "url", "id": "notify_link", "label": "Trang thông báo" },
+    { "type": "url", "id": "deals_link", "label": "Trang ưu đãi" }
   ]
 }
 {% endschema %}

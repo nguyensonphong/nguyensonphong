@@ -1,0 +1,52 @@
+<section class="container sec">
+  <div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>
+  <div class="banners3">
+    {%- for i in (1..3) -%}
+      {%- capture im %}banner_{{ i }}{% endcapture -%}{%- capture tt %}banner_{{ i }}_title{% endcapture -%}{%- capture ln %}banner_{{ i }}_link{% endcapture -%}
+      <a href="{{ section.settings[ln] }}">{% render 'placeholder', image: section.settings[im], title: section.settings[tt], bg: '#0b2e59', width: 800 %}</a>
+    {%- endfor -%}
+  </div>
+  <div class="row-scroll stores">
+    {%- for block in section.blocks -%}
+      <div class="store" {{ block.shopify_attributes }}>
+        <i style="background:{{ block.settings.color }}">
+          {%- if block.settings.logo -%}{{ block.settings.logo | image_url: width: 128 | image_tag: style: 'width:100%;height:100%;border-radius:50%;object-fit:cover' }}{%- else -%}{{ block.settings.name | slice: 0, 2 | upcase }}{%- endif -%}
+        </i>
+        <b>{{ block.settings.name }}</b>
+        <small>★ {{ block.settings.rating }} · {{ block.settings.followers }} ผู้ติดตาม</small>
+        <a class="btn btn--sm" href="{{ block.settings.link }}">ดูร้านค้า →</a>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cửa hàng đề xuất",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "ร้านค้าแนะนำ" },
+    { "type": "image_picker", "id": "banner_1", "label": "Banner 1" }, { "type": "text", "id": "banner_1_title", "label": "Tiêu đề 1", "default": "Spalding" }, { "type": "url", "id": "banner_1_link", "label": "Link 1" },
+    { "type": "image_picker", "id": "banner_2", "label": "Banner 2" }, { "type": "text", "id": "banner_2_title", "label": "Tiêu đề 2", "default": "Camel ลด 50%" }, { "type": "url", "id": "banner_2_link", "label": "Link 2" },
+    { "type": "image_picker", "id": "banner_3", "label": "Banner 3" }, { "type": "text", "id": "banner_3_title", "label": "Tiêu đề 3", "default": "uPVC ลด 35%" }, { "type": "url", "id": "banner_3_link", "label": "Link 3" }
+  ],
+  "blocks": [
+    { "type": "store", "name": "Cửa hàng", "settings": [
+      { "type": "text", "id": "name", "label": "Tên", "default": "Shop" },
+      { "type": "image_picker", "id": "logo", "label": "Logo tròn" },
+      { "type": "text", "id": "rating", "label": "Điểm", "default": "4.9" },
+      { "type": "text", "id": "followers", "label": "Người theo dõi", "default": "1.2K" },
+      { "type": "color", "id": "color", "label": "Màu logo mặc định", "default": "#0066b3" },
+      { "type": "url", "id": "link", "label": "Link" }
+    ]}
+  ],
+  "max_blocks": 20,
+  "presets": [{ "name": "Cửa hàng đề xuất", "blocks": [
+    { "type": "store", "settings": { "name": "tengugaminggears", "color": "#0b2e59" } },
+    { "type": "store", "settings": { "name": "HIP Global", "color": "#e4002b" } },
+    { "type": "store", "settings": { "name": "Worcraft", "color": "#f7931e" } },
+    { "type": "store", "settings": { "name": "Sportsynology", "color": "#1a9e5c" } },
+    { "type": "store", "settings": { "name": "MAAI Design", "color": "#6b4fbb" } },
+    { "type": "store", "settings": { "name": "EVE Kitchen", "color": "#2b8ad8" } }
+  ]}]
+}
+{% endschema %}

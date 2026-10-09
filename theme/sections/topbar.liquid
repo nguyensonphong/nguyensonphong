@@ -1,0 +1,44 @@
+<div class="topbar">
+  <div class="container topbar__inner">
+    {%- for block in section.blocks -%}
+      <a href="{{ block.settings.link }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+    {%- endfor -%}
+    <div class="topbar__help">
+      <a href="{{ section.settings.help_link }}">ศูนย์ช่วยเหลือ ▾</a>
+      <ul>
+        <li><a href="tel:1284">โทร. 1284</a></li>
+        {%- for link in linklists[section.settings.help_menu].links -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}
+      </ul>
+    </div>
+    {%- if localization.available_languages.size > 1 -%}
+      {%- form 'localization', class: 'lang' -%}
+        {%- for language in localization.available_languages -%}
+          <button type="submit" name="language_code" value="{{ language.iso_code }}" style="background:none;border:0;color:#fff;padding:0 2px">
+            {%- if language.iso_code == localization.language.iso_code -%}<b>{{ language.iso_code | upcase }}</b>{%- else -%}<span>{{ language.iso_code | upcase }}</span>{%- endif -%}
+          </button>{% unless forloop.last %}|{% endunless %}
+        {%- endfor -%}
+      {%- endform -%}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Thanh trên cùng",
+  "settings": [
+    { "type": "url", "id": "help_link", "label": "Link trung tâm hỗ trợ" },
+    { "type": "link_list", "id": "help_menu", "label": "Menu con hỗ trợ (สอบถาม / ร้องเรียน …)" }
+  ],
+  "blocks": [
+    { "type": "link", "name": "Liên kết", "settings": [
+      { "type": "text", "id": "label", "label": "Nhãn", "default": "ค้นหาสาขา" },
+      { "type": "url", "id": "link", "label": "Link" }
+    ]}
+  ],
+  "default": { "blocks": [
+    { "type": "link", "settings": { "label": "โฮมการ์ด" } },
+    { "type": "link", "settings": { "label": "สมัครเป็นผู้ขาย" } },
+    { "type": "link", "settings": { "label": "ค้นหาสาขา" } }
+  ]}
+}
+{% endschema %}

@@ -2,7 +2,17 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
-    "footer": { "type": "footer", "settings": {} }
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "help": { "type": "menu", "settings": { "title": "ช่วยเหลือ", "menu": "footer-help" } },
+        "benefit": { "type": "menu", "settings": { "title": "สิทธิประโยชน์", "menu": "footer-benefits" } },
+        "policy": { "type": "menu", "settings": { "title": "นโยบาย", "menu": "footer-policy" } },
+        "about": { "type": "menu", "settings": { "title": "เกี่ยวกับเรา", "menu": "footer-about" } }
+      },
+      "block_order": ["help", "benefit", "policy", "about"],
+      "settings": {}
+    }
   },
   "order": ["footer"]
 }

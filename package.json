@@ -1,0 +1,7 @@
+{
+  "name": "homestyle-theme",
+  "private": true,
+  "type": "module",
+  "scripts": { "preview": "node tools/render-preview.mjs" },
+  "devDependencies": { "liquidjs": "10.19.0" }
+}

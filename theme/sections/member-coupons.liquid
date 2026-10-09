@@ -1,0 +1,56 @@
+<section class="container sec">
+  <div class="member">
+    <div>
+      {%- if customer -%}<span>สวัสดี</span><b>{{ customer.first_name }}</b>
+      {%- else -%}<span>สวัสดี</span><span><a href="{{ routes.account_login_url }}">เข้าสู่ระบบ</a> | <a href="{{ routes.account_register_url }}">ลงทะเบียน</a></span>{%- endif -%}
+    </div>
+    <div><span>คุณมีคูปองพร้อมใช้</span><b data-coupon-count>0 ใบ</b></div>
+    <div><span>บัตรสมาชิก</span><a href="{{ section.settings.card_link }}">ผูก/สมัครบัตรโฮมการ์ด</a></div>
+    <div><span>โฮมโปรวอลเล็ท</span><b>฿{{ customer.metafields.custom.wallet | default: 0 }}</b></div>
+  </div>
+
+  <div class="sec__head" style="margin-top:20px">
+    <h2 class="sec__title" style="font-size:20px">{{ section.settings.title }}</h2>
+    <a class="sec__more" href="{{ section.settings.more_link }}">เก็บเพิ่มเติม ›</a>
+  </div>
+  <div class="coupons">
+    {%- for block in section.blocks -%}
+      <div class="coupon" {{ block.shopify_attributes }}>
+        <div class="coupon__val">{{ block.settings.value }}<small>ส่วนลด</small></div>
+        <div class="coupon__body">
+          <p>{{ block.settings.text }}</p>
+          <div class="coupon__act">
+            <a href="{{ block.settings.terms }}">ดูเงื่อนไข</a>
+            <button class="btn btn--sm" type="button" data-coupon="{{ block.settings.code | escape }}">เก็บ</button>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Thành viên & Coupon",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "มีคูปองให้เก็บอีก 141 ใบ" },
+    { "type": "url", "id": "more_link", "label": "Link xem thêm" },
+    { "type": "url", "id": "card_link", "label": "Link Home Card" }
+  ],
+  "blocks": [
+    { "type": "coupon", "name": "Coupon", "settings": [
+      { "type": "text", "id": "value", "label": "Giá trị", "default": "10%" },
+      { "type": "text", "id": "text", "label": "Điều kiện", "default": "เมื่อช้อปครบ ฿1,000" },
+      { "type": "text", "id": "code", "label": "Mã giảm giá Shopify", "info": "Khi bấm เก็บ, mã được lưu và tự áp dụng lúc thanh toán." },
+      { "type": "url", "id": "terms", "label": "Link điều kiện" }
+    ]}
+  ],
+  "max_blocks": 8,
+  "presets": [{ "name": "Thành viên & Coupon", "blocks": [
+    { "type": "coupon", "settings": { "value": "10%", "text": "ลด 10% เมื่อช้อปครบ ฿1,000" } },
+    { "type": "coupon", "settings": { "value": "5%", "text": "ลด 5% เมื่อช้อปครบ ฿3,000" } },
+    { "type": "coupon", "settings": { "value": "฿1000", "text": "ลด ฿1,000 เมื่อช้อปครบ ฿100,000" } },
+    { "type": "coupon", "settings": { "value": "฿100", "text": "ลด ฿100 เมื่อช้อปครบ ฿500" } }
+  ]}]
+}
+{% endschema %}

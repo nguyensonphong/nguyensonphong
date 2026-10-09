@@ -1,0 +1,78 @@
+{%- comment -%}
+  Dải sản phẩm dùng cho: FLASH SALE, DOUBLE SHOCK!, สินค้ายอดนิยม, สินค้าใหม่.
+  Không có block "tab" → dùng collection chính. Có block "tab" → hiện thanh tab, mỗi tab một collection.
+{%- endcomment -%}
+{%- assign st = section.settings.style -%}
+<section class="container sec" data-tabs>
+  {%- if st == 'flash' or st == 'shock' -%}
+    <div class="strip strip--{{ st }}">
+      <h3>{% if st == 'flash' %}⚡ {% endif %}{{ section.settings.title }}</h3>
+      {%- if st == 'flash' and section.settings.ends_at != blank -%}
+        <div class="countdown" data-countdown="{{ section.settings.ends_at }}">จบใน <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></div>
+      {%- endif -%}
+      {%- if section.settings.collection -%}<a href="{{ section.settings.collection.url }}">ดูเพิ่มเติม &gt;&gt;</a>{%- endif -%}
+    </div>
+  {%- else -%}
+    <div class="sec__head">
+      <h2 class="sec__title">{{ section.settings.title }}</h2>
+      {%- if section.settings.collection -%}<a class="sec__more" href="{{ section.settings.collection.url }}">ดูทั้งหมด ›</a>{%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="tabs" role="tablist">
+      {%- for block in section.blocks -%}
+        <button class="tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" data-tab="{{ forloop.index }}" {{ block.shopify_attributes }}>{{ block.settings.label | default: block.settings.collection.title }}</button>
+      {%- endfor -%}
+    </div>
+    {%- for block in section.blocks -%}
+      <div class="row-scroll" data-panel="{{ forloop.index }}" {% unless forloop.first %}hidden{% endunless %}>
+        {%- for product in block.settings.collection.products limit: section.settings.limit -%}
+          {% render 'product-card', product: product, style: st %}
+        {%- else -%}
+          {%- for i in (1..6) -%}{% render 'product-card' %}{%- endfor -%}
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  {%- else -%}
+    <div class="row-scroll">
+      {%- for product in section.settings.collection.products limit: section.settings.limit -%}
+        {% render 'product-card', product: product, style: st %}
+      {%- else -%}
+        {%- for i in (1..6) -%}{% render 'product-card' %}{%- endfor -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Dải sản phẩm",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "FLASH SALE" },
+    { "type": "select", "id": "style", "label": "Kiểu", "default": "flash", "options": [
+      { "value": "flash", "label": "Flash Sale (banner đỏ-cam + đếm ngược)" },
+      { "value": "shock", "label": "Double Shock (banner xanh + logo hãng)" },
+      { "value": "popular", "label": "Sản phẩm phổ biến (Best Price, sao, đã bán)" },
+      { "value": "new", "label": "Sản phẩm mới (badge NEW)" }
+    ]},
+    { "type": "collection", "id": "collection", "label": "Collection (khi không dùng tab)" },
+    { "type": "range", "id": "limit", "label": "Số sản phẩm", "min": 4, "max": 24, "step": 1, "default": 12 },
+    { "type": "text", "id": "ends_at", "label": "Flash Sale kết thúc lúc", "info": "Dạng 2026-10-10T23:59:00+07:00" }
+  ],
+  "blocks": [
+    { "type": "tab", "name": "Tab", "settings": [
+      { "type": "text", "id": "label", "label": "Tên tab" },
+      { "type": "collection", "id": "collection", "label": "Collection" }
+    ]}
+  ],
+  "max_blocks": 10,
+  "presets": [
+    { "name": "Flash Sale", "settings": { "title": "FLASH SALE", "style": "flash" } },
+    { "name": "Double Shock", "settings": { "title": "DOUBLE SHOCK!", "style": "shock" } },
+    { "name": "Sản phẩm phổ biến", "settings": { "title": "สินค้ายอดนิยม", "style": "popular" }, "blocks": [
+      { "type": "tab", "settings": { "label": "สินค้าแนะนำ" } }, { "type": "tab", "settings": { "label": "เครื่องใช้ไฟฟ้า" } }, { "type": "tab", "settings": { "label": "เครื่องใช้ไฟฟ้าเล็ก" } } ] },
+    { "name": "Sản phẩm mới", "settings": { "title": "สินค้าใหม่", "style": "new" } }
+  ]
+}
+{% endschema %}

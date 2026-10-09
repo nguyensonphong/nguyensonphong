@@ -5,23 +5,30 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ page_title }}{% unless page_title contains shop.name %} | {{ shop.name }}{% endunless %}</title>
   {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap">
+  {%- if settings.favicon %}<link rel="icon" href="{{ settings.favicon | image_url: width: 64 }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Lato:wght@400;700&display=swap">
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
   <style>
     :root{
-      --hp-red: {{ settings.color_primary }};
-      --hp-red-dark: {{ settings.color_primary_dark }};
-      --hp-yellow: {{ settings.color_sale }};
-      --hp-ink: {{ settings.color_text }};
+      --hp-blue:{{ settings.color_primary }};
+      --hp-blue-footer:{{ settings.color_footer }};
+      --hp-orange:{{ settings.color_accent }};
+      --hp-red:{{ settings.color_price }};
+      --hp-sky:{{ settings.color_soft }};
     }
   </style>
-  {{ 'theme.css' | asset_url | stylesheet_tag }}
   {{ content_for_header }}
 </head>
 <body>
+  <a class="visually-hidden" href="#main">ข้ามไปเนื้อหา</a>
   {% sections 'header-group' %}
   <main id="main">{{ content_for_layout }}</main>
   {% sections 'footer-group' %}
+  {%- if settings.chat_url != blank -%}
+    <a class="chatfab" href="{{ settings.chat_url }}"><i>🤖</i>แชท</a>
+  {%- endif -%}
+  <div class="toast" role="status" data-toast></div>
   <script src="{{ 'theme.js' | asset_url }}" defer></script>
 </body>
 </html>

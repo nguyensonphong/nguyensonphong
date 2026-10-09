@@ -1,0 +1,52 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__cols">
+      {%- for block in section.blocks -%}
+        <div {{ block.shopify_attributes }}>
+          <h4>{{ block.settings.title | default: linklists[block.settings.menu].title }}</h4>
+          <ul>{%- for link in linklists[block.settings.menu].links -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}</ul>
+        </div>
+      {%- endfor -%}
+      <div>
+        <h4>สมัครรับข่าวสารและโปรโมชั่น</h4>
+        {%- form 'customer', class: 'news' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input type="email" name="contact[email]" placeholder="อีเมลของคุณ" required aria-label="อีเมล">
+          <button class="btn btn--orange" type="submit" style="border-radius:0">ติดตาม</button>
+        {%- endform -%}
+        {%- if form.posted_successfully? -%}<p>ขอบคุณที่ติดตาม</p>{%- endif -%}
+        <div class="social">
+          {%- if settings.social_facebook != blank -%}<a href="{{ settings.social_facebook }}" aria-label="Facebook">f</a>{%- endif -%}
+          {%- if settings.social_line != blank -%}<a href="{{ settings.social_line }}" aria-label="LINE">L</a>{%- endif -%}
+          {%- if settings.social_instagram != blank -%}<a href="{{ settings.social_instagram }}" aria-label="Instagram">IG</a>{%- endif -%}
+          {%- if settings.social_youtube != blank -%}<a href="{{ settings.social_youtube }}" aria-label="YouTube">▶</a>{%- endif -%}
+          {%- if settings.social_x != blank -%}<a href="{{ settings.social_x }}" aria-label="X">X</a>{%- endif -%}
+        </div>
+        <div class="apps">
+          {%- if section.settings.app_store != blank -%}<a href="{{ section.settings.app_store }}">App Store</a>{%- endif -%}
+          {%- if section.settings.google_play != blank -%}<a href="{{ section.settings.google_play }}">Google Play</a>{%- endif -%}
+        </div>
+      </div>
+    </div>
+    {%- assign year = 'now' | date: '%Y' -%}
+    <div class="footer__copy">{{ section.settings.copyright | replace: '[year]', year | replace: '[shop]', shop.name }}</div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "text", "id": "copyright", "label": "Bản quyền", "default": "Copyright © [year] [shop]. All rights reserved." },
+    { "type": "url", "id": "app_store", "label": "Link App Store" },
+    { "type": "url", "id": "google_play", "label": "Link Google Play" }
+  ],
+  "blocks": [
+    { "type": "menu", "name": "Cột menu", "settings": [
+      { "type": "text", "id": "title", "label": "Tiêu đề" },
+      { "type": "link_list", "id": "menu", "label": "Menu" }
+    ]}
+  ],
+  "max_blocks": 5
+}
+{% endschema %}

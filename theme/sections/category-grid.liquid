@@ -1,0 +1,42 @@
+<section class="container sec">
+  <div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>
+  <div class="cats">
+    {%- for block in section.blocks -%}
+      {%- assign c = block.settings.collection -%}
+      <a class="cat" href="{% if c %}{{ c.url }}{% else %}{{ routes.collections_url }}{% endif %}" {{ block.shopify_attributes }}>
+        <span class="cat__img">
+          {%- if block.settings.image -%}{{ block.settings.image | image_url: width: 120 | image_tag: style: 'width:100%;height:100%;object-fit:contain' }}
+          {%- elsif c.featured_image -%}{{ c.featured_image | image_url: width: 120 | image_tag: style: 'width:100%;height:100%;object-fit:contain' }}
+          {%- else -%}{% render 'icon', name: block.settings.icon %}{%- endif -%}
+        </span>
+        <span>{{ block.settings.label | default: c.title }}</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Danh mục sản phẩm",
+  "settings": [{ "type": "text", "id": "title", "label": "Tiêu đề", "default": "หมวดหมู่สินค้า" }],
+  "blocks": [
+    { "type": "cat", "name": "Danh mục", "settings": [
+      { "type": "collection", "id": "collection", "label": "Collection" },
+      { "type": "text", "id": "label", "label": "Tên hiển thị" },
+      { "type": "image_picker", "id": "image", "label": "Ảnh" },
+      { "type": "text", "id": "icon", "label": "Icon mặc định", "default": "box" }
+    ]}
+  ],
+  "max_blocks": 24,
+  "presets": [{ "name": "Danh mục sản phẩm", "blocks": [
+    { "type": "cat", "settings": { "label": "เครื่องใช้ไฟฟ้า", "icon": "ac" } },
+    { "type": "cat", "settings": { "label": "เครื่องใช้ไฟฟ้าเล็ก", "icon": "pot" } },
+    { "type": "cat", "settings": { "label": "ทีวีและเครื่องเสียง", "icon": "tv" } },
+    { "type": "cat", "settings": { "label": "โคมไฟและหลอดไฟ", "icon": "bulb" } },
+    { "type": "cat", "settings": { "label": "ห้องนอนและเครื่องนอน", "icon": "bed" } },
+    { "type": "cat", "settings": { "label": "ห้องน้ำ", "icon": "bath" } },
+    { "type": "cat", "settings": { "label": "ห้องครัวและอุปกรณ์", "icon": "pot" } },
+    { "type": "cat", "settings": { "label": "สวนและอุปกรณ์ตกแต่ง", "icon": "leaf" } }
+  ]}]
+}
+{% endschema %}

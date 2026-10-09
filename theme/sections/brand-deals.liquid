@@ -1,0 +1,53 @@
+<section class="container sec">
+  <div class="brandwall">
+    <a class="brandwall__poster" href="{{ section.settings.link }}">
+      {% render 'placeholder', image: section.settings.poster, title: section.settings.title, sub: section.settings.sub, bg: 'linear-gradient(160deg,#0b2e59,#0066b3 60%,#f7931e)', width: 600 %}
+    </a>
+    <div class="brandwall__grid">
+      {%- for block in section.blocks -%}
+        <div class="bcard" {{ block.shopify_attributes }}>
+          <div class="bcard__logo">
+            {%- if block.settings.logo -%}{{ block.settings.logo | image_url: height: 72 | image_tag: style: 'max-height:36px;width:auto' }}{%- else -%}{{ block.settings.name }}{%- endif -%}
+          </div>
+          <div class="bcard__off">ลดสูงสุด <b>{{ block.settings.off }}%</b></div>
+          <a class="btn btn--sm" href="{{ block.settings.link }}">ช้อปเลย</a>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Double Brand",
+  "settings": [
+    { "type": "image_picker", "id": "poster", "label": "Ảnh dọc bên trái" },
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "DOUBLE BRAND" },
+    { "type": "text", "id": "sub", "label": "Mô tả", "default": "แบรนด์ดังลดคู่" },
+    { "type": "url", "id": "link", "label": "Link" }
+  ],
+  "blocks": [
+    { "type": "brand", "name": "Thương hiệu", "settings": [
+      { "type": "text", "id": "name", "label": "Tên", "default": "Brand" },
+      { "type": "image_picker", "id": "logo", "label": "Logo" },
+      { "type": "number", "id": "off", "label": "Giảm tối đa (%)", "default": 30 },
+      { "type": "url", "id": "link", "label": "Link" }
+    ]}
+  ],
+  "max_blocks": 12,
+  "presets": [{ "name": "Double Brand", "blocks": [
+    { "type": "brand", "settings": { "name": "Electrolux", "off": 38 } },
+    { "type": "brand", "settings": { "name": "Samsung", "off": 42 } },
+    { "type": "brand", "settings": { "name": "Haier", "off": 26 } },
+    { "type": "brand", "settings": { "name": "MEX", "off": 50 } },
+    { "type": "brand", "settings": { "name": "Bosch", "off": 30 } },
+    { "type": "brand", "settings": { "name": "Toshiba", "off": 35 } },
+    { "type": "brand", "settings": { "name": "TOTO", "off": 25 } },
+    { "type": "brand", "settings": { "name": "Karcher", "off": 30 } },
+    { "type": "brand", "settings": { "name": "Duragres", "off": 40 } },
+    { "type": "brand", "settings": { "name": "Lockin", "off": 20 } },
+    { "type": "brand", "settings": { "name": "PlanToys", "off": 30 } },
+    { "type": "brand", "settings": { "name": "Patara", "off": 50 } }
+  ]}]
+}
+{% endschema %}

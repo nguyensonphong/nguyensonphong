@@ -1,0 +1,23 @@
+<section class="container">
+  <h1 class="page-title">ตะกร้าสินค้า</h1>
+  {%- if cart.item_count > 0 -%}
+    <form action="{{ routes.cart_url }}" method="post">
+      {%- for item in cart.items -%}
+        <div style="display:flex;gap:16px;align-items:center;border-bottom:1px solid var(--hp-line);padding:12px 0">
+          {%- if item.image -%}{{ item.image | image_url: width: 120 | image_tag: style: 'width:80px;border-radius:8px' }}{%- endif -%}
+          <a href="{{ item.url }}" style="flex:1;color:var(--hp-head)">{{ item.product.title }}<br><small>{{ item.variant.title }}</small></a>
+          <input type="number" name="updates[]" value="{{ item.quantity }}" min="0" aria-label="จำนวน" style="width:70px;padding:6px">
+          <b class="price" style="font-size:16px">{{ item.final_line_price | money_without_trailing_zeros }}</b>
+        </div>
+      {%- endfor -%}
+      <div style="display:flex;justify-content:flex-end;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap">
+        <span>รวม <b class="price">{{ cart.total_price | money_without_trailing_zeros }}</b></span>
+        <button class="btn btn--outline" type="submit" name="update">อัปเดต</button>
+        <button class="btn btn--orange" type="submit" name="checkout">ชำระเงิน</button>
+      </div>
+    </form>
+  {%- else -%}
+    <p>ตะกร้าของคุณยังว่างอยู่ <a href="{{ routes.all_products_collection_url }}" style="color:var(--hp-blue)">เลือกซื้อสินค้า</a></p>
+  {%- endif -%}
+</section>
+{% schema %}{ "name": "Giỏ hàng" }{% endschema %}

@@ -1,0 +1,86 @@
+<section class="container">
+  <div class="hero">
+    <div class="slider" data-slider data-autoplay="{{ section.settings.autoplay }}">
+      <div class="slider__track" data-track>
+        {%- for block in section.blocks -%}
+          <div class="slide" {{ block.shopify_attributes }}>
+            <a href="{{ block.settings.link }}" style="display:block;height:100%">
+              {% render 'placeholder', image: block.settings.image, title: block.settings.title, sub: block.settings.sub, eyebrow: block.settings.eyebrow, bg: block.settings.bg, width: 1600 %}
+            </a>
+            {%- if block.settings.button != blank -%}<a class="btn" href="{{ block.settings.link }}">{{ block.settings.button }}</a>{%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      <button class="slider__btn slider__btn--prev" type="button" data-prev aria-label="ก่อนหน้า">‹</button>
+      <button class="slider__btn slider__btn--next" type="button" data-next aria-label="ถัดไป">›</button>
+      <div class="slider__dots" data-dots></div>
+    </div>
+    <div class="hero__side">
+      {%- for i in (1..4) -%}
+        {%- capture t %}tile_{{ i }}_title{% endcapture -%}
+        {%- capture s %}tile_{{ i }}_sub{% endcapture -%}
+        {%- capture l %}tile_{{ i }}_link{% endcapture -%}
+        {%- capture im %}tile_{{ i }}_image{% endcapture -%}
+        <a class="tile" href="{{ section.settings[l] }}" {% if section.settings[im] %}style="padding:0;overflow:hidden"{% endif %}>
+          {%- if section.settings[im] -%}{{ section.settings[im] | image_url: width: 600 | image_tag: style: 'width:100%;height:100%;object-fit:cover' }}
+          {%- else -%}<b>{{ section.settings[t] }}</b><small>{{ section.settings[s] }}</small>{%- endif -%}
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- if section.settings.show_delivery -%}
+  <div class="delivery">
+    <div>{% render 'icon', name: 'bolt' %}<span>ส่งทันที<small>ภายในวัน</small></span></div>
+    <div>{% render 'icon', name: 'truck' %}<span>ส่งวันถัดไป<small>สั่งไม่เกิน 20.30 น.</small></span></div>
+    <div>{% render 'icon', name: 'box' %}<span>ส่งปกติ<small>ทั่วประเทศ</small></span></div>
+    <div>{% render 'icon', name: 'store' %}<span>รับที่สาขา<small>ภายใน 1 ชั่วโมง</small></span></div>
+  </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Banner chính",
+  "settings": [
+    { "type": "range", "id": "autoplay", "label": "Tự chuyển (giây, 0 = tắt)", "min": 0, "max": 10, "step": 1, "default": 5 },
+    { "type": "header", "content": "Ô 1" },
+    { "type": "image_picker", "id": "tile_1_image", "label": "Ảnh" },
+    { "type": "text", "id": "tile_1_title", "label": "Tiêu đề", "default": "ช้อปก่อน จ่ายทีหลัง" },
+    { "type": "text", "id": "tile_1_sub", "label": "Mô tả", "default": "SPayLater · ascend" },
+    { "type": "url", "id": "tile_1_link", "label": "Link" },
+    { "type": "header", "content": "Ô 2" },
+    { "type": "image_picker", "id": "tile_2_image", "label": "Ảnh" },
+    { "type": "text", "id": "tile_2_title", "label": "Tiêu đề", "default": "รับส่วนลดทันที 3%" },
+    { "type": "text", "id": "tile_2_sub", "label": "Mô tả", "default": "สมัครเลย..คลิก" },
+    { "type": "url", "id": "tile_2_link", "label": "Link" },
+    { "type": "header", "content": "Ô 3" },
+    { "type": "image_picker", "id": "tile_3_image", "label": "Ảnh" },
+    { "type": "text", "id": "tile_3_title", "label": "Tiêu đề", "default": "ผ่อนสบาย 0% 10 เดือน" },
+    { "type": "text", "id": "tile_3_sub", "label": "Mô tả", "default": "บัตรเครดิตที่ร่วมรายการ" },
+    { "type": "url", "id": "tile_3_link", "label": "Link" },
+    { "type": "header", "content": "Ô 4" },
+    { "type": "image_picker", "id": "tile_4_image", "label": "Ảnh" },
+    { "type": "text", "id": "tile_4_title", "label": "Tiêu đề", "default": "ลดเพิ่มสูงสุด 20,000.-" },
+    { "type": "text", "id": "tile_4_sub", "label": "Mô tả", "default": "เมื่อชำระผ่านบัตร" },
+    { "type": "url", "id": "tile_4_link", "label": "Link" },
+    { "type": "checkbox", "id": "show_delivery", "label": "Hiện dải hình thức giao hàng", "default": true }
+  ],
+  "blocks": [
+    { "type": "slide", "name": "Slide", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Ảnh (1600×700)" },
+      { "type": "url", "id": "link", "label": "Link" },
+      { "type": "text", "id": "eyebrow", "label": "Dòng nhỏ" },
+      { "type": "text", "id": "title", "label": "Tiêu đề", "default": "10.10 Double Day" },
+      { "type": "text", "id": "sub", "label": "Mô tả" },
+      { "type": "text", "id": "button", "label": "Nút", "default": "ช้อปเลย" },
+      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#0066b3" }
+    ]}
+  ],
+  "max_blocks": 10,
+  "presets": [{ "name": "Banner chính", "blocks": [
+    { "type": "slide", "settings": { "title": "10.10 Double Day", "sub": "ลดแรงทั้งเว็บ" } },
+    { "type": "slide", "settings": { "title": "SHOCK PRICE", "sub": "สินค้าราคาแรง", "bg": "#e4002b" } },
+    { "type": "slide", "settings": { "title": "Washer & Dryer Fair", "sub": "เครื่องซักผ้า 5,990.- | เครื่องอบผ้า 9,990.-", "bg": "#0b2e59" } }
+  ]}]
+}
+{% endschema %}

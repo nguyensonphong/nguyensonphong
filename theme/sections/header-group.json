@@ -2,8 +2,23 @@
   "type": "header",
   "name": "Header group",
   "sections": {
-    "announcement": { "type": "announcement-bar", "settings": {} },
-    "header": { "type": "header", "settings": {} }
+    "topbar": {
+      "type": "topbar",
+      "settings": {
+        "help_menu": "help-center"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "main_menu": "main-menu",
+        "shortcut_menu": "category-shortcuts",
+        "mega_menu": "all-categories"
+      }
+    }
   },
-  "order": ["announcement", "header"]
+  "order": [
+    "topbar",
+    "header"
+  ]
 }

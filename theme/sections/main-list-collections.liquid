@@ -1,0 +1,4 @@
+<section class="container"><h1 class="page-title">หมวดหมู่ทั้งหมด</h1>
+  <div class="cats">{%- for c in collections -%}<a class="cat" href="{{ c.url }}"><span class="cat__img">{%- if c.featured_image -%}{{ c.featured_image | image_url: width: 120 | image_tag }}{%- else -%}{% render 'icon', name: 'box' %}{%- endif -%}</span>{{ c.title }}</a>{%- endfor -%}</div>
+</section>
+{% schema %}{ "name": "Tất cả danh mục" }{% endschema %}
