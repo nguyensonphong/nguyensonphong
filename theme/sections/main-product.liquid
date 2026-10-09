@@ -91,6 +91,13 @@
       {%- if product.metafields.custom.extra_offer != blank -%}<div class="pcard__extra">{{ product.metafields.custom.extra_offer }}</div>{%- endif -%}
     </div>
 
+    {%- if product.tags contains 'trade-in' -%}
+      <a class="tradein" href="{{ section.settings.tradein_link }}">
+        {% render 'icon', name: 'recycle' %}
+        <span><b>Thu cũ đổi mới</b> {{ section.settings.tradein_text }}</span><em>Xem ›</em>
+      </a>
+    {%- endif -%}
+
     {%- assign hl = product.metafields.custom.highlights.value | default: product.metafields.custom.highlights -%}
     {%- if hl != blank -%}<ul class="buybox__hl">{%- assign hls = hl | newline_to_br | split: '<br />' -%}{%- for h in hls -%}{%- if h != blank -%}<li>{{ h | strip }}</li>{%- endif -%}{%- endfor -%}</ul>{%- endif -%}
 
@@ -142,6 +149,8 @@
     { "type": "product", "id": "addon_product", "label": "Dịch vụ cộng thêm (tuỳ chọn)", "info": "Ví dụ: sản phẩm 'Tháo lắp máy cũ'. Khách tick để mua kèm." },
     { "type": "collection", "id": "bundle_collection", "label": "Sản phẩm mua kèm" },
     { "type": "url", "id": "installment_link", "label": "Link trang trả góp" },
+    { "type": "text", "id": "tradein_text", "label": "Thu cũ đổi mới: mô tả", "default": "trợ giá đến 1.000.000₫ khi đổi máy cũ", "info": "Hiện với sản phẩm có tag trade-in" },
+    { "type": "url", "id": "tradein_link", "label": "Thu cũ đổi mới: link" },
     { "type": "richtext", "id": "install_terms", "label": "Điều kiện lắp đặt", "default": "<p>Lắp đặt miễn phí trong bán kính 40 km tính từ cửa hàng gần nhất. Phí phát sinh (ống đồng dài thêm, giá đỡ, đục tường) được báo giá trước khi thi công. Bảo hành lắp đặt 12 tháng.</p>" }
   ]
 }

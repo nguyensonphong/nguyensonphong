@@ -173,3 +173,10 @@ if (filterForm) {
   }));
   document.querySelectorAll('[data-filter-toggle]').forEach((b) => b.addEventListener('click', () => filterForm.classList.toggle('is-open')));
 }
+
+// Hệ thống cửa hàng: lọc theo khu vực
+document.querySelectorAll('[data-region-tabs]').forEach((bar) => bar.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-region]'); if (!b) return;
+  bar.querySelectorAll('[data-region]').forEach((x) => x.classList.toggle('is-active', x === b));
+  document.querySelectorAll('[data-store-region]').forEach((c) => { c.hidden = !!b.dataset.region && c.dataset.storeRegion !== b.dataset.region; });
+}));

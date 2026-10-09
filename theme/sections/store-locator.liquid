@@ -1,0 +1,42 @@
+<section class="container sec">
+  <h1 class="page-title">{{ section.settings.title }}</h1>
+  {%- if section.settings.intro != blank -%}<p>{{ section.settings.intro }}</p>{%- endif -%}
+  {%- capture regions -%}{%- for block in section.blocks -%}{{ block.settings.region }}|{%- endfor -%}{%- endcapture -%}
+  {%- assign regions = regions | split: '|' | uniq -%}
+  <div class="tabs" data-region-tabs>
+    <button class="tab is-active" type="button" data-region="">Tất cả ({{ section.blocks.size }})</button>
+    {%- for r in regions -%}{%- if r != blank -%}<button class="tab" type="button" data-region="{{ r | escape }}">{{ r }}</button>{%- endif -%}{%- endfor -%}
+  </div>
+  <div class="stores-grid">
+    {%- for block in section.blocks -%}
+      <article class="store-card" data-store-region="{{ block.settings.region | escape }}" {{ block.shopify_attributes }}>
+        <small>{{ block.settings.region }}</small>
+        <h3>{{ block.settings.name }}</h3>
+        <p>{% render 'icon', name: 'pin' %}<span>{{ block.settings.address }}</span></p>
+        {%- if block.settings.phone != blank -%}<p>{% render 'icon', name: 'phone' %}<span>{{ block.settings.phone }}</span></p>{%- endif -%}
+        {%- if block.settings.hours != blank -%}<p>{% render 'icon', name: 'clock' %}<span>{{ block.settings.hours }}</span></p>{%- endif -%}
+        <a class="btn btn--sm btn--outline" href="https://www.google.com/maps/search/?api=1&query={{ block.settings.address | url_encode }}" target="_blank" rel="noopener">Chỉ đường</a>
+      </article>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hệ thống cửa hàng",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Hệ thống cửa hàng" },
+    { "type": "text", "id": "intro", "label": "Mô tả", "default": "Mua online, nhận tại cửa hàng gần bạn sau 1 giờ." }
+  ],
+  "blocks": [
+    { "type": "store", "name": "Cửa hàng", "settings": [
+      { "type": "text", "id": "name", "label": "Tên", "default": "Cửa hàng" },
+      { "type": "text", "id": "region", "label": "Khu vực", "default": "TP. Hồ Chí Minh" },
+      { "type": "text", "id": "address", "label": "Địa chỉ" },
+      { "type": "text", "id": "phone", "label": "Điện thoại" },
+      { "type": "text", "id": "hours", "label": "Giờ mở cửa", "default": "08:00 – 21:00, cả tuần" }
+    ]}
+  ],
+  "presets": [{ "name": "Hệ thống cửa hàng" }]
+}
+{% endschema %}

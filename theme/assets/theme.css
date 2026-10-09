@@ -399,3 +399,17 @@ button{cursor:pointer}
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--gap)}
 .tier{border:1px solid var(--hp-line);border-top:6px solid var(--tier);border-radius:var(--r-card);padding:18px}
 .tier h3{margin:0;color:var(--tier);font-size:22px}.tier small{color:var(--hp-mute)}
+
+/* ---- Thu cũ đổi mới, cửa hàng, liên hệ ---- */
+.tradein{display:flex;align-items:center;gap:10px;border:1px dashed #1a9e5c;background:#eefaf3;border-radius:8px;padding:10px 12px;font-size:13px;color:var(--hp-head)}
+.tradein svg{width:22px;height:22px;color:#1a9e5c;flex:none}.tradein em{margin-left:auto;font-style:normal;color:#1a9e5c;font-weight:600}
+.stores-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--gap)}
+.store-card{border:1px solid var(--hp-line);border-radius:var(--r-card);padding:16px;display:flex;flex-direction:column;gap:6px}
+.store-card small{color:var(--hp-blue);font-weight:600}.store-card h3{margin:0;color:var(--hp-head)}
+.store-card p{margin:0;display:flex;gap:8px;align-items:flex-start;font-size:13px}.store-card svg{width:18px;height:18px;color:var(--hp-blue);flex:none}
+.store-card .btn{align-self:flex-start;margin-top:6px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.contact__info{list-style:none;padding:0;display:grid;gap:10px}.contact__info li{display:flex;gap:10px;align-items:center}.contact__info svg{width:20px;height:20px;color:var(--hp-blue)}
+.contact__form{display:flex;flex-direction:column;gap:6px}.contact__form label{font-weight:600;color:var(--hp-head);font-size:13px;margin-top:6px}.contact__form .btn{margin-top:10px}
+.contact__ok{background:#eefaf3;color:#1a7a48;padding:10px;border-radius:8px;margin:0}.contact__err{background:#fdecee;color:var(--hp-red);padding:10px;border-radius:8px;margin:0}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}

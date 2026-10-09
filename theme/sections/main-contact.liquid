@@ -1,0 +1,35 @@
+<section class="container sec contact">
+  <div>
+    <h1 class="page-title">{{ page.title }}</h1>
+    <div class="rte">{{ page.content }}</div>
+    <ul class="contact__info">
+      {%- if section.settings.hotline != blank -%}<li>{% render 'icon', name: 'phone' %}<span>Hotline: <b>{{ section.settings.hotline }}</b></span></li>{%- endif -%}
+      {%- if section.settings.email != blank -%}<li>{% render 'icon', name: 'chat' %}<span>Email: <b>{{ section.settings.email }}</b></span></li>{%- endif -%}
+      {%- if section.settings.hours != blank -%}<li>{% render 'icon', name: 'clock' %}<span>{{ section.settings.hours }}</span></li>{%- endif -%}
+    </ul>
+  </div>
+  {%- form 'contact', class: 'contact__form pdp__box' -%}
+    {%- if form.posted_successfully? -%}<p class="contact__ok">Đã gửi. Chúng tôi sẽ phản hồi trong 24 giờ làm việc.</p>{%- endif -%}
+    {%- if form.errors -%}<p class="contact__err">Vui lòng kiểm tra lại email và nội dung.</p>{%- endif -%}
+    <label for="c-name">Họ tên</label><input class="field" id="c-name" name="contact[name]" value="{{ form.name }}" required>
+    <label for="c-phone">Số điện thoại</label><input class="field" id="c-phone" type="tel" name="contact[phone]" value="{{ form.phone }}">
+    <label for="c-email">Email</label><input class="field" id="c-email" type="email" name="contact[email]" value="{{ form.email }}" required>
+    <label for="c-topic">Chủ đề</label>
+    <select class="field" id="c-topic" name="contact[Chủ đề]">
+      <option>Hỏi về sản phẩm</option><option>Đơn hàng & giao hàng</option><option>Đặt lịch dịch vụ</option><option>Đổi trả & bảo hành</option><option>Khiếu nại</option>
+    </select>
+    <label for="c-body">Nội dung</label><textarea class="field" id="c-body" name="contact[body]" rows="5" required>{{ form.body }}</textarea>
+    <button class="btn btn--lg" type="submit">Gửi</button>
+  {%- endform -%}
+</section>
+
+{% schema %}
+{
+  "name": "Liên hệ",
+  "settings": [
+    { "type": "text", "id": "hotline", "label": "Hotline" },
+    { "type": "text", "id": "email", "label": "Email" },
+    { "type": "text", "id": "hours", "label": "Giờ làm việc", "default": "Hỗ trợ 08:00 – 21:00 mỗi ngày" }
+  ]
+}
+{% endschema %}
