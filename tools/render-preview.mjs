@@ -77,7 +77,7 @@ const globals = {
   request: { locale: { iso_code: 'vi' } }, localization: { available_languages: [] },
   routes: { root_url: '/', search_url: '/search', cart_url: '/cart', cart_add_url: '/cart/add', account_url: '/account', account_login_url: '/account/login', account_register_url: '/account/register', account_addresses_url: '/account/addresses', collections_url: '/collections', all_products_collection_url: '/collections/all' },
   linklists,
-  settings: { color_primary: '#0066B3', color_footer: '#0065B2', color_accent: '#F7931E', color_price: '#E4002B', color_soft: '#EAF4FC', chat_url: '#', social_facebook: '#', social_line: '#', social_instagram: '#', social_youtube: '#', social_x: '#' },
+  settings: { font_family: 'roboto', color_primary: '#0066B3', color_footer: '#0065B2', color_accent: '#F7931E', color_price: '#E4002B', color_soft: '#EAF4FC', chat_url: '#', social_facebook: '#', social_line: '#', social_instagram: '#', social_youtube: '#', social_x: '#' },
 };
 
 // --- Ghép section ---
@@ -117,7 +117,7 @@ const stub = `// Bản xem trước: giả lập giỏ hàng vì không có máy
 (function(){let n=0;const f=window.fetch;window.fetch=async(u,o)=>{u=String(u);if(u.startsWith('/cart/add')){n++;return new Response('{}',{status:200})}if(u.startsWith('/cart.js'))return new Response(JSON.stringify({item_count:n}));if(u.startsWith('/discount/'))return new Response('');return f(u,o)};document.addEventListener('click',e=>{const a=e.target.closest('a[href="#"],a[href^="/"]');if(a)e.preventDefault()})})();`;
 
 const html = `<title>HomeStyle Storefront</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Lato:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
 <style>${css}</style>
 ${header}
 <main id="main">${main}</main>

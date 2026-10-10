@@ -4,7 +4,7 @@
   --hp-sky:#eaf4fc; --hp-orange:#f7931e; --hp-red:#e4002b; --hp-pink:#e6007e;
   --hp-text:#525255; --hp-head:#0b2e59; --hp-line:#e3e6ea; --hp-mute:#9a9ca1; --hp-bg:#ffffff; --hp-soft:#f5f7fa;
   --r-card:10px; --r-banner:12px; --r-pill:18px; --gap:14px; --sec:56px; --w:1280px;
-  --font:"Prompt","Lato",Tahoma,sans-serif;
+  --font:"Roboto",Arial,sans-serif;
   color-scheme:light;
 }
 *{box-sizing:border-box}

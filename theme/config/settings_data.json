@@ -1,1 +1,8 @@
-{ "current": "Default", "presets": { "Default": {} } }
+{
+  "current": {
+    "font_family": "roboto"
+  },
+  "presets": {
+    "Default": {}
+  }
+}
