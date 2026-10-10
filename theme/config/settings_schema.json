@@ -1,21 +1,119 @@
 [
-  { "name": "theme_info", "theme_name": "HomeStyle", "theme_version": "1.0.0", "theme_author": "nguyensonphong", "theme_documentation_url": "https://github.com/nguyensonphong/nguyensonphong", "theme_support_url": "https://github.com/nguyensonphong/nguyensonphong" },
-  { "name": "Màu sắc", "settings": [
-    { "type": "color", "id": "color_primary", "label": "Màu chính (header, nút)", "default": "#0066B3" },
-    { "type": "color", "id": "color_footer", "label": "Màu footer", "default": "#0065B2" },
-    { "type": "color", "id": "color_accent", "label": "Màu nhấn (Xem tất cả, Đăng ký)", "default": "#F7931E" },
-    { "type": "color", "id": "color_price", "label": "Màu giá bán", "default": "#E4002B" },
-    { "type": "color", "id": "color_soft", "label": "Nền xanh nhạt", "default": "#EAF4FC" }
-  ]},
-  { "name": "Chung", "settings": [
-    { "type": "image_picker", "id": "favicon", "label": "Favicon" },
-    { "type": "url", "id": "chat_url", "label": "Link nút chat nổi (LINE OA…)" }
-  ]},
-  { "name": "Mạng xã hội", "settings": [
-    { "type": "url", "id": "social_facebook", "label": "Facebook" },
-    { "type": "url", "id": "social_line", "label": "LINE" },
-    { "type": "url", "id": "social_instagram", "label": "Instagram" },
-    { "type": "url", "id": "social_youtube", "label": "YouTube" },
-    { "type": "url", "id": "social_x", "label": "X" }
-  ]}
+  {
+    "name": "theme_info",
+    "theme_name": "HomeStyle",
+    "theme_version": "1.0.0",
+    "theme_author": "nguyensonphong",
+    "theme_documentation_url": "https://github.com/nguyensonphong/nguyensonphong",
+    "theme_support_url": "https://github.com/nguyensonphong/nguyensonphong"
+  },
+  {
+    "name": "Màu sắc",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Màu chính (header, nút)",
+        "default": "#0066B3"
+      },
+      {
+        "type": "color",
+        "id": "color_footer",
+        "label": "Màu footer",
+        "default": "#0065B2"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Màu nhấn (Xem tất cả, Đăng ký)",
+        "default": "#F7931E"
+      },
+      {
+        "type": "color",
+        "id": "color_price",
+        "label": "Màu giá bán",
+        "default": "#E4002B"
+      },
+      {
+        "type": "color",
+        "id": "color_soft",
+        "label": "Nền xanh nhạt",
+        "default": "#EAF4FC"
+      }
+    ]
+  },
+  {
+    "name": "Chung",
+    "settings": [
+      {
+        "type": "select",
+        "id": "font_family",
+        "label": "Font chữ",
+        "default": "prompt",
+        "options": [
+          {
+            "value": "prompt",
+            "label": "Prompt (giống HomePro)"
+          },
+          {
+            "value": "roboto",
+            "label": "Roboto"
+          },
+          {
+            "value": "be_vietnam",
+            "label": "Be Vietnam Pro"
+          },
+          {
+            "value": "inter",
+            "label": "Inter"
+          },
+          {
+            "value": "system",
+            "label": "Helvetica / Arial (font hệ thống)"
+          }
+        ],
+        "info": "Tất cả đều hỗ trợ đầy đủ dấu tiếng Việt."
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      },
+      {
+        "type": "url",
+        "id": "chat_url",
+        "label": "Link nút chat nổi (LINE OA…)"
+      }
+    ]
+  },
+  {
+    "name": "Mạng xã hội",
+    "settings": [
+      {
+        "type": "url",
+        "id": "social_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "url",
+        "id": "social_line",
+        "label": "LINE"
+      },
+      {
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram"
+      },
+      {
+        "type": "url",
+        "id": "social_youtube",
+        "label": "YouTube"
+      },
+      {
+        "type": "url",
+        "id": "social_x",
+        "label": "X"
+      }
+    ]
+  }
 ]

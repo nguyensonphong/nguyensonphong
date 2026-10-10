@@ -7,7 +7,14 @@
   {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
   {%- if settings.favicon %}<link rel="icon" href="{{ settings.favicon | image_url: width: 64 }}">{% endif %}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Lato:wght@400;700&display=swap">
+  {%- case settings.font_family -%}
+    {%- when 'roboto' -%}{%- assign gf = 'Roboto:wght@400;500;700' -%}{%- assign ff = '"Roboto",Arial,sans-serif' -%}
+    {%- when 'be_vietnam' -%}{%- assign gf = 'Be+Vietnam+Pro:wght@400;500;600;700' -%}{%- assign ff = '"Be Vietnam Pro",Arial,sans-serif' -%}
+    {%- when 'inter' -%}{%- assign gf = 'Inter:wght@400;500;600;700' -%}{%- assign ff = '"Inter",Arial,sans-serif' -%}
+    {%- when 'system' -%}{%- assign gf = '' -%}{%- assign ff = 'Helvetica,Arial,sans-serif' -%}
+    {%- else -%}{%- assign gf = 'Prompt:wght@400;500;600;700' -%}{%- assign ff = '"Prompt",Tahoma,sans-serif' -%}
+  {%- endcase -%}
+  {%- if gf != blank -%}<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family={{ gf }}&display=swap">{%- endif -%}
   {{ 'theme.css' | asset_url | stylesheet_tag }}
   <style>
     :root{
@@ -16,6 +23,7 @@
       --hp-orange:{{ settings.color_accent }};
       --hp-red:{{ settings.color_price }};
       --hp-sky:{{ settings.color_soft }};
+      --font:{{ ff }};
     }
   </style>
   {{ content_for_header }}
