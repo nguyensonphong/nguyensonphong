@@ -3,7 +3,6 @@
     "main": {
       "type": "main-product",
       "settings": {
-        "addon_product": "thao-lap-may-lanh-cu",
         "bundle_collection": "dich-vu",
         "tradein_link": "/pages/thu-cu-doi-moi",
         "installment_link": "/pages/tra-gop"

@@ -1,0 +1,184 @@
+{
+  "sections": {
+    "head": {
+      "type": "collection-landing",
+      "settings": {
+        "intro": "Tivi, tủ lạnh, máy giặt, điều hòa chính hãng. Giao nhanh 2h, lắp đặt miễn phí, trả góp 0%.",
+        "sub_menu": "main-menu"
+      },
+      "blocks": {
+        "s0": {
+          "type": "sub",
+          "settings": {
+            "label": "Tivi",
+            "icon": "tv"
+          }
+        },
+        "s1": {
+          "type": "sub",
+          "settings": {
+            "label": "Tủ lạnh",
+            "icon": "fridge"
+          }
+        },
+        "s2": {
+          "type": "sub",
+          "settings": {
+            "label": "Máy giặt",
+            "icon": "washer"
+          }
+        },
+        "s3": {
+          "type": "sub",
+          "settings": {
+            "label": "Điều hòa",
+            "icon": "ac"
+          }
+        },
+        "s4": {
+          "type": "sub",
+          "settings": {
+            "label": "Quạt",
+            "icon": "fan"
+          }
+        },
+        "s5": {
+          "type": "sub",
+          "settings": {
+            "label": "Gia dụng bếp",
+            "icon": "pot"
+          }
+        },
+        "s6": {
+          "type": "sub",
+          "settings": {
+            "label": "Nồi chảo",
+            "icon": "pan"
+          }
+        },
+        "s7": {
+          "type": "sub",
+          "settings": {
+            "label": "Đèn",
+            "icon": "bulb"
+          }
+        },
+        "s8": {
+          "type": "sub",
+          "settings": {
+            "label": "Máy nước nóng",
+            "icon": "bath"
+          }
+        },
+        "s9": {
+          "type": "sub",
+          "settings": {
+            "label": "Phụ kiện lắp đặt",
+            "icon": "tools"
+          }
+        }
+      },
+      "block_order": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9"
+      ]
+    },
+    "flash": {
+      "type": "product-row",
+      "settings": {
+        "title": "FLASH SALE NGÀNH HÀNG",
+        "style": "flash",
+        "limit": 12
+      }
+    },
+    "promo": {
+      "type": "banner-mosaic",
+      "settings": {
+        "title": "Khuyến mãi đề xuất",
+        "big_left": true
+      },
+      "blocks": {
+        "b1": {
+          "type": "banner",
+          "settings": {
+            "title": "Điều hòa giảm đến 30%",
+            "sub": "Lắp đặt miễn phí trong ngày",
+            "bg": "#0B6B09",
+            "image_src": "https://images.unsplash.com/photo-1718203862467-c33159fdc504?ixlib=rb-4.0.3"
+          }
+        },
+        "b2": {
+          "type": "banner",
+          "settings": {
+            "title": "Máy giặt – sấy",
+            "sub": "Trả góp 0%",
+            "bg": "#178A13",
+            "image_src": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?ixlib=rb-4.0.3"
+          }
+        },
+        "b3": {
+          "type": "banner",
+          "settings": {
+            "title": "Bếp hiện đại",
+            "bg": "#10200F",
+            "image_src": "https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3"
+          }
+        },
+        "b4": {
+          "type": "banner",
+          "settings": {
+            "title": "Thu cũ đổi mới",
+            "sub": "Trợ giá đến 10.000.000₫",
+            "bg": "#FF7A1A",
+            "image_src": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3"
+          }
+        },
+        "b5": {
+          "type": "banner",
+          "settings": {
+            "title": "Đèn LED tiết kiệm điện",
+            "bg": "#178A13",
+            "image_src": "https://images.unsplash.com/photo-1485119502162-016e4409beab?ixlib=rb-4.0.3"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
+    },
+    "hot": {
+      "type": "product-row",
+      "settings": {
+        "title": "Sản phẩm hot trong ngành",
+        "style": "popular",
+        "limit": 12
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "per_page": 24,
+        "sub_menu": "all-categories"
+      }
+    }
+  },
+  "order": [
+    "head",
+    "flash",
+    "promo",
+    "hot",
+    "main"
+  ]
+}

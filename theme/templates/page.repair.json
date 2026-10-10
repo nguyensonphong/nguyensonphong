@@ -1,0 +1,199 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "eyebrow": "Trung tâm sửa chữa",
+        "title": "Sửa mọi hãng, giá trọn gói",
+        "intro": "Nhận sửa cả hàng không mua tại GKMALL. Giá công cố định theo loại máy, bảo hành sửa chữa 90 ngày.",
+        "button": "Đặt lịch sửa",
+        "link": "/pages/contact",
+        "image_src": "https://images.unsplash.com/photo-1645651964715-d200ce0939cc?ixlib=rb-4.0.3"
+      }
+    },
+    "price": {
+      "type": "price-table",
+      "settings": {
+        "title": "Bảng giá công sửa chữa",
+        "intro": "Giá công trọn gói theo loại máy, chưa gồm linh kiện thay thế.",
+        "h1": "Loại máy",
+        "h2": "Giá công",
+        "note": "Linh kiện báo giá riêng và chỉ thay khi khách đồng ý. Bảo hành 90 ngày cho phần đã sửa."
+      },
+      "blocks": {
+        "b0": {
+          "type": "row",
+          "settings": {
+            "c1": "Máy lạnh",
+            "c2": "900.000₫",
+            "c3": ""
+          }
+        },
+        "b1": {
+          "type": "row",
+          "settings": {
+            "c1": "Máy giặt / máy sấy",
+            "c2": "900.000₫",
+            "c3": ""
+          }
+        },
+        "b2": {
+          "type": "row",
+          "settings": {
+            "c1": "Tủ lạnh",
+            "c2": "900.000₫",
+            "c3": ""
+          }
+        },
+        "b3": {
+          "type": "row",
+          "settings": {
+            "c1": "Máy bơm nước",
+            "c2": "900.000₫",
+            "c3": ""
+          }
+        },
+        "b4": {
+          "type": "row",
+          "settings": {
+            "c1": "Tivi 19–35 inch",
+            "c2": "1.600.000₫",
+            "c3": ""
+          }
+        },
+        "b5": {
+          "type": "row",
+          "settings": {
+            "c1": "Tivi 36–60 inch",
+            "c2": "2.100.000₫",
+            "c3": ""
+          }
+        },
+        "b6": {
+          "type": "row",
+          "settings": {
+            "c1": "Tivi trên 60 inch",
+            "c2": "2.700.000₫",
+            "c3": ""
+          }
+        },
+        "b7": {
+          "type": "row",
+          "settings": {
+            "c1": "Máy nước nóng",
+            "c2": "550.000₫",
+            "c3": ""
+          }
+        },
+        "b8": {
+          "type": "row",
+          "settings": {
+            "c1": "Máy lọc nước",
+            "c2": "550.000₫",
+            "c3": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8"
+      ]
+    },
+    "fee": {
+      "type": "price-table",
+      "settings": {
+        "title": "Phụ phí di chuyển",
+        "h1": "Khoảng cách từ trung tâm",
+        "h2": "Phụ phí"
+      },
+      "blocks": {
+        "b0": {
+          "type": "row",
+          "settings": {
+            "c1": "Dưới 40 km",
+            "c2": "Miễn phí",
+            "c3": ""
+          }
+        },
+        "b1": {
+          "type": "row",
+          "settings": {
+            "c1": "41–60 km",
+            "c2": "300.000₫",
+            "c3": ""
+          }
+        },
+        "b2": {
+          "type": "row",
+          "settings": {
+            "c1": "Trên 60 km",
+            "c2": "700.000₫",
+            "c3": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2"
+      ]
+    },
+    "why": {
+      "type": "info-cards",
+      "settings": {
+        "title": "Vì sao chọn GKMALL",
+        "columns": 3
+      },
+      "blocks": {
+        "b0": {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "title": "Bảo hành 90 ngày",
+            "text": "Hỏng lại cùng lỗi trong 90 ngày được sửa miễn phí.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b1": {
+          "type": "card",
+          "settings": {
+            "icon": "tag",
+            "title": "Giá rõ ràng",
+            "text": "Giá công niêm yết, linh kiện báo trước khi thay.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b2": {
+          "type": "card",
+          "settings": {
+            "icon": "tools",
+            "title": "Mọi thương hiệu",
+            "text": "Thợ được đào tạo với các hãng phổ biến tại Việt Nam.",
+            "price": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "price",
+    "fee",
+    "why"
+  ]
+}

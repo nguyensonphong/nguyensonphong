@@ -1,4 +1,6 @@
-/* GKMALL theme — dùng chung cho theme Shopify và trang preview */
+<title>GKMALL Storefront</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap">
+<style>/* GKMALL theme — dùng chung cho theme Shopify và trang preview */
 :root{
   --hp-blue:#0B6B09; --hp-blue-footer:#10200F; --hp-blue-dark:#074F06; --hp-navy:#10200F;
   --hp-sky:#E8F8E6; --hp-orange:#FF7A1A; --hp-red:#e4002b; --hp-pink:#e6007e;
@@ -585,3 +587,367 @@ a.icard:hover{border-color:var(--hp-blue)}
 .cmp td{vertical-align:top;font-weight:400;color:var(--hp-text);white-space:normal;min-width:180px}
 .cmp__name{display:block;font-weight:600;color:var(--hp-head);margin-bottom:6px}
 .cmp__price{color:var(--hp-red)}
+</style>
+<div class="topbar">
+  <div class="container topbar__inner"><a href="" >Thẻ thành viên</a><a href="" >Trở thành người bán</a><a href="" >Tìm cửa hàng</a><div class="topbar__help">
+      <a href="">Trung tâm hỗ trợ ▾</a>
+      <ul>
+        <li><a href="tel:1284">Hotline</a></li><li><a href="#">Hỏi đáp</a></li><li><a href="#">Khiếu nại</a></li><li><a href="#">Theo dõi đơn hàng</a></li></ul>
+    </div></div>
+</div>
+
+
+<div class="header-wrap" data-header>
+  <header class="header">
+    <div class="container header__main">
+      <button class="burger" type="button" aria-label="Menu" data-mega-toggle>☰</button>
+      <a class="logo" href="/"><svg viewBox="0 0 120 140" aria-hidden="true"><path d="M38 40V28a22 22 0 0 1 44 0v12" fill="none" stroke="#1FC21A" stroke-width="9" stroke-linecap="round"/><rect x="6" y="40" width="108" height="96" rx="16" fill="#1FC21A"/><text x="60" y="110" text-anchor="middle" font-family="Be Vietnam Pro,Arial,sans-serif" font-weight="900" font-size="54" letter-spacing="-3" fill="#FFFFFF">GK</text></svg>
+<span class="logo__word">GK<span>MALL</span></span></a>
+      <a class="loc" href="/account/addresses"><span>Giao đến</span><b>Chọn địa chỉ ▾</b></a>
+      <a class="loc" href=""><span>Nhận tại cửa hàng</span><b>Chọn cửa hàng ▾</b></a>
+      <form class="search" action="/search" method="get" role="search">
+        <select name="type" aria-label="Phạm vi tìm kiếm"><option value="product,article,page">Tất cả</option><option value="product">Sản phẩm</option><option value="article">Bài viết</option></select>
+        <input type="search" name="q" value="" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+        <button type="submit" aria-label="Tìm kiếm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/><path class="ic-accent" d="M8 11a3 3 0 0 1 3-3"/></svg>
+</button>
+      </form>
+      <div class="hicons">
+        <a class="hicon hide-sm" href="/search" aria-label="AI search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
+</a>
+        <a class="hicon hide-sm" href="" aria-label="Thông báo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg>
+</a>
+        <a class="hicon hide-sm" href="" aria-label="Khuyến mãi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V3h9l9 9-9 9z"/><circle class="ic-accent" cx="7.5" cy="7.5" r="1.5"/></svg>
+</a>
+        <a class="hicon" href="/cart" aria-label="Giỏ hàng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11h11l2-8H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path class="ic-accent" d="M10 10.5h6"/></svg>
+<span class="badge" data-cart-count>0</span></a>
+        <a class="hicon" href="/account/login" aria-label="Tài khoản"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle class="ic-accent" cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav" aria-label="Menu chính">
+    <div class="container nav__inner">
+      <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ Danh mục sản phẩm</button><a class="nav__item" href="#">Mua theo phòng</a><a class="nav__item" href="#">Thương hiệu</a><a class="nav__item" href="#">Flash Sale</a><a class="nav__item" href="#">Double Shock</a><a class="nav__item" href="#">Sản phẩm mới</a><a class="nav__item" href="#">Bán chạy</a><a class="nav__item" href="#">Dịch vụ lắp đặt</a><a class="nav__item" href="#">Ưu đãi hot</a></div>
+  </nav>
+  <div class="shortcuts">
+    <div class="container"><a href="#">Điện máy</a><a href="#">Đồ gia dụng</a><a href="#">Tivi & âm thanh</a><a href="#">Nội thất</a><a href="#">Phòng ngủ & chăn ga</a><a href="#">Phòng tắm</a><a href="#">Vật liệu xây dựng</a><a href="#">Dụng cụ</a><a href="#">Đèn & bóng đèn</a><a href="#">Thiết bị an ninh</a><a href="#">Sân vườn</a></div>
+  </div>
+
+  <div class="mega" data-mega>
+    <div class="mega__close"><span>Danh mục sản phẩm</span><button type="button" data-mega-close aria-label="Đóng">×</button></div>
+    <div class="container mega__inner">
+      <ul class="mega__list"><li><button type="button" data-mega-tab="1" class="is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="8" rx="2"/><path d="M5 10h14"/><path class="ic-accent" d="M8 16v3M12 16v4M16 16v3"/></svg>
+Điện máy</button></li><li><button type="button" data-mega-tab="2" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h14v7a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><path d="M3.5 10h17M9 7a3 3 0 0 1 6 0"/><circle class="ic-accent" cx="12" cy="15" r="1.5"/></svg>
+Đồ gia dụng</button></li><li><button type="button" data-mega-tab="3" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path class="ic-accent" d="M6.5 7.5h4"/></svg>
+Tivi & âm thanh</button></li><li><button type="button" data-mega-tab="4" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><path d="M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v4H2z"/><path d="M5 17v2M19 17v2"/><path class="ic-accent" d="M8.5 10h7"/></svg>
+Nội thất</button></li><li><button type="button" data-mega-tab="5" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19V6M3 14h18v5M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle class="ic-accent" cx="7" cy="11" r="1.6"/></svg>
+Phòng ngủ & chăn ga</button></li><li><button type="button" data-mega-tab="6" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></svg>
+Phòng tắm</button></li><li><button type="button" data-mega-tab="7" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3zM3 9.7h18M3 14.3h18M9 5v4.7M15 5v4.7M6 9.7v4.6M12 9.7v4.6M18 9.7v4.6M9 14.3V19M15 14.3V19"/></svg>
+Vật liệu xây dựng</button></li><li><button type="button" data-mega-tab="8" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19l-3 1 1-3 7.5-7.5zM4 4l6 6M3 7l4-4"/></svg>
+Dụng cụ</button></li><li><button type="button" data-mega-tab="9" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l3 8H5z"/><path d="M12 11v8"/><path class="ic-accent" d="M8 21h8"/></svg>
+Đèn & bóng đèn</button></li><li><button type="button" data-mega-tab="10" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path class="ic-accent" d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+Thiết bị an ninh</button></li><li><button type="button" data-mega-tab="11" ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4S8 3 5 11c-1.4 3.8.5 7 .5 7S15 19 18 11c1.5-4 2-7 2-7zM4 21c3-5 6-8 11-11"/></svg>
+Sân vườn</button></li></ul><div class="mega__panel" data-mega-panel="1" ><div><h4><a href="#">Máy lạnh</a></h4><a href="#">Treo tường</a><a href="#">Âm trần</a><a href="#">Di động</a><a href="#">Phụ kiện lắp đặt</a></div><div><h4><a href="#">Máy giặt & máy sấy</a></h4><a href="#">Cửa trước</a><a href="#">Cửa trên</a><a href="#">Máy sấy</a></div><div><h4><a href="#">Tủ lạnh</a></h4><a href="#">2 cửa</a><a href="#">Side by Side</a><a href="#">Multi Door</a></div></div><div class="mega__panel" data-mega-panel="2" hidden><div><h4><a href="#">Nhà bếp</a></h4><a href="#">Nồi chiên không dầu</a><a href="#">Nồi cơm điện</a><a href="#">Máy pha cà phê</a></div><div><h4><a href="#">Vệ sinh & không khí</a></h4><a href="#">Robot hút bụi</a><a href="#">Máy lọc không khí</a><a href="#">Quạt</a></div></div><div class="mega__panel" data-mega-panel="3" hidden><div><h4><a href="#">Tivi</a></h4><a href="#">Smart TV</a><a href="#">Tivi 4K</a></div><div><h4><a href="#">Âm thanh</a></h4><a href="#">Loa thanh</a><a href="#">Loa bluetooth</a></div></div><div class="mega__panel" data-mega-panel="4" hidden><div><h4><a href="#">Phòng khách</a></h4><a href="#">Sofa</a><a href="#">Kệ & tủ</a></div><div><h4><a href="#">Lưu trữ</a></h4><a href="#">Kệ giày</a><a href="#">Tủ đồ</a></div></div><div class="mega__panel" data-mega-panel="5" hidden><div><h4><a href="#">Nệm</a></h4><a href="#">Nệm lò xo</a><a href="#">Nệm foam</a></div><div><h4><a href="#">Chăn ga gối</a></h4></div></div><div class="mega__panel" data-mega-panel="6" hidden><div><h4><a href="#">Thiết bị vệ sinh</a></h4><a href="#">Bồn cầu</a><a href="#">Lavabo</a></div><div><h4><a href="#">Sen & vòi</a></h4><a href="#">Sen cây</a><a href="#">Vòi lavabo</a></div></div><div class="mega__panel" data-mega-panel="7" hidden><div><h4><a href="#">Gạch ốp lát</a></h4><a href="#">Gạch lát nền</a><a href="#">Gạch ốp tường</a></div><div><h4><a href="#">Sơn</a></h4><a href="#">Sơn nội thất</a><a href="#">Sơn ngoại thất</a></div></div><div class="mega__panel" data-mega-panel="8" hidden><div><h4><a href="#">Dụng cụ điện</a></h4><a href="#">Máy khoan</a><a href="#">Máy mài</a></div><div><h4><a href="#">Dụng cụ cầm tay</a></h4><a href="#">Bộ dụng cụ</a></div></div><div class="mega__panel" data-mega-panel="9" hidden><div><h4><a href="#">Đèn trong nhà</a></h4><a href="#">Đèn âm trần</a><a href="#">Đèn trang trí</a></div></div><div class="mega__panel" data-mega-panel="10" hidden><div><h4><a href="#">Khóa cửa</a></h4><a href="#">Khóa vân tay</a></div><div><h4><a href="#">Camera</a></h4></div></div><div class="mega__panel" data-mega-panel="11" hidden><div><h4><a href="#">Nội thất ngoài trời</a></h4><a href="#">Bàn ghế sân vườn</a></div></div></div>
+  </div>
+</div>
+
+
+
+<main id="main"><nav class="container crumbs" aria-label="Breadcrumb"><a href="/">Trang chủ</a> › <span>So sánh sản phẩm</span></nav>
+<section class="container" data-compare-page data-money="">
+  <h1 class="page-title">So sánh sản phẩm</h1>
+  <p data-cmp-empty hidden>Chưa có sản phẩm nào. Bấm <b>So sánh</b> trên thẻ sản phẩm để thêm (tối đa 4).</p>
+  <div class="ptable-wrap" data-cmp-wrap hidden><table class="ptable cmp" data-cmp-table></table></div>
+</section>
+<style>.cmp__img{display:block;width:150px;height:150px;border-radius:var(--r-card);background:var(--hp-soft);margin-bottom:8px;overflow:hidden}.cmp__img img{width:100%;height:100%;object-fit:contain}</style>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const root = document.querySelector('[data-compare-page]');
+  const fmt = (c) => (c / 100).toLocaleString('vi-VN') + '₫';
+  const esc = (t) => String(t ?? '').replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  const handles = window.gkCompare ? window.gkCompare.get() : [];
+  if (!handles.length) { root.querySelector('[data-cmp-empty]').hidden = false; return; }
+  const items = (await Promise.all(handles.map((h) => fetch('/products/' + encodeURIComponent(h) + '.js').then((r) => (r.ok ? r.json() : null)).catch(() => null)))).filter(Boolean);
+  const rows = [
+    ['', (p) => `<a class="cmp__img" href="${p.url}">${p.featured_image ? `<img src="${p.featured_image}${p.featured_image.includes('?') ? '&' : '?'}width=300" alt="" width="150" height="150">` : ''}</a><a class="cmp__name" href="${p.url}">${esc(p.title)}</a><button class="link-btn" type="button" data-cmp-rm="${esc(p.handle)}">Bỏ khỏi so sánh</button>`],
+    ['Giá bán', (p) => `<b class="cmp__price">${fmt(p.price)}</b>`],
+    ['Giá gốc', (p) => (p.compare_at_price > p.price ? `<s>${fmt(p.compare_at_price)}</s>` : '—')],
+    ['Thương hiệu', (p) => esc(p.vendor) || '—'],
+    ['Loại sản phẩm', (p) => esc(p.type) || '—'],
+    ['Phiên bản', (p) => p.variants.length > 1 ? p.variants.map((v) => esc(v.title)).join('<br>') : '—'],
+    ['Tình trạng', (p) => (p.available ? 'Còn hàng' : 'Hết hàng')],
+    ['Dịch vụ', (p) => [p.tags.includes('free-install') && 'Lắp đặt miễn phí', p.tags.includes('free-shipping') && 'Freeship', p.tags.includes('installment') && 'Trả góp 0%'].filter(Boolean).join('<br>') || '—'],
+    ['', (p) => `<a class="btn btn--sm" href="${p.url}">Xem chi tiết</a>`]
+  ];
+  root.querySelector('[data-cmp-table]').innerHTML = '<tbody>' + rows.map(([k, f]) => `<tr><th scope="row">${k}</th>${items.map((p) => `<td>${f(p)}</td>`).join('')}</tr>`).join('') + '</tbody>';
+  root.querySelector('[data-cmp-wrap]').hidden = false;
+  root.querySelectorAll('[data-cmp-rm]').forEach((b) => b.addEventListener('click', () => { window.gkCompare.set(handles.filter((h) => h !== b.dataset.cmpRm)); location.reload(); }));
+});
+</script>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__cols"><div >
+          <h4>Hỗ trợ</h4>
+          <ul><li><a href="#">Hướng dẫn mua online</a></li><li><a href="#">Câu hỏi thường gặp</a></li><li><a href="#">Đổi trả & bảo hành</a></li><li><a href="#">Theo dõi đơn hàng</a></li></ul>
+        </div><div >
+          <h4>Quyền lợi</h4>
+          <ul><li><a href="#">Thành viên</a></li><li><a href="#">Trả góp 0%</a></li><li><a href="#">Ưu đãi thẻ</a></li></ul>
+        </div><div >
+          <h4>Chính sách</h4>
+          <ul><li><a href="#">Điều khoản sử dụng</a></li><li><a href="#">Chính sách giao hàng</a></li><li><a href="#">Chính sách bảo mật</a></li><li><a href="#">Chính sách đổi trả</a></li></ul>
+        </div><div >
+          <h4>Về chúng tôi</h4>
+          <ul><li><a href="#">Giới thiệu</a></li><li><a href="#">Hệ thống cửa hàng</a></li><li><a href="#">Tuyển dụng</a></li><li><a href="#">Liên hệ</a></li></ul>
+        </div><div>
+        <h4>Đăng ký nhận tin khuyến mãi</h4><form class="news" onsubmit="event.preventDefault()"><input type="hidden" name="contact[tags]" value="newsletter">
+          <input type="email" name="contact[email]" placeholder="Email của bạn" required aria-label="Email">
+          <button class="btn btn--orange" type="submit" style="border-radius:0">Đăng ký</button></form><div class="social"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="LINE">L</a><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="X">X</a></div>
+        <div class="apps"></div>
+      </div>
+    </div><div class="footer__copy">Copyright © 2026 GKMALL. All rights reserved.</div>
+  </div>
+</footer>
+
+
+
+<a class="chatfab" href="#"><i>🤖</i>Chat</a>
+<div class="toast" role="status" data-toast></div>
+<script>// Bản xem trước: giả lập giỏ hàng vì không có máy chủ Shopify
+(function(){let n=0;const f=window.fetch;window.fetch=async(u,o)=>{u=String(u);if(u.startsWith('/cart/add')){n++;return new Response('{}',{status:200})}if(u.startsWith('/cart.js'))return new Response(JSON.stringify({item_count:n}));if(u.startsWith('/discount/'))return new Response('');return f(u,o)};document.addEventListener('click',e=>{const a=e.target.closest('a[href="#"],a[href^="/"]');if(a)e.preventDefault()})})();</script>
+<script>(function () {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+  const toastEl = $('[data-toast]');
+  function toast(msg) {
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastEl._t);
+    toastEl._t = setTimeout(() => toastEl.classList.remove('is-on'), 1800);
+  }
+
+  // Banner trượt
+  $$('[data-slider]').forEach((el) => {
+    const track = $('[data-track]', el);
+    const slides = track ? track.children : [];
+    const dots = $('[data-dots]', el);
+    let i = 0;
+    if (slides.length < 2) { $$('[data-prev],[data-next]', el).forEach((b) => (b.hidden = true)); return; }
+    const go = (n) => {
+      i = (n + slides.length) % slides.length;
+      track.style.transform = `translateX(-${i * 100}%)`;
+      $$('button', dots).forEach((d, k) => d.classList.toggle('is-active', k === i));
+    };
+    for (let k = 0; k < slides.length; k++) {
+      const d = document.createElement('button');
+      d.type = 'button';
+      d.setAttribute('aria-label', `Slide ${k + 1}`);
+      d.addEventListener('click', () => go(k));
+      dots.appendChild(d);
+    }
+    $('[data-prev]', el).addEventListener('click', () => go(i - 1));
+    $('[data-next]', el).addEventListener('click', () => go(i + 1));
+    go(0);
+    const sec = Number(el.dataset.autoplay || 0);
+    if (sec > 0 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let timer = setInterval(() => go(i + 1), sec * 1000);
+      el.addEventListener('mouseenter', () => clearInterval(timer));
+      el.addEventListener('mouseleave', () => (timer = setInterval(() => go(i + 1), sec * 1000)));
+    }
+  });
+
+  // Mega menu
+  const mega = $('[data-mega]');
+  $$('[data-mega-toggle]').forEach((b) =>
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = mega.classList.toggle('is-open');
+      b.setAttribute('aria-expanded', open);
+    })
+  );
+  document.addEventListener('click', (e) => { if (mega && !mega.contains(e.target)) mega.classList.remove('is-open'); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mega) mega.classList.remove('is-open'); });
+  $$('[data-mega-tab]').forEach((b) => {
+    const show = () => {
+      $$('[data-mega-tab]').forEach((x) => x.classList.toggle('is-active', x === b));
+      $$('[data-mega-panel]').forEach((p) => (p.hidden = p.dataset.megaPanel !== b.dataset.megaTab));
+    };
+    b.addEventListener('mouseenter', show);
+    b.addEventListener('click', show);
+  });
+
+  // Tab trong dải sản phẩm
+  $$('[data-tabs]').forEach((sec) => {
+    $$('[data-tab]', sec).forEach((t) =>
+      t.addEventListener('click', () => {
+        $$('[data-tab]', sec).forEach((x) => x.classList.toggle('is-active', x === t));
+        $$('[data-panel]', sec).forEach((p) => (p.hidden = p.dataset.panel !== t.dataset.tab));
+      })
+    );
+  });
+
+  // So sánh sản phẩm: lưu tối đa 4 handle trong trình duyệt
+  const CMP = 'gk_compare';
+  const cmpGet = () => { try { return JSON.parse(localStorage.getItem(CMP)) || []; } catch (e) { return []; } };
+  const cmpSet = (l) => { try { localStorage.setItem(CMP, JSON.stringify(l)); } catch (e) {} cmpRender(); };
+  function cmpRender() {
+    const l = cmpGet();
+    $$('[data-compare]').forEach((b) => b.classList.toggle('is-on', l.includes(b.dataset.compare)));
+    const bar = $('[data-cmpbar]');
+    if (bar) { bar.hidden = l.length === 0 || !!$('[data-compare-page]'); $('[data-cmp-count]', bar).textContent = l.length; }
+  }
+  $$('[data-compare]').forEach((b) => b.addEventListener('click', () => {
+    let l = cmpGet(); const h = b.dataset.compare;
+    if (l.includes(h)) l = l.filter((x) => x !== h);
+    else if (l.length >= 4) return toast('Chỉ so sánh tối đa 4 sản phẩm');
+    else l.push(h);
+    cmpSet(l);
+  }));
+  const cmpClear = $('[data-cmp-clear]'); if (cmpClear) cmpClear.addEventListener('click', () => cmpSet([]));
+  window.gkCompare = { get: cmpGet, set: cmpSet };
+  cmpRender();
+
+  // Đếm ngược Flash Sale
+  $$('[data-countdown]').forEach((el) => {
+    const end = new Date(el.dataset.countdown).getTime();
+    if (isNaN(end)) return;
+    const pad = (n) => String(n).padStart(2, '0');
+    const tick = () => {
+      const s = Math.max(0, Math.floor((end - Date.now()) / 1000));
+      $('[data-h]', el).textContent = pad(Math.floor(s / 3600));
+      $('[data-m]', el).textContent = pad(Math.floor(s / 60) % 60);
+      $('[data-s]', el).textContent = pad(s % 60);
+      if (s > 0) setTimeout(tick, 1000);
+    };
+    tick();
+  });
+
+  // Coupon: Shopify áp dụng 1 mã mỗi đơn. "Dùng mã" gọi /discount/MÃ để gắn mã vào phiên thanh toán.
+  let current = null;
+  try { current = localStorage.getItem('coupon'); } catch (e) {}
+  const markCoupon = () => {
+    $$('[data-coupon]').forEach((b) => {
+      const on = b.dataset.coupon === current;
+      b.textContent = on ? 'Đang dùng' : 'Dùng mã';
+      b.classList.toggle('is-done', on);
+    });
+    $$('[data-coupon-current]').forEach((el) => (el.textContent = current || 'Chưa có'));
+  };
+  $$('[data-coupon]').forEach((b) =>
+    b.addEventListener('click', async () => {
+      const code = b.dataset.coupon;
+      try { await fetch(`/discount/${encodeURIComponent(code)}`, { credentials: 'same-origin' }); } catch (e) {}
+      current = code;
+      try { localStorage.setItem('coupon', code); } catch (e) {}
+      markCoupon();
+      toast(`Đã chọn mã ${code}. Mã sẽ tự áp dụng khi thanh toán`);
+    })
+  );
+  markCoupon();
+
+  // Thêm vào giỏ bằng AJAX
+  $$('[data-add-form]').forEach((f) =>
+    f.addEventListener('submit', async (e) => {
+      if (!window.fetch) return;
+      e.preventDefault();
+      try {
+        const res = await fetch('/cart/add.js', { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(f) });
+        if (!res.ok) throw new Error((await res.json()).description || 'error');
+        const cart = await (await fetch('/cart.js')).json();
+        $$('[data-cart-count]').forEach((c) => (c.textContent = cart.item_count));
+        toast('Đã thêm vào giỏ');
+      } catch (err) {
+        toast(err.message === 'error' ? 'Không thêm được sản phẩm, hãy thử lại' : err.message);
+      }
+    })
+  );
+
+  // Yêu thích (lưu trên trình duyệt)
+  let favs = [];
+  try { favs = JSON.parse(localStorage.getItem('favs') || '[]'); } catch (e) {}
+  $$('[data-fav]').forEach((b) => {
+    const id = b.closest('.pcard')?.querySelector('a')?.getAttribute('href');
+    if (favs.includes(id)) b.classList.add('is-on');
+    b.addEventListener('click', () => {
+      b.classList.toggle('is-on');
+      favs = b.classList.contains('is-on') ? [...favs, id] : favs.filter((x) => x !== id);
+      try { localStorage.setItem('favs', JSON.stringify(favs)); } catch (e) {}
+    });
+  });
+
+  // Đoạn SEO: đọc tất cả
+  $$('[data-clamp-toggle]').forEach((b) =>
+    b.addEventListener('click', () => {
+      const c = b.previousElementSibling;
+      const open = c.classList.toggle('clamp');
+      b.textContent = open ? 'Đọc tiếp' : 'Thu gọn';
+    })
+  );
+
+  window.HP = { toast };
+})();
+
+// Trang chi tiết: đổi ảnh khi bấm thumbnail
+document.querySelectorAll('[data-thumb]').forEach((b) => b.addEventListener('click', () => {
+  const img = document.querySelector('[data-stage]');
+  if (img) { img.src = b.dataset.thumb; img.removeAttribute('srcset'); }
+}));
+// Trang danh mục: tự áp dụng khi đổi bộ lọc / sắp xếp, "Xem thêm", mở bộ lọc trên điện thoại
+const filterForm = document.querySelector('[data-filters]');
+if (filterForm) {
+  const submit = () => {
+    const params = new URLSearchParams(new FormData(filterForm));
+    for (const [k, v] of [...params]) if (v === '') params.delete(k);
+    location.search = params.toString();
+  };
+  filterForm.addEventListener('change', (e) => { if (e.target.type === 'checkbox') submit(); });
+  filterForm.addEventListener('submit', (e) => { e.preventDefault(); submit(); });
+  document.querySelectorAll('[data-sort]').forEach((s) => s.addEventListener('change', submit));
+  filterForm.querySelectorAll('[data-more]').forEach((b) => b.addEventListener('click', () => {
+    const f = b.closest('.facet'); f.classList.toggle('is-expanded');
+    b.textContent = f.classList.contains('is-expanded') ? 'Thu gọn' : 'Xem thêm';
+  }));
+  document.querySelectorAll('[data-filter-toggle]').forEach((b) => b.addEventListener('click', () => filterForm.classList.toggle('is-open')));
+}
+
+// Hệ thống cửa hàng: lọc theo khu vực
+document.querySelectorAll('[data-region-tabs]').forEach((bar) => bar.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-region]'); if (!b) return;
+  bar.querySelectorAll('[data-region]').forEach((x) => x.classList.toggle('is-active', x === b));
+  document.querySelectorAll('[data-store-region]').forEach((c) => { c.hidden = !!b.dataset.region && c.dataset.storeRegion !== b.dataset.region; });
+}));
+
+// Giỏ hàng: nút +/- rồi tự cập nhật
+document.querySelectorAll('[data-cart-form] [data-step]').forEach((b) => b.addEventListener('click', () => {
+  const input = b.parentElement.querySelector('[data-qty]');
+  input.value = Math.max(0, (parseInt(input.value, 10) || 0) + Number(b.dataset.step));
+  clearTimeout(window.__cartT);
+  window.__cartT = setTimeout(() => { const f = b.closest('form'); const u = document.createElement('input'); u.type = 'hidden'; u.name = 'update'; u.value = '1'; f.appendChild(u); f.submit(); }, 500);
+}));
+// Mega menu trên điện thoại: bấm nhóm thì mở danh mục con ngay bên dưới
+(() => {
+  const mq = matchMedia('(max-width:760px)');
+  document.querySelectorAll('[data-mega-tab]').forEach((b) => b.addEventListener('click', () => {
+    if (!mq.matches) return;
+    const panel = document.querySelector(`[data-mega-panel="${b.dataset.megaTab}"]`);
+    if (!panel) return;
+    const li = b.closest('li');
+    const open = panel.parentElement === li && !panel.hidden;
+    document.querySelectorAll('[data-mega-panel]').forEach((p) => (p.hidden = true));
+    if (!open) { li.appendChild(panel); panel.hidden = false; }
+  }));
+  document.querySelectorAll('[data-mega-close]').forEach((b) => b.addEventListener('click', () => document.querySelector('[data-mega]')?.classList.remove('is-open')));
+})();
+
+// Đăng nhập ⇄ quên mật khẩu
+(() => {
+  const box = document.querySelector('[data-auth]'); if (!box) return;
+  const show = (w) => { box.querySelector('[data-auth-login]').hidden = w !== 'login'; box.querySelector('[data-auth-recover]').hidden = w !== 'recover'; };
+  box.querySelectorAll('[data-auth-show]').forEach((b) => b.addEventListener('click', () => show(b.dataset.authShow)));
+  if (location.hash === '#recover' || box.querySelector('[data-auth-recover] .contact__ok')) show('recover');
+})();
+</script>

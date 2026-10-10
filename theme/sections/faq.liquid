@@ -1,0 +1,20 @@
+{%- comment -%} Câu hỏi thường gặp (mở/đóng) {%- endcomment -%}
+<section class="container sec">
+  <div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>
+  <div class="faq">
+    {%- for block in section.blocks -%}
+      <details {{ block.shopify_attributes }}><summary>{{ block.settings.q }}</summary><div>{{ block.settings.a }}</div></details>
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Câu hỏi thường gặp",
+  "settings": [{ "type": "text", "id": "title", "label": "Tiêu đề", "default": "Câu hỏi thường gặp" }],
+  "blocks": [{ "type": "qa", "name": "Câu hỏi", "settings": [
+    { "type": "text", "id": "q", "label": "Câu hỏi" },
+    { "type": "richtext", "id": "a", "label": "Trả lời" }
+  ]}],
+  "presets": [{ "name": "Câu hỏi thường gặp" }]
+}
+{% endschema %}

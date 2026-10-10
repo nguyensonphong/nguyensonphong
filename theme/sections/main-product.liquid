@@ -5,7 +5,8 @@
   Tag dùng: free-install, free-shipping, best-price
 {%- endcomment -%}
 {%- assign v = product.selected_or_first_available_variant -%}
-{%- assign addon = section.settings.addon_product -%}
+{%- comment -%} Dịch vụ cộng thêm: chọn riêng từng sản phẩm qua metafield custom.addon_product; không có thì dùng mặc định của template (nếu đặt) {%- endcomment -%}
+{%- assign addon = product.metafields.custom.addon_product.value | default: section.settings.addon_product -%}
 <nav class="container crumbs" aria-label="Breadcrumb">
   <a href="{{ routes.root_url }}">Trang chủ</a> ›
   {%- if collection -%}<a href="{{ collection.url }}">{{ collection.title }}</a> ›{%- elsif product.collections.size > 0 -%}<a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a> ›{%- endif -%}
@@ -73,6 +74,7 @@
       {%- if v.sku != blank -%}<span>SKU: {{ v.sku }}</span>{%- endif -%}
       <span>Bán bởi: <b>{{ shop.name }}</b></span>
       {%- if product.metafields.custom.sold != blank -%}<span>Đã bán {{ product.metafields.custom.sold }}</span>{%- endif -%}
+      <button class="link-btn" type="button" data-compare="{{ product.handle }}">{% render 'icon', name: 'compare' %}So sánh</button>
     </div>
     <div class="chips">
       {%- if product.tags contains 'free-install' -%}<span class="chip">Lắp đặt miễn phí</span>{%- endif -%}
@@ -146,7 +148,7 @@
 {
   "name": "Chi tiết sản phẩm",
   "settings": [
-    { "type": "product", "id": "addon_product", "label": "Dịch vụ cộng thêm (tuỳ chọn)", "info": "Ví dụ: sản phẩm 'Tháo lắp máy cũ'. Khách tick để mua kèm." },
+    { "type": "product", "id": "addon_product", "label": "Dịch vụ cộng thêm mặc định (tuỳ chọn)", "info": "Nên để trống và chọn riêng ở từng sản phẩm (trường 'Dịch vụ cộng thêm'). Chỉ dùng khi sản phẩm chưa chọn." },
     { "type": "collection", "id": "bundle_collection", "label": "Sản phẩm mua kèm" },
     { "type": "url", "id": "installment_link", "label": "Link trang trả góp" },
     { "type": "text", "id": "tradein_text", "label": "Thu cũ đổi mới: mô tả", "default": "trợ giá đến 1.000.000₫ khi đổi máy cũ", "info": "Hiện với sản phẩm có tag trade-in" },

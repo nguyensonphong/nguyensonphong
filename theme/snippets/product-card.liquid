@@ -20,6 +20,7 @@
     {%- if style == 'shock' -%}<span class="pcard__brand">{{ product.vendor }}</span>
     {%- else -%}<button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav>{% render 'icon', name: 'heart' %}</button>{%- endif -%}
     {%- if style == 'popular' -%}<span class="pcard__vendor">{{ product.vendor }}</span>{%- endif -%}
+    <button class="pcard__cmp" type="button" data-compare="{{ product.handle }}">{% render 'icon', name: 'compare' %}So sánh</button>
     <a href="{{ product.url }}"><h3 class="pcard__title">{{ product.title }}</h3></a>
     {%- if style == 'popular' -%}
       <div class="pcard__meta">

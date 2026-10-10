@@ -3,6 +3,8 @@
   Không có block "tab" → dùng collection chính. Có block "tab" → hiện thanh tab, mỗi tab một collection.
 {%- endcomment -%}
 {%- assign st = section.settings.style -%}
+{%- comment -%} Trên trang danh mục, nếu không chọn collection thì dùng luôn danh mục đang xem {%- endcomment -%}
+{%- assign col = section.settings.collection | default: collection -%}
 <section class="container sec" data-tabs>
   {%- if st == 'flash' or st == 'shock' -%}
     <div class="strip strip--{{ st }}">
@@ -10,12 +12,12 @@
       {%- if st == 'flash' and section.settings.ends_at != blank -%}
         <div class="countdown" data-countdown="{{ section.settings.ends_at }}">Kết thúc sau <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></div>
       {%- endif -%}
-      {%- if section.settings.collection -%}<a href="{{ section.settings.collection.url }}">Xem thêm &gt;&gt;</a>{%- endif -%}
+      {%- if col -%}<a href="{{ col.url }}">Xem thêm &gt;&gt;</a>{%- endif -%}
     </div>
   {%- else -%}
     <div class="sec__head">
       <h2 class="sec__title">{{ section.settings.title }}</h2>
-      {%- if section.settings.collection -%}<a class="sec__more" href="{{ section.settings.collection.url }}">Xem tất cả ›</a>{%- endif -%}
+      {%- if col -%}<a class="sec__more" href="{{ col.url }}">Xem tất cả ›</a>{%- endif -%}
     </div>
   {%- endif -%}
 
@@ -36,7 +38,7 @@
     {%- endfor -%}
   {%- else -%}
     <div class="row-scroll">
-      {%- for product in section.settings.collection.products limit: section.settings.limit -%}
+      {%- for product in col.products limit: section.settings.limit -%}
         {% render 'product-card', product: product, style: st %}
       {%- else -%}
         {%- for i in (1..6) -%}{% render 'product-card' %}{%- endfor -%}

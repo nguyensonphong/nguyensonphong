@@ -1,0 +1,33 @@
+{%- comment -%} Trang so sánh: đọc danh sách sản phẩm đã chọn trong trình duyệt rồi tải thông tin từng sản phẩm {%- endcomment -%}
+<nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>So sánh sản phẩm</span></nav>
+<section class="container" data-compare-page data-money="{{ shop.money_format | escape }}">
+  <h1 class="page-title">So sánh sản phẩm</h1>
+  <p data-cmp-empty hidden>Chưa có sản phẩm nào. Bấm <b>So sánh</b> trên thẻ sản phẩm để thêm (tối đa 4).</p>
+  <div class="ptable-wrap" data-cmp-wrap hidden><table class="ptable cmp" data-cmp-table></table></div>
+</section>
+<style>.cmp__img{display:block;width:150px;height:150px;border-radius:var(--r-card);background:var(--hp-soft);margin-bottom:8px;overflow:hidden}.cmp__img img{width:100%;height:100%;object-fit:contain}</style>
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const root = document.querySelector('[data-compare-page]');
+  const fmt = (c) => (c / 100).toLocaleString('vi-VN') + '₫';
+  const esc = (t) => String(t ?? '').replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  const handles = window.gkCompare ? window.gkCompare.get() : [];
+  if (!handles.length) { root.querySelector('[data-cmp-empty]').hidden = false; return; }
+  const items = (await Promise.all(handles.map((h) => fetch('/products/' + encodeURIComponent(h) + '.js').then((r) => (r.ok ? r.json() : null)).catch(() => null)))).filter(Boolean);
+  const rows = [
+    ['', (p) => `<a class="cmp__img" href="${p.url}">${p.featured_image ? `<img src="${p.featured_image}${p.featured_image.includes('?') ? '&' : '?'}width=300" alt="" width="150" height="150">` : ''}</a><a class="cmp__name" href="${p.url}">${esc(p.title)}</a><button class="link-btn" type="button" data-cmp-rm="${esc(p.handle)}">Bỏ khỏi so sánh</button>`],
+    ['Giá bán', (p) => `<b class="cmp__price">${fmt(p.price)}</b>`],
+    ['Giá gốc', (p) => (p.compare_at_price > p.price ? `<s>${fmt(p.compare_at_price)}</s>` : '—')],
+    ['Thương hiệu', (p) => esc(p.vendor) || '—'],
+    ['Loại sản phẩm', (p) => esc(p.type) || '—'],
+    ['Phiên bản', (p) => p.variants.length > 1 ? p.variants.map((v) => esc(v.title)).join('<br>') : '—'],
+    ['Tình trạng', (p) => (p.available ? 'Còn hàng' : 'Hết hàng')],
+    ['Dịch vụ', (p) => [p.tags.includes('free-install') && 'Lắp đặt miễn phí', p.tags.includes('free-shipping') && 'Freeship', p.tags.includes('installment') && 'Trả góp 0%'].filter(Boolean).join('<br>') || '—'],
+    ['', (p) => `<a class="btn btn--sm" href="${p.url}">Xem chi tiết</a>`]
+  ];
+  root.querySelector('[data-cmp-table]').innerHTML = '<tbody>' + rows.map(([k, f]) => `<tr><th scope="row">${k}</th>${items.map((p) => `<td>${f(p)}</td>`).join('')}</tr>`).join('') + '</tbody>';
+  root.querySelector('[data-cmp-wrap]').hidden = false;
+  root.querySelectorAll('[data-cmp-rm]').forEach((b) => b.addEventListener('click', () => { window.gkCompare.set(handles.filter((h) => h !== b.dataset.cmpRm)); location.reload(); }));
+});
+</script>
+{% schema %}{ "name": "So sánh sản phẩm" }{% endschema %}

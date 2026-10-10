@@ -1,0 +1,158 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "eyebrow": "Khuyến mãi",
+        "title": "Ưu đãi đang diễn ra tại GKMALL",
+        "intro": "Tổng hợp chiến dịch, mã giảm giá, ưu đãi thẻ và thương hiệu. Lưu coupon trước khi mua để có giá tốt nhất.",
+        "button": "Lấy mã giảm giá",
+        "link": "/pages/ma-giam-gia"
+      }
+    },
+    "camps": {
+      "type": "promo-campaigns",
+      "settings": {},
+      "blocks": {
+        "c0": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Chiến dịch",
+            "title": "10.10 Double Day",
+            "dates": "08/10 – 12/10/2026",
+            "badge": "Đang diễn ra",
+            "image_src": "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3",
+            "bg": "#e4002b"
+          }
+        },
+        "c1": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Chiến dịch",
+            "title": "Hot Sale cuối tuần",
+            "dates": "Thứ 6 – Chủ nhật hằng tuần",
+            "badge": "Hằng tuần",
+            "image_src": "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-4.0.3",
+            "bg": "#FF7A1A"
+          }
+        },
+        "c2": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Chiến dịch",
+            "title": "Mua 1 tặng 1",
+            "dates": "01/10 – 31/10/2026",
+            "badge": "",
+            "image_src": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-4.0.3",
+            "bg": "#0B6B09"
+          }
+        },
+        "c3": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Khuyến mãi online",
+            "title": "Giảm thêm 8% khi mua online",
+            "dates": "01/10 – 31/10/2026",
+            "badge": "Chỉ online",
+            "image_src": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3",
+            "bg": "#178A13"
+          }
+        },
+        "c4": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Khuyến mãi online",
+            "title": "Freeship đơn từ 500.000₫",
+            "dates": "Áp dụng toàn quốc",
+            "badge": "",
+            "image_src": "https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3",
+            "bg": "#10200F"
+          }
+        },
+        "c5": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Thẻ & đối tác",
+            "title": "Trả góp 0% qua thẻ tín dụng",
+            "dates": "Áp dụng 20+ ngân hàng",
+            "badge": "",
+            "image_src": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3",
+            "bg": "#0B6B09"
+          }
+        },
+        "c6": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Thẻ & đối tác",
+            "title": "Giảm 500.000₫ khi thanh toán ví điện tử",
+            "dates": "01/10 – 15/10/2026",
+            "badge": "",
+            "image_src": "https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3",
+            "bg": "#178A13"
+          }
+        },
+        "c7": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Ưu đãi tháng",
+            "title": "Giá thành viên tháng 10",
+            "dates": "01/10 – 31/10/2026",
+            "badge": "Thành viên",
+            "image_src": "https://images.unsplash.com/photo-1552858725-2758b5fb1286?ixlib=rb-4.0.3",
+            "bg": "#10200F"
+          }
+        },
+        "c8": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Ưu đãi tháng",
+            "title": "Mùa mưa bão – đồ cần thiết",
+            "dates": "01/10 – 30/11/2026",
+            "badge": "",
+            "image_src": "https://images.unsplash.com/photo-1498847559558-1e4b1a7f7a2f?ixlib=rb-4.0.3",
+            "bg": "#178A13"
+          }
+        },
+        "c9": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Thương hiệu",
+            "title": "Tuần lễ điều hòa",
+            "dates": "10/10 – 20/10/2026",
+            "badge": "",
+            "image_src": "https://images.unsplash.com/photo-1718203862467-c33159fdc504?ixlib=rb-4.0.3",
+            "bg": "#0B6B09"
+          }
+        },
+        "c10": {
+          "type": "campaign",
+          "settings": {
+            "tab": "Thương hiệu",
+            "title": "Ngày hội máy giặt – sấy",
+            "dates": "05/10 – 25/10/2026",
+            "badge": "",
+            "image_src": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?ixlib=rb-4.0.3",
+            "bg": "#FF7A1A"
+          }
+        }
+      },
+      "block_order": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9",
+        "c10"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "camps"
+  ]
+}

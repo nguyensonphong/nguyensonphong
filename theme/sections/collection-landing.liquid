@@ -1,0 +1,53 @@
+{%- comment -%}
+  Đầu trang ngành hàng cấp 1: breadcrumb, tên ngành, mô tả và ô danh mục con.
+  Danh mục con lấy từ block; nếu không có block thì lấy menu con của ngành này trong menu đã chọn.
+{%- endcomment -%}
+<nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>{{ collection.title }}</span></nav>
+<section class="container">
+  <div class="landing">
+    <div class="landing__intro">
+      <h1 class="page-title">{{ collection.title }}</h1>
+      {%- if collection.description != blank -%}<div class="landing__desc">{{ collection.description }}</div>
+      {%- elsif section.settings.intro != blank -%}<p class="landing__desc">{{ section.settings.intro }}</p>{%- endif -%}
+    </div>
+    {%- if collection.all_products_count > 0 -%}<a class="btn" href="#products">Xem {{ collection.all_products_count }} sản phẩm</a>{%- endif -%}
+  </div>
+  <div class="subcats">
+    {%- if section.blocks.size > 0 -%}
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.collection -%}
+        {%- assign q = block.settings.label | url_encode -%}
+        <a class="subcat" href="{% if c %}{{ c.url }}{% elsif block.settings.url != blank %}{{ block.settings.url }}{% else %}{{ routes.search_url }}?q={{ q }}&type=product{% endif %}" {{ block.shopify_attributes }}>
+          <span class="subcat__ic">{%- if c.featured_image -%}{{ c.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}{% render 'icon', name: block.settings.icon %}{%- endif -%}</span>
+          <span>{{ block.settings.label | default: c.title }}</span>
+        </a>
+      {%- endfor -%}
+    {%- else -%}
+      {%- assign parent = linklists[section.settings.sub_menu].links | where: 'url', collection.url | first -%}
+      {%- for l in parent.links -%}
+        <a class="subcat" href="{{ l.url }}">
+          <span class="subcat__ic">{%- if l.object.featured_image -%}{{ l.object.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}{% render 'icon', name: 'box' %}{%- endif -%}</span>
+          <span>{{ l.title }}</span>
+        </a>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Đầu trang ngành hàng",
+  "settings": [
+    { "type": "textarea", "id": "intro", "label": "Mô tả (khi danh mục chưa có mô tả)" },
+    { "type": "link_list", "id": "sub_menu", "label": "Menu chứa danh mục con", "default": "main-menu", "info": "Dùng khi không thêm block. Lấy các link con nằm dưới link trỏ tới danh mục này." }
+  ],
+  "blocks": [
+    { "type": "sub", "name": "Danh mục con", "settings": [
+      { "type": "text", "id": "label", "label": "Tên" },
+      { "type": "collection", "id": "collection", "label": "Collection" },
+      { "type": "url", "id": "url", "label": "Link (khi chưa có collection)", "info": "Để trống: tự tìm kiếm theo tên danh mục con." },
+      { "type": "text", "id": "icon", "label": "Icon", "default": "box", "info": "tv, fridge, washer, ac, fan, pot, pan, sofa, bed, table, wardrobe, bulb, bath, tools…" }
+    ]}
+  ]
+}
+{% endschema %}

@@ -1,0 +1,52 @@
+{%- comment -%}
+  Trang khuyến mãi: thanh tab + thẻ chiến dịch (ảnh, tên, thời gian, nhãn).
+  Tab khai báo trong ô "Danh sách tab"; mỗi chiến dịch ghi đúng tên tab của nó.
+{%- endcomment -%}
+{%- assign tabs = section.settings.tabs | split: ',' -%}
+<section class="container sec" data-tabs>
+  <div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>
+  <div class="tabs" role="tablist">
+    <button class="tab is-active" type="button" role="tab" data-tab="0">Tất cả</button>
+    {%- for t in tabs -%}<button class="tab" type="button" role="tab" data-tab="{{ forloop.index }}">{{ t | strip }}</button>{%- endfor -%}
+  </div>
+  {%- for i in (0..tabs.size) -%}
+    {%- if i > 0 -%}{%- assign idx = i | minus: 1 -%}{%- assign want = tabs[idx] | strip -%}{%- endif -%}
+    <div class="camps" data-panel="{{ i }}" {% if i > 0 %}hidden{% endif %}>
+      {%- for block in section.blocks -%}
+        {%- assign bt = block.settings.tab | strip -%}
+        {%- if i == 0 or bt == want -%}
+          <a class="camp" href="{{ block.settings.link | default: '#' }}" {{ block.shopify_attributes }}>
+            <span class="camp__img">{% render 'placeholder', image: block.settings.image, src: block.settings.image_src, title: '', bg: block.settings.bg, width: 800 %}</span>
+            <span class="camp__body">
+              {%- if block.settings.badge != blank -%}<span class="camp__badge">{{ block.settings.badge }}</span>{%- endif -%}
+              <b>{{ block.settings.title }}</b>
+              {%- if block.settings.dates != blank -%}<span class="camp__dates">{% render 'icon', name: 'clock' %}{{ block.settings.dates }}</span>{%- endif -%}
+            </span>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endfor -%}
+</section>
+{% schema %}
+{
+  "name": "Chiến dịch khuyến mãi",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Chương trình khuyến mãi" },
+    { "type": "text", "id": "tabs", "label": "Danh sách tab (phân cách bằng dấu phẩy)", "default": "Chiến dịch, Khuyến mãi online, Thẻ & đối tác, Ưu đãi tháng, Thương hiệu" }
+  ],
+  "blocks": [
+    { "type": "campaign", "name": "Chiến dịch", "settings": [
+      { "type": "text", "id": "tab", "label": "Thuộc tab", "default": "Chiến dịch" },
+      { "type": "text", "id": "title", "label": "Tên chiến dịch", "default": "Chiến dịch" },
+      { "type": "text", "id": "dates", "label": "Thời gian", "placeholder": "01/10 – 31/10/2026" },
+      { "type": "text", "id": "badge", "label": "Nhãn", "placeholder": "Đang diễn ra" },
+      { "type": "image_picker", "id": "image", "label": "Ảnh" },
+      { "type": "text", "id": "image_src", "label": "Link ảnh minh hoạ (khi chưa tải ảnh)" },
+      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#0B6B09" },
+      { "type": "url", "id": "link", "label": "Link" }
+    ]}
+  ],
+  "presets": [{ "name": "Chiến dịch khuyến mãi" }]
+}
+{% endschema %}

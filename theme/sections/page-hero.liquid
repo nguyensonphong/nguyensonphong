@@ -1,0 +1,28 @@
+{%- comment -%} Đầu trang thông tin: breadcrumb, tiêu đề, mô tả, nút, ảnh nền (tuỳ chọn) {%- endcomment -%}
+{%- assign src = section.settings.image_src -%}
+<nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>{{ page.title | default: section.settings.title }}</span></nav>
+<section class="container">
+  <div class="phero{% if section.settings.image or src != blank %} phero--photo{% endif %}"
+    {%- if section.settings.image %} style="background-image:linear-gradient(90deg,rgba(16,32,15,.85),rgba(16,32,15,.2)),url('{{ section.settings.image | image_url: width: 1600 }}')"
+    {%- elsif src != blank %} style="background-image:linear-gradient(90deg,rgba(16,32,15,.85),rgba(16,32,15,.2)),url('{{ src }}&w=1600&q=75&auto=format&fit=crop')"{% endif %}>
+    {%- if section.settings.eyebrow != blank -%}<small>{{ section.settings.eyebrow }}</small>{%- endif -%}
+    <h1>{{ section.settings.title }}</h1>
+    {%- if section.settings.intro != blank -%}<p>{{ section.settings.intro }}</p>{%- endif -%}
+    {%- if section.settings.button != blank -%}<a class="btn btn--orange" href="{{ section.settings.link }}">{{ section.settings.button }}</a>{%- endif -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Đầu trang thông tin",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Dòng nhỏ phía trên" },
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Tiêu đề trang" },
+    { "type": "textarea", "id": "intro", "label": "Mô tả" },
+    { "type": "text", "id": "button", "label": "Chữ trên nút" },
+    { "type": "url", "id": "link", "label": "Link nút" },
+    { "type": "image_picker", "id": "image", "label": "Ảnh nền" },
+    { "type": "text", "id": "image_src", "label": "Link ảnh minh hoạ (khi chưa tải ảnh)" }
+  ],
+  "presets": [{ "name": "Đầu trang thông tin" }]
+}
+{% endschema %}

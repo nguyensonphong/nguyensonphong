@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "head": {
+      "type": "collection-landing",
+      "settings": {
+        "intro": "Nệm, chăn ga gối và nội thất phòng ngủ cho giấc ngủ ngon.",
+        "sub_menu": "main-menu"
+      },
+      "blocks": {
+        "s0": {
+          "type": "sub",
+          "settings": {
+            "label": "Nệm lò xo",
+            "icon": "bed"
+          }
+        },
+        "s1": {
+          "type": "sub",
+          "settings": {
+            "label": "Nệm foam",
+            "icon": "bed"
+          }
+        },
+        "s2": {
+          "type": "sub",
+          "settings": {
+            "label": "Chăn ga gối",
+            "icon": "bed"
+          }
+        },
+        "s3": {
+          "type": "sub",
+          "settings": {
+            "label": "Gối",
+            "icon": "bed"
+          }
+        },
+        "s4": {
+          "type": "sub",
+          "settings": {
+            "label": "Giường ngủ",
+            "icon": "bed"
+          }
+        },
+        "s5": {
+          "type": "sub",
+          "settings": {
+            "label": "Tủ quần áo",
+            "icon": "wardrobe"
+          }
+        },
+        "s6": {
+          "type": "sub",
+          "settings": {
+            "label": "Bàn trang điểm",
+            "icon": "table"
+          }
+        },
+        "s7": {
+          "type": "sub",
+          "settings": {
+            "label": "Rèm cửa",
+            "icon": "home"
+          }
+        }
+      },
+      "block_order": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ]
+    },
+    "flash": {
+      "type": "product-row",
+      "settings": {
+        "title": "FLASH SALE NGÀNH HÀNG",
+        "style": "flash",
+        "limit": 12
+      }
+    },
+    "hot": {
+      "type": "product-row",
+      "settings": {
+        "title": "Sản phẩm hot trong ngành",
+        "style": "popular",
+        "limit": 12
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "per_page": 24,
+        "sub_menu": "all-categories"
+      }
+    }
+  },
+  "order": [
+    "head",
+    "flash",
+    "hot",
+    "main"
+  ]
+}

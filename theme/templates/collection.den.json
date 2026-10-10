@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "head": {
+      "type": "collection-landing",
+      "settings": {
+        "intro": "Đèn trang trí, đèn LED tiết kiệm điện cho mọi không gian.",
+        "sub_menu": "main-menu"
+      },
+      "blocks": {
+        "s0": {
+          "type": "sub",
+          "settings": {
+            "label": "Đèn LED âm trần",
+            "icon": "bulb"
+          }
+        },
+        "s1": {
+          "type": "sub",
+          "settings": {
+            "label": "Bóng đèn LED",
+            "icon": "bulb"
+          }
+        },
+        "s2": {
+          "type": "sub",
+          "settings": {
+            "label": "Đèn trang trí",
+            "icon": "bulb"
+          }
+        },
+        "s3": {
+          "type": "sub",
+          "settings": {
+            "label": "Đèn bàn",
+            "icon": "bulb"
+          }
+        },
+        "s4": {
+          "type": "sub",
+          "settings": {
+            "label": "Đèn ngoài trời",
+            "icon": "leaf"
+          }
+        },
+        "s5": {
+          "type": "sub",
+          "settings": {
+            "label": "Đèn năng lượng mặt trời",
+            "icon": "bolt"
+          }
+        },
+        "s6": {
+          "type": "sub",
+          "settings": {
+            "label": "Đèn thông minh",
+            "icon": "bulb"
+          }
+        },
+        "s7": {
+          "type": "sub",
+          "settings": {
+            "label": "Phụ kiện điện",
+            "icon": "tools"
+          }
+        }
+      },
+      "block_order": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ]
+    },
+    "flash": {
+      "type": "product-row",
+      "settings": {
+        "title": "FLASH SALE NGÀNH HÀNG",
+        "style": "flash",
+        "limit": 12
+      }
+    },
+    "hot": {
+      "type": "product-row",
+      "settings": {
+        "title": "Sản phẩm hot trong ngành",
+        "style": "popular",
+        "limit": 12
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "per_page": 24,
+        "sub_menu": "all-categories"
+      }
+    }
+  },
+  "order": [
+    "head",
+    "flash",
+    "hot",
+    "main"
+  ]
+}

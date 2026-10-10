@@ -1,0 +1,195 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "eyebrow": "Thợ GKMALL",
+        "title": "Dịch vụ tại nhà trọn gói",
+        "intro": "Hơn 100 dịch vụ lắp đặt, vệ sinh, sửa chữa và cải tạo. Giá niêm yết rõ ràng, thợ có chứng chỉ, bảo hành công trình.",
+        "button": "Đặt lịch ngay",
+        "link": "/pages/contact",
+        "image_src": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3"
+      }
+    },
+    "promise": {
+      "type": "info-cards",
+      "settings": {
+        "title": "4 cam kết của GKMALL",
+        "columns": 4
+      },
+      "blocks": {
+        "b0": {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "title": "Không bỏ dở công việc",
+            "text": "Thợ hoàn thành trọn vẹn theo đúng lịch hẹn.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b1": {
+          "type": "card",
+          "settings": {
+            "icon": "tag",
+            "title": "Không phát sinh chi phí",
+            "text": "Báo giá trước, không thu thêm ngoài báo giá.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b2": {
+          "type": "card",
+          "settings": {
+            "icon": "user",
+            "title": "Có người kiểm tra chất lượng",
+            "text": "Giám sát nghiệm thu sau mỗi công trình.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b3": {
+          "type": "card",
+          "settings": {
+            "icon": "return",
+            "title": "Bảo hành công trình",
+            "text": "Bảo hành tay nghề đến 1 năm.",
+            "price": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ]
+    },
+    "groups": {
+      "type": "info-cards",
+      "settings": {
+        "title": "Nhóm dịch vụ",
+        "columns": 3
+      },
+      "blocks": {
+        "b0": {
+          "type": "card",
+          "settings": {
+            "icon": "bolt",
+            "title": "Thợ khẩn cấp 24 giờ",
+            "text": "Mất điện, chập điện, máy bơm hỏng, máy lạnh không lạnh, vỡ ống nước.",
+            "price": "Từ 300.000₫",
+            "link": ""
+          }
+        },
+        "b1": {
+          "type": "card",
+          "settings": {
+            "icon": "ac",
+            "title": "Vệ sinh",
+            "text": "Vệ sinh máy lạnh, máy giặt, đồ bếp, hút bụi nệm.",
+            "price": "Từ 250.000₫",
+            "link": ""
+          }
+        },
+        "b2": {
+          "type": "card",
+          "settings": {
+            "icon": "wrench",
+            "title": "Lắp đặt",
+            "text": "Máy lạnh, máy giặt, máy nước nóng, quạt trần, lọc nước, đèn… khoảng 25 loại.",
+            "price": "Từ 200.000₫",
+            "link": ""
+          }
+        },
+        "b3": {
+          "type": "card",
+          "settings": {
+            "icon": "tools",
+            "title": "Sửa chữa",
+            "text": "Máy giặt, máy nước nóng, máy lạnh, tivi, máy bơm, tủ lạnh.",
+            "price": "Từ 550.000₫",
+            "link": "/pages/sua-chua"
+          }
+        },
+        "b4": {
+          "type": "card",
+          "settings": {
+            "icon": "home",
+            "title": "Khảo sát tận nơi",
+            "text": "Điện mặt trời, mái che, cải tạo bếp, sàn gỗ.",
+            "price": "Miễn phí khảo sát",
+            "link": ""
+          }
+        },
+        "b5": {
+          "type": "card",
+          "settings": {
+            "icon": "sofa",
+            "title": "Cải tạo theo không gian",
+            "text": "Phòng tắm, bếp, phòng ngủ, ngoài trời, cả căn nhà.",
+            "price": "Báo giá theo công trình",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
+    },
+    "how": {
+      "type": "steps",
+      "settings": {
+        "title": "Đặt dịch vụ trong 4 bước"
+      },
+      "blocks": {
+        "b0": {
+          "type": "step",
+          "settings": {
+            "title": "Chọn dịch vụ",
+            "text": "Chọn loại dịch vụ và thời gian mong muốn."
+          }
+        },
+        "b1": {
+          "type": "step",
+          "settings": {
+            "title": "Nhận báo giá",
+            "text": "GKMALL xác nhận và báo giá trọn gói."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "title": "Thợ đến làm",
+            "text": "Thợ đúng giờ, mang đủ dụng cụ và đồng phục."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "title": "Nghiệm thu & bảo hành",
+            "text": "Kiểm tra cùng khách, thanh toán và nhận phiếu bảo hành."
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "promise",
+    "groups",
+    "how"
+  ]
+}

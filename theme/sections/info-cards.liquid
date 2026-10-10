@@ -1,0 +1,35 @@
+{%- comment -%} Lưới thẻ: icon + tiêu đề + mô tả (+ giá, link). Dùng cho cam kết, nhóm dịch vụ, cách giao hàng… {%- endcomment -%}
+<section class="container sec">
+  {%- if section.settings.title != blank -%}<div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>{%- endif -%}
+  {%- if section.settings.intro != blank -%}<p class="sec__intro">{{ section.settings.intro }}</p>{%- endif -%}
+  <div class="icards" style="--cols:{{ section.settings.columns }}">
+    {%- for block in section.blocks -%}
+      {%- if block.settings.link != blank -%}<a class="icard" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>{%- else -%}<div class="icard" {{ block.shopify_attributes }}>{%- endif -%}
+        <span class="icard__ic">{% render 'icon', name: block.settings.icon %}</span>
+        <b>{{ block.settings.title }}</b>
+        {%- if block.settings.text != blank -%}<span class="icard__text">{{ block.settings.text }}</span>{%- endif -%}
+        {%- if block.settings.price != blank -%}<span class="icard__price">{{ block.settings.price }}</span>{%- endif -%}
+      {%- if block.settings.link != blank -%}</a>{%- else -%}</div>{%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Thẻ thông tin",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề" },
+    { "type": "textarea", "id": "intro", "label": "Mô tả" },
+    { "type": "range", "id": "columns", "label": "Số cột", "min": 2, "max": 6, "step": 1, "default": 4 }
+  ],
+  "blocks": [
+    { "type": "card", "name": "Thẻ", "settings": [
+      { "type": "text", "id": "icon", "label": "Icon", "default": "shield" },
+      { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Tiêu đề" },
+      { "type": "textarea", "id": "text", "label": "Mô tả" },
+      { "type": "text", "id": "price", "label": "Giá / ghi chú nổi bật" },
+      { "type": "url", "id": "link", "label": "Link" }
+    ]}
+  ],
+  "presets": [{ "name": "Thẻ thông tin" }]
+}
+{% endschema %}

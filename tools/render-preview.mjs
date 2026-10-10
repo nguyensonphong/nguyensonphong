@@ -1,5 +1,5 @@
 // Render trang chủ của theme thành một file HTML tĩnh để xem trước (không cần Shopify).
-// Chạy: npm install && node tools/render-preview.mjs  → ghi ra preview/index.html
+// Chạy: npm install && node tools/render-preview.mjs  → ghi ra preview/index.html và preview/<trang>.html
 import { Liquid, Tag } from 'liquidjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -96,8 +96,13 @@ async function renderSection(id, cfg) {
     if (settings._tabs) s.collection = C(s.label, settings._tabs[i % settings._tabs.length]);
     return { type: b.type, settings: s };
   });
-  return engine.parseAndRender(src, { ...globals, section: { id, settings, blocks } });
+  try {
+    return await engine.parseAndRender(src, { ...globals, ...pageGlobals, section: { id, settings, blocks } });
+  } catch (e) {
+    return `<section class="container sec"><p style="padding:24px;border:1px dashed #ccc;border-radius:10px;color:#888">[Section “${cfg.type}” chỉ hiển thị trên Shopify]</p></section>`;
+  }
 }
+let pageGlobals = {};
 async function renderGroup(file) {
   const g = JSON.parse(read(T('sections', file)));
   let out = '';
@@ -105,9 +110,6 @@ async function renderGroup(file) {
   return out;
 }
 
-const index = JSON.parse(read(T('templates', 'index.json')));
-let main = '';
-for (const id of index.order) main += await renderSection(id, index.sections[id]);
 const header = await renderGroup('header-group.json');
 const footer = await renderGroup('footer-group.json');
 
@@ -116,7 +118,7 @@ const js = read(T('assets', 'theme.js'));
 const stub = `// Bản xem trước: giả lập giỏ hàng vì không có máy chủ Shopify
 (function(){let n=0;const f=window.fetch;window.fetch=async(u,o)=>{u=String(u);if(u.startsWith('/cart/add')){n++;return new Response('{}',{status:200})}if(u.startsWith('/cart.js'))return new Response(JSON.stringify({item_count:n}));if(u.startsWith('/discount/'))return new Response('');return f(u,o)};document.addEventListener('click',e=>{const a=e.target.closest('a[href="#"],a[href^="/"]');if(a)e.preventDefault()})})();`;
 
-const html = `<title>GKMALL Storefront</title>
+const page = (main) => `<title>GKMALL Storefront</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap">
 <style>${css}</style>
 ${header}
@@ -127,6 +129,19 @@ ${footer}
 <script>${stub}</script>
 <script>${js}</script>
 `;
+const pages = {
+  index: {},
+  'collection.landing': { collection: { ...C('Điện máy', popular), description: '', all_products_count: 394 } },
+  'page.shipping': {}, 'page.compare': {}, 'page.promotions': {}, 'page.services': {}, 'page.repair': {}, 'page.trade-in': {},
+};
 fs.mkdirSync(path.join(ROOT, 'preview'), { recursive: true });
-fs.writeFileSync(path.join(ROOT, 'preview', 'index.html'), html);
-console.log('preview/index.html', (html.length / 1024).toFixed(0) + 'KB');
+for (const [name, g] of Object.entries(pages)) {
+  pageGlobals = g;
+  const tpl = JSON.parse(read(T('templates', name + '.json')));
+  let main = '';
+  for (const id of tpl.order) main += await renderSection(id, tpl.sections[id]);
+  const html = page(main);
+  const out = name === 'index' ? 'index.html' : name + '.html';
+  fs.writeFileSync(path.join(ROOT, 'preview', out), html);
+  console.log('preview/' + out, (html.length / 1024).toFixed(0) + 'KB');
+}

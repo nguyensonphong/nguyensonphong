@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "head": {
+      "type": "collection-landing",
+      "settings": {
+        "intro": "Thiết bị vệ sinh, sen vòi và phụ kiện phòng tắm.",
+        "sub_menu": "main-menu"
+      },
+      "blocks": {
+        "s0": {
+          "type": "sub",
+          "settings": {
+            "label": "Bồn cầu",
+            "icon": "bath"
+          }
+        },
+        "s1": {
+          "type": "sub",
+          "settings": {
+            "label": "Lavabo",
+            "icon": "bath"
+          }
+        },
+        "s2": {
+          "type": "sub",
+          "settings": {
+            "label": "Sen tắm",
+            "icon": "bath"
+          }
+        },
+        "s3": {
+          "type": "sub",
+          "settings": {
+            "label": "Vòi lavabo",
+            "icon": "pipe"
+          }
+        },
+        "s4": {
+          "type": "sub",
+          "settings": {
+            "label": "Máy nước nóng",
+            "icon": "bath"
+          }
+        },
+        "s5": {
+          "type": "sub",
+          "settings": {
+            "label": "Bồn tắm",
+            "icon": "bath"
+          }
+        },
+        "s6": {
+          "type": "sub",
+          "settings": {
+            "label": "Tủ & gương",
+            "icon": "wardrobe"
+          }
+        },
+        "s7": {
+          "type": "sub",
+          "settings": {
+            "label": "Phụ kiện phòng tắm",
+            "icon": "tools"
+          }
+        }
+      },
+      "block_order": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ]
+    },
+    "flash": {
+      "type": "product-row",
+      "settings": {
+        "title": "FLASH SALE NGÀNH HÀNG",
+        "style": "flash",
+        "limit": 12
+      }
+    },
+    "hot": {
+      "type": "product-row",
+      "settings": {
+        "title": "Sản phẩm hot trong ngành",
+        "style": "popular",
+        "limit": 12
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "per_page": 24,
+        "sub_menu": "all-categories"
+      }
+    }
+  },
+  "order": [
+    "head",
+    "flash",
+    "hot",
+    "main"
+  ]
+}

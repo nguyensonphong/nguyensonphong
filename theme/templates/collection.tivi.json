@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "head": {
+      "type": "collection-landing",
+      "settings": {
+        "intro": "Tivi, loa và thiết bị giải trí tại gia.",
+        "sub_menu": "main-menu"
+      },
+      "blocks": {
+        "s0": {
+          "type": "sub",
+          "settings": {
+            "label": "Smart TV",
+            "icon": "tv"
+          }
+        },
+        "s1": {
+          "type": "sub",
+          "settings": {
+            "label": "Tivi 4K",
+            "icon": "tv"
+          }
+        },
+        "s2": {
+          "type": "sub",
+          "settings": {
+            "label": "Tivi OLED",
+            "icon": "tv"
+          }
+        },
+        "s3": {
+          "type": "sub",
+          "settings": {
+            "label": "Loa thanh",
+            "icon": "tv"
+          }
+        },
+        "s4": {
+          "type": "sub",
+          "settings": {
+            "label": "Loa bluetooth",
+            "icon": "phone"
+          }
+        },
+        "s5": {
+          "type": "sub",
+          "settings": {
+            "label": "Dàn âm thanh",
+            "icon": "tv"
+          }
+        },
+        "s6": {
+          "type": "sub",
+          "settings": {
+            "label": "Máy chơi game",
+            "icon": "ball"
+          }
+        },
+        "s7": {
+          "type": "sub",
+          "settings": {
+            "label": "Phụ kiện tivi",
+            "icon": "tools"
+          }
+        }
+      },
+      "block_order": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ]
+    },
+    "flash": {
+      "type": "product-row",
+      "settings": {
+        "title": "FLASH SALE NGÀNH HÀNG",
+        "style": "flash",
+        "limit": 12
+      }
+    },
+    "hot": {
+      "type": "product-row",
+      "settings": {
+        "title": "Sản phẩm hot trong ngành",
+        "style": "popular",
+        "limit": 12
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "per_page": 24,
+        "sub_menu": "all-categories"
+      }
+    }
+  },
+  "order": [
+    "head",
+    "flash",
+    "hot",
+    "main"
+  ]
+}

@@ -1,0 +1,45 @@
+{%- comment -%} Bảng giá / bảng phí đến 3 cột. Mỗi block là một dòng. {%- endcomment -%}
+<section class="container sec">
+  {%- if section.settings.title != blank -%}<div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>{%- endif -%}
+  {%- if section.settings.intro != blank -%}<p class="sec__intro">{{ section.settings.intro }}</p>{%- endif -%}
+  <div class="ptable-wrap">
+    <table class="ptable">
+      <thead><tr>
+        <th scope="col">{{ section.settings.h1 }}</th>
+        {%- if section.settings.h2 != blank -%}<th scope="col">{{ section.settings.h2 }}</th>{%- endif -%}
+        {%- if section.settings.h3 != blank -%}<th scope="col">{{ section.settings.h3 }}</th>{%- endif -%}
+      </tr></thead>
+      <tbody>
+        {%- for block in section.blocks -%}
+          <tr {{ block.shopify_attributes }}>
+            <th scope="row">{{ block.settings.c1 }}</th>
+            {%- if section.settings.h2 != blank -%}<td>{{ block.settings.c2 }}</td>{%- endif -%}
+            {%- if section.settings.h3 != blank -%}<td>{{ block.settings.c3 }}</td>{%- endif -%}
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
+  {%- if section.settings.note != blank -%}<p class="ptable-note">{{ section.settings.note }}</p>{%- endif -%}
+</section>
+{% schema %}
+{
+  "name": "Bảng giá",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề" },
+    { "type": "textarea", "id": "intro", "label": "Mô tả" },
+    { "type": "text", "id": "h1", "label": "Tên cột 1", "default": "Hạng mục" },
+    { "type": "text", "id": "h2", "label": "Tên cột 2", "default": "Giá" },
+    { "type": "text", "id": "h3", "label": "Tên cột 3 (để trống nếu không dùng)" },
+    { "type": "textarea", "id": "note", "label": "Ghi chú dưới bảng" }
+  ],
+  "blocks": [
+    { "type": "row", "name": "Dòng", "settings": [
+      { "type": "text", "id": "c1", "label": "Cột 1" },
+      { "type": "text", "id": "c2", "label": "Cột 2" },
+      { "type": "text", "id": "c3", "label": "Cột 3" }
+    ]}
+  ],
+  "presets": [{ "name": "Bảng giá" }]
+}
+{% endschema %}

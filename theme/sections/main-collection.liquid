@@ -4,7 +4,7 @@
 {%- endcomment -%}
 {%- assign per_page = section.settings.per_page -%}
 <nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>{{ collection.title }}</span></nav>
-<section class="container">
+<section class="container" id="products">
   <h1 class="page-title">{{ collection.title }}</h1>
   {%- assign sub = linklists[section.settings.sub_menu].links | where: 'url', collection.url | first -%}
   {%- if sub and sub.links.size > 0 -%}

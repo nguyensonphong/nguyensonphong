@@ -71,6 +71,27 @@
     );
   });
 
+  // So sánh sản phẩm: lưu tối đa 4 handle trong trình duyệt
+  const CMP = 'gk_compare';
+  const cmpGet = () => { try { return JSON.parse(localStorage.getItem(CMP)) || []; } catch (e) { return []; } };
+  const cmpSet = (l) => { try { localStorage.setItem(CMP, JSON.stringify(l)); } catch (e) {} cmpRender(); };
+  function cmpRender() {
+    const l = cmpGet();
+    $$('[data-compare]').forEach((b) => b.classList.toggle('is-on', l.includes(b.dataset.compare)));
+    const bar = $('[data-cmpbar]');
+    if (bar) { bar.hidden = l.length === 0 || !!$('[data-compare-page]'); $('[data-cmp-count]', bar).textContent = l.length; }
+  }
+  $$('[data-compare]').forEach((b) => b.addEventListener('click', () => {
+    let l = cmpGet(); const h = b.dataset.compare;
+    if (l.includes(h)) l = l.filter((x) => x !== h);
+    else if (l.length >= 4) return toast('Chỉ so sánh tối đa 4 sản phẩm');
+    else l.push(h);
+    cmpSet(l);
+  }));
+  const cmpClear = $('[data-cmp-clear]'); if (cmpClear) cmpClear.addEventListener('click', () => cmpSet([]));
+  window.gkCompare = { get: cmpGet, set: cmpSet };
+  cmpRender();
+
   // Đếm ngược Flash Sale
   $$('[data-countdown]').forEach((el) => {
     const end = new Date(el.dataset.countdown).getTime();

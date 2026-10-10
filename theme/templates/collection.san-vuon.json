@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "head": {
+      "type": "collection-landing",
+      "settings": {
+        "intro": "Nội thất ngoài trời, dụng cụ làm vườn và trang trí sân vườn.",
+        "sub_menu": "main-menu"
+      },
+      "blocks": {
+        "s0": {
+          "type": "sub",
+          "settings": {
+            "label": "Bàn ghế sân vườn",
+            "icon": "table"
+          }
+        },
+        "s1": {
+          "type": "sub",
+          "settings": {
+            "label": "Dù che nắng",
+            "icon": "leaf"
+          }
+        },
+        "s2": {
+          "type": "sub",
+          "settings": {
+            "label": "Chậu cây",
+            "icon": "leaf"
+          }
+        },
+        "s3": {
+          "type": "sub",
+          "settings": {
+            "label": "Dụng cụ làm vườn",
+            "icon": "tools"
+          }
+        },
+        "s4": {
+          "type": "sub",
+          "settings": {
+            "label": "Máy cắt cỏ",
+            "icon": "tools"
+          }
+        },
+        "s5": {
+          "type": "sub",
+          "settings": {
+            "label": "Vòi tưới",
+            "icon": "pipe"
+          }
+        },
+        "s6": {
+          "type": "sub",
+          "settings": {
+            "label": "Đèn sân vườn",
+            "icon": "bulb"
+          }
+        },
+        "s7": {
+          "type": "sub",
+          "settings": {
+            "label": "Lò nướng ngoài trời",
+            "icon": "pot"
+          }
+        }
+      },
+      "block_order": [
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7"
+      ]
+    },
+    "flash": {
+      "type": "product-row",
+      "settings": {
+        "title": "FLASH SALE NGÀNH HÀNG",
+        "style": "flash",
+        "limit": 12
+      }
+    },
+    "hot": {
+      "type": "product-row",
+      "settings": {
+        "title": "Sản phẩm hot trong ngành",
+        "style": "popular",
+        "limit": 12
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "per_page": 24,
+        "sub_menu": "all-categories"
+      }
+    }
+  },
+  "order": [
+    "head",
+    "flash",
+    "hot",
+    "main"
+  ]
+}

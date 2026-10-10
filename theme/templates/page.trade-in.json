@@ -1,0 +1,188 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "eyebrow": "Thu cũ đổi mới",
+        "title": "Đổi đồ cũ, trợ giá đến 10.000.000₫",
+        "intro": "Nhận đồ cũ bất kể mua ở đâu, tình trạng ra sao, với khoảng 90 loại sản phẩm. Đồ cũ được tái chế đúng chuẩn.",
+        "button": "Xem sản phẩm áp dụng",
+        "link": "/collections/all",
+        "image_src": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3"
+      }
+    },
+    "ways": {
+      "type": "info-cards",
+      "settings": {
+        "title": "Hai cách đổi",
+        "columns": 2
+      },
+      "blocks": {
+        "b0": {
+          "type": "card",
+          "settings": {
+            "icon": "truck",
+            "title": "Mua online – giao mới, lấy cũ",
+            "text": "Chọn sản phẩm mới có nhãn Thu cũ đổi mới, chọn loại đồ cũ. Khi giao hàng mới, nhân viên thu luôn đồ cũ và trừ tiền trợ giá.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b1": {
+          "type": "card",
+          "settings": {
+            "icon": "store",
+            "title": "Mang đồ cũ tới cửa hàng",
+            "text": "Mua hàng mới rồi mang đồ cũ tới cửa hàng GKMALL trong 30 ngày. Tiền trợ giá được hoàn vào tài khoản thành viên.",
+            "price": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1"
+      ]
+    },
+    "rates": {
+      "type": "price-table",
+      "settings": {
+        "title": "Mức trợ giá tham khảo",
+        "h1": "Loại đồ cũ",
+        "h2": "Trợ giá đến",
+        "note": "Mức trợ giá thực tế tùy sản phẩm mới mua và chương trình từng thời điểm."
+      },
+      "blocks": {
+        "b0": {
+          "type": "row",
+          "settings": {
+            "c1": "Máy lạnh",
+            "c2": "1.000.000₫",
+            "c3": ""
+          }
+        },
+        "b1": {
+          "type": "row",
+          "settings": {
+            "c1": "Tủ lạnh",
+            "c2": "1.000.000₫",
+            "c3": ""
+          }
+        },
+        "b2": {
+          "type": "row",
+          "settings": {
+            "c1": "Máy giặt",
+            "c2": "800.000₫",
+            "c3": ""
+          }
+        },
+        "b3": {
+          "type": "row",
+          "settings": {
+            "c1": "Tivi",
+            "c2": "1.500.000₫",
+            "c3": ""
+          }
+        },
+        "b4": {
+          "type": "row",
+          "settings": {
+            "c1": "Máy nước nóng",
+            "c2": "500.000₫",
+            "c3": ""
+          }
+        },
+        "b5": {
+          "type": "row",
+          "settings": {
+            "c1": "Nệm, sofa",
+            "c2": "10.000.000₫",
+            "c3": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
+    },
+    "how": {
+      "type": "steps",
+      "settings": {
+        "title": "Các bước"
+      },
+      "blocks": {
+        "b0": {
+          "type": "step",
+          "settings": {
+            "title": "Chọn sản phẩm mới",
+            "text": "Tìm sản phẩm có nhãn Thu cũ đổi mới."
+          }
+        },
+        "b1": {
+          "type": "step",
+          "settings": {
+            "title": "Khai báo đồ cũ",
+            "text": "Chọn loại đồ cũ muốn đổi ngay trên trang sản phẩm."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "title": "Giao mới – thu cũ",
+            "text": "Nhân viên thu đồ cũ khi giao hàng mới."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "title": "Nhận trợ giá",
+            "text": "Trừ trực tiếp vào đơn hoặc hoàn vào tài khoản."
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {},
+      "blocks": {
+        "b0": {
+          "type": "qa",
+          "settings": {
+            "q": "Đồ cũ hỏng có được nhận không?",
+            "a": "<p>Có. GKMALL nhận cả đồ cũ không còn hoạt động.</p>"
+          }
+        },
+        "b1": {
+          "type": "qa",
+          "settings": {
+            "q": "Đồ cũ được xử lý thế nào?",
+            "a": "<p>Đồ cũ được chuyển tới đơn vị tái chế đạt chuẩn môi trường.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "ways",
+    "rates",
+    "how",
+    "faq"
+  ]
+}

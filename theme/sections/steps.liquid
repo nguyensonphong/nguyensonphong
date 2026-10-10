@@ -1,0 +1,20 @@
+{%- comment -%} Các bước đánh số {%- endcomment -%}
+<section class="container sec">
+  {%- if section.settings.title != blank -%}<div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>{%- endif -%}
+  <ol class="steps">
+    {%- for block in section.blocks -%}
+      <li {{ block.shopify_attributes }}><b>{{ block.settings.title }}</b>{%- if block.settings.text != blank -%}<span>{{ block.settings.text }}</span>{%- endif -%}</li>
+    {%- endfor -%}
+  </ol>
+</section>
+{% schema %}
+{
+  "name": "Các bước",
+  "settings": [{ "type": "text", "id": "title", "label": "Tiêu đề", "default": "Cách thực hiện" }],
+  "blocks": [{ "type": "step", "name": "Bước", "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Bước" },
+    { "type": "textarea", "id": "text", "label": "Mô tả" }
+  ]}],
+  "presets": [{ "name": "Các bước" }]
+}
+{% endschema %}

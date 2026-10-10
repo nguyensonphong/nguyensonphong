@@ -1,0 +1,190 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "eyebrow": "Chính sách",
+        "title": "Chính sách giao hàng",
+        "intro": "GKMALL giao bằng đội xe riêng, từ nhà sản xuất hoặc qua đối tác vận chuyển. Ngày giao dự kiến hiện rõ ở bước thanh toán."
+      }
+    },
+    "ways": {
+      "type": "info-cards",
+      "settings": {
+        "title": "Các cách nhận hàng",
+        "columns": 4
+      },
+      "blocks": {
+        "b0": {
+          "type": "card",
+          "settings": {
+            "icon": "bolt",
+            "title": "Giao nhanh 2h",
+            "text": "Nội thành, đặt từ 07:30 đến 18:00.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b1": {
+          "type": "card",
+          "settings": {
+            "icon": "clock",
+            "title": "Giao ngày mai",
+            "text": "Đặt trước 20:30, giao trong ngày hôm sau.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b2": {
+          "type": "card",
+          "settings": {
+            "icon": "truck",
+            "title": "Giao tiêu chuẩn",
+            "text": "2–14 ngày làm việc tùy khu vực và sản phẩm.",
+            "price": "",
+            "link": ""
+          }
+        },
+        "b3": {
+          "type": "card",
+          "settings": {
+            "icon": "store",
+            "title": "Nhận tại cửa hàng",
+            "text": "Sẵn sàng sau 1 giờ, miễn phí.",
+            "price": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ]
+    },
+    "fee": {
+      "type": "price-table",
+      "settings": {
+        "title": "Phí giao hàng",
+        "intro": "Phí tính theo khoảng cách từ cửa hàng gần nhất còn hàng tới địa chỉ nhận.",
+        "h1": "Khoảng cách",
+        "h2": "Đơn từ 500.000₫",
+        "h3": "Đơn dưới 500.000₫",
+        "note": "Hàng cồng kềnh hoặc giao tầng cao không có thang máy có thể phát sinh phụ phí; nhân viên sẽ báo trước khi giao."
+      },
+      "blocks": {
+        "b0": {
+          "type": "row",
+          "settings": {
+            "c1": "Đến 40 km",
+            "c2": "Miễn phí",
+            "c3": "50.000₫"
+          }
+        },
+        "b1": {
+          "type": "row",
+          "settings": {
+            "c1": "41–60 km",
+            "c2": "400.000₫",
+            "c3": "450.000₫"
+          }
+        },
+        "b2": {
+          "type": "row",
+          "settings": {
+            "c1": "Trên 60 km",
+            "c2": "900.000₫",
+            "c3": "950.000₫"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2"
+      ]
+    },
+    "how": {
+      "type": "steps",
+      "settings": {
+        "title": "Quy trình giao hàng"
+      },
+      "blocks": {
+        "b0": {
+          "type": "step",
+          "settings": {
+            "title": "Xác nhận đơn",
+            "text": "GKMALL gọi hoặc nhắn tin xác nhận trong vòng 2 giờ làm việc."
+          }
+        },
+        "b1": {
+          "type": "step",
+          "settings": {
+            "title": "Hẹn lịch giao",
+            "text": "Nhân viên liên hệ trước 1–3 ngày để hẹn giờ phù hợp."
+          }
+        },
+        "b2": {
+          "type": "step",
+          "settings": {
+            "title": "Giao & lắp đặt",
+            "text": "Kiểm tra hàng cùng khách, lắp đặt miễn phí với sản phẩm có hỗ trợ."
+          }
+        },
+        "b3": {
+          "type": "step",
+          "settings": {
+            "title": "Thanh toán & bảo hành",
+            "text": "Thanh toán khi nhận hàng hoặc online; kích hoạt bảo hành điện tử."
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {},
+      "blocks": {
+        "b0": {
+          "type": "qa",
+          "settings": {
+            "q": "Một đơn có thể giao nhiều lần không?",
+            "a": "<p>Có. Nếu sản phẩm nằm ở nhiều kho, đơn có thể được chia thành nhiều lần giao, không tính thêm phí.</p>"
+          }
+        },
+        "b1": {
+          "type": "qa",
+          "settings": {
+            "q": "Tôi có được kiểm tra hàng trước khi nhận?",
+            "a": "<p>Có. Bạn được mở hộp kiểm tra ngoại quan và phụ kiện trước khi ký nhận.</p>"
+          }
+        },
+        "b2": {
+          "type": "qa",
+          "settings": {
+            "q": "Có giao ngoài giờ hành chính không?",
+            "a": "<p>Có giao đến 20:00 hằng ngày, kể cả cuối tuần, tùy khu vực.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "ways",
+    "fee",
+    "how",
+    "faq"
+  ]
+}
