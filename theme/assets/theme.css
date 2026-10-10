@@ -1,10 +1,10 @@
-/* HomePro-style theme — dùng chung cho theme Shopify và trang preview */
+/* GKMALL theme — dùng chung cho theme Shopify và trang preview */
 :root{
-  --hp-blue:#0066b3; --hp-blue-footer:#0065b2; --hp-blue-dark:#004f8c; --hp-navy:#0b2e59;
-  --hp-sky:#eaf4fc; --hp-orange:#f7931e; --hp-red:#e4002b; --hp-pink:#e6007e;
-  --hp-text:#525255; --hp-head:#0b2e59; --hp-line:#e3e6ea; --hp-mute:#9a9ca1; --hp-bg:#ffffff; --hp-soft:#f5f7fa;
+  --hp-blue:#0B6B09; --hp-blue-footer:#10200F; --hp-blue-dark:#074F06; --hp-navy:#10200F;
+  --hp-sky:#E8F8E6; --hp-orange:#FF7A1A; --hp-red:#e4002b; --hp-pink:#e6007e;
+  --hp-text:#525255; --hp-head:#10200F; --hp-line:#e3e6ea; --hp-mute:#9a9ca1; --hp-bg:#ffffff; --hp-soft:#f5f7fa;
   --r-card:10px; --r-banner:12px; --r-pill:18px; --gap:14px; --sec:56px; --w:1280px;
-  --font:"Roboto",Arial,sans-serif;
+  --font:"Be Vietnam Pro",Arial,sans-serif;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -23,7 +23,7 @@ button{cursor:pointer}
 .sec__more:hover{text-decoration:underline}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:8px;padding:8px 18px;font-weight:600;color:#fff;background:var(--hp-blue);white-space:nowrap}
 .btn:hover{background:var(--hp-blue-dark)}
-.btn--orange{background:var(--hp-orange)}.btn--orange:hover{background:#e07f0a}
+.btn--orange{background:var(--hp-orange)}.btn--orange:hover{background:#E8650A}
 .btn--sm{padding:5px 12px;font-size:13px}
 .btn--outline{background:#fff;color:var(--hp-blue);border:1px solid var(--hp-blue)}
 .ph{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:24px;color:#fff;height:100%;width:100%}
@@ -46,7 +46,8 @@ button{cursor:pointer}
 .header{position:sticky;top:0;z-index:50;background:var(--hp-blue);color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.12)}
 .header__main{display:flex;align-items:center;gap:18px;min-height:72px}
 .logo{display:flex;align-items:center;gap:8px;font-size:26px;font-weight:700;letter-spacing:-.02em;flex:none}
-.logo svg{width:34px;height:34px}
+.logo svg{width:34px;height:40px;flex:none}.logo__word{font-weight:900;letter-spacing:-.01em}.logo__word span{color:#1FC21A}
+.ic-accent{stroke:var(--icon-accent,#1FC21A)}
 .loc{display:flex;flex-direction:column;line-height:1.25;font-size:12px;opacity:.95;flex:none}
 .loc b{font-size:14px;font-weight:600}
 .search{flex:1;display:flex;background:#fff;border-radius:8px;overflow:hidden;min-width:0;height:42px}
@@ -138,8 +139,8 @@ button{cursor:pointer}
 .strip{border-radius:var(--r-banner);overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;color:#fff;margin-bottom:var(--gap);flex-wrap:wrap}
 .strip h3{margin:0;font-size:28px;font-weight:700;letter-spacing:.02em}
 .strip a{color:#fff;font-weight:600}
-.strip--flash{background:linear-gradient(90deg,#e4002b,#f7931e)}
-.strip--shock{background:linear-gradient(90deg,var(--hp-blue),#2b8ad8)}
+.strip--flash{background:linear-gradient(90deg,#e4002b,#FF7A1A)}
+.strip--shock{background:linear-gradient(90deg,var(--hp-blue),#178A13)}
 .countdown{display:flex;align-items:center;gap:6px;font-weight:600}
 .countdown b{background:#fff;color:var(--hp-red);border-radius:6px;min-width:36px;padding:4px 6px;text-align:center;font-size:18px;font-variant-numeric:tabular-nums}
 
@@ -511,3 +512,4 @@ small.muted{font-size:12px}
 .article__body{font-size:16px;line-height:1.8;max-width:70ch}.article__body h2,.article__body h3{color:var(--hp-head)}
 .nf__code{font-size:96px;line-height:1;color:var(--hp-blue);font-weight:700}.nf .search--page{width:100%}
 @media (max-width:760px){.auth,.acct{grid-template-columns:1fr}.order-row{grid-template-columns:1fr auto}.order-addr{grid-template-columns:1fr}.posts{grid-template-columns:1fr}.post--lead{grid-column:auto;grid-row:auto}}
+.ph--photo{text-shadow:0 1px 3px rgba(0,0,0,.4)}

@@ -10,10 +10,12 @@
           {{ block.settings.video | video_tag: autoplay: false, muted: true, loop: true, playsinline: true, image_size: '600x', style: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover' }}
         {%- elsif block.settings.image -%}
           {{ block.settings.image | image_url: width: 600 | image_tag: style: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover' }}
+        {%- elsif block.settings.image_src != blank -%}
+          <img src="{{ block.settings.image_src }}&w=600&q=75&auto=format&fit=crop" alt="{{ block.settings.title | escape }}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
         {%- endif -%}
         <span class="clip__views">▶ {{ block.settings.views }}</span>
         <span class="clip__play">{% render 'icon', name: 'play' %}</span>
-        <span class="clip__by" style="position:relative"><i>HP</i>{{ block.settings.title }}</span>
+        <span class="clip__by" style="position:relative"><i>GK</i>{{ block.settings.title }}</span>
       </a>
     {%- endfor -%}
   </div>
@@ -30,18 +32,19 @@
     { "type": "clip", "name": "Video", "settings": [
       { "type": "video", "id": "video", "label": "Video (tải lên Shopify)" },
       { "type": "image_picker", "id": "image", "label": "Ảnh bìa (nếu không có video)" },
+      { "type": "text", "id": "image_src", "label": "Link ảnh minh hoạ (khi chưa tải ảnh)", "info": "Ảnh miễn phí từ Unsplash. Ảnh tải lên ở trên sẽ được ưu tiên." },
       { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Video" },
       { "type": "text", "id": "views", "label": "Lượt xem", "default": "12.3K" },
       { "type": "url", "id": "link", "label": "Link sản phẩm" },
-      { "type": "color", "id": "bg", "label": "Màu nền", "default": "#0b2e59" }
+      { "type": "color", "id": "bg", "label": "Màu nền", "default": "#10200F" }
     ]}
   ],
   "max_blocks": 8,
   "presets": [{ "name": "Clips & Click", "blocks": [
-    { "type": "clip", "settings": { "title": "Máy hút ẩm gia đình", "views": "25.1K", "bg": "#2b8ad8" } },
-    { "type": "clip", "settings": { "title": "Kệ giày thông minh", "views": "18.4K", "bg": "#0b2e59" } },
-    { "type": "clip", "settings": { "title": "Khóa cửa vân tay", "views": "9.8K", "bg": "#f7931e" } },
-    { "type": "clip", "settings": { "title": "Bồn chứa nước inox", "views": "31.2K", "bg": "#0066b3" } }
+    { "type": "clip", "settings": { "title": "Máy hút ẩm gia đình", "views": "25.1K", "bg": "#178A13" } },
+    { "type": "clip", "settings": { "title": "Kệ giày thông minh", "views": "18.4K", "bg": "#10200F" } },
+    { "type": "clip", "settings": { "title": "Khóa cửa vân tay", "views": "9.8K", "bg": "#FF7A1A" } },
+    { "type": "clip", "settings": { "title": "Bồn chứa nước inox", "views": "31.2K", "bg": "#0B6B09" } }
   ]}]
 }
 {% endschema %}

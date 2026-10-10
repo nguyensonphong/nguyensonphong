@@ -9,8 +9,9 @@
             "title": "10.10 Double Day",
             "sub": "Giảm sâu toàn web",
             "button": "Mua ngay",
-            "bg": "#0066b3",
-            "link": "/collections/flash-sale"
+            "bg": "#0B6B09",
+            "link": "/collections/flash-sale",
+            "image_src": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3"
           }
         },
         "s2": {
@@ -20,7 +21,8 @@
             "sub": "Giá sốc",
             "button": "Mua ngay",
             "bg": "#e4002b",
-            "link": "/collections/flash-sale"
+            "link": "/collections/flash-sale",
+            "image_src": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?ixlib=rb-4.0.3"
           }
         },
         "s3": {
@@ -29,8 +31,9 @@
             "title": "Washer & Dryer Fair",
             "sub": "Máy giặt từ 5,99 triệu | Máy sấy từ 9,99 triệu | Cửa trước 7,99 triệu",
             "button": "Mua ngay",
-            "bg": "#0b2e59",
-            "link": "/collections/flash-sale"
+            "bg": "#10200F",
+            "link": "/collections/flash-sale",
+            "image_src": "https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3"
           }
         }
       },
@@ -57,7 +60,7 @@
           "settings": {
             "label": "Mã giảm giá",
             "icon": "coupon",
-            "color": "#f7931e"
+            "color": "#FF7A1A"
           }
         },
         "c": {
@@ -65,7 +68,7 @@
           "settings": {
             "label": "Mall",
             "icon": "store",
-            "color": "#0066b3"
+            "color": "#0B6B09"
           }
         },
         "d": {
@@ -81,7 +84,7 @@
           "settings": {
             "label": "Thẻ thành viên",
             "icon": "card",
-            "color": "#0b2e59"
+            "color": "#10200F"
           }
         },
         "f": {
@@ -89,7 +92,7 @@
           "settings": {
             "label": "Lắp đặt miễn phí",
             "icon": "tools",
-            "color": "#2b8ad8"
+            "color": "#178A13"
           }
         },
         "g": {
@@ -121,7 +124,7 @@
           "settings": {
             "label": "Kiếm thu nhập cùng chúng tôi",
             "icon": "home",
-            "color": "#f7931e"
+            "color": "#FF7A1A"
           }
         }
       },
@@ -323,7 +326,8 @@
           "settings": {
             "title": "Máy hút ẩm gia đình",
             "views": "25.1K",
-            "bg": "#2b8ad8"
+            "bg": "#178A13",
+            "image_src": "https://images.unsplash.com/photo-1511634829096-045a111727eb?ixlib=rb-4.0.3"
           }
         },
         "v2": {
@@ -331,7 +335,8 @@
           "settings": {
             "title": "Kệ giày thông minh",
             "views": "18.4K",
-            "bg": "#0b2e59"
+            "bg": "#10200F",
+            "image_src": "https://images.unsplash.com/photo-1478887011962-709960f8ced8?ixlib=rb-4.0.3"
           }
         },
         "v3": {
@@ -339,7 +344,8 @@
           "settings": {
             "title": "Khóa cửa vân tay",
             "views": "9.8K",
-            "bg": "#f7931e"
+            "bg": "#FF7A1A",
+            "image_src": "https://images.unsplash.com/photo-1529564407776-e5c3265186f1?ixlib=rb-4.0.3"
           }
         },
         "v4": {
@@ -347,7 +353,8 @@
           "settings": {
             "title": "Bồn chứa nước inox",
             "views": "31.2K",
-            "bg": "#0066b3"
+            "bg": "#0B6B09",
+            "image_src": "https://images.unsplash.com/photo-1646488993053-8c182b628696?ixlib=rb-4.0.3"
           }
         }
       },
@@ -367,35 +374,40 @@
           "settings": {
             "title": "Mùa mưa bão",
             "sub": "Tất cả sản phẩm cần thiết",
-            "bg": "#0b2e59"
+            "bg": "#10200F",
+            "image_src": "https://images.unsplash.com/photo-1498847559558-1e4b1a7f7a2f?ixlib=rb-4.0.3"
           }
         },
         "t2": {
           "type": "banner",
           "settings": {
             "title": "Chuẩn bị nhà cửa mùa mưa bão",
-            "bg": "#2b8ad8"
+            "bg": "#178A13",
+            "image_src": "https://images.unsplash.com/photo-1691440732313-410d1865065f?ixlib=rb-4.0.3"
           }
         },
         "t3": {
           "type": "banner",
           "settings": {
             "title": "Thiết bị cần thiết mùa lũ",
-            "bg": "#0066b3"
+            "bg": "#0B6B09",
+            "image_src": "https://images.unsplash.com/photo-1617368522519-b7bb1d74c27f?ixlib=rb-4.0.3"
           }
         },
         "t4": {
           "type": "banner",
           "settings": {
             "title": "Dọn dẹp nhà sau mưa lũ",
-            "bg": "#1a9e5c"
+            "bg": "#1a9e5c",
+            "image_src": "https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?ixlib=rb-4.0.3"
           }
         },
         "t5": {
           "type": "banner",
           "settings": {
             "title": "Sửa sang nhà sau mưa lũ",
-            "bg": "#f7931e"
+            "bg": "#FF7A1A",
+            "image_src": "https://images.unsplash.com/photo-1645651964715-d200ce0939cc?ixlib=rb-4.0.3"
           }
         }
       },
@@ -425,7 +437,7 @@
           "type": "cat",
           "settings": {
             "label": "Đồ gia dụng nhỏ",
-            "icon": "pot",
+            "icon": "fan",
             "collection": "gia-dung"
           }
         },
@@ -465,7 +477,7 @@
           "type": "cat",
           "settings": {
             "label": "Nhà bếp & dụng cụ",
-            "icon": "pot",
+            "icon": "pan",
             "collection": "gia-dung"
           }
         },
@@ -631,19 +643,22 @@
         "m1": {
           "type": "promo",
           "settings": {
-            "title": "Mua 1 tặng 1"
+            "title": "Mua 1 tặng 1",
+            "image_src": "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-4.0.3"
           }
         },
         "m2": {
           "type": "promo",
           "settings": {
-            "title": "Quà tặng miễn phí"
+            "title": "Quà tặng miễn phí",
+            "image_src": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-4.0.3"
           }
         },
         "m3": {
           "type": "promo",
           "settings": {
-            "title": "Giảm đến 80%"
+            "title": "Giảm đến 80%",
+            "image_src": "https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"
           }
         }
       },
@@ -705,35 +720,40 @@
           "settings": {
             "title": "NEW ARRIVAL",
             "sub": "Bộ sưu tập mới nhất",
-            "bg": "#0b2e59"
+            "bg": "#10200F",
+            "image_src": "https://images.unsplash.com/photo-1724582586529-62622e50c0b3?ixlib=rb-4.0.3"
           }
         },
         "n2": {
           "type": "banner",
           "settings": {
             "title": "Pre Sale",
-            "bg": "#e6007e"
+            "bg": "#e6007e",
+            "image_src": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3"
           }
         },
         "n3": {
           "type": "banner",
           "settings": {
             "title": "Get it now",
-            "bg": "#0066b3"
+            "bg": "#0B6B09",
+            "image_src": "https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3"
           }
         },
         "n4": {
           "type": "banner",
           "settings": {
             "title": "Halloween",
-            "bg": "#f7931e"
+            "bg": "#FF7A1A",
+            "image_src": "https://images.unsplash.com/photo-1508361001413-7a9dca21d08a?ixlib=rb-4.0.3"
           }
         },
         "n5": {
           "type": "banner",
           "settings": {
             "title": "Đèn LED 99K",
-            "bg": "#2b8ad8"
+            "bg": "#178A13",
+            "image_src": "https://images.unsplash.com/photo-1485119502162-016e4409beab?ixlib=rb-4.0.3"
           }
         }
       },
@@ -764,35 +784,40 @@
           "type": "banner",
           "settings": {
             "title": "Sống khỏe, sống vui",
-            "bg": "#1a9e5c"
+            "bg": "#1a9e5c",
+            "image_src": "https://images.unsplash.com/photo-1467453678174-768ec283a940?ixlib=rb-4.0.3"
           }
         },
         "h2": {
           "type": "banner",
           "settings": {
             "title": "Giấc ngủ",
-            "bg": "#6b4fbb"
+            "bg": "#6b4fbb",
+            "image_src": "https://images.unsplash.com/photo-1552858725-2758b5fb1286?ixlib=rb-4.0.3"
           }
         },
         "h3": {
           "type": "banner",
           "settings": {
             "title": "Không khí sạch",
-            "bg": "#2b8ad8"
+            "bg": "#178A13",
+            "image_src": "https://images.unsplash.com/photo-1765153155226-f617921051b3?ixlib=rb-4.0.3"
           }
         },
         "h4": {
           "type": "banner",
           "settings": {
             "title": "Khỏe mạnh",
-            "bg": "#f7931e"
+            "bg": "#FF7A1A",
+            "image_src": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-4.0.3"
           }
         },
         "h5": {
           "type": "banner",
           "settings": {
             "title": "Tăng cường thể lực",
-            "bg": "#e4002b"
+            "bg": "#e4002b",
+            "image_src": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixlib=rb-4.0.3"
           }
         }
       },
@@ -815,7 +840,7 @@
           "type": "store",
           "settings": {
             "name": "tengugaminggears",
-            "color": "#0b2e59"
+            "color": "#10200F"
           }
         },
         "z2": {
@@ -829,7 +854,7 @@
           "type": "store",
           "settings": {
             "name": "Worcraft",
-            "color": "#f7931e"
+            "color": "#FF7A1A"
           }
         },
         "z4": {
@@ -850,7 +875,7 @@
           "type": "store",
           "settings": {
             "name": "EVE Kitchen",
-            "color": "#2b8ad8"
+            "color": "#178A13"
           }
         }
       },
@@ -871,28 +896,32 @@
           "type": "service",
           "settings": {
             "title": "Cải tạo nhà bếp",
-            "bg": "#f7931e"
+            "bg": "#FF7A1A",
+            "image_src": "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3"
           }
         },
         "x2": {
           "type": "service",
           "settings": {
             "title": "Cải tạo phòng tắm",
-            "bg": "#2b8ad8"
+            "bg": "#178A13",
+            "image_src": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3"
           }
         },
         "x3": {
           "type": "service",
           "settings": {
             "title": "Lắp đặt hệ thống nước",
-            "bg": "#0b2e59"
+            "bg": "#10200F",
+            "image_src": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3"
           }
         },
         "x4": {
           "type": "service",
           "settings": {
             "title": "Vệ sinh máy lạnh",
-            "bg": "#1a9e5c"
+            "bg": "#1a9e5c",
+            "image_src": "https://images.unsplash.com/photo-1718203862467-c33159fdc504?ixlib=rb-4.0.3"
           }
         }
       },

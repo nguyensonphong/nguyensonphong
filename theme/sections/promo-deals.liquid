@@ -8,7 +8,7 @@
   <div class="promos">
     {%- for block in section.blocks -%}
       <a class="promo" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
-        {% render 'placeholder', image: block.settings.image, title: block.settings.title, sub: block.settings.sub, bg: 'transparent', width: 800 %}
+        {% render 'placeholder', image: block.settings.image, src: block.settings.image_src, title: block.settings.title, sub: block.settings.sub, bg: 'transparent', width: 800 %}
       </a>
     {%- endfor -%}
   </div>
@@ -26,6 +26,7 @@
   "blocks": [
     { "type": "promo", "name": "Banner ưu đãi", "settings": [
       { "type": "image_picker", "id": "image", "label": "Ảnh" },
+      { "type": "text", "id": "image_src", "label": "Link ảnh minh hoạ (khi chưa tải ảnh)", "info": "Ảnh miễn phí từ Unsplash. Ảnh tải lên ở trên sẽ được ưu tiên." },
       { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Mua 1 tặng 1" },
       { "type": "text", "id": "sub", "label": "Mô tả" },
       { "type": "url", "id": "link", "label": "Link" }

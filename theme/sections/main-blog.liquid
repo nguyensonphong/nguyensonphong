@@ -9,7 +9,7 @@
   <div class="posts">
     {%- for article in blog.articles -%}
       <a class="post{% if forloop.first and paginate.current_page == 1 %} post--lead{% endif %}" href="{{ article.url }}">
-        <div class="post__img">{%- if article.image -%}{{ article.image | image_url: width: 900 | image_tag: loading: 'lazy' }}{%- else -%}{% render 'placeholder', title: article.title, bg: '#0066b3' %}{%- endif -%}</div>
+        <div class="post__img">{%- if article.image -%}{{ article.image | image_url: width: 900 | image_tag: loading: 'lazy' }}{%- else -%}{% render 'placeholder', title: article.title, bg: '#0B6B09' %}{%- endif -%}</div>
         <div class="post__body">
           {%- if article.tags.size > 0 -%}<small>{{ article.tags.first }}</small>{%- endif -%}
           <h2>{{ article.title }}</h2>

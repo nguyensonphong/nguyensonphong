@@ -12,7 +12,7 @@
   <div class="services">
     {%- for block in section.blocks -%}
       <a class="service" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
-        {% render 'placeholder', image: block.settings.image, title: '', bg: block.settings.bg, width: 600 %}
+        {% render 'placeholder', image: block.settings.image, src: block.settings.image_src, title: '', bg: block.settings.bg, width: 600 %}
         <span>{{ block.settings.title }}</span>
       </a>
     {%- endfor -%}
@@ -35,16 +35,17 @@
   "blocks": [
     { "type": "service", "name": "Dịch vụ", "settings": [
       { "type": "image_picker", "id": "image", "label": "Ảnh" },
+      { "type": "text", "id": "image_src", "label": "Link ảnh minh hoạ (khi chưa tải ảnh)", "info": "Ảnh miễn phí từ Unsplash. Ảnh tải lên ở trên sẽ được ưu tiên." },
       { "type": "text", "id": "title", "label": "Tên", "default": "Vệ sinh máy lạnh" },
-      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#2b8ad8" },
+      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#178A13" },
       { "type": "url", "id": "link", "label": "Link" }
     ]}
   ],
   "max_blocks": 8,
   "presets": [{ "name": "Dịch vụ & Home Card", "blocks": [
-    { "type": "service", "settings": { "title": "Cải tạo nhà bếp", "bg": "#f7931e" } },
-    { "type": "service", "settings": { "title": "Cải tạo phòng tắm", "bg": "#2b8ad8" } },
-    { "type": "service", "settings": { "title": "Lắp đặt hệ thống nước", "bg": "#0b2e59" } },
+    { "type": "service", "settings": { "title": "Cải tạo nhà bếp", "bg": "#FF7A1A" } },
+    { "type": "service", "settings": { "title": "Cải tạo phòng tắm", "bg": "#178A13" } },
+    { "type": "service", "settings": { "title": "Lắp đặt hệ thống nước", "bg": "#10200F" } },
     { "type": "service", "settings": { "title": "Vệ sinh máy lạnh", "bg": "#1a9e5c" } }
   ]}]
 }

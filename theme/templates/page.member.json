@@ -30,7 +30,7 @@
             "name": "Thành viên",
             "condition": "Khi đăng ký",
             "perks": "<p>Tích 1 điểm cho mỗi 10.000₫</p><p>Ưu đãi sinh nhật</p>",
-            "color": "#2b8ad8"
+            "color": "#178A13"
           }
         },
         "t1": {
@@ -48,7 +48,7 @@
             "name": "Vàng",
             "condition": "Chi tiêu từ 50 triệu/năm",
             "perks": "<p>Tích điểm x2</p><p>Giao hàng ưu tiên, bảo hành mở rộng</p>",
-            "color": "#f7931e"
+            "color": "#FF7A1A"
           }
         }
       },

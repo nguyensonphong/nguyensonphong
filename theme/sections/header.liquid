@@ -11,7 +11,7 @@
         {%- if section.settings.logo -%}
           {{ section.settings.logo | image_url: width: 320 | image_tag: alt: shop.name, width: 160, style: 'height:auto' }}
         {%- else -%}
-          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M2 11 12 3l10 8M5 9v11h14V9"/></svg>{{ shop.name }}
+          {% render 'logo-mark' %}<span class="logo__word">GK<span>MALL</span></span>
         {%- endif -%}
       </a>
       <a class="loc" href="{{ routes.account_addresses_url }}"><span>Giao đến</span><b>Chọn địa chỉ ▾</b></a>

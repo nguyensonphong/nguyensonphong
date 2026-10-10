@@ -7,7 +7,7 @@
   <div class="mosaic{% if section.settings.big_left %} mosaic--left-big{% endif %}">
     {%- for block in section.blocks limit: 5 -%}
       <a href="{{ block.settings.link }}" class="{% if forloop.first %}is-big{% endif %}" {{ block.shopify_attributes }}>
-        {% render 'placeholder', image: block.settings.image, title: block.settings.title, sub: block.settings.sub, bg: block.settings.bg, width: 1000 %}
+        {% render 'placeholder', image: block.settings.image, src: block.settings.image_src, title: block.settings.title, sub: block.settings.sub, bg: block.settings.bg, width: 1000 %}
       </a>
     {%- endfor -%}
   </div>
@@ -24,31 +24,32 @@
   "blocks": [
     { "type": "banner", "name": "Banner", "settings": [
       { "type": "image_picker", "id": "image", "label": "Ảnh" },
+      { "type": "text", "id": "image_src", "label": "Link ảnh minh hoạ (khi chưa tải ảnh)", "info": "Ảnh miễn phí từ Unsplash. Ảnh tải lên ở trên sẽ được ưu tiên." },
       { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Banner" },
       { "type": "text", "id": "sub", "label": "Mô tả" },
       { "type": "url", "id": "link", "label": "Link" },
-      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#0066b3" }
+      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#0B6B09" }
     ]}
   ],
   "max_blocks": 5,
   "presets": [
     { "name": "Xu hướng (lũ lụt)", "blocks": [
-      { "type": "banner", "settings": { "title": "Mùa mưa bão", "sub": "Tất cả sản phẩm cần thiết", "bg": "#0b2e59" } },
-      { "type": "banner", "settings": { "title": "Chuẩn bị nhà cửa mùa mưa bão", "bg": "#2b8ad8" } },
-      { "type": "banner", "settings": { "title": "Thiết bị cần thiết mùa lũ", "bg": "#0066b3" } },
+      { "type": "banner", "settings": { "title": "Mùa mưa bão", "sub": "Tất cả sản phẩm cần thiết", "bg": "#10200F" } },
+      { "type": "banner", "settings": { "title": "Chuẩn bị nhà cửa mùa mưa bão", "bg": "#178A13" } },
+      { "type": "banner", "settings": { "title": "Thiết bị cần thiết mùa lũ", "bg": "#0B6B09" } },
       { "type": "banner", "settings": { "title": "Dọn dẹp nhà sau mưa lũ", "bg": "#1a9e5c" } },
-      { "type": "banner", "settings": { "title": "Sửa sang nhà sau mưa lũ", "bg": "#f7931e" } } ] },
+      { "type": "banner", "settings": { "title": "Sửa sang nhà sau mưa lũ", "bg": "#FF7A1A" } } ] },
     { "name": "Hàng mới về", "settings": { "title": "Hàng mới về", "big_left": true }, "blocks": [
-      { "type": "banner", "settings": { "title": "NEW ARRIVAL", "sub": "Bộ sưu tập mới nhất", "bg": "#0b2e59" } },
+      { "type": "banner", "settings": { "title": "NEW ARRIVAL", "sub": "Bộ sưu tập mới nhất", "bg": "#10200F" } },
       { "type": "banner", "settings": { "title": "Pre Sale", "bg": "#e6007e" } },
-      { "type": "banner", "settings": { "title": "Get it now", "bg": "#0066b3" } },
-      { "type": "banner", "settings": { "title": "Halloween", "bg": "#f7931e" } },
-      { "type": "banner", "settings": { "title": "Đèn LED 99K", "bg": "#2b8ad8" } } ] },
+      { "type": "banner", "settings": { "title": "Get it now", "bg": "#0B6B09" } },
+      { "type": "banner", "settings": { "title": "Halloween", "bg": "#FF7A1A" } },
+      { "type": "banner", "settings": { "title": "Đèn LED 99K", "bg": "#178A13" } } ] },
     { "name": "Sống khỏe mỗi ngày", "settings": { "title": "Sống khỏe mỗi ngày", "big_left": true }, "blocks": [
       { "type": "banner", "settings": { "title": "Sống khỏe, sống vui", "bg": "#1a9e5c" } },
       { "type": "banner", "settings": { "title": "Giấc ngủ", "bg": "#6b4fbb" } },
-      { "type": "banner", "settings": { "title": "Không khí sạch", "bg": "#2b8ad8" } },
-      { "type": "banner", "settings": { "title": "Khỏe mạnh", "bg": "#f7931e" } },
+      { "type": "banner", "settings": { "title": "Không khí sạch", "bg": "#178A13" } },
+      { "type": "banner", "settings": { "title": "Khỏe mạnh", "bg": "#FF7A1A" } },
       { "type": "banner", "settings": { "title": "Tăng cường thể lực", "bg": "#e4002b" } } ] }
   ]
 }

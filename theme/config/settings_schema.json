@@ -1,7 +1,7 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "HomeStyle",
+    "theme_name": "GKMALL",
     "theme_version": "1.0.0",
     "theme_author": "nguyensonphong",
     "theme_documentation_url": "https://github.com/nguyensonphong/nguyensonphong",
@@ -14,19 +14,19 @@
         "type": "color",
         "id": "color_primary",
         "label": "Màu chính (header, nút)",
-        "default": "#0066B3"
+        "default": "#0B6B09"
       },
       {
         "type": "color",
         "id": "color_footer",
         "label": "Màu footer",
-        "default": "#0065B2"
+        "default": "#10200F"
       },
       {
         "type": "color",
         "id": "color_accent",
         "label": "Màu nhấn (Xem tất cả, Đăng ký)",
-        "default": "#F7931E"
+        "default": "#FF7A1A"
       },
       {
         "type": "color",
@@ -38,7 +38,7 @@
         "type": "color",
         "id": "color_soft",
         "label": "Nền xanh nhạt",
-        "default": "#EAF4FC"
+        "default": "#E8F8E6"
       }
     ]
   },
@@ -49,11 +49,11 @@
         "type": "select",
         "id": "font_family",
         "label": "Font chữ",
-        "default": "roboto",
+        "default": "be_vietnam",
         "options": [
           {
             "value": "prompt",
-            "label": "Prompt (giống HomePro)"
+            "label": "Prompt"
           },
           {
             "value": "roboto",
@@ -61,7 +61,7 @@
           },
           {
             "value": "be_vietnam",
-            "label": "Be Vietnam Pro"
+            "label": "Be Vietnam Pro (font thương hiệu GKMALL)"
           },
           {
             "value": "inter",

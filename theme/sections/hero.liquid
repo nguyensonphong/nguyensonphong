@@ -5,7 +5,7 @@
         {%- for block in section.blocks -%}
           <div class="slide" {{ block.shopify_attributes }}>
             <a href="{{ block.settings.link }}" style="display:block;height:100%">
-              {% render 'placeholder', image: block.settings.image, title: block.settings.title, sub: block.settings.sub, eyebrow: block.settings.eyebrow, bg: block.settings.bg, width: 1600 %}
+              {% render 'placeholder', image: block.settings.image, src: block.settings.image_src, title: block.settings.title, sub: block.settings.sub, eyebrow: block.settings.eyebrow, bg: block.settings.bg, width: 1600 %}
             </a>
             {%- if block.settings.button != blank -%}<a class="btn" href="{{ block.settings.link }}">{{ block.settings.button }}</a>{%- endif -%}
           </div>
@@ -68,19 +68,20 @@
   "blocks": [
     { "type": "slide", "name": "Slide", "settings": [
       { "type": "image_picker", "id": "image", "label": "Ảnh (1600×700)" },
+      { "type": "text", "id": "image_src", "label": "Link ảnh minh hoạ (khi chưa tải ảnh)", "info": "Ảnh miễn phí từ Unsplash. Ảnh tải lên ở trên sẽ được ưu tiên." },
       { "type": "url", "id": "link", "label": "Link" },
       { "type": "text", "id": "eyebrow", "label": "Dòng nhỏ" },
       { "type": "text", "id": "title", "label": "Tiêu đề", "default": "10.10 Double Day" },
       { "type": "text", "id": "sub", "label": "Mô tả" },
       { "type": "text", "id": "button", "label": "Nút", "default": "Mua ngay" },
-      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#0066b3" }
+      { "type": "color", "id": "bg", "label": "Màu nền khi chưa có ảnh", "default": "#0B6B09" }
     ]}
   ],
   "max_blocks": 10,
   "presets": [{ "name": "Banner chính", "blocks": [
     { "type": "slide", "settings": { "title": "10.10 Double Day", "sub": "Giảm sâu toàn web" } },
     { "type": "slide", "settings": { "title": "SHOCK PRICE", "sub": "Giá sốc", "bg": "#e4002b" } },
-    { "type": "slide", "settings": { "title": "Washer & Dryer Fair", "sub": "Máy giặt từ 5,99 triệu | Máy sấy từ 9,99 triệu", "bg": "#0b2e59" } }
+    { "type": "slide", "settings": { "title": "Washer & Dryer Fair", "sub": "Máy giặt từ 5,99 triệu | Máy sấy từ 9,99 triệu", "bg": "#10200F" } }
   ]}]
 }
 {% endschema %}

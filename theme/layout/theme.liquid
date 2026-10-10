@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ page_title }}{% unless page_title contains shop.name %} | {{ shop.name }}{% endunless %}</title>
   {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
-  {%- if settings.favicon %}<link rel="icon" href="{{ settings.favicon | image_url: width: 64 }}">{% endif %}
+  {%- if settings.favicon %}<link rel="icon" href="{{ settings.favicon | image_url: width: 64 }}">{% else %}<link rel="icon" type="image/svg+xml" href="{{ 'gkmall-icon.svg' | asset_url }}">{% endif %}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {%- case settings.font_family -%}
     {%- when 'roboto' -%}{%- assign gf = 'Roboto:wght@400;500;700' -%}{%- assign ff = '"Roboto",Arial,sans-serif' -%}
-    {%- when 'be_vietnam' -%}{%- assign gf = 'Be+Vietnam+Pro:wght@400;500;600;700' -%}{%- assign ff = '"Be Vietnam Pro",Arial,sans-serif' -%}
+    {%- when 'be_vietnam' -%}{%- assign gf = 'Be+Vietnam+Pro:wght@400;500;600;700;800;900' -%}{%- assign ff = '"Be Vietnam Pro",Arial,sans-serif' -%}
     {%- when 'inter' -%}{%- assign gf = 'Inter:wght@400;500;600;700' -%}{%- assign ff = '"Inter",Arial,sans-serif' -%}
     {%- when 'system' -%}{%- assign gf = '' -%}{%- assign ff = 'Helvetica,Arial,sans-serif' -%}
     {%- else -%}{%- assign gf = 'Prompt:wght@400;500;600;700' -%}{%- assign ff = '"Prompt",Tahoma,sans-serif' -%}
