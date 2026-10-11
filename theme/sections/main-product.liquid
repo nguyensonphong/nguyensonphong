@@ -5,6 +5,8 @@
   Tag dùng: free-install, free-shipping, best-price
 {%- endcomment -%}
 {%- assign v = product.selected_or_first_available_variant -%}
+{%- assign brand_col = collections[product.vendor | handleize] -%}
+{%- if brand_col and brand_col.template_suffix == 'brand' -%}{%- assign brand_url = brand_col.url -%}{%- else -%}{%- assign brand_url = product.vendor | url_for_vendor -%}{%- endif -%}
 {%- comment -%} Dịch vụ cộng thêm: chọn riêng từng sản phẩm qua metafield custom.addon_product; không có thì dùng mặc định của template (nếu đặt) {%- endcomment -%}
 {%- assign addon = product.metafields.custom.addon_product.value | default: section.settings.addon_product -%}
 <nav class="container crumbs" aria-label="Breadcrumb">
@@ -84,8 +86,6 @@
       <div class="buybox__flash"><b>{{ shop.name }}</b><span>FLASH ⚡ SALE</span><em>Kết thúc trong <i data-countdown>23:59:59</i></em></div>
     {%- endif -%}
     <div class="buybox__head">
-      {%- assign brand_col = collections[product.vendor | handleize] -%}
-      {%- if brand_col and brand_col.template_suffix == 'brand' -%}{%- assign brand_url = brand_col.url -%}{%- else -%}{%- assign brand_url = product.vendor | url_for_vendor -%}{%- endif -%}
       <a class="pcard__vendor" href="{{ brand_url }}">{{ product.vendor }}</a>
       <h1 class="buybox__title">{{ product.title }}</h1>
       <div class="buybox__meta">
