@@ -18,7 +18,8 @@
     {%- elsif product.tags contains 'best-price' -%}<span class="pcard__tag">Best Price</span>
     {%- elsif off > 0 -%}<span class="pcard__tag">-{{ off }}%</span>{%- endif -%}
     <button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav>{% render 'icon', name: 'heart' %}</button>
-    <span class="pcard__vendor">{{ product.vendor }}</span>
+    {%- assign brand_col = collections[product.vendor | handleize] -%}
+    {%- if brand_col and brand_col.template_suffix == 'brand' -%}<a class="pcard__vendor" href="{{ brand_col.url }}">{{ product.vendor }}</a>{%- else -%}<span class="pcard__vendor">{{ product.vendor }}</span>{%- endif -%}
     <a href="{{ product.url }}"><h3 class="pcard__title">{{ product.title }}</h3></a>
     <div class="pcard__chips">
       {%- if product.tags contains 'free-install' -%}<span class="chip">Lắp đặt miễn phí</span>{%- endif -%}

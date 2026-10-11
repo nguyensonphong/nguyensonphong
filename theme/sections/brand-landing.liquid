@@ -1,0 +1,71 @@
+{%- comment -%}
+  Landing page thương hiệu (collection template "brand", collection tự động theo Vendor).
+  Bố cục theo HomePro: banner hãng → dải icon ngành hàng → khối trưng bày từng ngành (ảnh lớn + ô sản phẩm "Mua ngay")
+  → thanh hình thức giao hàng. Bên dưới là danh sách sản phẩm có bộ lọc (section main-collection).
+  Nội dung hãng (logo, slogan) lấy từ metaobject "brand" có handle trùng handle collection.
+{%- endcomment -%}
+{%- assign b = shop.metaobjects.brand[collection.handle] -%}
+<section class="blp">
+  <div class="container">
+    <div class="blp__hero">
+      {%- if collection.image -%}{{ collection.image | image_url: width: 1800 | image_tag: class: 'blp__heroimg', alt: collection.title, loading: 'eager' }}{%- endif -%}
+      <div class="blp__herotext">
+        <div class="blp__logo">{%- if b.logo.value -%}{{ b.logo.value | image_url: width: 400 | image_tag: alt: collection.title }}{%- else -%}<b>{{ collection.title }}</b>{%- endif -%}</div>
+        <p class="blp__slogan">{{ section.settings.slogan | default: b.tagline.value }}</p>
+        {%- if b -%}<a class="blp__about" href="{{ b.system.url }}">Câu chuyện thương hiệu ›</a>{%- endif -%}
+      </div>
+    </div>
+
+    {%- assign types = collection.all_types -%}
+    <nav class="blp__icons" aria-label="Ngành hàng {{ collection.title }}">
+      {%- for t in types -%}
+        {%- case t -%}
+          {%- when 'Tivi' -%}{%- assign ic = 'tv' -%}
+          {%- when 'Tủ lạnh' -%}{%- assign ic = 'fridge' -%}
+          {%- when 'Máy giặt' -%}{%- assign ic = 'washer' -%}
+          {%- when 'Điều hòa' -%}{%- assign ic = 'ac' -%}
+          {%- when 'Lò vi sóng' -%}{%- assign ic = 'pot' -%}
+          {%- when 'Quạt' -%}{%- assign ic = 'fan' -%}
+          {%- else -%}{%- assign ic = 'home' -%}
+        {%- endcase -%}
+        <a href="#blp-{{ t | handleize }}">{% render 'icon', name: ic %}<span>{{ t }}</span></a>
+      {%- endfor -%}
+    </nav>
+
+    {%- for t in types -%}
+      {%- assign items = collection.products | where: 'type', t -%}
+      {%- if items.size == 0 -%}{%- continue -%}{%- endif -%}
+      {%- assign filter_url = collection.url | append: '?filter.p.product_type=' | append: t | url_escape | append: '#products' -%}
+      <section class="blp__show {% cycle '', 'is-flip' %}" id="blp-{{ t | handleize }}">
+        <a class="blp__big" href="{{ filter_url }}">
+          {%- if items.first.featured_image -%}{{ items.first.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: t }}{%- endif -%}
+          <span class="blp__bigtxt"><b>{{ t }}</b><em>Mua ngay</em></span>
+        </a>
+        <div class="blp__tiles">
+          {%- for p in items limit: 4 -%}
+            <a class="blp__tile" href="{{ p.url }}">
+              <span class="blp__tilehead"><b>{{ p.title | remove: 'Samsung ' | remove: collection.title | truncate: 34 }}</b><em>Mua ngay</em></span>
+              <span class="blp__tileimg">{%- if p.featured_image -%}{{ p.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}</span>
+              <span class="blp__tileprice">{{ p.price | money_without_trailing_zeros }}</span>
+            </a>
+          {%- endfor -%}
+        </div>
+      </section>
+    {%- endfor -%}
+
+    <div class="blp__ship">
+      <b>Mua theo<br>hình thức giao</b><span aria-hidden="true">⇢</span>
+      <div>{% render 'icon', name: 'bolt' %}<p><b>Giao nhanh</b><small>07:30 – 20:00</small></p></div>
+      <div>{% render 'icon', name: 'truck' %}<p><b>Giao trong ngày</b><small>Đặt trước 20:30</small></p></div>
+      <div>{% render 'icon', name: 'box' %}<p><b>Giao tiêu chuẩn</b><small>Miễn phí giao hàng</small></p></div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Landing thương hiệu",
+  "settings": [
+    { "type": "text", "id": "slogan", "label": "Slogan (để trống = lấy giới thiệu ngắn của thương hiệu)" }
+  ]
+}
+{% endschema %}

@@ -11,7 +11,7 @@
 
   <div class="row-scroll logos bhub__logos">
     {%- for o in brands -%}{%- if o.featured.value -%}
-      <a class="logo-box" href="{{ o.system.url }}" title="{{ o.name.value }}">{%- if o.logo.value -%}{{ o.logo.value | image_url: height: 96 | image_tag: alt: o.name.value, loading: 'lazy' }}{%- else -%}{{ o.name.value }}{%- endif -%}</a>
+      {%- assign bc = collections[o.system.handle] -%}<a class="logo-box" href="{% if bc and bc.template_suffix == 'brand' %}{{ bc.url }}{% else %}{{ o.system.url }}{% endif %}" title="{{ o.name.value }}">{%- if o.logo.value -%}{{ o.logo.value | image_url: height: 96 | image_tag: alt: o.name.value, loading: 'lazy' }}{%- else -%}{{ o.name.value }}{%- endif -%}</a>
     {%- endif -%}{%- endfor -%}
   </div>
 

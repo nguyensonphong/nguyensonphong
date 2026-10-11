@@ -4,7 +4,7 @@
 {%- endcomment -%}
 {%- assign b = metaobject -%}
 {%- assign vendor = b.vendor.value | default: b.name.value -%}
-{%- assign vendor_url = vendor | url_for_vendor -%}
+{%- assign bc = collections[b.system.handle] -%}{%- if bc and bc.template_suffix == 'brand' -%}{%- assign vendor_url = bc.url -%}{%- else -%}{%- assign vendor_url = vendor | url_for_vendor -%}{%- endif -%}
 <nav class="container crumbs" aria-label="Breadcrumb">
   <a href="{{ routes.root_url }}">Trang chủ</a> › <a href="{{ section.settings.brands_page }}">Thương hiệu</a> › <span>{{ b.name.value }}</span>
 </nav>

@@ -1,0 +1,18 @@
+{%- comment -%} Khối "Về thương hiệu" cuối landing: tóm tắt từ metaobject brand + link bài lịch sử đầy đủ {%- endcomment -%}
+{%- assign b = shop.metaobjects.brand[collection.handle] -%}
+{%- if b -%}
+<section class="container sec bstory">
+  <div class="bstory__logo">{%- if b.logo.value -%}{{ b.logo.value | image_url: width: 300 | image_tag: alt: b.name.value, loading: 'lazy' }}{%- endif -%}</div>
+  <div>
+    <h2 class="sec__title">Về thương hiệu {{ b.name.value }}</h2>
+    <p>{{ b.tagline.value }}</p>
+    <ul class="brand__facts">
+      {%- if b.country.value != blank -%}<li><small>Xuất xứ</small><b>{{ b.country.value }}</b></li>{%- endif -%}
+      {%- if b.founded.value != blank -%}<li><small>Thành lập</small><b>{{ b.founded.value }}</b></li>{%- endif -%}
+      {%- if b.headquarters.value != blank -%}<li><small>Trụ sở</small><b>{{ b.headquarters.value }}</b></li>{%- endif -%}
+    </ul>
+    <a class="btn btn--outline" href="{{ b.system.url }}">Đọc lịch sử & tư vấn chọn mua {{ b.name.value }} ›</a>
+  </div>
+</section>
+{%- endif -%}
+{% schema %}{ "name": "Về thương hiệu" }{% endschema %}
