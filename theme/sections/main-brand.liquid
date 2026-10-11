@@ -1,0 +1,100 @@
+{%- comment -%}
+  Trang chi tiết thương hiệu (metaobject "brand", URL /pages/thuong-hieu/<handle>).
+  Bố cục kiểu chuyên mục tư vấn: cột trái là chủ đề và thương hiệu khác, cột phải là bài giới thiệu.
+{%- endcomment -%}
+{%- assign b = metaobject -%}
+{%- assign vendor = b.vendor.value | default: b.name.value -%}
+{%- assign vendor_url = vendor | url_for_vendor -%}
+<nav class="container crumbs" aria-label="Breadcrumb">
+  <a href="{{ routes.root_url }}">Trang chủ</a> › <a href="{{ section.settings.brands_page }}">Thương hiệu</a> › <span>{{ b.name.value }}</span>
+</nav>
+
+<section class="container brand">
+  <header class="brand__hero">
+    <div class="brand__logo">
+      {%- if b.logo.value -%}{{ b.logo.value | image_url: width: 480 | image_tag: alt: b.name.value }}{%- else -%}<b>{{ b.name.value }}</b>{%- endif -%}
+    </div>
+    <div class="brand__intro">
+      <p class="brand__eyebrow">Thương hiệu chính hãng</p>
+      <h1>{{ b.name.value }}</h1>
+      {%- if b.tagline.value != blank -%}<p class="brand__tagline">{{ b.tagline.value }}</p>{%- endif -%}
+      <ul class="brand__facts">
+        {%- if b.country.value != blank -%}<li><small>Xuất xứ</small><b>{{ b.country.value }}</b></li>{%- endif -%}
+        {%- if b.founded.value != blank -%}<li><small>Thành lập</small><b>{{ b.founded.value }}</b></li>{%- endif -%}
+        {%- if b.headquarters.value != blank -%}<li><small>Trụ sở</small><b>{{ b.headquarters.value }}</b></li>{%- endif -%}
+        {%- if b.category.value != blank -%}<li><small>Thế mạnh</small><b>{{ b.category.value }}</b></li>{%- endif -%}
+      </ul>
+      <div class="brand__cta">
+        <a class="btn" href="{{ vendor_url }}">Xem sản phẩm {{ b.name.value }}</a>
+        {%- if b.website.value != blank -%}<a class="btn btn--outline" href="{{ b.website.value }}" target="_blank" rel="noopener nofollow">Website hãng ↗</a>{%- endif -%}
+      </div>
+    </div>
+  </header>
+
+  <div class="brand__layout">
+    <aside class="brand__side">
+      {%- if b.topics.value.size > 0 -%}
+        <h2 class="brand__sideh">Chủ đề liên quan</h2>
+        <div class="brand__tags">{%- for t in b.topics.value -%}<a href="{{ section.settings.brands_page }}?topic={{ t | url_encode }}">#{{ t }}</a>{%- endfor -%}</div>
+      {%- endif -%}
+      <h2 class="brand__sideh">Mục lục</h2>
+      <ol class="brand__toc">
+        <li><a href="#lich-su">Lịch sử thương hiệu</a></li>
+        <li><a href="#dong-san-pham">Dòng sản phẩm & tư vấn chọn mua</a></li>
+        <li><a href="#san-pham">Sản phẩm đang bán</a></li>
+      </ol>
+    </aside>
+
+    <div class="brand__main">
+      <article class="brand__article" id="lich-su">
+        <h2>Lịch sử thương hiệu {{ b.name.value }}</h2>
+        <div class="rte">{{ b.history | metafield_tag }}</div>
+      </article>
+      <article class="brand__article" id="dong-san-pham">
+        <h2>{{ b.name.value }} có những dòng sản phẩm nào? Nên mua loại nào?</h2>
+        <div class="rte">{{ b.products_guide | metafield_tag }}</div>
+      </article>
+
+      <section class="brand__article" id="san-pham">
+        <h2>Sản phẩm {{ b.name.value }} tại {{ shop.name }}</h2>
+        {%- assign items = collections.all.products | where: 'vendor', vendor -%}
+        {%- if items.size > 0 -%}
+          <div class="grid-products">{%- for p in items limit: 8 -%}{% render 'product-card', product: p, style: 'popular' %}{%- endfor -%}</div>
+          <p class="brand__more"><a class="sec__more" href="{{ vendor_url }}">Xem tất cả sản phẩm {{ b.name.value }} ›</a></p>
+        {%- else -%}
+          <p class="brand__empty">Sản phẩm {{ b.name.value }} đang được cập nhật. Liên hệ hotline để được báo giá và đặt hàng chính hãng.</p>
+        {%- endif -%}
+      </section>
+
+      {%- comment -%} Bài liên quan: thương hiệu có chung chủ đề {%- endcomment -%}
+      {%- assign shown = 0 -%}
+      <section class="brand__article">
+        <h2>Thương hiệu cùng chủ đề</h2>
+        <ul class="brand__feed">
+          {%- for o in shop.metaobjects.brand.values -%}
+            {%- if o.system.handle == b.system.handle or shown >= 6 -%}{%- continue -%}{%- endif -%}
+            {%- assign match = false -%}
+            {%- for t in o.topics.value -%}{%- if b.topics.value contains t -%}{%- assign match = true -%}{%- break -%}{%- endif -%}{%- endfor -%}
+            {%- if match -%}
+              {%- assign shown = shown | plus: 1 -%}
+              <li><a href="{{ o.system.url }}">
+                <span class="brand__feedimg">{%- if o.logo.value -%}{{ o.logo.value | image_url: width: 200 | image_tag: alt: o.name.value, loading: 'lazy' }}{%- endif -%}</span>
+                <span><b>{{ o.name.value }}: lịch sử thương hiệu và tư vấn chọn mua</b><small>{{ o.country.value }}{% if o.founded.value != blank %} · từ {{ o.founded.value }}{% endif %}</small></span>
+              </a></li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </section>
+      {%- if b.logo_credit.value != blank -%}<p class="brand__credit">Logo: {{ b.logo_credit.value }}. Logo là nhãn hiệu thuộc sở hữu của {{ b.name.value }}.</p>{%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Chi tiết thương hiệu",
+  "settings": [
+    { "type": "url", "id": "brands_page", "label": "Trang danh sách thương hiệu", "default": "/pages/thuong-hieu" }
+  ]
+}
+{% endschema %}

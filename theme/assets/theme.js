@@ -277,3 +277,17 @@ document.querySelectorAll('[data-countdown]').forEach((el) => {
   };
   tick(); setInterval(tick, 1000);
 });
+// Trung tâm thương hiệu: lọc bài theo #chủ đề (hỗ trợ ?topic= trên URL)
+document.querySelectorAll('[data-bhub]').forEach((hub) => {
+  const items = hub.querySelectorAll('[data-topics]');
+  const count = hub.querySelector('[data-bhub-count]');
+  const apply = (t) => {
+    let n = 0;
+    items.forEach((li) => { const ok = !t || li.dataset.topics.includes(`|${t}|`); li.hidden = !ok; if (ok) n++; });
+    hub.querySelectorAll('[data-topic]').forEach((b) => b.classList.toggle('is-active', b.dataset.topic === t));
+    if (count) count.textContent = `${n} thương hiệu`;
+  };
+  hub.querySelectorAll('[data-topic]').forEach((b) => b.addEventListener('click', () => apply(b.dataset.topic)));
+  const q = new URLSearchParams(location.search).get('topic');
+  if (q) apply(q);
+});

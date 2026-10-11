@@ -1,0 +1,51 @@
+{%- comment -%}
+  Trung tâm thương hiệu: đọc toàn bộ metaobject "brand".
+  Trái: chủ đề #hashtag để lọc. Phải: logo nổi bật + bài giới thiệu từng hãng (kiểu chuyên mục tư vấn).
+{%- endcomment -%}
+{%- assign brands = shop.metaobjects.brand.values -%}
+{%- assign topics = '' -%}
+{%- for o in brands -%}{%- for t in o.topics.value -%}{%- assign key = '|' | append: t | append: '|' -%}{%- unless topics contains key -%}{%- assign topics = topics | append: key -%}{%- endunless -%}{%- endfor -%}{%- endfor -%}
+{%- assign topic_list = topics | split: '|' | compact | sort_natural -%}
+<section class="container sec bhub" data-bhub>
+  {%- if section.settings.title != blank -%}<div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>{%- endif -%}
+
+  <div class="row-scroll logos bhub__logos">
+    {%- for o in brands -%}{%- if o.featured.value -%}
+      <a class="logo-box" href="{{ o.system.url }}" title="{{ o.name.value }}">{%- if o.logo.value -%}{{ o.logo.value | image_url: height: 96 | image_tag: alt: o.name.value, loading: 'lazy' }}{%- else -%}{{ o.name.value }}{%- endif -%}</a>
+    {%- endif -%}{%- endfor -%}
+  </div>
+
+  <div class="bhub__layout">
+    <aside class="bhub__side">
+      <h3>Gợi ý chủ đề</h3>
+      <button type="button" class="bhub__topic is-active" data-topic="">#tất cả thương hiệu</button>
+      {%- for t in topic_list -%}{%- if t != blank -%}<button type="button" class="bhub__topic" data-topic="{{ t }}">#{{ t }}</button>{%- endif -%}{%- endfor -%}
+    </aside>
+    <div class="bhub__main">
+      <h3 class="bhub__h">Bài giới thiệu thương hiệu <small data-bhub-count>{{ brands.size }} thương hiệu</small></h3>
+      <ul class="bhub__feed">
+        {%- for o in brands -%}
+          <li data-topics="|{{ o.topics.value | join: '|' }}|" class="{% if forloop.first %}is-lead{% endif %}">
+            <a href="{{ o.system.url }}">
+              <span class="bhub__img">{%- if o.logo.value -%}{{ o.logo.value | image_url: width: 400 | image_tag: alt: o.name.value, loading: 'lazy' }}{%- else -%}<b>{{ o.name.value }}</b>{%- endif -%}</span>
+              <span class="bhub__txt">
+                <b>{{ o.name.value }}: lịch sử thương hiệu và tư vấn chọn mua</b>
+                <em>{{ o.tagline.value | truncate: 140 }}</em>
+                <small>{{ o.country.value }}{% if o.founded.value != blank %} · thành lập {{ o.founded.value }}{% endif %}{% if o.category.value != blank %} · {{ o.category.value }}{% endif %}</small>
+              </span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Trung tâm thương hiệu",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Thương hiệu chính hãng" }
+  ],
+  "presets": [{ "name": "Trung tâm thương hiệu" }]
+}
+{% endschema %}

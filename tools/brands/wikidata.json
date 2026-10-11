@@ -1,0 +1,219 @@
+{
+ "Samsung Electronics": {
+  "qid": "Q20718",
+  "logo": "Samsung wordmark.svg",
+  "founded": "1969",
+  "country": "Hàn Quốc",
+  "hq": "Suwon"
+ },
+ "LG Electronics": {
+  "qid": "Q162345",
+  "logo": "LG Electronics.svg",
+  "founded": "1958",
+  "country": "Hàn Quốc",
+  "hq": "Seoul"
+ },
+ "Panasonic": {
+  "qid": "Q53247",
+  "logo": "Panasonic Group logo.svg",
+  "founded": "1918",
+  "country": "Nhật Bản",
+  "hq": "Kadoma"
+ },
+ "Sony": {
+  "qid": "Q41187",
+  "logo": "Sony Group logo.svg",
+  "founded": "1946",
+  "country": "Nhật Bản",
+  "hq": "Minato"
+ },
+ "Toshiba": {
+  "qid": "Q49125",
+  "logo": "Toshiba logo.svg",
+  "founded": "1939",
+  "country": "Nhật Bản",
+  "hq": "Minato"
+ },
+ "Sharp Corporation": {
+  "qid": "Q53227",
+  "logo": "Logo of the Sharp Corporation.svg",
+  "founded": "1912",
+  "country": "Nhật Bản",
+  "hq": "Ōsaka"
+ },
+ "Hitachi": {
+  "qid": "Q53238",
+  "logo": "Hitachi 2025 logo.svg",
+  "founded": "1910",
+  "country": "Nhật Bản",
+  "hq": "Marunouchi"
+ },
+ "Mitsubishi Electric": {
+  "qid": "Q53257",
+  "logo": "Mitsubishi Electric logo.svg",
+  "founded": "1921",
+  "country": "Nhật Bản",
+  "hq": "Chiyoda"
+ },
+ "Daikin": {
+  "qid": "Q1157589",
+  "logo": "DAIKIN logo.svg",
+  "founded": "1924",
+  "country": "Nhật Bản",
+  "hq": "Umeda"
+ },
+ "Carrier Global": {
+  "qid": "Q731912",
+  "logo": "Logo of the Carrier Corporation.svg",
+  "founded": "1915",
+  "country": "Hoa Kỳ",
+  "hq": "Charlotte"
+ },
+ "Electrolux": {
+  "qid": "Q505922",
+  "logo": "Electrolux 2015.svg",
+  "founded": "1910",
+  "country": "Thụy Điển",
+  "hq": "Stockholm"
+ },
+ "Whirlpool Corporation": {
+  "qid": "Q1471346",
+  "logo": "Whirlpool Corporation Logo (as of 2017).svg",
+  "founded": "1911",
+  "country": "Hoa Kỳ",
+  "hq": "Benton Harbor"
+ },
+ "Haier": {
+  "qid": "Q1143211",
+  "logo": "Haier logo.svg",
+  "founded": "1984",
+  "country": "Trung Quốc",
+  "hq": "Thanh Đảo"
+ },
+ "Hisense": {
+  "qid": "Q2527941",
+  "logo": "Hisense.svg",
+  "founded": "1969",
+  "country": "Trung Quốc",
+  "hq": "Thanh Đảo"
+ },
+ "TCL Technology": {
+  "qid": "Q733958",
+  "logo": "Logo of the TCL Corporation.svg",
+  "founded": "1981",
+  "country": "Trung Quốc",
+  "hq": "Huệ Châu"
+ },
+ "Xiaomi": {
+  "qid": "Q1636958",
+  "logo": "Xiaomi logo (2021-).svg",
+  "founded": "2010",
+  "country": "Trung Quốc",
+  "hq": "Bắc Kinh"
+ },
+ "Philips": {
+  "qid": "Q170416",
+  "logo": "Philips shield (2013).svg",
+  "founded": "1891",
+  "country": "Hà Lan",
+  "hq": "Amsterdam"
+ },
+ "Tefal": {
+  "qid": "Q764155",
+  "logo": "Tefal logo.svg",
+  "founded": "1956",
+  "country": "Pháp",
+  "hq": null
+ },
+ "Smeg (appliances)": {
+  "qid": "Q1995486",
+  "logo": "Smeg logo.svg",
+  "founded": "1948",
+  "country": "Ý",
+  "hq": "Guastalla"
+ },
+ "Dyson (company)": {
+  "qid": "Q621429",
+  "logo": "Dyson logo.svg",
+  "founded": "1991",
+  "country": "Singapore",
+  "hq": "St James Power Station"
+ },
+ "Zojirushi": {
+  "qid": "Q1101230",
+  "logo": null,
+  "founded": "1918",
+  "country": "Nhật Bản",
+  "hq": "Ōsaka"
+ },
+ "Lock & Lock": {
+  "qid": "Q5646759",
+  "logo": null,
+  "founded": "1978",
+  "country": "Hàn Quốc",
+  "hq": "Seoul"
+ },
+ "Marshall Amplification": {
+  "qid": "Q671465",
+  "logo": "Marshall logo.svg",
+  "founded": "1962",
+  "country": "Vương quốc Liên hiệp Anh và Bắc Ireland",
+  "hq": "Luân Đôn"
+ },
+ "Kohler Co.": {
+  "qid": "Q6426036",
+  "logo": "Kohler logo.svg",
+  "founded": "1873",
+  "country": "Hoa Kỳ",
+  "hq": "Kohler"
+ },
+ "Toto Ltd.": {
+  "qid": "Q1751566",
+  "logo": "TOTO logo.svg",
+  "founded": "1917",
+  "country": "Nhật Bản",
+  "hq": "Kokurakita, Kitakyūshū"
+ },
+ "American Standard Brands": {
+  "qid": "Q4745165",
+  "logo": "American Standard Companies logo.svg",
+  "founded": "2007",
+  "country": null,
+  "hq": "Piscataway"
+ },
+ "Grohe": {
+  "qid": "Q316477",
+  "logo": "Grohe.svg",
+  "founded": "1948",
+  "country": "Đức",
+  "hq": "Düsseldorf"
+ },
+ "Ariston Group": {
+  "qid": "Q1059709",
+  "logo": "Ariston Group.svg",
+  "founded": "1975",
+  "country": "Ý",
+  "hq": "Fabriano"
+ },
+ "Stiebel Eltron": {
+  "qid": "Q73292",
+  "logo": "Stiebel-eltron.svg",
+  "founded": "1924",
+  "country": "Đức",
+  "hq": "Holzminden"
+ },
+ "3M": {
+  "qid": "Q159433",
+  "logo": "3M wordmark.svg",
+  "founded": "1902",
+  "country": "Hoa Kỳ",
+  "hq": "Maplewood"
+ },
+ "Jotun": {
+  "qid": "Q6294489",
+  "logo": null,
+  "founded": null,
+  "country": null,
+  "hq": null
+ }
+}
