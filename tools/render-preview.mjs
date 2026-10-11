@@ -147,7 +147,7 @@ ${footer}
 `;
 const pages = {
   index: {},
-  'collection.landing': { collection: { ...C('Điện máy', popular), description: '', all_products_count: 394 } },
+  'collection.landing': { collection: { ...C('Điện máy', popular), url: '/collections/dien-may', description: '', all_products_count: 394 } },
   'page.shipping': {}, 'page.compare': {}, 'page.promotions': {}, 'page.services': {}, 'page.repair': {}, 'page.trade-in': {},
   'page.rooms': {}, 'page.brands': {}, 'page.diy': {}, 'page.special': {},
 };

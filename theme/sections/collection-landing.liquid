@@ -4,14 +4,20 @@
 {%- endcomment -%}
 <nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <span>{{ collection.title }}</span></nav>
 <section class="container">
-  <div class="landing">
-    <div class="landing__intro">
-      <h1 class="page-title">{{ collection.title }}</h1>
-      {%- if collection.description != blank -%}<div class="landing__desc">{{ collection.description }}</div>
-      {%- elsif section.settings.intro != blank -%}<p class="landing__desc">{{ section.settings.intro }}</p>{%- endif -%}
+  {%- comment -%} Banner rộng đầu trang: ảnh của collection, nếu chưa có thì dùng link ảnh minh hoạ {%- endcomment -%}
+  {%- if collection.image or section.settings.banner_src != blank -%}
+    <div class="landing__banner">
+      {%- if collection.image -%}{{ collection.image | image_url: width: 1600 | image_tag: alt: collection.title }}
+      {%- else -%}{% render 'placeholder', src: section.settings.banner_src, title: section.settings.intro, width: 1600 %}{%- endif -%}
     </div>
-    {%- if collection.all_products_count > 0 -%}<a class="btn" href="#products">Xem {{ collection.all_products_count }} sản phẩm</a>{%- endif -%}
+  {%- endif -%}
+  {%- assign parent = linklists[section.settings.sub_menu].links | where: 'url', collection.url | first -%}
+  {%- assign n = section.blocks.size -%}{%- if n == 0 -%}{%- assign n = parent.links.size -%}{%- endif -%}
+  <div class="landing">
+    <h1 class="page-title">{{ collection.title }}</h1>
+    <a class="sec__more" href="#products">Xem tất cả ({{ n }} danh mục)</a>
   </div>
+  {%- if collection.description != blank -%}<div class="landing__desc">{{ collection.description }}</div>{%- endif -%}
   <div class="subcats">
     {%- if section.blocks.size > 0 -%}
       {%- for block in section.blocks -%}
@@ -23,7 +29,6 @@
         </a>
       {%- endfor -%}
     {%- else -%}
-      {%- assign parent = linklists[section.settings.sub_menu].links | where: 'url', collection.url | first -%}
       {%- for l in parent.links -%}
         <a class="subcat" href="{{ l.url }}">
           <span class="subcat__ic">{%- if l.object.featured_image -%}{{ l.object.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}{%- assign l2h = l.url | split: '/' | last -%}{% render 'l2-icon', handle: l2h %}{%- endif -%}</span>
@@ -38,7 +43,8 @@
 {
   "name": "Đầu trang ngành hàng",
   "settings": [
-    { "type": "textarea", "id": "intro", "label": "Mô tả (khi danh mục chưa có mô tả)" },
+    { "type": "textarea", "id": "intro", "label": "Dòng phụ trên banner minh hoạ" },
+    { "type": "text", "id": "banner_src", "label": "Link ảnh banner minh hoạ", "info": "Dùng khi danh mục chưa có ảnh (Products → Collections → ảnh danh mục).", "default": "https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3" },
     { "type": "link_list", "id": "sub_menu", "label": "Menu chứa danh mục con", "default": "main-menu", "info": "Dùng khi không thêm block. Lấy các link con nằm dưới link trỏ tới danh mục này." }
   ],
   "blocks": [

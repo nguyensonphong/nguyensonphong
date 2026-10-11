@@ -660,3 +660,37 @@ a.icard:hover{border-color:var(--hp-blue)}
   .delivery div{font-size:16px;min-height:64px}.delivery svg{width:32px;height:32px}
   .strip h3{font-size:22px}.strip a{font-size:15px}
 }
+/* Thẻ sản phẩm kiểu HomePro: tên căn giữa, giá đỏ + giá gạch xuống dòng, nút giỏ tròn */
+.pcard{padding:12px 12px 10px;gap:8px}
+.pcard__title{text-align:center;font-size:13px;line-height:1.45;min-height:2.9em}
+.pcard__vendor{text-align:center;font-size:12px}
+.pcard .price{display:flex;flex-direction:column;line-height:1.15;font-size:18px}
+.pcard .price s{margin-left:0}
+.pcard .addcart{width:34px;height:34px;border-radius:50%;background:var(--hp-blue);color:#fff;display:grid;place-items:center;flex:none}
+.pcard .addcart svg{width:18px;height:18px}
+.pcard__final{font-size:12px}
+/* Trang ngành kiểu HomePro: banner rộng, tiêu đề + "Xem tất cả", lưới 7 ô ảnh vuông */
+.landing__banner{margin-top:16px;border-radius:10px;overflow:hidden;aspect-ratio:1280/300}
+.landing__banner img,.landing__banner .ph{width:100%;height:100%;object-fit:cover}
+.landing{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:28px 0 14px}
+.landing .page-title{font-size:32px;font-weight:600;color:var(--hp-blue);margin:0}
+.landing .sec__more{color:var(--hp-orange);font-weight:600}
+.subcats{grid-template-columns:repeat(7,1fr);gap:22px 18px}
+.subcat{border:0;padding:0;background:none;font-weight:400;font-size:14px;color:#525255;gap:8px}
+.subcat__ic{width:100%;height:auto;aspect-ratio:1;border:1px solid var(--hp-line);border-radius:10px;background:#fff}
+.subcat__ic svg{width:44%;height:44%;color:var(--hp-blue)}
+.subcat:hover .subcat__ic{border-color:var(--hp-blue)}
+@media (max-width:900px){.subcats{grid-template-columns:repeat(4,1fr)}.landing__banner{aspect-ratio:16/7}}
+/* Trang sản phẩm kiểu HomePro: ảnh nhỏ xếp dọc bên trái, ảnh lớn giữa, khung mua bên phải không viền */
+.pdp{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:32px}
+.pdp__gallery{display:grid;grid-template-columns:84px minmax(0,1fr);gap:14px;align-items:start}
+.pdp__stage{grid-column:2;grid-row:1;border-radius:10px}
+.pdp__thumbs{grid-column:1;grid-row:1;flex-direction:column;margin-top:0;max-height:560px;overflow-y:auto;overflow-x:hidden}
+.pdp__thumbs button{width:84px;height:84px;border-radius:10px}
+.buybox{border:0;padding:4px 0;gap:10px}
+.buybox .pcard__vendor{text-align:left;color:var(--hp-mute);font-weight:500}
+.buybox__title{font-size:24px;font-weight:600;text-transform:uppercase;text-wrap:pretty}
+.buybox__price{background:none;padding:0}
+.buybox__price .price{flex-direction:row;align-items:baseline;gap:6px;font-size:30px}
+.buybox__price .price::after{content:"/Cái";font-size:15px;font-weight:400;color:var(--hp-text)}
+@media (max-width:900px){.pdp__gallery{grid-template-columns:1fr}.pdp__thumbs{grid-column:1;grid-row:2;flex-direction:row;overflow-x:auto}.pdp__stage{grid-column:1}}
