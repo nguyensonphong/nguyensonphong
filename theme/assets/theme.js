@@ -264,7 +264,11 @@ document.querySelectorAll('[data-qstep]').forEach((b) => b.addEventListener('cli
   const i = b.parentElement.querySelector('input');
   i.value = Math.max(1, (parseInt(i.value, 10) || 1) + Number(b.dataset.qstep));
 }));
-document.querySelectorAll('[data-copy-link]').forEach((b) => b.addEventListener('click', () => navigator.clipboard?.writeText(b.dataset.copyLink)));
+document.querySelectorAll('[data-copy-link]').forEach((b) => b.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copyLink); } catch (e) { return; }
+  const em = b.querySelector('em'); if (!em) return;
+  em.textContent = 'Đã sao chép'; setTimeout(() => { em.textContent = 'Lấy link'; }, 1800);
+}));
 document.querySelectorAll('[data-countdown]').forEach((el) => {
   const tick = () => {
     const n = new Date(), e = new Date(n); e.setHours(24, 0, 0, 0);

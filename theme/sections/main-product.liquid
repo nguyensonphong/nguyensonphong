@@ -36,9 +36,9 @@
       </div>
       <div class="pdp__share">
         <span>Chia sẻ</span>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url | append: product.url | url_encode }}" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-        <a href="https://zalo.me/share?url={{ shop.url | append: product.url | url_encode }}" target="_blank" rel="noopener" aria-label="Zalo">Z</a>
-        <button type="button" aria-label="Sao chép link" data-copy-link="{{ shop.url | append: product.url }}">🔗</button>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url | append: product.url | url_encode }}" target="_blank" rel="noopener" aria-label="Chia sẻ Facebook" class="sh-fb">f</a>
+        <a href="https://zalo.me/share?url={{ shop.url | append: product.url | url_encode }}" target="_blank" rel="noopener" aria-label="Chia sẻ Zalo" class="sh-zalo">Zalo</a>
+        <button type="button" class="sh-link" aria-label="Lấy link" data-copy-link="{{ shop.url | append: product.url }}">{% render 'icon', name: 'tag' %}<em>Lấy link</em></button>
       </div>
     </div>
 

@@ -820,3 +820,7 @@ a.icard:hover{border-color:var(--hp-blue)}
 .pdp__vthumb{position:relative}
 .pdp__vthumb span{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.35);border-radius:inherit;color:#fff}
 .pdp__vthumb svg{width:26px;height:26px}
+.pdp__share .sh-fb{background:#1877f2;color:#fff;border-color:#1877f2;font-family:Arial,sans-serif;font-size:19px}
+.pdp__share .sh-zalo{width:auto;padding:0 10px;border-radius:17px;background:#0068ff;color:#fff;border-color:#0068ff;font-size:12px}
+.pdp__share .sh-link{width:auto;padding:0 12px;border-radius:17px;gap:5px;display:inline-flex;align-items:center;font-size:12px;font-weight:600}
+.pdp__share .sh-link svg{width:15px;height:15px}.pdp__share .sh-link em{font-style:normal}
