@@ -617,3 +617,46 @@ a.icard:hover{border-color:var(--hp-blue)}
 .cmp td{vertical-align:top;font-weight:400;color:var(--hp-text);white-space:normal;min-width:180px}
 .cmp__name{display:block;font-weight:600;color:var(--hp-head);margin-bottom:6px}
 .cmp__price{color:var(--hp-red)}
+
+/* ==== Khớp bố cục HomePro (số đo lấy từ homepro.co.th ở màn 1550px, container 1280px) ==== */
+/* Header: logo cao ~60px, ô tìm kiếm cao 48px bo 10px */
+.logo svg{width:44px;height:52px}.logo{font-size:30px}
+.search{height:48px;max-width:560px;margin:0 auto}
+.search{border-radius:10px;overflow:hidden}
+.nav__item,.nav__cat{font-size:15px;font-weight:500}
+.shortcuts{background:#F2F4F2}.shortcuts a{font-size:13px;color:#525255}
+/* Banner chính: ảnh lớn 1/2 chiều ngang tỉ lệ 4:3 + lưới 2x2 thẻ khuyến mãi */
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin-top:16px}
+.slider{aspect-ratio:4/3;border-radius:10px}
+.hero__side{gap:22px}
+.tile{border-radius:10px;padding:18px;justify-content:center;align-items:center;text-align:center;gap:10px;
+  background:linear-gradient(180deg,#fff 0%,#E8F8E6 100%);border:2px solid #CDEFC9}
+.tile b{font-size:clamp(20px,1.9vw,30px);font-weight:700;line-height:1.15;color:var(--hp-pink)}
+.tile small{font-size:15px;font-weight:600;color:var(--hp-blue)}
+/* 4 thẻ giao hàng: nền đậm, icon + chữ trắng cỡ lớn, cao 80px */
+.delivery{gap:22px;margin-top:22px}
+.delivery div{min-height:80px;border:0;border-radius:10px;padding:10px 20px;background:var(--hp-blue);color:#fff;font-size:22px;font-weight:600;line-height:1.15}
+.delivery svg{width:44px;height:44px;color:#fff}
+.delivery small{color:#fff;opacity:.9;font-size:13px;margin-top:2px}
+/* Lối tắt: icon minh hoạ lớn, không nền tròn, chữ 16px đậm */
+.icons{gap:28px 12px}
+.ic{font-size:16px;font-weight:600;color:#525255}
+.ic span{background:none!important;color:var(--hp-blue);width:72px;height:72px}
+.ic svg{width:56px;height:56px}
+/* Tiêu đề khối */
+.sec__title{font-size:28px;font-weight:600;color:var(--hp-blue)}
+.sec__more{color:var(--hp-blue);text-decoration:underline}
+/* Dải DOUBLE SHOCK / FLASH SALE: băng ngang, chữ nghiêng đậm */
+.strip{border-radius:10px;padding:10px 24px}
+.strip h3{font-size:34px;font-weight:700;font-style:italic;letter-spacing:.03em}
+.strip a{font-size:22px;font-weight:700;font-style:italic}
+/* Thẻ sản phẩm: giá đỏ lớn, nhãn giảm giá đỏ góc trái */
+.pcard{border-radius:10px}
+.pcard__tag{background:var(--hp-red);border-radius:4px;font-size:13px}
+.pcard .price{color:var(--hp-red);font-size:20px;font-weight:700}
+.pcard .price s{font-size:13px;font-weight:400;color:var(--hp-mute)}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .delivery div{font-size:16px;min-height:64px}.delivery svg{width:32px;height:32px}
+  .strip h3{font-size:22px}.strip a{font-size:15px}
+}

@@ -93,7 +93,7 @@ const globals = {
   request: { locale: { iso_code: 'vi' } }, localization: { available_languages: [] },
   routes: { root_url: '/', search_url: '/search', cart_url: '/cart', cart_add_url: '/cart/add', account_url: '/account', account_login_url: '/account/login', account_register_url: '/account/register', account_addresses_url: '/account/addresses', collections_url: '/collections', all_products_collection_url: '/collections/all' },
   linklists,
-  settings: { font_family: 'be_vietnam', color_primary: '#0B6B09', color_footer: '#10200F', color_accent: '#FF7A1A', color_price: '#E4002B', color_soft: '#E8F8E6', chat_url: '#', social_facebook: '#', social_line: '#', social_instagram: '#', social_youtube: '#', social_x: '#' },
+  settings: { font_family: 'prompt', color_primary: '#0B6B09', color_footer: '#10200F', color_accent: '#FF7A1A', color_price: '#E4002B', color_soft: '#E8F8E6', chat_url: '#', social_facebook: '#', social_line: '#', social_instagram: '#', social_youtube: '#', social_x: '#' },
 };
 
 // --- Ghép section ---
