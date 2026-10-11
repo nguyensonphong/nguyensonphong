@@ -6,8 +6,8 @@ items=[]
 for c in d['cats']:
   for i,(t,v,p,cp) in enumerate(c['products']):
     items.append(dict(title=t,vendor=v,status="ACTIVE",productType=cats[c['tag']],tags=[c['tag'],'room-goi-y']+(['best-price'] if i==0 else []),
-      descriptionHtml=f"<p>{t}. Thuộc nhóm {cats[c['tag']].lower()}. Bảo hành chính hãng, giao hàng toàn quốc.</p>",
-      files=[dict(originalSource=f"https://images.unsplash.com/photo-{c['img'][i%len(c['img'])]}?w=1000&q=75&fm=jpg",contentType="IMAGE",alt=t)],
+      descriptionHtml="<p>Bảo hành chính hãng, giao hàng toàn quốc.</p>",
+      files=[dict(originalSource=f"https://images.unsplash.com/photo-{c['img'][i%len(c['img'])]}?w=1000&q=75&fm=jpg",contentType="IMAGE")],
       productOptions=[dict(name="Title",values=[dict(name="Default Title")])],
       variants=[dict(optionValues=[dict(optionName="Title",name="Default Title")],price=str(p),compareAtPrice=str(cp))]))
 n=0
