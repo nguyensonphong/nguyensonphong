@@ -707,3 +707,6 @@ a.icard:hover{border-color:var(--hp-blue)}
 .mcards--image .mcard b{color:var(--hp-blue);font-size:17px;font-weight:600}
 .mcards--image .mcard__img{border-radius:10px}
 .mcards--image .mcard:hover b{color:var(--hp-orange)}
+/* Shopify image_tag gắn sẵn width/height gốc → ép height:auto để tỉ lệ 4:3 có hiệu lực */
+.nav__tile img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.mcard__img img,.landing__banner img,.subcat__ic img{height:100%!important;width:100%}
