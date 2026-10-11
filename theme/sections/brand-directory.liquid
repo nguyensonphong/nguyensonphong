@@ -1,0 +1,44 @@
+{%- comment -%}
+  Danh bạ thương hiệu: thương hiệu theo từng ngành (vendor của sản phẩm trong collection ngành)
+  + danh sách A–Z toàn bộ vendor của shop. Tự cập nhật khi thêm sản phẩm.
+{%- endcomment -%}
+<section class="container sec">
+  {%- if section.settings.title != blank -%}<div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>{%- endif -%}
+  <div class="bdir">
+    {%- for link in linklists[section.settings.menu].links -%}
+      {%- assign vendors = link.object.all_vendors -%}
+      {%- if vendors.size > 0 -%}
+        <div class="bdir__group">
+          <h3><a href="{{ link.url }}">{{ link.title }}</a></h3>
+          <div class="bdir__chips">
+            {%- for v in vendors limit: 24 -%}<a href="{{ link.url }}?filter.p.vendor={{ v | url_encode }}">{{ v }}</a>{%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+  {%- if section.settings.show_az -%}
+    <div class="sec__head"><h2 class="sec__title">{{ section.settings.az_title }}</h2></div>
+    {%- assign vs = shop.vendors | sort_natural -%}
+    {%- assign letters = '' -%}
+    {%- for v in vs -%}{%- assign f = v | slice: 0 | upcase -%}{%- unless letters contains f -%}{%- assign letters = letters | append: f -%}{%- endunless -%}{%- endfor -%}
+    <nav class="bdir__az">{%- assign ls = letters | split: '' -%}{%- for l in ls -%}<a href="#brand-{{ l }}">{{ l }}</a>{%- endfor -%}</nav>
+    {%- for l in ls -%}
+      <div class="bdir__group" id="brand-{{ l }}"><h3>{{ l }}</h3><div class="bdir__chips">
+        {%- for v in vs -%}{%- assign f = v | slice: 0 | upcase -%}{%- if f == l -%}<a href="{{ v | url_for_vendor }}">{{ v }}</a>{%- endif -%}{%- endfor -%}
+      </div></div>
+    {%- endfor -%}
+  {%- endif -%}
+</section>
+{% schema %}
+{
+  "name": "Danh bạ thương hiệu",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Thương hiệu theo ngành hàng" },
+    { "type": "link_list", "id": "menu", "label": "Menu ngành hàng", "default": "main-menu" },
+    { "type": "checkbox", "id": "show_az", "label": "Hiện danh sách A–Z", "default": true },
+    { "type": "text", "id": "az_title", "label": "Tiêu đề A–Z", "default": "Tất cả thương hiệu A–Z" }
+  ],
+  "presets": [{ "name": "Danh bạ thương hiệu" }]
+}
+{% endschema %}

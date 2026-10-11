@@ -37,6 +37,7 @@ const money = (c) => (Math.round(Number(c || 0) / 100)).toLocaleString('vi-VN') 
 engine.registerFilter('money_without_trailing_zeros', money);
 engine.registerFilter('money', money);
 engine.registerFilter('image_url', (img) => (img && img.src) || '');
+engine.registerFilter('url_for_vendor', (v) => '/collections/vendors?q=' + encodeURIComponent(v));
 engine.registerFilter('image_tag', (src, ...a) => (src ? `<img src="${src}" alt="">` : ''));
 engine.registerFilter('video_tag', () => '');
 engine.registerFilter('default_errors', () => '');
@@ -72,12 +73,23 @@ const linklists = {
   'footer-policy': { links: L("Điều khoản sử dụng", "Chính sách giao hàng", "Chính sách bảo mật", "Chính sách đổi trả") },
   'footer-about': { links: L("Giới thiệu", "Hệ thống cửa hàng", "Tuyển dụng", "Liên hệ") },
 };
+// Menu chính + Mua theo phòng / Đồ thợ / Dịch vụ đặc biệt: giống hệt dữ liệu đã đẩy lên Shopify (tools/menus)
+const MENUS = JSON.parse(read(path.join(ROOT, 'tools', 'menus', 'menus.json')));
+const ROOM_IMG = Object.fromEntries(JSON.parse(read(path.join(ROOT, 'tools', 'menus', 'rooms.json'))).map((r) => ['/collections/' + r.h, r.img]));
+const toLinks = (items) => items.map((i) => ({ title: i.title, url: i.url, links: toLinks(i.items), object: ROOM_IMG[i.url] ? { image: { src: ROOM_IMG[i.url] } } : null }));
+linklists['main-menu'] = { links: toLinks(MENUS.main) };
+linklists['shop-by-room'] = { links: toLinks(MENUS.room) };
+linklists['diy-menu'] = { links: toLinks(MENUS.diy) };
+linklists['special-services'] = { links: toLinks(MENUS.spec) };
+// Vendor mẫu cho trang Thương hiệu
+const VENDORS = ['LG', 'Samsung', 'Electrolux', 'Panasonic', 'Daikin', 'Toshiba', 'Sharp', 'Philips', 'Tefal', 'Sunhouse', 'Kangaroo', 'TOTO', 'INAX', 'Caesar', 'Bosch', 'Makita', 'Stanley', 'Rạng Đông', 'Điện Quang', 'Hòa Phát'];
+for (const l of linklists['all-categories'].links) l.object = { all_vendors: VENDORS.slice(0, 4 + (l.title.length % 9)) };
 // Menu cấp 2 + 3 cho từng ngành ("cat-<handle>"), giống trên Shopify
 for (const c of JSON.parse(read(path.join(ROOT, 'tools', 'categories', 'categories.json')))) {
   linklists['cat-' + c.handle] = { links: c.subs.map((x) => ({ title: x.title, url: '/collections/' + x.handle, links: x.l3.map((t) => ({ title: t.title, url: '/collections/' + x.handle + '/' + t.tag, links: [] })) })) };
 }
 const globals = {
-  shop: { name: 'GKMALL' }, cart: { item_count: 0 }, customer: null, search: {},
+  shop: { name: 'GKMALL', vendors: VENDORS }, cart: { item_count: 0 }, customer: null, search: {},
   request: { locale: { iso_code: 'vi' } }, localization: { available_languages: [] },
   routes: { root_url: '/', search_url: '/search', cart_url: '/cart', cart_add_url: '/cart/add', account_url: '/account', account_login_url: '/account/login', account_register_url: '/account/register', account_addresses_url: '/account/addresses', collections_url: '/collections', all_products_collection_url: '/collections/all' },
   linklists,
@@ -137,6 +149,7 @@ const pages = {
   index: {},
   'collection.landing': { collection: { ...C('Điện máy', popular), description: '', all_products_count: 394 } },
   'page.shipping': {}, 'page.compare': {}, 'page.promotions': {}, 'page.services': {}, 'page.repair': {}, 'page.trade-in': {},
+  'page.rooms': {}, 'page.brands': {}, 'page.diy': {}, 'page.special': {},
 };
 fs.mkdirSync(path.join(ROOT, 'preview'), { recursive: true });
 for (const [name, g] of Object.entries(pages)) {

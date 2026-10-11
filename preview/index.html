@@ -64,11 +64,43 @@ button{cursor:pointer}
 .badge{position:absolute;top:2px;right:0;min-width:18px;height:18px;border-radius:9px;background:var(--hp-orange);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;padding:0 4px}
 .burger{display:none;background:none;border:0;color:#fff;font-size:24px}
 /* 3. Nav */
-.nav{background:var(--hp-blue);color:#fff;border-top:1px solid rgba(255,255,255,.15)}
+.nav{position:relative;z-index:40;background:var(--hp-blue);color:#fff;border-top:1px solid rgba(255,255,255,.15)}
 .nav__inner{display:flex;align-items:center;gap:4px;min-height:46px;overflow-x:auto;scrollbar-width:none}
 .nav__item{padding:10px 14px;font-weight:500;white-space:nowrap;color:#fff}
 .nav__item::after{content:" ▾";font-size:10px;opacity:.8}
+.nav__item--plain::after{content:none}
 .nav__item:hover{text-decoration:underline}
+/* Dropdown menu chính: panel định vị theo .nav (không theo .nav__inner cuộn ngang nên không bị cắt) */
+.nav__panel{position:absolute;left:0;right:0;top:100%;background:#fff;color:var(--hp-text);box-shadow:0 12px 24px rgba(0,0,0,.12);border-top:3px solid var(--hp-orange);padding:20px 0;visibility:hidden;opacity:0;transition:opacity .15s}
+.nav__drop:hover .nav__panel,.nav__drop:focus-within .nav__panel{visibility:visible;opacity:1}
+.nav__tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.nav__tile{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:var(--hp-head);text-align:center}
+.nav__tile img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.nav__tile:hover span{color:var(--hp-blue)}
+.nav__cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px 24px}
+.nav__cols a{display:block;padding:3px 0;font-size:14px;color:var(--hp-text)}
+.nav__cols a:hover{color:var(--hp-blue)}
+.nav__cols .nav__col-h{font-weight:700;color:var(--hp-head)}
+.nav__all{display:inline-block;margin-top:14px;font-weight:600;color:var(--hp-blue)}
+@media (max-width:900px){.nav__panel{display:none}}
+/* Lưới thẻ từ menu + danh bạ thương hiệu */
+.mcards{display:grid;grid-template-columns:repeat(var(--cols,5),minmax(0,1fr));gap:var(--gap)}
+.mcard{display:flex;flex-direction:column;gap:8px;padding:12px;border:1px solid var(--hp-line);border-radius:var(--r-card);background:#fff;color:var(--hp-text)}
+.mcard:hover{border-color:var(--hp-blue)}
+.mcard b{color:var(--hp-head);font-size:15px}
+.mcard__img{display:block;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:var(--hp-bg,#f3f5f3)}
+.mcard__img img{width:100%;height:100%;object-fit:cover}
+.mcard__ph{display:grid;place-items:center;height:100%}
+.mcards--image .mcard{text-align:center}
+.mcard__sub{font-size:13px;color:var(--hp-muted,#666)}
+.bdir{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--gap);margin-bottom:32px}
+.bdir__group h3{font-size:16px;margin:0 0 8px}
+.bdir__chips{display:flex;flex-wrap:wrap;gap:6px}
+.bdir__chips a{padding:5px 12px;border:1px solid var(--hp-line);border-radius:999px;font-size:13px;background:#fff;color:var(--hp-text)}
+.bdir__chips a:hover{border-color:var(--hp-blue);color:var(--hp-blue)}
+.bdir__az{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.bdir__az a{min-width:32px;padding:4px 8px;text-align:center;border-radius:6px;background:var(--hp-blue);color:#fff;font-weight:600}
+@media (max-width:900px){.mcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .nav__cat{display:flex;gap:8px;align-items:center;background:none;color:#fff;padding:10px 14px 10px 0;border:0;font-weight:600;white-space:nowrap}
 .shortcuts{background:var(--hp-soft);font-size:13px}
 .shortcuts .container{display:flex;gap:20px;overflow-x:auto;min-height:36px;align-items:center;scrollbar-width:none}
@@ -628,7 +660,31 @@ a.icard:hover{border-color:var(--hp-blue)}
 
   <nav class="nav" aria-label="Menu chính">
     <div class="container nav__inner">
-      <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ Danh mục sản phẩm</button><a class="nav__item" href="#">Mua theo phòng</a><a class="nav__item" href="#">Thương hiệu</a><a class="nav__item" href="#">Flash Sale</a><a class="nav__item" href="#">Double Shock</a><a class="nav__item" href="#">Sản phẩm mới</a><a class="nav__item" href="#">Bán chạy</a><a class="nav__item" href="#">Dịch vụ lắp đặt</a><a class="nav__item" href="#">Ưu đãi hot</a></div>
+      <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ Danh mục sản phẩm</button><div class="nav__drop">
+            <a class="nav__item" href="/pages/mua-theo-phong" aria-haspopup="true">Mua theo phòng</a>
+            <div class="nav__panel">
+              <div class="container"><div class="nav__tiles"><a class="nav__tile" href="/collections/khong-gian-phong-ngu"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=70" alt=""><span>Phòng ngủ</span></a><a class="nav__tile" href="/collections/khong-gian-nha-bep"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=70" alt=""><span>Nhà bếp</span></a><a class="nav__tile" href="/collections/khong-gian-phong-lam-viec"><img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&q=70" alt=""><span>Phòng làm việc</span></a><a class="nav__tile" href="/collections/khong-gian-phong-khach"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=70" alt=""><span>Phòng khách</span></a><a class="nav__tile" href="/collections/khong-gian-phong-tam"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=70" alt=""><span>Phòng tắm</span></a><a class="nav__tile" href="/collections/khong-gian-phong-an"><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&q=70" alt=""><span>Phòng ăn</span></a><a class="nav__tile" href="/collections/khong-gian-giat-ui"><img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800&q=70" alt=""><span>Giặt ủi</span></a><a class="nav__tile" href="/collections/khong-gian-luu-tru"><img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=70" alt=""><span>Lưu trữ</span></a><a class="nav__tile" href="/collections/khong-gian-the-thao"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=70" alt=""><span>Phòng tập</span></a><a class="nav__tile" href="/collections/khong-gian-thu-cung"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=70" alt=""><span>Góc thú cưng</span></a><a class="nav__tile" href="/collections/khong-gian-gaming"><img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&q=70" alt=""><span>Phòng gaming</span></a><a class="nav__tile" href="/collections/khong-gian-phong-tre"><img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=70" alt=""><span>Phòng trẻ em</span></a><a class="nav__tile" href="/collections/khong-gian-nguoi-cao-tuoi"><img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&q=70" alt=""><span>Phòng người cao tuổi</span></a><a class="nav__tile" href="/collections/khong-gian-phong-tho"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=70" alt=""><span>Phòng thờ</span></a><a class="nav__tile" href="/collections/khong-gian-san-vuon"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800&q=70" alt=""><span>Sân vườn & ngoài trời</span></a></div><a class="nav__all" href="/pages/mua-theo-phong">Xem tất cả mua theo phòng →</a>
+              </div>
+            </div>
+          </div><a class="nav__item nav__item--plain" href="/pages/thuong-hieu">Thương hiệu</a><div class="nav__drop">
+            <a class="nav__item" href="/pages/do-tho-diy" aria-haspopup="true">Đồ thợ & DIY</a>
+            <div class="nav__panel">
+              <div class="container"><div class="nav__cols"><div><a class="nav__col-h" href="/collections/vat-lieu">Xây dựng tổng hợp</a></div><div><a class="nav__col-h" href="/collections/ong-nuoc">Hệ thống cấp thoát nước</a></div><div><a class="nav__col-h" href="/collections/den">Điện & chiếu sáng</a></div><div><a class="nav__col-h" href="/collections/mai-lop">Mái, vách & trần</a></div><div><a class="nav__col-h" href="/collections/san-tuong">Sàn & tường</a></div><div><a class="nav__col-h" href="/collections/phong-tam">Phòng tắm</a></div><div><a class="nav__col-h" href="/collections/cua">Cửa & cửa sổ</a></div><div><a class="nav__col-h" href="/search?q=s%C6%A1n&type=product">Sơn & chống thấm</a></div><div><a class="nav__col-h" href="/collections/nha-bep">Nhà bếp</a></div><div><a class="nav__col-h" href="/collections/dung-cu">Dụng cụ thợ</a></div><div><a class="nav__col-h" href="/collections/noi-that">Nội thất tự lắp</a></div><div><a class="nav__col-h" href="/collections/dien-mat-troi">Điện mặt trời</a></div><div><a class="nav__col-h" href="/collections/vat-tu-lap-may-lanh">Vật tư máy lạnh</a></div><div><a class="nav__col-h" href="/collections/do-bao-ho">Đồ bảo hộ lao động</a></div><div><a class="nav__col-h" href="/collections/hat-giong-vat-tu-trong-cay">Nông nghiệp & trồng trọt</a></div><div><a class="nav__col-h" href="/collections/oc-vit-dinh">Ốc vít & phụ kiện</a></div></div><a class="nav__all" href="/pages/do-tho-diy">Xem tất cả đồ thợ & diy →</a>
+              </div>
+            </div>
+          </div><div class="nav__drop">
+            <a class="nav__item" href="/blogs/cam-nang" aria-haspopup="true">Cẩm nang</a>
+            <div class="nav__panel">
+              <div class="container"><div class="nav__cols"><div><a class="nav__col-h" href="/blogs/cam-nang">Bài viết mới</a><a href="/blogs/cam-nang/chon-may-lanh-bao-nhieu-hp">Chọn máy lạnh bao nhiêu HP</a><a href="/blogs/cam-nang/5-buoc-ve-sinh-may-lanh-tai-nha">5 bước vệ sinh máy lạnh</a><a href="/blogs/cam-nang/chuan-bi-nha-truoc-mua-mua-bao">Chuẩn bị nhà trước mùa mưa</a></div><div><a class="nav__col-h" href="/pages/mua-theo-phong">Ý tưởng theo phòng</a><a href="/collections/khong-gian-phong-khach">Phòng khách</a><a href="/collections/khong-gian-phong-ngu">Phòng ngủ</a><a href="/collections/khong-gian-nha-bep">Nhà bếp</a><a href="/collections/khong-gian-phong-lam-viec">Phòng làm việc</a></div><div><a class="nav__col-h" href="/pages/huong-dan">Hướng dẫn mua sắm</a><a href="/pages/huong-dan">Hướng dẫn mua online</a><a href="/pages/faq">Câu hỏi thường gặp</a><a href="/pages/compare">So sánh sản phẩm</a></div></div><a class="nav__all" href="/blogs/cam-nang">Xem tất cả cẩm nang →</a>
+              </div>
+            </div>
+          </div><a class="nav__item nav__item--plain" href="/pages/dich-vu-tai-nha">Dịch vụ cho ngôi nhà</a><div class="nav__drop">
+            <a class="nav__item" href="/pages/dich-vu-dac-biet" aria-haspopup="true">Dịch vụ đặc biệt</a>
+            <div class="nav__panel">
+              <div class="container"><div class="nav__cols"><div><a class="nav__col-h" href="/pages/contact">Khảo sát tận nơi</a><a href="/pages/contact">Lắp điện mặt trời áp mái</a><a href="/pages/contact">Mái che & nhà xe</a><a href="/pages/contact">Cải tạo nhà bếp</a><a href="/pages/contact">Lát sàn gỗ</a><a href="/pages/contact">Trải cỏ nhân tạo</a><a href="/pages/contact">Vách ngăn may đo</a></div><div><a class="nav__col-h" href="/collections/cua-may-do">Hàng may đo theo kích thước</a><a href="/collections/cua-may-do">Cửa & khung cửa may đo</a><a href="/collections/do-phong-tam-may-do">Đồ phòng tắm may đo</a><a href="/collections/rem-cua-manh">Rèm cửa may đo</a><a href="/collections/nem">Nệm theo kích thước</a></div><div><a class="nav__col-h" href="/pages/dich-vu-tai-nha">Kiểm tra nhà trước bàn giao</a><a href="/pages/dich-vu-tai-nha">Nhà phố & biệt thự</a><a href="/pages/dich-vu-tai-nha">Căn hộ chung cư</a></div><div><a class="nav__col-h" href="/pages/contact">Quà tặng doanh nghiệp in logo</a><a href="/pages/contact">Đặt quà in tên, logo</a></div></div><a class="nav__all" href="/pages/dich-vu-dac-biet">Xem tất cả dịch vụ đặc biệt →</a>
+              </div>
+            </div>
+          </div><a class="nav__item nav__item--plain" href="/pages/khuyen-mai">Khuyến mãi</a><a class="nav__item nav__item--plain" href="/collections/flash-sale">Flash Sale</a><a class="nav__item nav__item--plain" href="/pages/ma-giam-gia">Mã giảm giá</a></div>
   </nav>
   <div class="shortcuts">
     <div class="container"><a href="#">Điện máy</a><a href="#">Đồ gia dụng</a><a href="#">Tivi & âm thanh</a><a href="#">Nội thất</a><a href="#">Phòng ngủ & chăn ga</a><a href="#">Phòng tắm</a><a href="#">Vật liệu xây dựng</a><a href="#">Dụng cụ</a><a href="#">Đèn & bóng đèn</a><a href="#">Thiết bị an ninh</a><a href="#">Sân vườn</a></div>
@@ -910,7 +966,7 @@ So sánh</button>
 
 
 <section class="container sec" data-tabs><div class="strip strip--flash">
-      <h3>⚡ FLASH SALE</h3><div class="countdown" data-countdown="2026-10-12T20:19:47.230Z">Kết thúc sau <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></div><a href="#">Xem thêm &gt;&gt;</a></div><div class="row-scroll"><article class="pcard">
+      <h3>⚡ FLASH SALE</h3><div class="countdown" data-countdown="2026-10-12T20:49:06.939Z">Kết thúc sau <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></div><a href="#">Xem thêm &gt;&gt;</a></div><div class="row-scroll"><article class="pcard">
     <a class="pcard__img" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
 </a><span class="pcard__tag">-24%</span><button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path class="ic-accent" d="M8.5 10a1.8 1.8 0 0 1 1.8-1.8"/></svg>
 </button><button class="pcard__cmp" type="button" data-compare=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4v16M17 4v16M3 8l4-4 4 4M13 16l4 4 4-4"/></svg>

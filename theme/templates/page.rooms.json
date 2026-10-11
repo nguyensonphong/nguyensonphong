@@ -1,0 +1,9 @@
+{"sections":{
+ "hero":{"type":"page-hero","settings":{"eyebrow":"Mua theo phòng","title":"Sắm đồ theo từng không gian sống","intro":"Chọn phòng bạn muốn làm mới. GKMALL đã gom sẵn nội thất, thiết bị và phụ kiện phù hợp cho từng không gian.","button":"Xem phòng khách","link":"/collections/khong-gian-phong-khach","image_src":"https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3"}},
+ "rooms":{"type":"menu-cards","settings":{"title":"15 không gian cho ngôi nhà","menu":"shop-by-room","style":"image","columns":5}},
+ "tips":{"type":"info-cards","settings":{"title":"Mẹo sắm theo phòng","columns":3},"blocks":{
+  "a":{"type":"card","settings":{"icon":"tools","title":"Đo trước khi mua","text":"Ghi lại kích thước phòng, cửa và lối đi để chọn nội thất vừa vặn."}},
+  "b":{"type":"card","settings":{"icon":"bulb","title":"Phối ánh sáng","text":"Kết hợp đèn trần, đèn bàn và đèn trang trí để phòng ấm và đủ sáng."}},
+  "c":{"type":"card","settings":{"icon":"truck","title":"Giao & lắp đặt","text":"Thợ GKMALL giao và lắp tận nơi cho nội thất, thiết bị lớn.","link":"/pages/dich-vu-tai-nha"}}},
+  "block_order":["a","b","c"]}
+ },"order":["hero","rooms","tips"]}

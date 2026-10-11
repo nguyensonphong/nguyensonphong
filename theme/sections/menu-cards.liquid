@@ -1,0 +1,65 @@
+{%- comment -%}
+  Lưới thẻ lấy từ một menu (Navigation). Mỗi link con = 1 thẻ.
+  Ảnh: ảnh của collection được link tới; không có ảnh thì hiện icon.
+  Dùng cho Mua theo phòng, Đồ thợ & DIY, Dịch vụ đặc biệt…
+{%- endcomment -%}
+{%- assign links = linklists[section.settings.menu].links -%}
+<section class="container sec">
+  {%- if section.settings.title != blank -%}<div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>{%- endif -%}
+  {%- if section.settings.intro != blank -%}<p class="sec__intro">{{ section.settings.intro }}</p>{%- endif -%}
+  <div class="mcards mcards--{{ section.settings.style }}" style="--cols:{{ section.settings.columns }}">
+    {%- for link in links -%}
+      {%- assign img = link.object.image | default: link.object.featured_image -%}
+      <a class="mcard" href="{{ link.url }}">
+        {%- if section.settings.style == 'image' -%}
+          <span class="mcard__img">
+            {%- if img -%}{{ img | image_url: width: 600 | image_tag: loading: 'lazy', alt: link.title }}{%- else -%}<span class="mcard__ph">{% render 'icon', name: 'home' %}</span>{%- endif -%}
+          </span>
+        {%- else -%}
+          {%- assign h = link.url | split: '?' | first | split: '/' | last -%}
+          {%- case h -%}
+            {%- when 'vat-lieu' -%}{%- assign ic = 'brick' -%}
+            {%- when 'ong-nuoc' -%}{%- assign ic = 'pipe' -%}
+            {%- when 'den', 'dien-mat-troi' -%}{%- assign ic = 'bulb' -%}
+            {%- when 'mai-lop', 'nem' -%}{%- assign ic = 'home' -%}
+            {%- when 'san-tuong' -%}{%- assign ic = 'tile' -%}
+            {%- when 'phong-tam', 'do-phong-tam-may-do' -%}{%- assign ic = 'bath' -%}
+            {%- when 'cua', 'cua-may-do' -%}{%- assign ic = 'door' -%}
+            {%- when 'search' -%}{%- assign ic = 'paint' -%}
+            {%- when 'nha-bep' -%}{%- assign ic = 'pot' -%}
+            {%- when 'dung-cu', 'oc-vit-dinh' -%}{%- assign ic = 'wrench' -%}
+            {%- when 'noi-that' -%}{%- assign ic = 'sofa' -%}
+            {%- when 'vat-tu-lap-may-lanh' -%}{%- assign ic = 'ac' -%}
+            {%- when 'do-bao-ho' -%}{%- assign ic = 'shield' -%}
+            {%- when 'hat-giong-vat-tu-trong-cay' -%}{%- assign ic = 'leaf' -%}
+            {%- when 'dich-vu-tai-nha' -%}{%- assign ic = 'tools' -%}
+            {%- when 'contact' -%}{%- assign ic = 'chat' -%}
+            {%- else -%}{%- assign ic = section.settings.icon -%}
+          {%- endcase -%}
+          {%- if link.title contains 'Quà' -%}{%- assign ic = 'gift' -%}{%- endif -%}
+          <span class="icard__ic">{% render 'icon', name: ic %}</span>
+        {%- endif -%}
+        <b>{{ link.title }}</b>
+        {%- if section.settings.style != 'image' and link.links.size > 0 -%}
+          <span class="mcard__sub">{%- for c in link.links limit: 4 -%}{{ c.title }}{% unless forloop.last %} · {% endunless %}{%- endfor -%}</span>
+        {%- endif -%}
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Lưới thẻ từ menu",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề" },
+    { "type": "textarea", "id": "intro", "label": "Mô tả" },
+    { "type": "link_list", "id": "menu", "label": "Menu nguồn" },
+    { "type": "select", "id": "style", "label": "Kiểu thẻ", "default": "image", "options": [
+      { "value": "image", "label": "Ảnh" }, { "value": "icon", "label": "Icon" }
+    ] },
+    { "type": "text", "id": "icon", "label": "Icon (kiểu Icon)", "default": "tools" },
+    { "type": "range", "id": "columns", "label": "Số cột", "min": 2, "max": 6, "step": 1, "default": 5 }
+  ],
+  "presets": [{ "name": "Lưới thẻ từ menu" }]
+}
+{% endschema %}

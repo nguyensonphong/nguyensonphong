@@ -1,0 +1,5 @@
+{"sections":{
+ "hero":{"type":"page-hero","settings":{"eyebrow":"Mua theo thương hiệu","title":"Thương hiệu chính hãng tại GKMALL","intro":"Hàng trăm thương hiệu điện máy, gia dụng, vật liệu và nội thất. Bảo hành chính hãng, giá niêm yết rõ ràng.","button":"Xem ưu đãi thương hiệu","link":"/pages/khuyen-mai","image_src":"https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3"}},
+ "featured":{"type":"brand-logos","settings":{"title":"Thương hiệu nổi bật"}},
+ "directory":{"type":"brand-directory","settings":{"title":"Thương hiệu theo ngành hàng","menu":"all-categories","show_az":true,"az_title":"Tất cả thương hiệu A–Z"}}
+ },"order":["hero","featured","directory"]}

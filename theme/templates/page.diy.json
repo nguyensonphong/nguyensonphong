@@ -1,0 +1,9 @@
+{"sections":{
+ "hero":{"type":"page-hero","settings":{"eyebrow":"Đồ thợ & DIY","title":"Vật tư cho thợ và người tự làm","intro":"Chọn theo hạng mục công việc: xây dựng, điện nước, sơn, mái, sàn tường… Đủ vật tư, dụng cụ và đồ bảo hộ cho một công trình.","button":"Dụng cụ & phụ kiện","link":"/collections/dung-cu","image_src":"https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-4.0.3"}},
+ "jobs":{"type":"menu-cards","settings":{"title":"Mua theo hạng mục công việc","menu":"diy-menu","style":"icon","icon":"tools","columns":4}},
+ "pro":{"type":"info-cards","settings":{"title":"Ưu đãi cho thợ","columns":3},"blocks":{
+  "a":{"type":"card","settings":{"icon":"tag","title":"Giá sỉ theo số lượng","text":"Mua nhiều giảm thêm cho vật liệu xây dựng và ống nước."}},
+  "b":{"type":"card","settings":{"icon":"truck","title":"Giao tận công trình","text":"Xe tải giao vật liệu nặng đến tận chân công trình."}},
+  "c":{"type":"card","settings":{"icon":"user","title":"Tư vấn kỹ thuật","text":"Nhân viên kỹ thuật hỗ trợ bóc tách khối lượng miễn phí.","link":"/pages/contact"}}},
+  "block_order":["a","b","c"]}
+ },"order":["hero","jobs","pro"]}

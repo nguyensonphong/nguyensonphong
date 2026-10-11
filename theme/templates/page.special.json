@@ -1,0 +1,72 @@
+{
+ "sections": {
+  "hero": {
+   "type": "page-hero",
+   "settings": {
+    "eyebrow": "Dịch vụ đặc biệt",
+    "title": "Khảo sát, đặt may đo và dịch vụ trọn gói",
+    "intro": "Chuyên viên GKMALL khảo sát tận nơi, tư vấn giải pháp và báo giá trước khi thi công.",
+    "button": "Đặt lịch khảo sát",
+    "link": "/pages/contact",
+    "image_src": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3"
+   }
+  },
+  "services": {
+   "type": "menu-cards",
+   "settings": {
+    "title": "Các nhóm dịch vụ",
+    "menu": "special-services",
+    "style": "icon",
+    "icon": "shield",
+    "columns": 3
+   }
+  },
+  "steps": {
+   "type": "steps",
+   "settings": {
+    "title": "Quy trình khảo sát"
+   },
+   "blocks": {
+    "s0": {
+     "type": "step",
+     "settings": {
+      "title": "Đặt lịch",
+      "text": "Chọn dịch vụ và để lại số điện thoại, GKMALL gọi lại trong 24 giờ."
+     }
+    },
+    "s1": {
+     "type": "step",
+     "settings": {
+      "title": "Khảo sát tận nơi",
+      "text": "Chuyên viên đến đo đạc, kiểm tra hiện trạng và tư vấn phương án."
+     }
+    },
+    "s2": {
+     "type": "step",
+     "settings": {
+      "title": "Báo giá",
+      "text": "Gửi báo giá chi tiết vật tư và nhân công, không phát sinh."
+     }
+    },
+    "s3": {
+     "type": "step",
+     "settings": {
+      "title": "Thi công & bàn giao",
+      "text": "Thợ thi công đúng hẹn, nghiệm thu và bảo hành."
+     }
+    }
+   },
+   "block_order": [
+    "s0",
+    "s1",
+    "s2",
+    "s3"
+   ]
+  }
+ },
+ "order": [
+  "hero",
+  "services",
+  "steps"
+ ]
+}

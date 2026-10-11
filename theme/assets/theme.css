@@ -62,11 +62,43 @@ button{cursor:pointer}
 .badge{position:absolute;top:2px;right:0;min-width:18px;height:18px;border-radius:9px;background:var(--hp-orange);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;padding:0 4px}
 .burger{display:none;background:none;border:0;color:#fff;font-size:24px}
 /* 3. Nav */
-.nav{background:var(--hp-blue);color:#fff;border-top:1px solid rgba(255,255,255,.15)}
+.nav{position:relative;z-index:40;background:var(--hp-blue);color:#fff;border-top:1px solid rgba(255,255,255,.15)}
 .nav__inner{display:flex;align-items:center;gap:4px;min-height:46px;overflow-x:auto;scrollbar-width:none}
 .nav__item{padding:10px 14px;font-weight:500;white-space:nowrap;color:#fff}
 .nav__item::after{content:" ▾";font-size:10px;opacity:.8}
+.nav__item--plain::after{content:none}
 .nav__item:hover{text-decoration:underline}
+/* Dropdown menu chính: panel định vị theo .nav (không theo .nav__inner cuộn ngang nên không bị cắt) */
+.nav__panel{position:absolute;left:0;right:0;top:100%;background:#fff;color:var(--hp-text);box-shadow:0 12px 24px rgba(0,0,0,.12);border-top:3px solid var(--hp-orange);padding:20px 0;visibility:hidden;opacity:0;transition:opacity .15s}
+.nav__drop:hover .nav__panel,.nav__drop:focus-within .nav__panel{visibility:visible;opacity:1}
+.nav__tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.nav__tile{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:var(--hp-head);text-align:center}
+.nav__tile img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.nav__tile:hover span{color:var(--hp-blue)}
+.nav__cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px 24px}
+.nav__cols a{display:block;padding:3px 0;font-size:14px;color:var(--hp-text)}
+.nav__cols a:hover{color:var(--hp-blue)}
+.nav__cols .nav__col-h{font-weight:700;color:var(--hp-head)}
+.nav__all{display:inline-block;margin-top:14px;font-weight:600;color:var(--hp-blue)}
+@media (max-width:900px){.nav__panel{display:none}}
+/* Lưới thẻ từ menu + danh bạ thương hiệu */
+.mcards{display:grid;grid-template-columns:repeat(var(--cols,5),minmax(0,1fr));gap:var(--gap)}
+.mcard{display:flex;flex-direction:column;gap:8px;padding:12px;border:1px solid var(--hp-line);border-radius:var(--r-card);background:#fff;color:var(--hp-text)}
+.mcard:hover{border-color:var(--hp-blue)}
+.mcard b{color:var(--hp-head);font-size:15px}
+.mcard__img{display:block;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:var(--hp-bg,#f3f5f3)}
+.mcard__img img{width:100%;height:100%;object-fit:cover}
+.mcard__ph{display:grid;place-items:center;height:100%}
+.mcards--image .mcard{text-align:center}
+.mcard__sub{font-size:13px;color:var(--hp-muted,#666)}
+.bdir{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--gap);margin-bottom:32px}
+.bdir__group h3{font-size:16px;margin:0 0 8px}
+.bdir__chips{display:flex;flex-wrap:wrap;gap:6px}
+.bdir__chips a{padding:5px 12px;border:1px solid var(--hp-line);border-radius:999px;font-size:13px;background:#fff;color:var(--hp-text)}
+.bdir__chips a:hover{border-color:var(--hp-blue);color:var(--hp-blue)}
+.bdir__az{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.bdir__az a{min-width:32px;padding:4px 8px;text-align:center;border-radius:6px;background:var(--hp-blue);color:#fff;font-weight:600}
+@media (max-width:900px){.mcards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .nav__cat{display:flex;gap:8px;align-items:center;background:none;color:#fff;padding:10px 14px 10px 0;border:0;font-weight:600;white-space:nowrap}
 .shortcuts{background:var(--hp-soft);font-size:13px}
 .shortcuts .container{display:flex;gap:20px;overflow-x:auto;min-height:36px;align-items:center;scrollbar-width:none}

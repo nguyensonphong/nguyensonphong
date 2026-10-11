@@ -34,8 +34,37 @@
   <nav class="nav" aria-label="Menu chính">
     <div class="container nav__inner">
       <button class="nav__cat" type="button" data-mega-toggle aria-expanded="false">☰ Danh mục sản phẩm</button>
+      {%- comment -%}
+        Link có menu con → thả xuống khi rê chuột. Con là collection có ảnh → thẻ ảnh (Mua theo phòng);
+        con có cháu → cột tiêu đề + link (Cẩm nang, Dịch vụ đặc biệt); còn lại → danh sách link.
+      {%- endcomment -%}
       {%- for link in linklists[section.settings.main_menu].links -%}
-        <a class="nav__item" href="{{ link.url }}">{{ link.title }}</a>
+        {%- if link.links.size > 0 -%}
+          {%- assign first_img = link.links.first.object.image -%}
+          <div class="nav__drop">
+            <a class="nav__item" href="{{ link.url }}" aria-haspopup="true">{{ link.title }}</a>
+            <div class="nav__panel">
+              <div class="container">
+                {%- if first_img -%}
+                  <div class="nav__tiles">
+                    {%- for c in link.links -%}<a class="nav__tile" href="{{ c.url }}">{%- if c.object.image -%}{{ c.object.image | image_url: width: 300 | image_tag: loading: 'lazy', alt: c.title }}{%- endif -%}<span>{{ c.title }}</span></a>{%- endfor -%}
+                  </div>
+                {%- else -%}
+                  <div class="nav__cols">
+                    {%- for c in link.links -%}
+                      <div><a class="nav__col-h" href="{{ c.url }}">{{ c.title }}</a>
+                        {%- for g in c.links -%}<a href="{{ g.url }}">{{ g.title }}</a>{%- endfor -%}
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+                <a class="nav__all" href="{{ link.url }}">Xem tất cả {{ link.title | downcase }} →</a>
+              </div>
+            </div>
+          </div>
+        {%- else -%}
+          <a class="nav__item nav__item--plain" href="{{ link.url }}">{{ link.title }}</a>
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </nav>
