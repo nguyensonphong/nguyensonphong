@@ -24,6 +24,7 @@
     {%- assign types = joined | split: '|' -%}
     <nav class="blp__icons" aria-label="Ngành hàng {{ collection.title }}">
       {%- for t in types -%}
+        {%- assign has = collection.products | where: 'type', t -%}{%- if has.size == 0 -%}{%- continue -%}{%- endif -%}
         {%- case t -%}
           {%- when 'Tivi' -%}{%- assign ic = 'tv' -%}
           {%- when 'Tủ lạnh' -%}{%- assign ic = 'fridge' -%}
