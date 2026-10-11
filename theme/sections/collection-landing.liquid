@@ -26,7 +26,7 @@
       {%- assign parent = linklists[section.settings.sub_menu].links | where: 'url', collection.url | first -%}
       {%- for l in parent.links -%}
         <a class="subcat" href="{{ l.url }}">
-          <span class="subcat__ic">{%- if l.object.featured_image -%}{{ l.object.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}{% render 'icon', name: 'box' %}{%- endif -%}</span>
+          <span class="subcat__ic">{%- if l.object.featured_image -%}{{ l.object.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}{%- else -%}{%- assign l2h = l.url | split: '/' | last -%}{% render 'l2-icon', handle: l2h %}{%- endif -%}</span>
           <span>{{ l.title }}</span>
         </a>
       {%- endfor -%}

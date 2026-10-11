@@ -78,7 +78,7 @@ button{cursor:pointer}
 .mega__list button{width:100%;text-align:left;border:0;background:none;padding:8px 16px;display:flex;gap:10px;align-items:center;color:var(--hp-text)}
 .mega__list button svg{width:20px;height:20px;color:var(--hp-blue);flex:none}
 .mega__list button.is-active,.mega__list button:hover{background:var(--hp-sky);color:var(--hp-blue);font-weight:600}
-.mega__panel{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 28px;padding:20px 28px;overflow:auto;align-content:start}
+.mega__panel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px 28px;padding:20px 28px;overflow:auto;align-content:start}
 .mega__panel h4{margin:0 0 6px;color:var(--hp-head);font-size:15px}
 .mega__panel a{display:block;padding:2px 0;font-size:13px}.mega__panel a:hover{color:var(--hp-blue)}
 .header-wrap{position:relative}

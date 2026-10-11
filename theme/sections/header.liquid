@@ -58,7 +58,13 @@
         <div class="mega__panel" data-mega-panel="{{ forloop.index }}" {% unless forloop.first %}hidden{% endunless %}>
           {%- for col in group.links -%}
             <div><h4><a href="{{ col.url }}">{{ col.title }}</a></h4>
-              {%- for item in col.links -%}<a href="{{ item.url }}">{{ item.title }}</a>{%- endfor -%}
+              {%- if col.links.size > 0 -%}
+                {%- for item in col.links -%}<a href="{{ item.url }}">{{ item.title }}</a>{%- endfor -%}
+              {%- else -%}
+                {%- comment -%} Menu chỉ có 2 cấp: lấy cấp 3 theo cây danh mục (snippet mega-l3) {%- endcomment -%}
+                {%- assign l2h = col.url | split: '/' | last -%}
+                {% render 'mega-l3', handle: l2h %}
+              {%- endif -%}
             </div>
           {%- else -%}
             <div><h4><a href="{{ group.url }}">{{ group.title }}</a></h4></div>

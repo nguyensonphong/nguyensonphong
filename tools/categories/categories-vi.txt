@@ -1,0 +1,258 @@
+# APP|dien-may|Điện máy|ac
+Máy lạnh|Máy lạnh treo tường;Máy lạnh áp trần, treo sàn;Máy lạnh di động;Máy lạnh âm trần cassette;Máy lạnh tủ đứng
+Máy giặt & máy sấy|Máy giặt cửa trước;Máy giặt cửa trên;Máy giặt 2 lồng;Máy giặt sấy 2 trong 1;Máy sấy cửa trước;Tháp giặt sấy;Tủ chăm sóc quần áo;Phụ kiện máy giặt
+Tủ lạnh|Tủ lạnh 1 cửa;Tủ lạnh 2 cửa;Tủ lạnh Side by Side;Tủ lạnh nhiều cửa;Tủ lạnh âm tủ;Bóng đèn tủ lạnh
+Tủ rượu|Tủ bảo quản rượu vang;Máy làm lạnh rượu
+Tủ đông|
+Tủ mát|
+Tủ trưng bày bánh & tủ lạnh mini|
+Quạt điện|Quạt bàn;Quạt đứng;Quạt treo tường;Quạt tháp;Quạt trần;Quạt lửng;Quạt hút;Quạt công nghiệp;Quạt điều hòa hơi nước;Quạt cầm tay
+# SMA|gia-dung|Đồ gia dụng nhỏ|pot
+Lò vi sóng & lò nướng|Lò nướng mini;Lò vi sóng hâm nóng;Lò vi sóng có nướng;Lò vi sóng đối lưu;Lò vi sóng hơi nước;Máy sấy thực phẩm
+Nồi cơm điện|Nồi cơm điện tử;Nồi cơm cơ;Nồi cơm ủ ấm
+Máy pha cà phê & trà|Máy pha cà phê tự động;Máy pha cà phê viên nén;Máy pha espresso;Máy pha cà phê nhỏ giọt;Máy xay cà phê;Máy đánh sữa;Viên nén cà phê;Cà phê hạt rang;Nguyên liệu pha chế;Ấm Moka;Dụng cụ pha cà phê;Hộp đựng viên nén;Máy hâm đồ uống;Bộ máy pha cà phê
+Nồi & bếp điện|Nồi chiên;Bếp từ;Bếp nướng điện;Chảo điện;Nồi lẩu đa năng;Nồi chiên không dầu;Nồi hấp;Nồi nấu chậm
+Quạt|Quạt phun sương;Quạt lửng;Quạt đứng;Quạt bàn;Quạt treo tường;Quạt công nghiệp;Quạt trần;Quạt cầm tay;Quạt tháp;Quạt trang trí;Quạt không dây;Quạt năng lượng mặt trời;Cánh quạt thay thế
+Máy lọc không khí|Máy hút ẩm;Máy cấp khí tươi;Máy lọc không khí gia đình;Máy lọc không khí để bàn;Máy lọc không khí ô tô;Máy lọc không khí mini;Máy tạo ẩm;Đèn diệt khuẩn UV;Máy tạo ozone;Màng lọc không khí
+Máy hút bụi|Máy hút bụi cầm tay dạng cây;Máy hút bụi cây không dây;Máy hút bụi không túi;Robot hút bụi;Máy hút bụi khô và ướt;Máy hút bụi mini;Máy hút bụi có túi;Máy giặt thảm, tẩy vết bẩn;Máy hút bụi diệt khuẩn UV;Máy hút bụi công nghiệp;Máy vệ sinh hơi nước;Phụ kiện máy hút bụi
+Máy xay & máy ép|Máy xay sinh tố;Máy xay công suất lớn;Máy xay cầm tay;Máy ép trái cây;Máy ép chậm;Máy vắt cam;Máy làm sữa hạt;Máy làm đá bào;Máy làm soda
+Máy chế biến thực phẩm|Máy trộn bột;Máy chế biến đa năng;Máy xay thịt
+Máy làm đá|Máy làm đá
+Máy nướng bánh mì & sandwich|Máy làm sandwich;Máy nướng bánh mì;Máy làm bánh waffle
+Đồ gia dụng khác|Máy làm bánh mì;Máy làm kem;Máy hấp trứng;Nồi áp suất;Máy làm takoyaki;Máy làm sữa chua;Máy làm bánh donut;Bộ đồ gia dụng;Máy hút chân không;Phụ kiện
+Bàn ủi & bàn là hơi nước|Bàn ủi hơi nước có bình;Bàn là hơi nước đứng;Bàn ủi hơi nước;Bàn ủi du lịch;Bàn ủi khô
+Máy sấy tóc & tạo kiểu|
+Quạt thông gió|Quạt hút âm trần;Quạt hút gắn tường;Quạt hút gắn kính;Máy thổi
+Ấm siêu tốc & bình thủy điện|Bình thủy điện tử;Bình thủy điện cơ;Ấm siêu tốc;Nồi đun nước;Ấm đun du lịch
+Máy sưởi|Máy sưởi
+Thiết bị kinh doanh|Máy thái thực phẩm
+# FUR|noi-that|Nội thất & trang trí|sofa
+Nội thất phòng ngủ|Bộ phòng ngủ;Giường;Tủ đầu giường;Tủ quần áo gỗ;Bàn trang điểm;Gương
+Nội thất phòng khách|Kệ tivi;Ghế đôn;Ghế thư giãn;Ghế ngả lưng;Thiết bị massage;Sofa;Bàn góc;Bàn trà;Bộ phòng khách
+Gối tựa & nệm ngồi|Ghế lười;Nệm lót ghế;Gối kê cổ;Gối tựa lưng;Gối sức khỏe;Gối kê chân
+Nội thất phòng ăn|Quầy bar;Bộ bàn ăn;Bàn ăn;Ghế ăn;Bàn bar;Ghế bar;Bàn console
+Tủ & kệ lưu trữ|Tủ treo tường;Tủ trưng bày;Kệ;Tủ giày;Tủ locker;Tủ ngăn kéo;Tủ thấp;Tủ cao
+Bàn thờ|Tủ, kệ bàn thờ Phật;Miếu thờ
+Bàn ghế đa năng|Bàn đa năng;Ghế đa năng
+Nội thất văn phòng|Phụ kiện ghế & kê chân;Ghế khách;Két sắt;Tủ hồ sơ;Bộ nội thất văn phòng;Bàn máy tính;Bàn gỗ;Ghế công thái học;Tủ sách;Phụ kiện bàn làm việc
+Nội thất gaming|Bàn gaming;Ghế gaming
+Buồng làm việc văn phòng|Phòng họp mini
+Nội thất trẻ em|Giường trẻ em;Tủ quần áo trẻ em;Tủ trẻ em;Kệ trẻ em;Bàn học trẻ em;Ghế trẻ em;Bàn trẻ em;Ghế đẩu trẻ em;Ghế ăn dặm
+Rèm cửa & mành|Rèm cửa đi;Rèm cửa sổ;Rèm may đo;Thanh treo rèm;Mành sáo;Rèm chống muỗi
+Vách ngăn|Vách ngăn;Vách ngăn phòng;Vách ngăn may đo;Vách ngăn văn phòng
+Giấy dán tường & decal|Phim dán trang trí;Decal;Decal cắt theo mét;Giấy dán tường
+Đồ trang trí nhà|Khung ảnh;Trang trí tường;Đồ trang trí theo mùa;Đồng hồ treo tường;Lò sưởi điện;Đồ decor;Quà tặng lễ tết
+Thảm|Thảm êm chân;Thảm nhỏ;Thảm lớn;Thảm đa năng;Thảm cắt theo mét;Thảm khăn;Thảm trong nhà
+Thảm chùi chân|Thảm chống bụi;Thảm cửa;Thảm ngoài trời cắt theo mét
+Phụ kiện nội thất|Bánh xe;Bi trượt;Ray trượt ngăn kéo;Tay nắm & núm;Thanh treo tủ áo;Bản lề;Phụ tùng nội thất khác;Miếng đệm chống va;Áo phủ nội thất
+Biển hiệu|Biển báo;Chữ;Bảng tên
+# TVA|tivi|Tivi, âm thanh & game|tv
+Tivi|Tivi lifestyle;Tivi Mini RGB;Tivi LED;Tivi OLED;Tivi QLED;Tivi Neo QLED;Tivi QNED;Tivi Mini LED;Máy chiếu;Gói dịch vụ truyền hình
+Game & thiết bị chơi game|PlayStation;Máy & phụ kiện Nintendo;XBOX;Ghế lái mô phỏng
+Loa thanh|Loa thanh đơn;Loa thanh kèm loa trầm
+Phụ kiện tivi|Chân tivi;Giá treo tivi;Dung dịch vệ sinh màn hình
+Loa|Loa kéo;Loa mini;Loa gia đình
+Giải trí tại gia|Loa xem phim;Dàn xem phim;Loa siêu trầm;Amply;Chân loa;Dàn âm thanh gia đình;Loa bluetooth
+Tai nghe|Tai nghe chụp tai;Tai nghe chụp tai không dây;Tai nghe nhét tai;Tai nghe nhét tai không dây
+Đầu thu & ăng-ten|Đầu thu vệ tinh;Ăng-ten tivi
+Dây cáp|Cáp HDMI;Cáp âm thanh;Cáp AV;Cáp RF;Cáp quang;Cáp RCA;Dây loa;Cáp mạng LAN;Dây điện thoại
+Đầu phát & ghi|Mâm đĩa than;Đầu CD, DVD, Blu-ray;Đầu Blu-ray;Đầu DVD
+Micro|Micro có dây;Micro không dây
+Hi-Fi & karaoke|Loa karaoke;Amply tích hợp;Mixer công suất;Dàn karaoke
+Loa hội trường|Loa chuyên nghiệp;Loa cột
+Thiết bị DJ|Bộ mixer DJ
+Màn hình thương mại|Màn hình quảng cáo;Màn hình cảm ứng tương tác
+# HHP|do-dung-gia-dinh|Đồ dùng gia đình & lưu trữ|box
+Hộp & kệ lưu trữ|Thùng lưu trữ;Tủ nhựa ngăn kéo;Hộp đồ trẻ em;Kệ lưu trữ;Xe đẩy đa năng;Kệ để giày;Hộp trưng bày mô hình;Kệ & giá đỡ;Hộp đựng mỹ phẩm;Hộp đựng văn phòng phẩm;Giá để ô;Tấm phủ
+Dụng cụ phơi đồ|Giá phơi đồ;Móc áo;Giá phơi treo;Kẹp phơi đồ;Dụng cụ phơi khác
+Sắp xếp quần áo|Kệ quần áo & phụ kiện;Giá treo đồ;Túi treo quần áo;Giỏ đựng đồ;Hộp đựng quần áo;Móc treo
+Giấy vệ sinh & khăn giấy|Khăn ướt;Khăn giấy rút;Khăn giấy hộp;Khăn giấy nhà bếp
+Thùng rác & túi rác|Thùng rác trong nhà;Túi rác;Hộp đựng túi rác
+Dụng cụ vệ sinh|Lưới lọc bụi;Bộ dụng cụ vệ sinh;Bộ chổi;Khăn lau đa năng;Xô;Phụ tùng bàn chải;Mút & miếng chà;Giá mút kèm bình xà phòng;Dụng cụ lau kính;Kệ để dụng cụ vệ sinh;Cây lăn bụi;Máy chà sàn;Găng tay & tất;Dụng cụ thông tắc
+Chất tẩy rửa gia dụng|Nước lau sàn;Nước tẩy bồn cầu;Chất thông cống;Nước rửa chén;Nước tẩy rửa đa năng;Cồn;Nước rửa tay;Nước rửa rau quả;Nước lau kính;Chất vệ sinh đồ gỗ;Chất vệ sinh thiết bị;Khử mùi thú cưng;Bộ quà tặng chất tẩy rửa
+Giặt giũ|Bột giặt;Nước giặt;Thuốc tẩy;Nước xả vải;Hồ vải;Bàn để ủi;Túi giặt
+Khử mùi & hút ẩm|Xịt thơm phòng;Hộp hút ẩm;Khử mùi không khí;Máy khuếch tán tinh dầu
+Diệt côn trùng|Thuốc diệt côn trùng;Diệt chuột & sâu bọ;Thiết bị diệt côn trùng;Thiết bị chống chim
+Du lịch|Túi mua sắm & túi tote;Ba lô;Khóa vali;Túi sắp xếp đồ;Phụ kiện du lịch;Ô & áo mưa
+Vật liệu đóng gói|Máy in nhãn;Thùng carton;Màng co;Phong bì;Dây buộc;Máy hàn miệng túi;Vật liệu đóng gói khác;Máy quét mã vạch
+Văn phòng phẩm|Máy hủy giấy;Tẩy & bút xóa;Kẹp giấy;Máy tính cầm tay;Bìa hồ sơ;Sổ tay;Giấy;Bút chì & chì màu;Bút & bút dạ;Thước kẻ;Dao rọc giấy;Con dấu;Dập ghim & bấm lỗ;Băng keo;Màu nước;Giấy photo;Máy in nhãn;Bảng trắng;Lịch;Gọt bút chì;Nhãn dán
+Đồ cúng dường|Đồ dùng cho chư tăng
+Máy may & phụ kiện|Máy may
+# BAT|phong-tam|Phòng tắm|bath
+Bồn cầu|Bồn cầu một khối;Bồn cầu cảm ứng;Bồn cầu có vòi rửa;Bồn cầu thông minh;Bồn cầu xả dội;Bồn cầu di động;Bồn cầu xổm;Bồn cầu ngồi
+Chậu rửa lavabo|Lavabo treo tường;Lavabo đặt bàn;Chân lavabo;Lavabo âm bàn;Lavabo dương vành;Lavabo liền bàn
+Cabin tắm|Cabin tắm kính;Khay tắm;Gờ chắn nước;Gioăng cabin tắm
+Bồn tắm|Bồn tắm;Bồn tắm massage
+Bồn tiểu|Bồn tiểu nam;Bồn rửa vệ sinh;Vách ngăn bồn tiểu
+Vòi nước|Vòi lavabo;Vòi lavabo cảm ứng;Vòi rửa chén;Vòi rửa chén cảm ứng;Vòi bồn tắm;Vòi sen trộn;Vòi gắn tường
+Sen tắm|Lõi lọc sen tắm;Sen tắm cây;Tay sen;Thanh trượt;Bát sen;Sen tắm dạng tấm;Bát sen rời
+Van & van khóa|Van sen;Van khóa âm tường;Van khóa
+Vòi xịt vệ sinh|Bộ vòi xịt;Đầu vòi xịt
+Phụ kiện phòng tắm|Kệ xà phòng;Kệ sắp xếp phòng tắm;Giá treo phòng tắm;Hộp giấy vệ sinh & phụ kiện;Ghế tắm;Thảm phòng tắm;Bộ phụ kiện phòng tắm;Phụ kiện khác;Ghế kê chân toilet;Tay vịn an toàn
+Gương|Gương trơn;Gương khung gỗ;Gương họa tiết;Gương mờ;Gương có kệ;Gương trang trí;Gương soi toàn thân;Gương vát cạnh;Gương trang điểm;Gương đèn LED;Gương khung nhựa
+Đồ phòng tắm may đo|Cabin tắm may đo;Gương may đo
+Rèm phòng tắm|Rèm tắm;Thanh treo & phụ kiện rèm
+Phụ tùng phòng tắm|Nắp bồn cầu nhựa;Bộ xả lavabo;Phụ kiện két nước;Dây sen;Phụ tùng vòi;Dây cấp nước inox;Van xả;Phụ kiện nắp bồn cầu
+Khăn tắm & áo choàng|Khăn tay;Khăn quấn tóc;Khăn tắm;Áo choàng tắm
+Chất tẩy rửa phòng tắm|
+# PLU|ong-nuoc|Hệ thống nước|pipe
+Máy nước nóng|Bình nước nóng;Máy nước nóng 4.500W;Máy nước nóng 5.500W
+Máy lọc nước|Máy lọc nước uống;Máy lọc nước sinh hoạt;Lõi lọc thay thế;Phụ tùng máy lọc nước;Phụ kiện máy lọc nước
+Cây nước nóng lạnh|Cây nước có lọc;Cây nước không lọc;Cây nước thương mại;Phụ kiện cây nước;Phụ kiện vòi nước uống
+Máy bơm nước|Máy bơm tăng áp;Máy bơm đa tầng;Máy bơm chìm nước thải;Máy bơm ly tâm;Máy bơm giếng;Máy bơm đẩy cao;Máy bơm cấp nước;Phụ kiện máy bơm
+Bồn chứa & xử lý nước thải|Bồn nước nhựa kèm bơm;Bồn nước composite;Bồn nước inox;Phụ kiện bồn nước;Bể tách mỡ;Bể tự hoại nhựa;Bể tự hoại composite;Bồn 1.000–1.499 lít;Nắp bể tự hoại;Nút thông tắc
+Ống & phụ kiện|Ống & phụ kiện khác;Ống nhựa PVC;Co nối;Kẹp ống;Keo dán ống;Đai siết;Máy hàn ống;Băng tan
+Thoát sàn|Thoát sàn chống mùi;Rãnh thoát nước;Ga thoát sàn
+Van nước|Vòi nước;Van bi mini;Van bi;Van một chiều;Van cổng;Van khóa;Đồng hồ nước;Van đáy
+Keo & phụ kiện ống nước|
+# KIT|nha-bep|Nhà bếp|pan
+Thiết bị nhà bếp|Bộ thiết bị bếp;Máy rửa & sấy chén;Lò nướng & phụ kiện;Bếp âm;Máy hút mùi;Bếp đứng;Bếp gas;Bếp điện;Máy xử lý rác thải;Lò vi sóng âm tủ;Máy pha cà phê âm tủ;Phụ kiện thiết bị bếp
+Chậu rửa chén & phụ kiện|Chậu đa năng âm bàn;Chậu inox có chân;Chậu inox âm bàn;Chậu inox vuông âm bàn;Chậu đá granite;Chậu inox mặt kính;Chậu sứ âm bàn;Chậu inox lắp dưới;Chậu granite lắp dưới;Bộ xả chậu rửa
+Tủ bếp|Cánh tủ;Tủ treo;Phụ kiện tủ;Tủ dưới;Giá kệ tủ;Tủ chạn
+Bếp mini|Bếp mini gỗ;Bếp mini inox;Bếp mini nhôm
+Dụng cụ nấu nướng|Bộ nồi chảo;Dao bếp;Sạn & muôi;Dụng cụ làm bánh;Đồ dùng lò vi sóng;Khăn lau tay;Dụng cụ nấu khác
+Bộ đồ ăn|Đĩa;Cốc ly;Hộp khăn giấy;Bộ dụng cụ ăn;Khăn trải bàn;Lót ly;Đồ ăn khác
+Lưu trữ nhà bếp|Giá úp chén nhôm;Giá để ly;Kệ bếp;Hộp sắp xếp tủ lạnh;Giỏ nhà bếp;Thanh treo bếp;Khay đựng dụng cụ;Giá cắm dao;Giá treo giấy;Giỏ đựng trái cây;Lưu trữ khác
+Hộp đựng thực phẩm|Hộp đựng thực phẩm;Thìa & nĩa;Giấy bạc;Màng bọc thực phẩm
+Bình nước & thùng giữ nhiệt|Bình giữ nhiệt;Bình nước;Bình rót;Khay đá;Xô đá;Hũ đựng;Thùng giữ nhiệt;Bơm bình nước
+Chất tẩy rửa nhà bếp|
+Máy lọc nước nhà bếp|Máy lọc nước uống;Máy lọc nước sinh hoạt
+# FLO|san-tuong|Gạch & sàn|tile
+Gạch ốp lát|Gạch lát nền;Gạch ốp tường;Đá nhân tạo;Gạch granito;Đá sa thạch nhân tạo;Đá tự nhiên
+Sàn nhựa vinyl|Sàn vinyl không keo;Sàn vinyl có keo;Sàn vinyl hèm khóa;Thảm sàn vinyl;Keo dán sàn
+Sàn gỗ|Sàn gỗ kỹ thuật;Sàn gỗ Kempas
+Sàn gỗ công nghiệp & SPC|Sàn gỗ công nghiệp;Nẹp kết thúc sàn;Sàn vinyl;Sàn SPC;Phụ kiện sàn
+Trang trí sàn & tường|Gạch thẻ trang trí;Tấm ốp tường;Nẹp inox;Len chân tường;Nẹp góc nhôm;Nẹp mũi bậc nhôm;Tấm ốp PVC, PS
+Gạch mosaic|Gạch mosaic
+Gạch kính|Gạch kính
+Keo dán & keo chà ron|Keo dán gạch gốc xi măng;Keo chà ron
+Dụng cụ lát sàn|Chất vệ sinh sàn;Ke cân gạch;Máy cắt gạch
+Chất vệ sinh sàn|
+Băng dính chống trơn|Băng dính chống trơn
+# CON|vat-lieu|Vật liệu xây dựng|brick
+Thép|Thép lanh tô;Song chắn rác;Thép tròn;Thép hộp vuông;Dây kẽm buộc
+Xi măng|Vữa xây tô;Xi măng trộn sẵn;Xi măng Portland;Vữa trám khe
+Gạch xây|Gạch block;Gạch nhẹ
+Tấm thạch cao|Tấm ốp tường;Thanh C;Tấm trần thả;Tấm thạch cao;Nắp thăm trần
+Vật liệu cách nhiệt|Cách âm;Bông thủy tinh;Bông khoáng;Mút PE cách nhiệt;Túi khí cách nhiệt;Tấm phản nhiệt
+Mái lợp|Mái che tự lắp;Tấm polycarbonate;Phụ kiện máng xối PVC;Tấm Future Board;Tấm lấy sáng;Phụ kiện bắt mái;Đinh mũ lớn;Ngói fibro xi măng;Ngói bê tông;Ngói úp nóc;Tôn;Mái nhựa;Quả cầu thông gió;Ngói gốm;Khung mái
+Tấm trang trí|Hàng rào che;Tấm lát sàn;Phào trần;Tấm ốp ngoài;Thanh lam;Hàng rào;Tấm ốp trang trí;Len tường;Diềm mái;Ván ốp chồng;Cầu thang;Ván ép;Nẹp kết thúc
+Nhà xe lắp ghép|Mái nhựa;Mái polycarbonate đặc
+Cốt liệu xây dựng|Nhựa đường;Đá cát
+Gạch lát vỉa hè|Tấm đan;Bó vỉa;Gạch con sâu;Bê tông dập khuôn
+Giàn giáo|
+Bê tông đúc sẵn|
+Cốp pha|Cốp pha nhựa
+Hóa chất xây dựng|Băng keo nhôm;Keo acrylic;Bột trét;Vữa rót;Chất kết nối;Keo dán thay đinh;Keo xịt;Mỡ bôi trơn;Hóa chất khác
+Lưới & dây|Lưới nhựa;Dây thừng;Cáp thép;Ròng rọc;Bánh xe cổng
+# TOO|dung-cu|Dụng cụ & phụ kiện|tools
+Dụng cụ điện|Mũi khoan & khoét lỗ;Pin & phụ kiện máy pin;Máy rửa áp lực & phụ kiện;Máy thổi;Máy mài & phụ kiện;Máy cưa & phụ kiện;Máy cắt & phụ kiện;Máy chà nhám & phụ kiện;Máy bào & phụ kiện;Máy đục bê tông;Máy khoan pin;Máy phun sơn điện
+Thang|Thang chữ A 7–8 bậc;Thang ghế sợi thủy tinh;Thang đa năng;Thang ghế thép 4 bậc;Thang thẳng;Thang giàn giáo;Phụ kiện thang
+Xe đẩy & thiết bị vận chuyển|Xe đẩy đa năng;Xe nâng tay;Xe đẩy;Xe đẩy sàn nhựa;Xe đẩy gấp gọn;Xe đẩy công nghiệp;Tủ đồ nghề di động;Xe rùa;Thiết bị cứu hộ;Xe đẩy rau củ
+Dụng cụ cầm tay|Máy đo laser;Bộ dụng cụ cầm tay;Kìm tuốt dây;Bút thử điện;Cờ lê;Chậu trộn vữa;Búa cao su;Kẹp chữ C;Giấy nhám;Cưa tay;Dao;Bộ tuýp;Xà beng;Rìu;Khoan tay;Dụng cụ đa năng;Cân
+Hộp & tủ đồ nghề|Kệ & thiết bị lưu trữ;Hộp đồ nghề;Hộp linh kiện có nắp;Thùng công nghiệp;Tủ đồ nghề;Túi đồ nghề
+Hàn & hàn thiếc|Phụ kiện hàn;Mỏ hàn thiếc
+Dụng cụ xây dựng|Máy đầm;Máy trộn bê tông;Máy đầm dùi;Máy trộn vữa;Máy xoa nền;Thước cán bê tông;Tời;Máy uốn sắt
+Dụng cụ khí nén & máy nén khí|Súng phun sơn;Máy nén khí không dây;Súng bắn đinh;Súng siết bu lông;Máy chà nhám khí nén;Phụ kiện khí nén;Máy mài khuôn
+Động cơ & máy phát điện|Sạc bình ắc quy;Động cơ xăng;Máy phát điện;Mô tơ điện;Máy bơm động cơ
+Đồ bảo hộ|Camera an ninh;Dụng cụ giao thông;Mũ bảo hộ
+Vật tư lắp máy lạnh|Ống gió;Gas lạnh;Ống đồng;Ống đồng bọc bảo ôn;Băng quấn ống;Chân đỡ dàn nóng;Mô tơ quạt;Vật tư khác
+Ốc vít & đinh|Vít tự khoan;Tắc kê nhựa;Ty ren;Đinh gỗ
+# LIG|den|Đèn & bóng đèn|bulb
+Bóng đèn|Bóng đèn ngắn;Bóng đèn dài;Bóng đèn kiểu mới;Dây đèn LED;Bóng đèn trang trí;Bóng đèn tròn;Bóng đèn nến;Bóng compact;Bóng đèn LED
+Đèn tuýp|Máng đèn;Bộ đèn tuýp LED;Đèn LED chống nước;Máng đèn chống nước
+Đèn năng lượng mặt trời|Đèn gắn tường;Đèn tường;Đèn trụ;Đèn trụ thấp;Đèn cột;Đèn đường;Đèn pha;Đèn trang trí sân vườn;Đèn thả;Đèn ốp trần;Đèn máng
+Đèn ngoài trời|Đèn pha ngoài trời;Đèn sân vườn;Đèn đường;Đèn trụ thấp;Đèn trang trí sân vườn;Đèn cột;Đèn gắn tường ngoài trời;Đèn tường ngoài trời;Đèn thả
+Đèn âm trần downlight|Đèn âm trần;Đèn LED âm trần;Đèn ốp nổi;Đèn LED ốp nổi;Đèn halogen âm trần;Đèn halogen LED âm trần
+Đèn văn phòng|Đèn LED panel;Máng đèn
+Đèn trong nhà|Đèn ốp trần;Đèn ray;Quạt trần đèn;Đèn chùm;Máng đèn trần;Đèn rọi trong nhà;Đèn gắn tường trong nhà
+Đèn nhà xưởng|Đèn UFO nhà xưởng;Đèn chóa nhà xưởng
+Đèn bàn & đèn cây|Đèn học;Thiết bị chiếu sáng studio;Đèn bàn;Đèn cây
+Phụ kiện đèn|Dụng cụ thay bóng;Chấn lưu;Tắc te;Đui đèn
+# DOW|cua|Cửa & cửa sổ|door
+Cửa & khung cửa|Cửa nhựa tổng hợp;Khung cửa nhựa & UPVC;Cửa cỡ lớn;Cửa cho thú cưng
+Cửa nhôm & UPVC|Cửa nhôm mở quay;Cửa UPVC trượt;Cửa sổ nhôm trượt;Cửa sổ UPVC mở quay;Ô kính nhôm;Ô kính UPVC;Thanh trang trí UPVC
+Phụ kiện khóa cửa|Khóa đa năng;Núm cửa;Tay nắm cửa;Hộp đựng chìa khóa;Tay co thủy lực & bản lề;Bộ ổ khóa;Chốt cửa phòng tắm;Khóa chốt;Phụ tùng khóa;Chặn cửa
+Cửa sổ & khung|Ô thông gió;Cánh cửa sổ gỗ;Khung cửa sổ gỗ;Cửa sổ trượt
+Phụ kiện cửa|Ron chống côn trùng;Lưới chống muỗi;Song sắt chống trộm;Phụ kiện lưới;Dụng cụ vệ sinh kính
+Cửa may đo|Cửa nhôm may đo;Cửa UPVC may đo;Cửa & khung gỗ may đo
+# ELT|an-ninh|Điện & an ninh|shield
+Ổ cắm kéo dài & phích chuyển|Thanh ray ổ cắm;Ổ cắm cuộn;Ổ cắm kéo dài;Phích chuyển
+Aptomat & tủ điện|Đồng hồ & bảng điện;Aptomat chống giật;Tủ điện trống;Cầu chì;Tủ phân phối;Tủ điện chống nước;Cầu dao
+Dây điện|Dây điện THW;Dây điện THW-A;Dây điện VAF;Dây điện VAF-GRD;Dây điện NYY;Dây điện VCT;Dây điện thiết bị
+Điện mặt trời|Bộ điện mặt trời hòa lưới;Bộ điện mặt trời độc lập;Tấm pin mặt trời;Thiết bị lắp đặt điện mặt trời;Phụ kiện lắp đặt;Cáp điện mặt trời
+Thiết bị dự phòng điện|Trạm sạc di động;Bộ lưu điện UPS
+Sạc xe điện|Bộ sạc xe điện & phụ kiện
+Pin|Pin khô;Pin alkaline;Pin;Bộ sạc pin;Pin cúc áo;Pin sạc;Pin remote
+Đèn khẩn cấp & đèn pin|Đèn khẩn cấp;Đèn pin;Đèn làm việc;Đèn ngủ
+Ổ cắm & công tắc|Phích cắm;Bộ ổ cắm;Công tắc hẹn giờ;Mặt chống nước
+Phụ kiện điện|Thiết bị an toàn;Bảng điện;Nút nhấn
+Ống luồn & phụ kiện|Ống luồn cứng;Máng điện;Hộp điện;Hộp nối;Đầu nối;Kẹp ống;Lò xo uốn ống;Ống luồn khác;Ống luồn mềm
+Vật tư điện|Băng keo điện;Đồng hồ đo điện;Dây rút;Ống xoắn bọc dây;Kẹp dây;Đầu nối dây
+Chuông cửa|Chuông cửa không dây;Chuông cửa có dây
+# OUT|san-vuon|Ngoài trời & sân vườn|leaf
+Nhà kho ngoài trời|Nhà lắp ghép;Kho nhựa ngoài trời;Tủ nhựa ngoài trời
+Nội thất ngoài trời|Bộ bàn ghế sân vườn;Bàn sân vườn;Ghế sân vườn;Ghế thư giãn;Xích đu;Ghế băng;Giường thư giãn;Sofa ngoài trời;Bàn ghế ngoài trời;Dù sân vườn
+Bàn ghế dã ngoại|Bàn ghế sự kiện;Bàn ghế dã ngoại
+Bàn ghế nhựa|Bàn nhựa;Ghế nhựa
+Nhà bạt & dù che|Nhà bạt;Dù che nắng
+Bếp nướng BBQ|Bếp nướng gas;Bếp nướng điện;Bếp nướng than;Than;Phụ kiện BBQ
+Dã ngoại & cắm trại|Lều;Túi ngủ;Ghế cắm trại;Đèn dầu;Dụng cụ cắm trại;Dao xếp;Dụng cụ nấu ăn dã ngoại
+Vui chơi ngoài trời|Bể bơi trẻ em;Phao bơi;Phao nổi
+Trang trí sân vườn|Cây giả;Sàn gỗ ngoài trời;Hộp thư;Chậu cây & phụ kiện;Cỏ nhân tạo;Hàng rào gỗ;Kệ để cây;Tượng sân vườn;Đài phun nước;Bể cá;Đá trang trí
+Máy làm vườn|Máy thổi lá;Máy cắt cỏ điện;Máy cắt cỏ pin;Máy tỉa hàng rào;Máy cưa xích pin;Máy xới đất;Phụ kiện máy làm vườn;Máy cắt cỏ cầm tay
+Dụng cụ làm vườn|Kéo tỉa cây;Nhà kính;Drone nông nghiệp & phụ kiện;Bình phun;Màng phủ nông nghiệp;Bạt & lưới;Dụng cụ làm vườn khác;Cuốc;Xẻng
+Tưới cây|Cuộn ống tưới;Hẹn giờ tưới;Súng phun nước;Khớp nối ống;Bình tưới;Van đáy
+Hạt giống & vật tư trồng cây|Hạt giống;Giá thể trồng cây;Phân bón;Chế phẩm vi sinh;Xử lý nước
+Thuốc trừ sâu|Thuốc diệt côn trùng
+# SPO|the-thao|Thể thao & thể hình|ball
+Máy tập thể hình|Máy chạy bộ;Máy tập elip;Máy đi bộ trên không;Xe đạp tập;Máy tập tạ;Máy chèo thuyền
+Dụng cụ tập|Tạ tự do;Dụng cụ tập bụng;Xà đơn xà kép;Máy kéo giãn;Yoga & Pilates;Bạt nhún;Máy tập chân;Dây nhảy;Máy tập vai
+Dụng cụ thể thao|Thuyền & phụ kiện;Bao cát;Cầu lông;Bóng bàn;Cầu mây;Bóng chuyền;Dụng cụ huấn luyện;Phi tiêu;Mặt nạ;Đĩa ném;Bida
+Quần áo thể thao|Áo bra thể thao;Áo xông hơi;Áo crop;Quần legging;Phụ kiện tập
+Phụ kiện thể thao|Móc khóa & thẻ treo túi;Túi tập gym
+Đồng hồ thông minh|Đồng hồ thông minh;Sạc đồng hồ
+Thực phẩm bổ sung|Whey protein;Bình lắc protein
+Xe máy|Phụ kiện xe máy
+Xe điện|Xe trượt điện;Xe đạp điện;Xe điện một bánh
+Xe đạp|Xe đạp đường phố;Xe đạp gấp;Xe đạp địa hình;Xe đạp bánh béo;Mũ bảo hiểm xe đạp;Bơm xe;Yên & phụ kiện xe đạp;Máy tập đạp xe
+# HEA|suc-khoe|Sức khỏe|health
+Máy đo sức khỏe|Máy đo huyết áp;Nhiệt kế;Máy đo oxy;Máy đo đường huyết;Bộ test cholesterol;Bộ test nhanh kháng nguyên;Que thử thai;Cân sức khỏe;Máy đo nồng độ cồn
+Dụng cụ hỗ trợ di chuyển|Xe lăn;Khung tập đi có bánh;Khung tập đi;Gậy chống;Phụ kiện xe lăn;Xe lăn đẩy tay
+Giường y tế & phụ kiện|Giường y tế;Nệm;Nệm hơi;Đệm sưởi;Tấm chuyển bệnh nhân;Phụ tùng giường
+An toàn phòng tắm|Ghế bô vệ sinh
+Tã người lớn|Tã người lớn;Tấm lót;Ga trải giường;Khăn ướt
+Gói khám sức khỏe|Gói khám sức khỏe
+Thực phẩm chức năng|Vitamin;Vitamin cho trẻ;Thực phẩm bổ sung;Thực phẩm y tế
+Thuốc không kê đơn|Thuốc long đờm;Thuốc bôi giảm đau, côn trùng cắn
+Thiết bị cấp cứu|Máy khử rung tim AED;Máy theo dõi sinh hiệu;Thiết bị cấp cứu khác
+Dụng cụ sơ cứu|Bông;Gạc;Túi chườm nóng lạnh;Hộp sơ cứu;Khác
+Đai hỗ trợ|Đai hỗ trợ
+Thiết bị y tế khác|Máy xông khí dung;Máy trợ thính;Máy tạo oxy;Máy hút đờm;Hộp chia thuốc;Túi chườm nóng;Tủ thuốc;Xe đạp tập mini;Quà tặng sức khỏe;Sản phẩm hỗ trợ giấc ngủ;Kính mắt
+Đồ uống chức năng|Nước khoáng;Nước vitamin
+# MOM|me-be|Mẹ & bé|baby
+An toàn cho bé|Ghế ô tô;Xe đẩy;Thảm chơi;Địu & ba lô;Máy báo khóc;Thiết bị an toàn;Phụ kiện xe đẩy;Phụ kiện ghế ô tô;Phụ kiện địu;Quây cũi
+Đồ dùng thiết yếu|Máy tiệt trùng;Máy hâm sữa;Máy xay đồ ăn dặm;Bình sữa & núm ti;Khăn ướt;Dụng cụ rửa bình;Tã bỉm;Thay tã;Đồ vệ sinh cho bé;Túi cho bé
+Tắm & chăm sóc bé|Nước giặt cho bé;Nước xả cho bé;Sữa tắm & xà phòng;Chăm sóc da;Nước lau bề mặt;Bàn chải & kem đánh răng;Phấn rôm;Chống muỗi;Bông tròn & tăm bông;Cồn
+Nệm & chăn ga trẻ em|Nôi & đồ chơi treo nôi;Nệm em bé;Gối trẻ em;Chăn & khăn quấn;Gối bầu;Màn chống muỗi;Vỏ gối;Ga trải giường;Hộp nhạc
+Đồ ăn dặm|Bộ chén ăn;Khay chia ngăn;Thìa đũa cho bé;Cốc uống nước;Hộp trữ đồ ăn;Yếm ăn;Ghế ăn dặm
+Phụ kiện cho bé|Cân em bé;Lược & tông đơ;Dụng cụ hút mũi;Chăm sóc móng
+Sản phẩm cho mẹ|Máy hút sữa;Máy nghe tim thai;Áo choàng cho con bú;Phụ kiện cho con bú;Đai bầu;Massage ngực;Miếng lót thấm sữa;Túi trữ sữa;Túi giữ nhiệt;Túi cho mẹ;Phụ kiện máy hút sữa;Túi zip;Thực phẩm bổ sung cho mẹ
+Đồ chơi|Kệ chơi;Xếp hình;Đồ chơi mỹ thuật;Đồ chơi giáo dục;Búp bê;Bể bơi phao;Phao bơi;Đồ chơi ngoài trời;Bảng trắng
+Quần áo trẻ em|Đồ bơi trẻ em;Găng tay & tất;Thời trang trẻ em
+Xe cho bé|Xe ô tô cho bé;Xe trượt;Xe chòi chân;Xe thăng bằng;Xe đạp địa hình
+Sữa & đồ ăn cho bé|Vitamin cho bé;Bánh ăn dặm;Thực phẩm cho bé
+Quà tặng mẹ & bé|Quà tặng cho bé;Quà tặng mẹ & bé khác
+# PET|thu-cung|Thú cưng|pet
+Thức ăn thú cưng|Hạt khô cho chó;Pate cho chó;Hạt khô cho mèo;Pate cho mèo;Thức ăn cho chim;Thức ăn thú nhỏ;Sữa cho thú cưng;Thức ăn cho cá
+Bánh thưởng|Bánh thưởng cho chó;Bánh thưởng cho mèo;Súp thưởng cho mèo;Xương gặm sạch răng;Bánh thưởng thú nhỏ
+Đồ dùng thú cưng|Túi & lồng vận chuyển;Bát ăn;Thảm chống trơn;Đồ dùng đa năng;Đồ chơi;Quần áo & phụ kiện;Vòng cổ & dây dắt;Bể cá;Nhà cho thú cưng
+Cát & vệ sinh|Tấm lót & tã;Cát vệ sinh mèo;Túi nhặt phân;Khay vệ sinh mèo;Xịt huấn luyện đi vệ sinh
+Chăm sóc thú cưng|Khăn ướt;Khử mùi & tẩy vết bẩn;Vệ sinh tai, mắt, miệng;Phòng ve rận;Vitamin
+Tắm & cắt tỉa|Sữa tắm & dầu xả;Máy sấy & tông đơ;Vòi tắm
+# BED|phong-ngu|Phòng ngủ & chăn ga|bed
+Nệm|Nệm may đo;Giường gấp & điều chỉnh;Đế nệm;Tấm topper;Nệm hơi;Giường dã ngoại;Nệm
+Chăn ga gối|Tấm bảo vệ nệm;Bộ chăn ga;Ga trải giường;Ga bọc topper;Chăn;Chăn bông;Vỏ chăn;Chăn chần;Vỏ gối;Vỏ gối ôm;Vỏ gối dài
+Gối & gối ôm|Gối ngủ;Gối sức khỏe;Gối ôm;Gối dài;Gối trẻ em
+Phụ kiện giường ngủ|Tấm phủ giường;Thanh chắn & dây giữ ga;Gối tựa đầu giường
+Dép đi trong nhà|Dép đi trong nhà

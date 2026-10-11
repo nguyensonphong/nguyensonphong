@@ -1,0 +1,6716 @@
+[
+ {
+  "code": "APP",
+  "handle": "dien-may",
+  "title": "Điện máy",
+  "icon": "ac",
+  "subs": [
+   {
+    "title": "Máy lạnh",
+    "handle": "may-lanh",
+    "l3": [
+     {
+      "title": "Máy lạnh treo tường",
+      "tag": "may-lanh-treo-tuong"
+     },
+     {
+      "title": "Máy lạnh áp trần, treo sàn",
+      "tag": "may-lanh-ap-tran-treo-san"
+     },
+     {
+      "title": "Máy lạnh di động",
+      "tag": "may-lanh-di-dong"
+     },
+     {
+      "title": "Máy lạnh âm trần cassette",
+      "tag": "may-lanh-am-tran-cassette"
+     },
+     {
+      "title": "Máy lạnh tủ đứng",
+      "tag": "may-lanh-tu-dung"
+     }
+    ]
+   },
+   {
+    "title": "Máy giặt & máy sấy",
+    "handle": "may-giat-may-say",
+    "l3": [
+     {
+      "title": "Máy giặt cửa trước",
+      "tag": "may-giat-cua-truoc"
+     },
+     {
+      "title": "Máy giặt cửa trên",
+      "tag": "may-giat-cua-tren"
+     },
+     {
+      "title": "Máy giặt 2 lồng",
+      "tag": "may-giat-2-long"
+     },
+     {
+      "title": "Máy giặt sấy 2 trong 1",
+      "tag": "may-giat-say-2-trong-1"
+     },
+     {
+      "title": "Máy sấy cửa trước",
+      "tag": "may-say-cua-truoc"
+     },
+     {
+      "title": "Tháp giặt sấy",
+      "tag": "thap-giat-say"
+     },
+     {
+      "title": "Tủ chăm sóc quần áo",
+      "tag": "tu-cham-soc-quan-ao"
+     },
+     {
+      "title": "Phụ kiện máy giặt",
+      "tag": "phu-kien-may-giat"
+     }
+    ]
+   },
+   {
+    "title": "Tủ lạnh",
+    "handle": "tu-lanh",
+    "l3": [
+     {
+      "title": "Tủ lạnh 1 cửa",
+      "tag": "tu-lanh-1-cua"
+     },
+     {
+      "title": "Tủ lạnh 2 cửa",
+      "tag": "tu-lanh-2-cua"
+     },
+     {
+      "title": "Tủ lạnh Side by Side",
+      "tag": "tu-lanh-side-by-side"
+     },
+     {
+      "title": "Tủ lạnh nhiều cửa",
+      "tag": "tu-lanh-nhieu-cua"
+     },
+     {
+      "title": "Tủ lạnh âm tủ",
+      "tag": "tu-lanh-am-tu"
+     },
+     {
+      "title": "Bóng đèn tủ lạnh",
+      "tag": "bong-den-tu-lanh"
+     }
+    ]
+   },
+   {
+    "title": "Tủ rượu",
+    "handle": "tu-ruou",
+    "l3": [
+     {
+      "title": "Tủ bảo quản rượu vang",
+      "tag": "tu-bao-quan-ruou-vang"
+     },
+     {
+      "title": "Máy làm lạnh rượu",
+      "tag": "may-lam-lanh-ruou"
+     }
+    ]
+   },
+   {
+    "title": "Tủ đông",
+    "handle": "tu-dong",
+    "l3": []
+   },
+   {
+    "title": "Tủ mát",
+    "handle": "tu-mat",
+    "l3": []
+   },
+   {
+    "title": "Tủ trưng bày bánh & tủ lạnh mini",
+    "handle": "tu-trung-bay-banh-tu-lanh-mini",
+    "l3": []
+   },
+   {
+    "title": "Quạt điện",
+    "handle": "quat-dien",
+    "l3": [
+     {
+      "title": "Quạt bàn",
+      "tag": "quat-ban"
+     },
+     {
+      "title": "Quạt đứng",
+      "tag": "quat-dung"
+     },
+     {
+      "title": "Quạt treo tường",
+      "tag": "quat-treo-tuong"
+     },
+     {
+      "title": "Quạt tháp",
+      "tag": "quat-thap"
+     },
+     {
+      "title": "Quạt trần",
+      "tag": "quat-tran"
+     },
+     {
+      "title": "Quạt lửng",
+      "tag": "quat-lung"
+     },
+     {
+      "title": "Quạt hút",
+      "tag": "quat-hut"
+     },
+     {
+      "title": "Quạt công nghiệp",
+      "tag": "quat-cong-nghiep"
+     },
+     {
+      "title": "Quạt điều hòa hơi nước",
+      "tag": "quat-dieu-hoa-hoi-nuoc"
+     },
+     {
+      "title": "Quạt cầm tay",
+      "tag": "quat-cam-tay"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "SMA",
+  "handle": "gia-dung",
+  "title": "Đồ gia dụng nhỏ",
+  "icon": "pot",
+  "subs": [
+   {
+    "title": "Lò vi sóng & lò nướng",
+    "handle": "lo-vi-song-lo-nuong",
+    "l3": [
+     {
+      "title": "Lò nướng mini",
+      "tag": "lo-nuong-mini"
+     },
+     {
+      "title": "Lò vi sóng hâm nóng",
+      "tag": "lo-vi-song-ham-nong"
+     },
+     {
+      "title": "Lò vi sóng có nướng",
+      "tag": "lo-vi-song-co-nuong"
+     },
+     {
+      "title": "Lò vi sóng đối lưu",
+      "tag": "lo-vi-song-doi-luu"
+     },
+     {
+      "title": "Lò vi sóng hơi nước",
+      "tag": "lo-vi-song-hoi-nuoc"
+     },
+     {
+      "title": "Máy sấy thực phẩm",
+      "tag": "may-say-thuc-pham"
+     }
+    ]
+   },
+   {
+    "title": "Nồi cơm điện",
+    "handle": "noi-com-dien",
+    "l3": [
+     {
+      "title": "Nồi cơm điện tử",
+      "tag": "noi-com-dien-tu"
+     },
+     {
+      "title": "Nồi cơm cơ",
+      "tag": "noi-com-co"
+     },
+     {
+      "title": "Nồi cơm ủ ấm",
+      "tag": "noi-com-u-am"
+     }
+    ]
+   },
+   {
+    "title": "Máy pha cà phê & trà",
+    "handle": "may-pha-ca-phe-tra",
+    "l3": [
+     {
+      "title": "Máy pha cà phê tự động",
+      "tag": "may-pha-ca-phe-tu-dong"
+     },
+     {
+      "title": "Máy pha cà phê viên nén",
+      "tag": "may-pha-ca-phe-vien-nen"
+     },
+     {
+      "title": "Máy pha espresso",
+      "tag": "may-pha-espresso"
+     },
+     {
+      "title": "Máy pha cà phê nhỏ giọt",
+      "tag": "may-pha-ca-phe-nho-giot"
+     },
+     {
+      "title": "Máy xay cà phê",
+      "tag": "may-xay-ca-phe"
+     },
+     {
+      "title": "Máy đánh sữa",
+      "tag": "may-danh-sua"
+     },
+     {
+      "title": "Viên nén cà phê",
+      "tag": "vien-nen-ca-phe"
+     },
+     {
+      "title": "Cà phê hạt rang",
+      "tag": "ca-phe-hat-rang"
+     },
+     {
+      "title": "Nguyên liệu pha chế",
+      "tag": "nguyen-lieu-pha-che"
+     },
+     {
+      "title": "Ấm Moka",
+      "tag": "am-moka"
+     },
+     {
+      "title": "Dụng cụ pha cà phê",
+      "tag": "dung-cu-pha-ca-phe"
+     },
+     {
+      "title": "Hộp đựng viên nén",
+      "tag": "hop-dung-vien-nen"
+     },
+     {
+      "title": "Máy hâm đồ uống",
+      "tag": "may-ham-do-uong"
+     },
+     {
+      "title": "Bộ máy pha cà phê",
+      "tag": "bo-may-pha-ca-phe"
+     }
+    ]
+   },
+   {
+    "title": "Nồi & bếp điện",
+    "handle": "noi-bep-dien",
+    "l3": [
+     {
+      "title": "Nồi chiên",
+      "tag": "noi-chien"
+     },
+     {
+      "title": "Bếp từ",
+      "tag": "bep-tu"
+     },
+     {
+      "title": "Bếp nướng điện",
+      "tag": "bep-nuong-dien"
+     },
+     {
+      "title": "Chảo điện",
+      "tag": "chao-dien"
+     },
+     {
+      "title": "Nồi lẩu đa năng",
+      "tag": "noi-lau-da-nang"
+     },
+     {
+      "title": "Nồi chiên không dầu",
+      "tag": "noi-chien-khong-dau"
+     },
+     {
+      "title": "Nồi hấp",
+      "tag": "noi-hap"
+     },
+     {
+      "title": "Nồi nấu chậm",
+      "tag": "noi-nau-cham"
+     }
+    ]
+   },
+   {
+    "title": "Quạt",
+    "handle": "quat",
+    "l3": [
+     {
+      "title": "Quạt phun sương",
+      "tag": "quat-phun-suong"
+     },
+     {
+      "title": "Quạt lửng",
+      "tag": "quat-lung"
+     },
+     {
+      "title": "Quạt đứng",
+      "tag": "quat-dung"
+     },
+     {
+      "title": "Quạt bàn",
+      "tag": "quat-ban"
+     },
+     {
+      "title": "Quạt treo tường",
+      "tag": "quat-treo-tuong"
+     },
+     {
+      "title": "Quạt công nghiệp",
+      "tag": "quat-cong-nghiep"
+     },
+     {
+      "title": "Quạt trần",
+      "tag": "quat-tran"
+     },
+     {
+      "title": "Quạt cầm tay",
+      "tag": "quat-cam-tay"
+     },
+     {
+      "title": "Quạt tháp",
+      "tag": "quat-thap"
+     },
+     {
+      "title": "Quạt trang trí",
+      "tag": "quat-trang-tri"
+     },
+     {
+      "title": "Quạt không dây",
+      "tag": "quat-khong-day"
+     },
+     {
+      "title": "Quạt năng lượng mặt trời",
+      "tag": "quat-nang-luong-mat-troi"
+     },
+     {
+      "title": "Cánh quạt thay thế",
+      "tag": "canh-quat-thay-the"
+     }
+    ]
+   },
+   {
+    "title": "Máy lọc không khí",
+    "handle": "may-loc-khong-khi",
+    "l3": [
+     {
+      "title": "Máy hút ẩm",
+      "tag": "may-hut-am"
+     },
+     {
+      "title": "Máy cấp khí tươi",
+      "tag": "may-cap-khi-tuoi"
+     },
+     {
+      "title": "Máy lọc không khí gia đình",
+      "tag": "may-loc-khong-khi-gia-dinh"
+     },
+     {
+      "title": "Máy lọc không khí để bàn",
+      "tag": "may-loc-khong-khi-de-ban"
+     },
+     {
+      "title": "Máy lọc không khí ô tô",
+      "tag": "may-loc-khong-khi-o-to"
+     },
+     {
+      "title": "Máy lọc không khí mini",
+      "tag": "may-loc-khong-khi-mini"
+     },
+     {
+      "title": "Máy tạo ẩm",
+      "tag": "may-tao-am"
+     },
+     {
+      "title": "Đèn diệt khuẩn UV",
+      "tag": "den-diet-khuan-uv"
+     },
+     {
+      "title": "Máy tạo ozone",
+      "tag": "may-tao-ozone"
+     },
+     {
+      "title": "Màng lọc không khí",
+      "tag": "mang-loc-khong-khi"
+     }
+    ]
+   },
+   {
+    "title": "Máy hút bụi",
+    "handle": "may-hut-bui",
+    "l3": [
+     {
+      "title": "Máy hút bụi cầm tay dạng cây",
+      "tag": "may-hut-bui-cam-tay-dang-cay"
+     },
+     {
+      "title": "Máy hút bụi cây không dây",
+      "tag": "may-hut-bui-cay-khong-day"
+     },
+     {
+      "title": "Máy hút bụi không túi",
+      "tag": "may-hut-bui-khong-tui"
+     },
+     {
+      "title": "Robot hút bụi",
+      "tag": "robot-hut-bui"
+     },
+     {
+      "title": "Máy hút bụi khô và ướt",
+      "tag": "may-hut-bui-kho-va-uot"
+     },
+     {
+      "title": "Máy hút bụi mini",
+      "tag": "may-hut-bui-mini"
+     },
+     {
+      "title": "Máy hút bụi có túi",
+      "tag": "may-hut-bui-co-tui"
+     },
+     {
+      "title": "Máy giặt thảm, tẩy vết bẩn",
+      "tag": "may-giat-tham-tay-vet-ban"
+     },
+     {
+      "title": "Máy hút bụi diệt khuẩn UV",
+      "tag": "may-hut-bui-diet-khuan-uv"
+     },
+     {
+      "title": "Máy hút bụi công nghiệp",
+      "tag": "may-hut-bui-cong-nghiep"
+     },
+     {
+      "title": "Máy vệ sinh hơi nước",
+      "tag": "may-ve-sinh-hoi-nuoc"
+     },
+     {
+      "title": "Phụ kiện máy hút bụi",
+      "tag": "phu-kien-may-hut-bui"
+     }
+    ]
+   },
+   {
+    "title": "Máy xay & máy ép",
+    "handle": "may-xay-may-ep",
+    "l3": [
+     {
+      "title": "Máy xay sinh tố",
+      "tag": "may-xay-sinh-to"
+     },
+     {
+      "title": "Máy xay công suất lớn",
+      "tag": "may-xay-cong-suat-lon"
+     },
+     {
+      "title": "Máy xay cầm tay",
+      "tag": "may-xay-cam-tay"
+     },
+     {
+      "title": "Máy ép trái cây",
+      "tag": "may-ep-trai-cay"
+     },
+     {
+      "title": "Máy ép chậm",
+      "tag": "may-ep-cham"
+     },
+     {
+      "title": "Máy vắt cam",
+      "tag": "may-vat-cam"
+     },
+     {
+      "title": "Máy làm sữa hạt",
+      "tag": "may-lam-sua-hat"
+     },
+     {
+      "title": "Máy làm đá bào",
+      "tag": "may-lam-da-bao"
+     },
+     {
+      "title": "Máy làm soda",
+      "tag": "may-lam-soda"
+     }
+    ]
+   },
+   {
+    "title": "Máy chế biến thực phẩm",
+    "handle": "may-che-bien-thuc-pham",
+    "l3": [
+     {
+      "title": "Máy trộn bột",
+      "tag": "may-tron-bot"
+     },
+     {
+      "title": "Máy chế biến đa năng",
+      "tag": "may-che-bien-da-nang"
+     },
+     {
+      "title": "Máy xay thịt",
+      "tag": "may-xay-thit"
+     }
+    ]
+   },
+   {
+    "title": "Máy làm đá",
+    "handle": "may-lam-da",
+    "l3": [
+     {
+      "title": "Máy làm đá",
+      "tag": "may-lam-da"
+     }
+    ]
+   },
+   {
+    "title": "Máy nướng bánh mì & sandwich",
+    "handle": "may-nuong-banh-mi-sandwich",
+    "l3": [
+     {
+      "title": "Máy làm sandwich",
+      "tag": "may-lam-sandwich"
+     },
+     {
+      "title": "Máy nướng bánh mì",
+      "tag": "may-nuong-banh-mi"
+     },
+     {
+      "title": "Máy làm bánh waffle",
+      "tag": "may-lam-banh-waffle"
+     }
+    ]
+   },
+   {
+    "title": "Đồ gia dụng khác",
+    "handle": "do-gia-dung-khac",
+    "l3": [
+     {
+      "title": "Máy làm bánh mì",
+      "tag": "may-lam-banh-mi"
+     },
+     {
+      "title": "Máy làm kem",
+      "tag": "may-lam-kem"
+     },
+     {
+      "title": "Máy hấp trứng",
+      "tag": "may-hap-trung"
+     },
+     {
+      "title": "Nồi áp suất",
+      "tag": "noi-ap-suat"
+     },
+     {
+      "title": "Máy làm takoyaki",
+      "tag": "may-lam-takoyaki"
+     },
+     {
+      "title": "Máy làm sữa chua",
+      "tag": "may-lam-sua-chua"
+     },
+     {
+      "title": "Máy làm bánh donut",
+      "tag": "may-lam-banh-donut"
+     },
+     {
+      "title": "Bộ đồ gia dụng",
+      "tag": "bo-do-gia-dung"
+     },
+     {
+      "title": "Máy hút chân không",
+      "tag": "may-hut-chan-khong"
+     },
+     {
+      "title": "Phụ kiện",
+      "tag": "phu-kien"
+     }
+    ]
+   },
+   {
+    "title": "Bàn ủi & bàn là hơi nước",
+    "handle": "ban-ui-ban-la-hoi-nuoc",
+    "l3": [
+     {
+      "title": "Bàn ủi hơi nước có bình",
+      "tag": "ban-ui-hoi-nuoc-co-binh"
+     },
+     {
+      "title": "Bàn là hơi nước đứng",
+      "tag": "ban-la-hoi-nuoc-dung"
+     },
+     {
+      "title": "Bàn ủi hơi nước",
+      "tag": "ban-ui-hoi-nuoc"
+     },
+     {
+      "title": "Bàn ủi du lịch",
+      "tag": "ban-ui-du-lich"
+     },
+     {
+      "title": "Bàn ủi khô",
+      "tag": "ban-ui-kho"
+     }
+    ]
+   },
+   {
+    "title": "Máy sấy tóc & tạo kiểu",
+    "handle": "may-say-toc-tao-kieu",
+    "l3": []
+   },
+   {
+    "title": "Quạt thông gió",
+    "handle": "quat-thong-gio",
+    "l3": [
+     {
+      "title": "Quạt hút âm trần",
+      "tag": "quat-hut-am-tran"
+     },
+     {
+      "title": "Quạt hút gắn tường",
+      "tag": "quat-hut-gan-tuong"
+     },
+     {
+      "title": "Quạt hút gắn kính",
+      "tag": "quat-hut-gan-kinh"
+     },
+     {
+      "title": "Máy thổi",
+      "tag": "may-thoi"
+     }
+    ]
+   },
+   {
+    "title": "Ấm siêu tốc & bình thủy điện",
+    "handle": "am-sieu-toc-binh-thuy-dien",
+    "l3": [
+     {
+      "title": "Bình thủy điện tử",
+      "tag": "binh-thuy-dien-tu"
+     },
+     {
+      "title": "Bình thủy điện cơ",
+      "tag": "binh-thuy-dien-co"
+     },
+     {
+      "title": "Ấm siêu tốc",
+      "tag": "am-sieu-toc"
+     },
+     {
+      "title": "Nồi đun nước",
+      "tag": "noi-dun-nuoc"
+     },
+     {
+      "title": "Ấm đun du lịch",
+      "tag": "am-dun-du-lich"
+     }
+    ]
+   },
+   {
+    "title": "Máy sưởi",
+    "handle": "may-suoi",
+    "l3": [
+     {
+      "title": "Máy sưởi",
+      "tag": "may-suoi"
+     }
+    ]
+   },
+   {
+    "title": "Thiết bị kinh doanh",
+    "handle": "thiet-bi-kinh-doanh",
+    "l3": [
+     {
+      "title": "Máy thái thực phẩm",
+      "tag": "may-thai-thuc-pham"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "FUR",
+  "handle": "noi-that",
+  "title": "Nội thất & trang trí",
+  "icon": "sofa",
+  "subs": [
+   {
+    "title": "Nội thất phòng ngủ",
+    "handle": "noi-that-phong-ngu",
+    "l3": [
+     {
+      "title": "Bộ phòng ngủ",
+      "tag": "bo-phong-ngu"
+     },
+     {
+      "title": "Giường",
+      "tag": "giuong"
+     },
+     {
+      "title": "Tủ đầu giường",
+      "tag": "tu-dau-giuong"
+     },
+     {
+      "title": "Tủ quần áo gỗ",
+      "tag": "tu-quan-ao-go"
+     },
+     {
+      "title": "Bàn trang điểm",
+      "tag": "ban-trang-diem"
+     },
+     {
+      "title": "Gương",
+      "tag": "guong"
+     }
+    ]
+   },
+   {
+    "title": "Nội thất phòng khách",
+    "handle": "noi-that-phong-khach",
+    "l3": [
+     {
+      "title": "Kệ tivi",
+      "tag": "ke-tivi"
+     },
+     {
+      "title": "Ghế đôn",
+      "tag": "ghe-don"
+     },
+     {
+      "title": "Ghế thư giãn",
+      "tag": "ghe-thu-gian"
+     },
+     {
+      "title": "Ghế ngả lưng",
+      "tag": "ghe-nga-lung"
+     },
+     {
+      "title": "Thiết bị massage",
+      "tag": "thiet-bi-massage"
+     },
+     {
+      "title": "Sofa",
+      "tag": "sofa"
+     },
+     {
+      "title": "Bàn góc",
+      "tag": "ban-goc"
+     },
+     {
+      "title": "Bàn trà",
+      "tag": "ban-tra"
+     },
+     {
+      "title": "Bộ phòng khách",
+      "tag": "bo-phong-khach"
+     }
+    ]
+   },
+   {
+    "title": "Gối tựa & nệm ngồi",
+    "handle": "goi-tua-nem-ngoi",
+    "l3": [
+     {
+      "title": "Ghế lười",
+      "tag": "ghe-luoi"
+     },
+     {
+      "title": "Nệm lót ghế",
+      "tag": "nem-lot-ghe"
+     },
+     {
+      "title": "Gối kê cổ",
+      "tag": "goi-ke-co"
+     },
+     {
+      "title": "Gối tựa lưng",
+      "tag": "goi-tua-lung"
+     },
+     {
+      "title": "Gối sức khỏe",
+      "tag": "goi-suc-khoe"
+     },
+     {
+      "title": "Gối kê chân",
+      "tag": "goi-ke-chan"
+     }
+    ]
+   },
+   {
+    "title": "Nội thất phòng ăn",
+    "handle": "noi-that-phong-an",
+    "l3": [
+     {
+      "title": "Quầy bar",
+      "tag": "quay-bar"
+     },
+     {
+      "title": "Bộ bàn ăn",
+      "tag": "bo-ban-an"
+     },
+     {
+      "title": "Bàn ăn",
+      "tag": "ban-an"
+     },
+     {
+      "title": "Ghế ăn",
+      "tag": "ghe-an"
+     },
+     {
+      "title": "Bàn bar",
+      "tag": "ban-bar"
+     },
+     {
+      "title": "Ghế bar",
+      "tag": "ghe-bar"
+     },
+     {
+      "title": "Bàn console",
+      "tag": "ban-console"
+     }
+    ]
+   },
+   {
+    "title": "Tủ & kệ lưu trữ",
+    "handle": "tu-ke-luu-tru",
+    "l3": [
+     {
+      "title": "Tủ treo tường",
+      "tag": "tu-treo-tuong"
+     },
+     {
+      "title": "Tủ trưng bày",
+      "tag": "tu-trung-bay"
+     },
+     {
+      "title": "Kệ",
+      "tag": "ke"
+     },
+     {
+      "title": "Tủ giày",
+      "tag": "tu-giay"
+     },
+     {
+      "title": "Tủ locker",
+      "tag": "tu-locker"
+     },
+     {
+      "title": "Tủ ngăn kéo",
+      "tag": "tu-ngan-keo"
+     },
+     {
+      "title": "Tủ thấp",
+      "tag": "tu-thap"
+     },
+     {
+      "title": "Tủ cao",
+      "tag": "tu-cao"
+     }
+    ]
+   },
+   {
+    "title": "Bàn thờ",
+    "handle": "ban-tho",
+    "l3": [
+     {
+      "title": "Tủ, kệ bàn thờ Phật",
+      "tag": "tu-ke-ban-tho-phat"
+     },
+     {
+      "title": "Miếu thờ",
+      "tag": "mieu-tho"
+     }
+    ]
+   },
+   {
+    "title": "Bàn ghế đa năng",
+    "handle": "ban-ghe-da-nang",
+    "l3": [
+     {
+      "title": "Bàn đa năng",
+      "tag": "ban-da-nang"
+     },
+     {
+      "title": "Ghế đa năng",
+      "tag": "ghe-da-nang"
+     }
+    ]
+   },
+   {
+    "title": "Nội thất văn phòng",
+    "handle": "noi-that-van-phong",
+    "l3": [
+     {
+      "title": "Phụ kiện ghế & kê chân",
+      "tag": "phu-kien-ghe-ke-chan"
+     },
+     {
+      "title": "Ghế khách",
+      "tag": "ghe-khach"
+     },
+     {
+      "title": "Két sắt",
+      "tag": "ket-sat"
+     },
+     {
+      "title": "Tủ hồ sơ",
+      "tag": "tu-ho-so"
+     },
+     {
+      "title": "Bộ nội thất văn phòng",
+      "tag": "bo-noi-that-van-phong"
+     },
+     {
+      "title": "Bàn máy tính",
+      "tag": "ban-may-tinh"
+     },
+     {
+      "title": "Bàn gỗ",
+      "tag": "ban-go"
+     },
+     {
+      "title": "Ghế công thái học",
+      "tag": "ghe-cong-thai-hoc"
+     },
+     {
+      "title": "Tủ sách",
+      "tag": "tu-sach"
+     },
+     {
+      "title": "Phụ kiện bàn làm việc",
+      "tag": "phu-kien-ban-lam-viec"
+     }
+    ]
+   },
+   {
+    "title": "Nội thất gaming",
+    "handle": "noi-that-gaming",
+    "l3": [
+     {
+      "title": "Bàn gaming",
+      "tag": "ban-gaming"
+     },
+     {
+      "title": "Ghế gaming",
+      "tag": "ghe-gaming"
+     }
+    ]
+   },
+   {
+    "title": "Buồng làm việc văn phòng",
+    "handle": "buong-lam-viec-van-phong",
+    "l3": [
+     {
+      "title": "Phòng họp mini",
+      "tag": "phong-hop-mini"
+     }
+    ]
+   },
+   {
+    "title": "Nội thất trẻ em",
+    "handle": "noi-that-tre-em",
+    "l3": [
+     {
+      "title": "Giường trẻ em",
+      "tag": "giuong-tre-em"
+     },
+     {
+      "title": "Tủ quần áo trẻ em",
+      "tag": "tu-quan-ao-tre-em"
+     },
+     {
+      "title": "Tủ trẻ em",
+      "tag": "tu-tre-em"
+     },
+     {
+      "title": "Kệ trẻ em",
+      "tag": "ke-tre-em"
+     },
+     {
+      "title": "Bàn học trẻ em",
+      "tag": "ban-hoc-tre-em"
+     },
+     {
+      "title": "Ghế trẻ em",
+      "tag": "ghe-tre-em"
+     },
+     {
+      "title": "Bàn trẻ em",
+      "tag": "ban-tre-em"
+     },
+     {
+      "title": "Ghế đẩu trẻ em",
+      "tag": "ghe-dau-tre-em"
+     },
+     {
+      "title": "Ghế ăn dặm",
+      "tag": "ghe-an-dam"
+     }
+    ]
+   },
+   {
+    "title": "Rèm cửa & mành",
+    "handle": "rem-cua-manh",
+    "l3": [
+     {
+      "title": "Rèm cửa đi",
+      "tag": "rem-cua-di"
+     },
+     {
+      "title": "Rèm cửa sổ",
+      "tag": "rem-cua-so"
+     },
+     {
+      "title": "Rèm may đo",
+      "tag": "rem-may-do"
+     },
+     {
+      "title": "Thanh treo rèm",
+      "tag": "thanh-treo-rem"
+     },
+     {
+      "title": "Mành sáo",
+      "tag": "manh-sao"
+     },
+     {
+      "title": "Rèm chống muỗi",
+      "tag": "rem-chong-muoi"
+     }
+    ]
+   },
+   {
+    "title": "Vách ngăn",
+    "handle": "vach-ngan",
+    "l3": [
+     {
+      "title": "Vách ngăn",
+      "tag": "vach-ngan"
+     },
+     {
+      "title": "Vách ngăn phòng",
+      "tag": "vach-ngan-phong"
+     },
+     {
+      "title": "Vách ngăn may đo",
+      "tag": "vach-ngan-may-do"
+     },
+     {
+      "title": "Vách ngăn văn phòng",
+      "tag": "vach-ngan-van-phong"
+     }
+    ]
+   },
+   {
+    "title": "Giấy dán tường & decal",
+    "handle": "giay-dan-tuong-decal",
+    "l3": [
+     {
+      "title": "Phim dán trang trí",
+      "tag": "phim-dan-trang-tri"
+     },
+     {
+      "title": "Decal",
+      "tag": "decal"
+     },
+     {
+      "title": "Decal cắt theo mét",
+      "tag": "decal-cat-theo-met"
+     },
+     {
+      "title": "Giấy dán tường",
+      "tag": "giay-dan-tuong"
+     }
+    ]
+   },
+   {
+    "title": "Đồ trang trí nhà",
+    "handle": "do-trang-tri-nha",
+    "l3": [
+     {
+      "title": "Khung ảnh",
+      "tag": "khung-anh"
+     },
+     {
+      "title": "Trang trí tường",
+      "tag": "trang-tri-tuong"
+     },
+     {
+      "title": "Đồ trang trí theo mùa",
+      "tag": "do-trang-tri-theo-mua"
+     },
+     {
+      "title": "Đồng hồ treo tường",
+      "tag": "dong-ho-treo-tuong"
+     },
+     {
+      "title": "Lò sưởi điện",
+      "tag": "lo-suoi-dien"
+     },
+     {
+      "title": "Đồ decor",
+      "tag": "do-decor"
+     },
+     {
+      "title": "Quà tặng lễ tết",
+      "tag": "qua-tang-le-tet"
+     }
+    ]
+   },
+   {
+    "title": "Thảm",
+    "handle": "tham",
+    "l3": [
+     {
+      "title": "Thảm êm chân",
+      "tag": "tham-em-chan"
+     },
+     {
+      "title": "Thảm nhỏ",
+      "tag": "tham-nho"
+     },
+     {
+      "title": "Thảm lớn",
+      "tag": "tham-lon"
+     },
+     {
+      "title": "Thảm đa năng",
+      "tag": "tham-da-nang"
+     },
+     {
+      "title": "Thảm cắt theo mét",
+      "tag": "tham-cat-theo-met"
+     },
+     {
+      "title": "Thảm khăn",
+      "tag": "tham-khan"
+     },
+     {
+      "title": "Thảm trong nhà",
+      "tag": "tham-trong-nha"
+     }
+    ]
+   },
+   {
+    "title": "Thảm chùi chân",
+    "handle": "tham-chui-chan",
+    "l3": [
+     {
+      "title": "Thảm chống bụi",
+      "tag": "tham-chong-bui"
+     },
+     {
+      "title": "Thảm cửa",
+      "tag": "tham-cua"
+     },
+     {
+      "title": "Thảm ngoài trời cắt theo mét",
+      "tag": "tham-ngoai-troi-cat-theo-met"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện nội thất",
+    "handle": "phu-kien-noi-that",
+    "l3": [
+     {
+      "title": "Bánh xe",
+      "tag": "banh-xe"
+     },
+     {
+      "title": "Bi trượt",
+      "tag": "bi-truot"
+     },
+     {
+      "title": "Ray trượt ngăn kéo",
+      "tag": "ray-truot-ngan-keo"
+     },
+     {
+      "title": "Tay nắm & núm",
+      "tag": "tay-nam-num"
+     },
+     {
+      "title": "Thanh treo tủ áo",
+      "tag": "thanh-treo-tu-ao"
+     },
+     {
+      "title": "Bản lề",
+      "tag": "ban-le"
+     },
+     {
+      "title": "Phụ tùng nội thất khác",
+      "tag": "phu-tung-noi-that-khac"
+     },
+     {
+      "title": "Miếng đệm chống va",
+      "tag": "mieng-dem-chong-va"
+     },
+     {
+      "title": "Áo phủ nội thất",
+      "tag": "ao-phu-noi-that"
+     }
+    ]
+   },
+   {
+    "title": "Biển hiệu",
+    "handle": "bien-hieu",
+    "l3": [
+     {
+      "title": "Biển báo",
+      "tag": "bien-bao"
+     },
+     {
+      "title": "Chữ",
+      "tag": "chu"
+     },
+     {
+      "title": "Bảng tên",
+      "tag": "bang-ten"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "TVA",
+  "handle": "tivi",
+  "title": "Tivi, âm thanh & game",
+  "icon": "tv",
+  "subs": [
+   {
+    "title": "Tivi",
+    "handle": "tivi-man-hinh",
+    "l3": [
+     {
+      "title": "Tivi lifestyle",
+      "tag": "tivi-lifestyle"
+     },
+     {
+      "title": "Tivi Mini RGB",
+      "tag": "tivi-mini-rgb"
+     },
+     {
+      "title": "Tivi LED",
+      "tag": "tivi-led"
+     },
+     {
+      "title": "Tivi OLED",
+      "tag": "tivi-oled"
+     },
+     {
+      "title": "Tivi QLED",
+      "tag": "tivi-qled"
+     },
+     {
+      "title": "Tivi Neo QLED",
+      "tag": "tivi-neo-qled"
+     },
+     {
+      "title": "Tivi QNED",
+      "tag": "tivi-qned"
+     },
+     {
+      "title": "Tivi Mini LED",
+      "tag": "tivi-mini-led"
+     },
+     {
+      "title": "Máy chiếu",
+      "tag": "may-chieu"
+     },
+     {
+      "title": "Gói dịch vụ truyền hình",
+      "tag": "goi-dich-vu-truyen-hinh"
+     }
+    ]
+   },
+   {
+    "title": "Game & thiết bị chơi game",
+    "handle": "game-thiet-bi-choi-game",
+    "l3": [
+     {
+      "title": "PlayStation",
+      "tag": "playstation"
+     },
+     {
+      "title": "Máy & phụ kiện Nintendo",
+      "tag": "may-phu-kien-nintendo"
+     },
+     {
+      "title": "XBOX",
+      "tag": "xbox"
+     },
+     {
+      "title": "Ghế lái mô phỏng",
+      "tag": "ghe-lai-mo-phong"
+     }
+    ]
+   },
+   {
+    "title": "Loa thanh",
+    "handle": "loa-thanh",
+    "l3": [
+     {
+      "title": "Loa thanh đơn",
+      "tag": "loa-thanh-don"
+     },
+     {
+      "title": "Loa thanh kèm loa trầm",
+      "tag": "loa-thanh-kem-loa-tram"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện tivi",
+    "handle": "phu-kien-tivi",
+    "l3": [
+     {
+      "title": "Chân tivi",
+      "tag": "chan-tivi"
+     },
+     {
+      "title": "Giá treo tivi",
+      "tag": "gia-treo-tivi"
+     },
+     {
+      "title": "Dung dịch vệ sinh màn hình",
+      "tag": "dung-dich-ve-sinh-man-hinh"
+     }
+    ]
+   },
+   {
+    "title": "Loa",
+    "handle": "loa",
+    "l3": [
+     {
+      "title": "Loa kéo",
+      "tag": "loa-keo"
+     },
+     {
+      "title": "Loa mini",
+      "tag": "loa-mini"
+     },
+     {
+      "title": "Loa gia đình",
+      "tag": "loa-gia-dinh"
+     }
+    ]
+   },
+   {
+    "title": "Giải trí tại gia",
+    "handle": "giai-tri-tai-gia",
+    "l3": [
+     {
+      "title": "Loa xem phim",
+      "tag": "loa-xem-phim"
+     },
+     {
+      "title": "Dàn xem phim",
+      "tag": "dan-xem-phim"
+     },
+     {
+      "title": "Loa siêu trầm",
+      "tag": "loa-sieu-tram"
+     },
+     {
+      "title": "Amply",
+      "tag": "amply"
+     },
+     {
+      "title": "Chân loa",
+      "tag": "chan-loa"
+     },
+     {
+      "title": "Dàn âm thanh gia đình",
+      "tag": "dan-am-thanh-gia-dinh"
+     },
+     {
+      "title": "Loa bluetooth",
+      "tag": "loa-bluetooth"
+     }
+    ]
+   },
+   {
+    "title": "Tai nghe",
+    "handle": "tai-nghe",
+    "l3": [
+     {
+      "title": "Tai nghe chụp tai",
+      "tag": "tai-nghe-chup-tai"
+     },
+     {
+      "title": "Tai nghe chụp tai không dây",
+      "tag": "tai-nghe-chup-tai-khong-day"
+     },
+     {
+      "title": "Tai nghe nhét tai",
+      "tag": "tai-nghe-nhet-tai"
+     },
+     {
+      "title": "Tai nghe nhét tai không dây",
+      "tag": "tai-nghe-nhet-tai-khong-day"
+     }
+    ]
+   },
+   {
+    "title": "Đầu thu & ăng-ten",
+    "handle": "dau-thu-ang-ten",
+    "l3": [
+     {
+      "title": "Đầu thu vệ tinh",
+      "tag": "dau-thu-ve-tinh"
+     },
+     {
+      "title": "Ăng-ten tivi",
+      "tag": "ang-ten-tivi"
+     }
+    ]
+   },
+   {
+    "title": "Dây cáp",
+    "handle": "day-cap",
+    "l3": [
+     {
+      "title": "Cáp HDMI",
+      "tag": "cap-hdmi"
+     },
+     {
+      "title": "Cáp âm thanh",
+      "tag": "cap-am-thanh"
+     },
+     {
+      "title": "Cáp AV",
+      "tag": "cap-av"
+     },
+     {
+      "title": "Cáp RF",
+      "tag": "cap-rf"
+     },
+     {
+      "title": "Cáp quang",
+      "tag": "cap-quang"
+     },
+     {
+      "title": "Cáp RCA",
+      "tag": "cap-rca"
+     },
+     {
+      "title": "Dây loa",
+      "tag": "day-loa"
+     },
+     {
+      "title": "Cáp mạng LAN",
+      "tag": "cap-mang-lan"
+     },
+     {
+      "title": "Dây điện thoại",
+      "tag": "day-dien-thoai"
+     }
+    ]
+   },
+   {
+    "title": "Đầu phát & ghi",
+    "handle": "dau-phat-ghi",
+    "l3": [
+     {
+      "title": "Mâm đĩa than",
+      "tag": "mam-dia-than"
+     },
+     {
+      "title": "Đầu CD, DVD, Blu-ray",
+      "tag": "dau-cd-dvd-blu-ray"
+     },
+     {
+      "title": "Đầu Blu-ray",
+      "tag": "dau-blu-ray"
+     },
+     {
+      "title": "Đầu DVD",
+      "tag": "dau-dvd"
+     }
+    ]
+   },
+   {
+    "title": "Micro",
+    "handle": "micro",
+    "l3": [
+     {
+      "title": "Micro có dây",
+      "tag": "micro-co-day"
+     },
+     {
+      "title": "Micro không dây",
+      "tag": "micro-khong-day"
+     }
+    ]
+   },
+   {
+    "title": "Hi-Fi & karaoke",
+    "handle": "hi-fi-karaoke",
+    "l3": [
+     {
+      "title": "Loa karaoke",
+      "tag": "loa-karaoke"
+     },
+     {
+      "title": "Amply tích hợp",
+      "tag": "amply-tich-hop"
+     },
+     {
+      "title": "Mixer công suất",
+      "tag": "mixer-cong-suat"
+     },
+     {
+      "title": "Dàn karaoke",
+      "tag": "dan-karaoke"
+     }
+    ]
+   },
+   {
+    "title": "Loa hội trường",
+    "handle": "loa-hoi-truong",
+    "l3": [
+     {
+      "title": "Loa chuyên nghiệp",
+      "tag": "loa-chuyen-nghiep"
+     },
+     {
+      "title": "Loa cột",
+      "tag": "loa-cot"
+     }
+    ]
+   },
+   {
+    "title": "Thiết bị DJ",
+    "handle": "thiet-bi-dj",
+    "l3": [
+     {
+      "title": "Bộ mixer DJ",
+      "tag": "bo-mixer-dj"
+     }
+    ]
+   },
+   {
+    "title": "Màn hình thương mại",
+    "handle": "man-hinh-thuong-mai",
+    "l3": [
+     {
+      "title": "Màn hình quảng cáo",
+      "tag": "man-hinh-quang-cao"
+     },
+     {
+      "title": "Màn hình cảm ứng tương tác",
+      "tag": "man-hinh-cam-ung-tuong-tac"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "HHP",
+  "handle": "do-dung-gia-dinh",
+  "title": "Đồ dùng gia đình & lưu trữ",
+  "icon": "box",
+  "subs": [
+   {
+    "title": "Hộp & kệ lưu trữ",
+    "handle": "hop-ke-luu-tru",
+    "l3": [
+     {
+      "title": "Thùng lưu trữ",
+      "tag": "thung-luu-tru"
+     },
+     {
+      "title": "Tủ nhựa ngăn kéo",
+      "tag": "tu-nhua-ngan-keo"
+     },
+     {
+      "title": "Hộp đồ trẻ em",
+      "tag": "hop-do-tre-em"
+     },
+     {
+      "title": "Kệ lưu trữ",
+      "tag": "ke-luu-tru"
+     },
+     {
+      "title": "Xe đẩy đa năng",
+      "tag": "xe-day-da-nang"
+     },
+     {
+      "title": "Kệ để giày",
+      "tag": "ke-de-giay"
+     },
+     {
+      "title": "Hộp trưng bày mô hình",
+      "tag": "hop-trung-bay-mo-hinh"
+     },
+     {
+      "title": "Kệ & giá đỡ",
+      "tag": "ke-gia-do"
+     },
+     {
+      "title": "Hộp đựng mỹ phẩm",
+      "tag": "hop-dung-my-pham"
+     },
+     {
+      "title": "Hộp đựng văn phòng phẩm",
+      "tag": "hop-dung-van-phong-pham"
+     },
+     {
+      "title": "Giá để ô",
+      "tag": "gia-de-o"
+     },
+     {
+      "title": "Tấm phủ",
+      "tag": "tam-phu"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ phơi đồ",
+    "handle": "dung-cu-phoi-do",
+    "l3": [
+     {
+      "title": "Giá phơi đồ",
+      "tag": "gia-phoi-do"
+     },
+     {
+      "title": "Móc áo",
+      "tag": "moc-ao"
+     },
+     {
+      "title": "Giá phơi treo",
+      "tag": "gia-phoi-treo"
+     },
+     {
+      "title": "Kẹp phơi đồ",
+      "tag": "kep-phoi-do"
+     },
+     {
+      "title": "Dụng cụ phơi khác",
+      "tag": "dung-cu-phoi-khac"
+     }
+    ]
+   },
+   {
+    "title": "Sắp xếp quần áo",
+    "handle": "sap-xep-quan-ao",
+    "l3": [
+     {
+      "title": "Kệ quần áo & phụ kiện",
+      "tag": "ke-quan-ao-phu-kien"
+     },
+     {
+      "title": "Giá treo đồ",
+      "tag": "gia-treo-do"
+     },
+     {
+      "title": "Túi treo quần áo",
+      "tag": "tui-treo-quan-ao"
+     },
+     {
+      "title": "Giỏ đựng đồ",
+      "tag": "gio-dung-do"
+     },
+     {
+      "title": "Hộp đựng quần áo",
+      "tag": "hop-dung-quan-ao"
+     },
+     {
+      "title": "Móc treo",
+      "tag": "moc-treo"
+     }
+    ]
+   },
+   {
+    "title": "Giấy vệ sinh & khăn giấy",
+    "handle": "giay-ve-sinh-khan-giay",
+    "l3": [
+     {
+      "title": "Khăn ướt",
+      "tag": "khan-uot"
+     },
+     {
+      "title": "Khăn giấy rút",
+      "tag": "khan-giay-rut"
+     },
+     {
+      "title": "Khăn giấy hộp",
+      "tag": "khan-giay-hop"
+     },
+     {
+      "title": "Khăn giấy nhà bếp",
+      "tag": "khan-giay-nha-bep"
+     }
+    ]
+   },
+   {
+    "title": "Thùng rác & túi rác",
+    "handle": "thung-rac-tui-rac",
+    "l3": [
+     {
+      "title": "Thùng rác trong nhà",
+      "tag": "thung-rac-trong-nha"
+     },
+     {
+      "title": "Túi rác",
+      "tag": "tui-rac"
+     },
+     {
+      "title": "Hộp đựng túi rác",
+      "tag": "hop-dung-tui-rac"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ vệ sinh",
+    "handle": "dung-cu-ve-sinh",
+    "l3": [
+     {
+      "title": "Lưới lọc bụi",
+      "tag": "luoi-loc-bui"
+     },
+     {
+      "title": "Bộ dụng cụ vệ sinh",
+      "tag": "bo-dung-cu-ve-sinh"
+     },
+     {
+      "title": "Bộ chổi",
+      "tag": "bo-choi"
+     },
+     {
+      "title": "Khăn lau đa năng",
+      "tag": "khan-lau-da-nang"
+     },
+     {
+      "title": "Xô",
+      "tag": "xo"
+     },
+     {
+      "title": "Phụ tùng bàn chải",
+      "tag": "phu-tung-ban-chai"
+     },
+     {
+      "title": "Mút & miếng chà",
+      "tag": "mut-mieng-cha"
+     },
+     {
+      "title": "Giá mút kèm bình xà phòng",
+      "tag": "gia-mut-kem-binh-xa-phong"
+     },
+     {
+      "title": "Dụng cụ lau kính",
+      "tag": "dung-cu-lau-kinh"
+     },
+     {
+      "title": "Kệ để dụng cụ vệ sinh",
+      "tag": "ke-de-dung-cu-ve-sinh"
+     },
+     {
+      "title": "Cây lăn bụi",
+      "tag": "cay-lan-bui"
+     },
+     {
+      "title": "Máy chà sàn",
+      "tag": "may-cha-san"
+     },
+     {
+      "title": "Găng tay & tất",
+      "tag": "gang-tay-tat"
+     },
+     {
+      "title": "Dụng cụ thông tắc",
+      "tag": "dung-cu-thong-tac"
+     }
+    ]
+   },
+   {
+    "title": "Chất tẩy rửa gia dụng",
+    "handle": "chat-tay-rua-gia-dung",
+    "l3": [
+     {
+      "title": "Nước lau sàn",
+      "tag": "nuoc-lau-san"
+     },
+     {
+      "title": "Nước tẩy bồn cầu",
+      "tag": "nuoc-tay-bon-cau"
+     },
+     {
+      "title": "Chất thông cống",
+      "tag": "chat-thong-cong"
+     },
+     {
+      "title": "Nước rửa chén",
+      "tag": "nuoc-rua-chen"
+     },
+     {
+      "title": "Nước tẩy rửa đa năng",
+      "tag": "nuoc-tay-rua-da-nang"
+     },
+     {
+      "title": "Cồn",
+      "tag": "con"
+     },
+     {
+      "title": "Nước rửa tay",
+      "tag": "nuoc-rua-tay"
+     },
+     {
+      "title": "Nước rửa rau quả",
+      "tag": "nuoc-rua-rau-qua"
+     },
+     {
+      "title": "Nước lau kính",
+      "tag": "nuoc-lau-kinh"
+     },
+     {
+      "title": "Chất vệ sinh đồ gỗ",
+      "tag": "chat-ve-sinh-do-go"
+     },
+     {
+      "title": "Chất vệ sinh thiết bị",
+      "tag": "chat-ve-sinh-thiet-bi"
+     },
+     {
+      "title": "Khử mùi thú cưng",
+      "tag": "khu-mui-thu-cung"
+     },
+     {
+      "title": "Bộ quà tặng chất tẩy rửa",
+      "tag": "bo-qua-tang-chat-tay-rua"
+     }
+    ]
+   },
+   {
+    "title": "Giặt giũ",
+    "handle": "giat-giu",
+    "l3": [
+     {
+      "title": "Bột giặt",
+      "tag": "bot-giat"
+     },
+     {
+      "title": "Nước giặt",
+      "tag": "nuoc-giat"
+     },
+     {
+      "title": "Thuốc tẩy",
+      "tag": "thuoc-tay"
+     },
+     {
+      "title": "Nước xả vải",
+      "tag": "nuoc-xa-vai"
+     },
+     {
+      "title": "Hồ vải",
+      "tag": "ho-vai"
+     },
+     {
+      "title": "Bàn để ủi",
+      "tag": "ban-de-ui"
+     },
+     {
+      "title": "Túi giặt",
+      "tag": "tui-giat"
+     }
+    ]
+   },
+   {
+    "title": "Khử mùi & hút ẩm",
+    "handle": "khu-mui-hut-am",
+    "l3": [
+     {
+      "title": "Xịt thơm phòng",
+      "tag": "xit-thom-phong"
+     },
+     {
+      "title": "Hộp hút ẩm",
+      "tag": "hop-hut-am"
+     },
+     {
+      "title": "Khử mùi không khí",
+      "tag": "khu-mui-khong-khi"
+     },
+     {
+      "title": "Máy khuếch tán tinh dầu",
+      "tag": "may-khuech-tan-tinh-dau"
+     }
+    ]
+   },
+   {
+    "title": "Diệt côn trùng",
+    "handle": "diet-con-trung",
+    "l3": [
+     {
+      "title": "Thuốc diệt côn trùng",
+      "tag": "thuoc-diet-con-trung"
+     },
+     {
+      "title": "Diệt chuột & sâu bọ",
+      "tag": "diet-chuot-sau-bo"
+     },
+     {
+      "title": "Thiết bị diệt côn trùng",
+      "tag": "thiet-bi-diet-con-trung"
+     },
+     {
+      "title": "Thiết bị chống chim",
+      "tag": "thiet-bi-chong-chim"
+     }
+    ]
+   },
+   {
+    "title": "Du lịch",
+    "handle": "du-lich",
+    "l3": [
+     {
+      "title": "Túi mua sắm & túi tote",
+      "tag": "tui-mua-sam-tui-tote"
+     },
+     {
+      "title": "Ba lô",
+      "tag": "ba-lo"
+     },
+     {
+      "title": "Khóa vali",
+      "tag": "khoa-vali"
+     },
+     {
+      "title": "Túi sắp xếp đồ",
+      "tag": "tui-sap-xep-do"
+     },
+     {
+      "title": "Phụ kiện du lịch",
+      "tag": "phu-kien-du-lich"
+     },
+     {
+      "title": "Ô & áo mưa",
+      "tag": "o-ao-mua"
+     }
+    ]
+   },
+   {
+    "title": "Vật liệu đóng gói",
+    "handle": "vat-lieu-dong-goi",
+    "l3": [
+     {
+      "title": "Máy in nhãn",
+      "tag": "may-in-nhan"
+     },
+     {
+      "title": "Thùng carton",
+      "tag": "thung-carton"
+     },
+     {
+      "title": "Màng co",
+      "tag": "mang-co"
+     },
+     {
+      "title": "Phong bì",
+      "tag": "phong-bi"
+     },
+     {
+      "title": "Dây buộc",
+      "tag": "day-buoc"
+     },
+     {
+      "title": "Máy hàn miệng túi",
+      "tag": "may-han-mieng-tui"
+     },
+     {
+      "title": "Vật liệu đóng gói khác",
+      "tag": "vat-lieu-dong-goi-khac"
+     },
+     {
+      "title": "Máy quét mã vạch",
+      "tag": "may-quet-ma-vach"
+     }
+    ]
+   },
+   {
+    "title": "Văn phòng phẩm",
+    "handle": "van-phong-pham",
+    "l3": [
+     {
+      "title": "Máy hủy giấy",
+      "tag": "may-huy-giay"
+     },
+     {
+      "title": "Tẩy & bút xóa",
+      "tag": "tay-but-xoa"
+     },
+     {
+      "title": "Kẹp giấy",
+      "tag": "kep-giay"
+     },
+     {
+      "title": "Máy tính cầm tay",
+      "tag": "may-tinh-cam-tay"
+     },
+     {
+      "title": "Bìa hồ sơ",
+      "tag": "bia-ho-so"
+     },
+     {
+      "title": "Sổ tay",
+      "tag": "so-tay"
+     },
+     {
+      "title": "Giấy",
+      "tag": "giay"
+     },
+     {
+      "title": "Bút chì & chì màu",
+      "tag": "but-chi-chi-mau"
+     },
+     {
+      "title": "Bút & bút dạ",
+      "tag": "but-but-da"
+     },
+     {
+      "title": "Thước kẻ",
+      "tag": "thuoc-ke"
+     },
+     {
+      "title": "Dao rọc giấy",
+      "tag": "dao-roc-giay"
+     },
+     {
+      "title": "Con dấu",
+      "tag": "con-dau"
+     },
+     {
+      "title": "Dập ghim & bấm lỗ",
+      "tag": "dap-ghim-bam-lo"
+     },
+     {
+      "title": "Băng keo",
+      "tag": "bang-keo"
+     },
+     {
+      "title": "Màu nước",
+      "tag": "mau-nuoc"
+     },
+     {
+      "title": "Giấy photo",
+      "tag": "giay-photo"
+     },
+     {
+      "title": "Máy in nhãn",
+      "tag": "may-in-nhan"
+     },
+     {
+      "title": "Bảng trắng",
+      "tag": "bang-trang"
+     },
+     {
+      "title": "Lịch",
+      "tag": "lich"
+     },
+     {
+      "title": "Gọt bút chì",
+      "tag": "got-but-chi"
+     },
+     {
+      "title": "Nhãn dán",
+      "tag": "nhan-dan"
+     }
+    ]
+   },
+   {
+    "title": "Đồ cúng dường",
+    "handle": "do-cung-duong",
+    "l3": [
+     {
+      "title": "Đồ dùng cho chư tăng",
+      "tag": "do-dung-cho-chu-tang"
+     }
+    ]
+   },
+   {
+    "title": "Máy may & phụ kiện",
+    "handle": "may-may-phu-kien",
+    "l3": [
+     {
+      "title": "Máy may",
+      "tag": "may-may"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "BAT",
+  "handle": "phong-tam",
+  "title": "Phòng tắm",
+  "icon": "bath",
+  "subs": [
+   {
+    "title": "Bồn cầu",
+    "handle": "bon-cau",
+    "l3": [
+     {
+      "title": "Bồn cầu một khối",
+      "tag": "bon-cau-mot-khoi"
+     },
+     {
+      "title": "Bồn cầu cảm ứng",
+      "tag": "bon-cau-cam-ung"
+     },
+     {
+      "title": "Bồn cầu có vòi rửa",
+      "tag": "bon-cau-co-voi-rua"
+     },
+     {
+      "title": "Bồn cầu thông minh",
+      "tag": "bon-cau-thong-minh"
+     },
+     {
+      "title": "Bồn cầu xả dội",
+      "tag": "bon-cau-xa-doi"
+     },
+     {
+      "title": "Bồn cầu di động",
+      "tag": "bon-cau-di-dong"
+     },
+     {
+      "title": "Bồn cầu xổm",
+      "tag": "bon-cau-xom"
+     },
+     {
+      "title": "Bồn cầu ngồi",
+      "tag": "bon-cau-ngoi"
+     }
+    ]
+   },
+   {
+    "title": "Chậu rửa lavabo",
+    "handle": "chau-rua-lavabo",
+    "l3": [
+     {
+      "title": "Lavabo treo tường",
+      "tag": "lavabo-treo-tuong"
+     },
+     {
+      "title": "Lavabo đặt bàn",
+      "tag": "lavabo-dat-ban"
+     },
+     {
+      "title": "Chân lavabo",
+      "tag": "chan-lavabo"
+     },
+     {
+      "title": "Lavabo âm bàn",
+      "tag": "lavabo-am-ban"
+     },
+     {
+      "title": "Lavabo dương vành",
+      "tag": "lavabo-duong-vanh"
+     },
+     {
+      "title": "Lavabo liền bàn",
+      "tag": "lavabo-lien-ban"
+     }
+    ]
+   },
+   {
+    "title": "Cabin tắm",
+    "handle": "cabin-tam",
+    "l3": [
+     {
+      "title": "Cabin tắm kính",
+      "tag": "cabin-tam-kinh"
+     },
+     {
+      "title": "Khay tắm",
+      "tag": "khay-tam"
+     },
+     {
+      "title": "Gờ chắn nước",
+      "tag": "go-chan-nuoc"
+     },
+     {
+      "title": "Gioăng cabin tắm",
+      "tag": "gioang-cabin-tam"
+     }
+    ]
+   },
+   {
+    "title": "Bồn tắm",
+    "handle": "bon-tam",
+    "l3": [
+     {
+      "title": "Bồn tắm",
+      "tag": "bon-tam"
+     },
+     {
+      "title": "Bồn tắm massage",
+      "tag": "bon-tam-massage"
+     }
+    ]
+   },
+   {
+    "title": "Bồn tiểu",
+    "handle": "bon-tieu",
+    "l3": [
+     {
+      "title": "Bồn tiểu nam",
+      "tag": "bon-tieu-nam"
+     },
+     {
+      "title": "Bồn rửa vệ sinh",
+      "tag": "bon-rua-ve-sinh"
+     },
+     {
+      "title": "Vách ngăn bồn tiểu",
+      "tag": "vach-ngan-bon-tieu"
+     }
+    ]
+   },
+   {
+    "title": "Vòi nước",
+    "handle": "voi-nuoc",
+    "l3": [
+     {
+      "title": "Vòi lavabo",
+      "tag": "voi-lavabo"
+     },
+     {
+      "title": "Vòi lavabo cảm ứng",
+      "tag": "voi-lavabo-cam-ung"
+     },
+     {
+      "title": "Vòi rửa chén",
+      "tag": "voi-rua-chen"
+     },
+     {
+      "title": "Vòi rửa chén cảm ứng",
+      "tag": "voi-rua-chen-cam-ung"
+     },
+     {
+      "title": "Vòi bồn tắm",
+      "tag": "voi-bon-tam"
+     },
+     {
+      "title": "Vòi sen trộn",
+      "tag": "voi-sen-tron"
+     },
+     {
+      "title": "Vòi gắn tường",
+      "tag": "voi-gan-tuong"
+     }
+    ]
+   },
+   {
+    "title": "Sen tắm",
+    "handle": "sen-tam",
+    "l3": [
+     {
+      "title": "Lõi lọc sen tắm",
+      "tag": "loi-loc-sen-tam"
+     },
+     {
+      "title": "Sen tắm cây",
+      "tag": "sen-tam-cay"
+     },
+     {
+      "title": "Tay sen",
+      "tag": "tay-sen"
+     },
+     {
+      "title": "Thanh trượt",
+      "tag": "thanh-truot"
+     },
+     {
+      "title": "Bát sen",
+      "tag": "bat-sen"
+     },
+     {
+      "title": "Sen tắm dạng tấm",
+      "tag": "sen-tam-dang-tam"
+     },
+     {
+      "title": "Bát sen rời",
+      "tag": "bat-sen-roi"
+     }
+    ]
+   },
+   {
+    "title": "Van & van khóa",
+    "handle": "van-van-khoa",
+    "l3": [
+     {
+      "title": "Van sen",
+      "tag": "van-sen"
+     },
+     {
+      "title": "Van khóa âm tường",
+      "tag": "van-khoa-am-tuong"
+     },
+     {
+      "title": "Van khóa",
+      "tag": "van-khoa"
+     }
+    ]
+   },
+   {
+    "title": "Vòi xịt vệ sinh",
+    "handle": "voi-xit-ve-sinh",
+    "l3": [
+     {
+      "title": "Bộ vòi xịt",
+      "tag": "bo-voi-xit"
+     },
+     {
+      "title": "Đầu vòi xịt",
+      "tag": "dau-voi-xit"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện phòng tắm",
+    "handle": "phu-kien-phong-tam",
+    "l3": [
+     {
+      "title": "Kệ xà phòng",
+      "tag": "ke-xa-phong"
+     },
+     {
+      "title": "Kệ sắp xếp phòng tắm",
+      "tag": "ke-sap-xep-phong-tam"
+     },
+     {
+      "title": "Giá treo phòng tắm",
+      "tag": "gia-treo-phong-tam"
+     },
+     {
+      "title": "Hộp giấy vệ sinh & phụ kiện",
+      "tag": "hop-giay-ve-sinh-phu-kien"
+     },
+     {
+      "title": "Ghế tắm",
+      "tag": "ghe-tam"
+     },
+     {
+      "title": "Thảm phòng tắm",
+      "tag": "tham-phong-tam"
+     },
+     {
+      "title": "Bộ phụ kiện phòng tắm",
+      "tag": "bo-phu-kien-phong-tam"
+     },
+     {
+      "title": "Phụ kiện khác",
+      "tag": "phu-kien-khac"
+     },
+     {
+      "title": "Ghế kê chân toilet",
+      "tag": "ghe-ke-chan-toilet"
+     },
+     {
+      "title": "Tay vịn an toàn",
+      "tag": "tay-vin-an-toan"
+     }
+    ]
+   },
+   {
+    "title": "Gương",
+    "handle": "guong",
+    "l3": [
+     {
+      "title": "Gương trơn",
+      "tag": "guong-tron"
+     },
+     {
+      "title": "Gương khung gỗ",
+      "tag": "guong-khung-go"
+     },
+     {
+      "title": "Gương họa tiết",
+      "tag": "guong-hoa-tiet"
+     },
+     {
+      "title": "Gương mờ",
+      "tag": "guong-mo"
+     },
+     {
+      "title": "Gương có kệ",
+      "tag": "guong-co-ke"
+     },
+     {
+      "title": "Gương trang trí",
+      "tag": "guong-trang-tri"
+     },
+     {
+      "title": "Gương soi toàn thân",
+      "tag": "guong-soi-toan-than"
+     },
+     {
+      "title": "Gương vát cạnh",
+      "tag": "guong-vat-canh"
+     },
+     {
+      "title": "Gương trang điểm",
+      "tag": "guong-trang-diem"
+     },
+     {
+      "title": "Gương đèn LED",
+      "tag": "guong-den-led"
+     },
+     {
+      "title": "Gương khung nhựa",
+      "tag": "guong-khung-nhua"
+     }
+    ]
+   },
+   {
+    "title": "Đồ phòng tắm may đo",
+    "handle": "do-phong-tam-may-do",
+    "l3": [
+     {
+      "title": "Cabin tắm may đo",
+      "tag": "cabin-tam-may-do"
+     },
+     {
+      "title": "Gương may đo",
+      "tag": "guong-may-do"
+     }
+    ]
+   },
+   {
+    "title": "Rèm phòng tắm",
+    "handle": "rem-phong-tam",
+    "l3": [
+     {
+      "title": "Rèm tắm",
+      "tag": "rem-tam"
+     },
+     {
+      "title": "Thanh treo & phụ kiện rèm",
+      "tag": "thanh-treo-phu-kien-rem"
+     }
+    ]
+   },
+   {
+    "title": "Phụ tùng phòng tắm",
+    "handle": "phu-tung-phong-tam",
+    "l3": [
+     {
+      "title": "Nắp bồn cầu nhựa",
+      "tag": "nap-bon-cau-nhua"
+     },
+     {
+      "title": "Bộ xả lavabo",
+      "tag": "bo-xa-lavabo"
+     },
+     {
+      "title": "Phụ kiện két nước",
+      "tag": "phu-kien-ket-nuoc"
+     },
+     {
+      "title": "Dây sen",
+      "tag": "day-sen"
+     },
+     {
+      "title": "Phụ tùng vòi",
+      "tag": "phu-tung-voi"
+     },
+     {
+      "title": "Dây cấp nước inox",
+      "tag": "day-cap-nuoc-inox"
+     },
+     {
+      "title": "Van xả",
+      "tag": "van-xa"
+     },
+     {
+      "title": "Phụ kiện nắp bồn cầu",
+      "tag": "phu-kien-nap-bon-cau"
+     }
+    ]
+   },
+   {
+    "title": "Khăn tắm & áo choàng",
+    "handle": "khan-tam-ao-choang",
+    "l3": [
+     {
+      "title": "Khăn tay",
+      "tag": "khan-tay"
+     },
+     {
+      "title": "Khăn quấn tóc",
+      "tag": "khan-quan-toc"
+     },
+     {
+      "title": "Khăn tắm",
+      "tag": "khan-tam"
+     },
+     {
+      "title": "Áo choàng tắm",
+      "tag": "ao-choang-tam"
+     }
+    ]
+   },
+   {
+    "title": "Chất tẩy rửa phòng tắm",
+    "handle": "chat-tay-rua-phong-tam",
+    "l3": []
+   }
+  ]
+ },
+ {
+  "code": "PLU",
+  "handle": "ong-nuoc",
+  "title": "Hệ thống nước",
+  "icon": "pipe",
+  "subs": [
+   {
+    "title": "Máy nước nóng",
+    "handle": "may-nuoc-nong",
+    "l3": [
+     {
+      "title": "Bình nước nóng",
+      "tag": "binh-nuoc-nong"
+     },
+     {
+      "title": "Máy nước nóng 4.500W",
+      "tag": "may-nuoc-nong-4-500w"
+     },
+     {
+      "title": "Máy nước nóng 5.500W",
+      "tag": "may-nuoc-nong-5-500w"
+     }
+    ]
+   },
+   {
+    "title": "Máy lọc nước",
+    "handle": "may-loc-nuoc",
+    "l3": [
+     {
+      "title": "Máy lọc nước uống",
+      "tag": "may-loc-nuoc-uong"
+     },
+     {
+      "title": "Máy lọc nước sinh hoạt",
+      "tag": "may-loc-nuoc-sinh-hoat"
+     },
+     {
+      "title": "Lõi lọc thay thế",
+      "tag": "loi-loc-thay-the"
+     },
+     {
+      "title": "Phụ tùng máy lọc nước",
+      "tag": "phu-tung-may-loc-nuoc"
+     },
+     {
+      "title": "Phụ kiện máy lọc nước",
+      "tag": "phu-kien-may-loc-nuoc"
+     }
+    ]
+   },
+   {
+    "title": "Cây nước nóng lạnh",
+    "handle": "cay-nuoc-nong-lanh",
+    "l3": [
+     {
+      "title": "Cây nước có lọc",
+      "tag": "cay-nuoc-co-loc"
+     },
+     {
+      "title": "Cây nước không lọc",
+      "tag": "cay-nuoc-khong-loc"
+     },
+     {
+      "title": "Cây nước thương mại",
+      "tag": "cay-nuoc-thuong-mai"
+     },
+     {
+      "title": "Phụ kiện cây nước",
+      "tag": "phu-kien-cay-nuoc"
+     },
+     {
+      "title": "Phụ kiện vòi nước uống",
+      "tag": "phu-kien-voi-nuoc-uong"
+     }
+    ]
+   },
+   {
+    "title": "Máy bơm nước",
+    "handle": "may-bom-nuoc",
+    "l3": [
+     {
+      "title": "Máy bơm tăng áp",
+      "tag": "may-bom-tang-ap"
+     },
+     {
+      "title": "Máy bơm đa tầng",
+      "tag": "may-bom-da-tang"
+     },
+     {
+      "title": "Máy bơm chìm nước thải",
+      "tag": "may-bom-chim-nuoc-thai"
+     },
+     {
+      "title": "Máy bơm ly tâm",
+      "tag": "may-bom-ly-tam"
+     },
+     {
+      "title": "Máy bơm giếng",
+      "tag": "may-bom-gieng"
+     },
+     {
+      "title": "Máy bơm đẩy cao",
+      "tag": "may-bom-day-cao"
+     },
+     {
+      "title": "Máy bơm cấp nước",
+      "tag": "may-bom-cap-nuoc"
+     },
+     {
+      "title": "Phụ kiện máy bơm",
+      "tag": "phu-kien-may-bom"
+     }
+    ]
+   },
+   {
+    "title": "Bồn chứa & xử lý nước thải",
+    "handle": "bon-chua-xu-ly-nuoc-thai",
+    "l3": [
+     {
+      "title": "Bồn nước nhựa kèm bơm",
+      "tag": "bon-nuoc-nhua-kem-bom"
+     },
+     {
+      "title": "Bồn nước composite",
+      "tag": "bon-nuoc-composite"
+     },
+     {
+      "title": "Bồn nước inox",
+      "tag": "bon-nuoc-inox"
+     },
+     {
+      "title": "Phụ kiện bồn nước",
+      "tag": "phu-kien-bon-nuoc"
+     },
+     {
+      "title": "Bể tách mỡ",
+      "tag": "be-tach-mo"
+     },
+     {
+      "title": "Bể tự hoại nhựa",
+      "tag": "be-tu-hoai-nhua"
+     },
+     {
+      "title": "Bể tự hoại composite",
+      "tag": "be-tu-hoai-composite"
+     },
+     {
+      "title": "Bồn 1.000–1.499 lít",
+      "tag": "bon-1-0001-499-lit"
+     },
+     {
+      "title": "Nắp bể tự hoại",
+      "tag": "nap-be-tu-hoai"
+     },
+     {
+      "title": "Nút thông tắc",
+      "tag": "nut-thong-tac"
+     }
+    ]
+   },
+   {
+    "title": "Ống & phụ kiện",
+    "handle": "ong-phu-kien",
+    "l3": [
+     {
+      "title": "Ống & phụ kiện khác",
+      "tag": "ong-phu-kien-khac"
+     },
+     {
+      "title": "Ống nhựa PVC",
+      "tag": "ong-nhua-pvc"
+     },
+     {
+      "title": "Co nối",
+      "tag": "co-noi"
+     },
+     {
+      "title": "Kẹp ống",
+      "tag": "kep-ong"
+     },
+     {
+      "title": "Keo dán ống",
+      "tag": "keo-dan-ong"
+     },
+     {
+      "title": "Đai siết",
+      "tag": "dai-siet"
+     },
+     {
+      "title": "Máy hàn ống",
+      "tag": "may-han-ong"
+     },
+     {
+      "title": "Băng tan",
+      "tag": "bang-tan"
+     }
+    ]
+   },
+   {
+    "title": "Thoát sàn",
+    "handle": "thoat-san",
+    "l3": [
+     {
+      "title": "Thoát sàn chống mùi",
+      "tag": "thoat-san-chong-mui"
+     },
+     {
+      "title": "Rãnh thoát nước",
+      "tag": "ranh-thoat-nuoc"
+     },
+     {
+      "title": "Ga thoát sàn",
+      "tag": "ga-thoat-san"
+     }
+    ]
+   },
+   {
+    "title": "Van nước",
+    "handle": "van-nuoc",
+    "l3": [
+     {
+      "title": "Vòi nước",
+      "tag": "voi-nuoc"
+     },
+     {
+      "title": "Van bi mini",
+      "tag": "van-bi-mini"
+     },
+     {
+      "title": "Van bi",
+      "tag": "van-bi"
+     },
+     {
+      "title": "Van một chiều",
+      "tag": "van-mot-chieu"
+     },
+     {
+      "title": "Van cổng",
+      "tag": "van-cong"
+     },
+     {
+      "title": "Van khóa",
+      "tag": "van-khoa"
+     },
+     {
+      "title": "Đồng hồ nước",
+      "tag": "dong-ho-nuoc"
+     },
+     {
+      "title": "Van đáy",
+      "tag": "van-day"
+     }
+    ]
+   },
+   {
+    "title": "Keo & phụ kiện ống nước",
+    "handle": "keo-phu-kien-ong-nuoc",
+    "l3": []
+   }
+  ]
+ },
+ {
+  "code": "KIT",
+  "handle": "nha-bep",
+  "title": "Nhà bếp",
+  "icon": "pan",
+  "subs": [
+   {
+    "title": "Thiết bị nhà bếp",
+    "handle": "thiet-bi-nha-bep",
+    "l3": [
+     {
+      "title": "Bộ thiết bị bếp",
+      "tag": "bo-thiet-bi-bep"
+     },
+     {
+      "title": "Máy rửa & sấy chén",
+      "tag": "may-rua-say-chen"
+     },
+     {
+      "title": "Lò nướng & phụ kiện",
+      "tag": "lo-nuong-phu-kien"
+     },
+     {
+      "title": "Bếp âm",
+      "tag": "bep-am"
+     },
+     {
+      "title": "Máy hút mùi",
+      "tag": "may-hut-mui"
+     },
+     {
+      "title": "Bếp đứng",
+      "tag": "bep-dung"
+     },
+     {
+      "title": "Bếp gas",
+      "tag": "bep-gas"
+     },
+     {
+      "title": "Bếp điện",
+      "tag": "bep-dien"
+     },
+     {
+      "title": "Máy xử lý rác thải",
+      "tag": "may-xu-ly-rac-thai"
+     },
+     {
+      "title": "Lò vi sóng âm tủ",
+      "tag": "lo-vi-song-am-tu"
+     },
+     {
+      "title": "Máy pha cà phê âm tủ",
+      "tag": "may-pha-ca-phe-am-tu"
+     },
+     {
+      "title": "Phụ kiện thiết bị bếp",
+      "tag": "phu-kien-thiet-bi-bep"
+     }
+    ]
+   },
+   {
+    "title": "Chậu rửa chén & phụ kiện",
+    "handle": "chau-rua-chen-phu-kien",
+    "l3": [
+     {
+      "title": "Chậu đa năng âm bàn",
+      "tag": "chau-da-nang-am-ban"
+     },
+     {
+      "title": "Chậu inox có chân",
+      "tag": "chau-inox-co-chan"
+     },
+     {
+      "title": "Chậu inox âm bàn",
+      "tag": "chau-inox-am-ban"
+     },
+     {
+      "title": "Chậu inox vuông âm bàn",
+      "tag": "chau-inox-vuong-am-ban"
+     },
+     {
+      "title": "Chậu đá granite",
+      "tag": "chau-da-granite"
+     },
+     {
+      "title": "Chậu inox mặt kính",
+      "tag": "chau-inox-mat-kinh"
+     },
+     {
+      "title": "Chậu sứ âm bàn",
+      "tag": "chau-su-am-ban"
+     },
+     {
+      "title": "Chậu inox lắp dưới",
+      "tag": "chau-inox-lap-duoi"
+     },
+     {
+      "title": "Chậu granite lắp dưới",
+      "tag": "chau-granite-lap-duoi"
+     },
+     {
+      "title": "Bộ xả chậu rửa",
+      "tag": "bo-xa-chau-rua"
+     }
+    ]
+   },
+   {
+    "title": "Tủ bếp",
+    "handle": "tu-bep",
+    "l3": [
+     {
+      "title": "Cánh tủ",
+      "tag": "canh-tu"
+     },
+     {
+      "title": "Tủ treo",
+      "tag": "tu-treo"
+     },
+     {
+      "title": "Phụ kiện tủ",
+      "tag": "phu-kien-tu"
+     },
+     {
+      "title": "Tủ dưới",
+      "tag": "tu-duoi"
+     },
+     {
+      "title": "Giá kệ tủ",
+      "tag": "gia-ke-tu"
+     },
+     {
+      "title": "Tủ chạn",
+      "tag": "tu-chan"
+     }
+    ]
+   },
+   {
+    "title": "Bếp mini",
+    "handle": "bep-mini",
+    "l3": [
+     {
+      "title": "Bếp mini gỗ",
+      "tag": "bep-mini-go"
+     },
+     {
+      "title": "Bếp mini inox",
+      "tag": "bep-mini-inox"
+     },
+     {
+      "title": "Bếp mini nhôm",
+      "tag": "bep-mini-nhom"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ nấu nướng",
+    "handle": "dung-cu-nau-nuong",
+    "l3": [
+     {
+      "title": "Bộ nồi chảo",
+      "tag": "bo-noi-chao"
+     },
+     {
+      "title": "Dao bếp",
+      "tag": "dao-bep"
+     },
+     {
+      "title": "Sạn & muôi",
+      "tag": "san-muoi"
+     },
+     {
+      "title": "Dụng cụ làm bánh",
+      "tag": "dung-cu-lam-banh"
+     },
+     {
+      "title": "Đồ dùng lò vi sóng",
+      "tag": "do-dung-lo-vi-song"
+     },
+     {
+      "title": "Khăn lau tay",
+      "tag": "khan-lau-tay"
+     },
+     {
+      "title": "Dụng cụ nấu khác",
+      "tag": "dung-cu-nau-khac"
+     }
+    ]
+   },
+   {
+    "title": "Bộ đồ ăn",
+    "handle": "bo-do-an",
+    "l3": [
+     {
+      "title": "Đĩa",
+      "tag": "dia"
+     },
+     {
+      "title": "Cốc ly",
+      "tag": "coc-ly"
+     },
+     {
+      "title": "Hộp khăn giấy",
+      "tag": "hop-khan-giay"
+     },
+     {
+      "title": "Bộ dụng cụ ăn",
+      "tag": "bo-dung-cu-an"
+     },
+     {
+      "title": "Khăn trải bàn",
+      "tag": "khan-trai-ban"
+     },
+     {
+      "title": "Lót ly",
+      "tag": "lot-ly"
+     },
+     {
+      "title": "Đồ ăn khác",
+      "tag": "do-an-khac"
+     }
+    ]
+   },
+   {
+    "title": "Lưu trữ nhà bếp",
+    "handle": "luu-tru-nha-bep",
+    "l3": [
+     {
+      "title": "Giá úp chén nhôm",
+      "tag": "gia-up-chen-nhom"
+     },
+     {
+      "title": "Giá để ly",
+      "tag": "gia-de-ly"
+     },
+     {
+      "title": "Kệ bếp",
+      "tag": "ke-bep"
+     },
+     {
+      "title": "Hộp sắp xếp tủ lạnh",
+      "tag": "hop-sap-xep-tu-lanh"
+     },
+     {
+      "title": "Giỏ nhà bếp",
+      "tag": "gio-nha-bep"
+     },
+     {
+      "title": "Thanh treo bếp",
+      "tag": "thanh-treo-bep"
+     },
+     {
+      "title": "Khay đựng dụng cụ",
+      "tag": "khay-dung-dung-cu"
+     },
+     {
+      "title": "Giá cắm dao",
+      "tag": "gia-cam-dao"
+     },
+     {
+      "title": "Giá treo giấy",
+      "tag": "gia-treo-giay"
+     },
+     {
+      "title": "Giỏ đựng trái cây",
+      "tag": "gio-dung-trai-cay"
+     },
+     {
+      "title": "Lưu trữ khác",
+      "tag": "luu-tru-khac"
+     }
+    ]
+   },
+   {
+    "title": "Hộp đựng thực phẩm",
+    "handle": "hop-dung-thuc-pham",
+    "l3": [
+     {
+      "title": "Hộp đựng thực phẩm",
+      "tag": "hop-dung-thuc-pham"
+     },
+     {
+      "title": "Thìa & nĩa",
+      "tag": "thia-nia"
+     },
+     {
+      "title": "Giấy bạc",
+      "tag": "giay-bac"
+     },
+     {
+      "title": "Màng bọc thực phẩm",
+      "tag": "mang-boc-thuc-pham"
+     }
+    ]
+   },
+   {
+    "title": "Bình nước & thùng giữ nhiệt",
+    "handle": "binh-nuoc-thung-giu-nhiet",
+    "l3": [
+     {
+      "title": "Bình giữ nhiệt",
+      "tag": "binh-giu-nhiet"
+     },
+     {
+      "title": "Bình nước",
+      "tag": "binh-nuoc"
+     },
+     {
+      "title": "Bình rót",
+      "tag": "binh-rot"
+     },
+     {
+      "title": "Khay đá",
+      "tag": "khay-da"
+     },
+     {
+      "title": "Xô đá",
+      "tag": "xo-da"
+     },
+     {
+      "title": "Hũ đựng",
+      "tag": "hu-dung"
+     },
+     {
+      "title": "Thùng giữ nhiệt",
+      "tag": "thung-giu-nhiet"
+     },
+     {
+      "title": "Bơm bình nước",
+      "tag": "bom-binh-nuoc"
+     }
+    ]
+   },
+   {
+    "title": "Chất tẩy rửa nhà bếp",
+    "handle": "chat-tay-rua-nha-bep",
+    "l3": []
+   },
+   {
+    "title": "Máy lọc nước nhà bếp",
+    "handle": "may-loc-nuoc-nha-bep",
+    "l3": [
+     {
+      "title": "Máy lọc nước uống",
+      "tag": "may-loc-nuoc-uong"
+     },
+     {
+      "title": "Máy lọc nước sinh hoạt",
+      "tag": "may-loc-nuoc-sinh-hoat"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "FLO",
+  "handle": "san-tuong",
+  "title": "Gạch & sàn",
+  "icon": "tile",
+  "subs": [
+   {
+    "title": "Gạch ốp lát",
+    "handle": "gach-op-lat",
+    "l3": [
+     {
+      "title": "Gạch lát nền",
+      "tag": "gach-lat-nen"
+     },
+     {
+      "title": "Gạch ốp tường",
+      "tag": "gach-op-tuong"
+     },
+     {
+      "title": "Đá nhân tạo",
+      "tag": "da-nhan-tao"
+     },
+     {
+      "title": "Gạch granito",
+      "tag": "gach-granito"
+     },
+     {
+      "title": "Đá sa thạch nhân tạo",
+      "tag": "da-sa-thach-nhan-tao"
+     },
+     {
+      "title": "Đá tự nhiên",
+      "tag": "da-tu-nhien"
+     }
+    ]
+   },
+   {
+    "title": "Sàn nhựa vinyl",
+    "handle": "san-nhua-vinyl",
+    "l3": [
+     {
+      "title": "Sàn vinyl không keo",
+      "tag": "san-vinyl-khong-keo"
+     },
+     {
+      "title": "Sàn vinyl có keo",
+      "tag": "san-vinyl-co-keo"
+     },
+     {
+      "title": "Sàn vinyl hèm khóa",
+      "tag": "san-vinyl-hem-khoa"
+     },
+     {
+      "title": "Thảm sàn vinyl",
+      "tag": "tham-san-vinyl"
+     },
+     {
+      "title": "Keo dán sàn",
+      "tag": "keo-dan-san"
+     }
+    ]
+   },
+   {
+    "title": "Sàn gỗ",
+    "handle": "san-go",
+    "l3": [
+     {
+      "title": "Sàn gỗ kỹ thuật",
+      "tag": "san-go-ky-thuat"
+     },
+     {
+      "title": "Sàn gỗ Kempas",
+      "tag": "san-go-kempas"
+     }
+    ]
+   },
+   {
+    "title": "Sàn gỗ công nghiệp & SPC",
+    "handle": "san-go-cong-nghiep-spc",
+    "l3": [
+     {
+      "title": "Sàn gỗ công nghiệp",
+      "tag": "san-go-cong-nghiep"
+     },
+     {
+      "title": "Nẹp kết thúc sàn",
+      "tag": "nep-ket-thuc-san"
+     },
+     {
+      "title": "Sàn vinyl",
+      "tag": "san-vinyl"
+     },
+     {
+      "title": "Sàn SPC",
+      "tag": "san-spc"
+     },
+     {
+      "title": "Phụ kiện sàn",
+      "tag": "phu-kien-san"
+     }
+    ]
+   },
+   {
+    "title": "Trang trí sàn & tường",
+    "handle": "trang-tri-san-tuong",
+    "l3": [
+     {
+      "title": "Gạch thẻ trang trí",
+      "tag": "gach-the-trang-tri"
+     },
+     {
+      "title": "Tấm ốp tường",
+      "tag": "tam-op-tuong"
+     },
+     {
+      "title": "Nẹp inox",
+      "tag": "nep-inox"
+     },
+     {
+      "title": "Len chân tường",
+      "tag": "len-chan-tuong"
+     },
+     {
+      "title": "Nẹp góc nhôm",
+      "tag": "nep-goc-nhom"
+     },
+     {
+      "title": "Nẹp mũi bậc nhôm",
+      "tag": "nep-mui-bac-nhom"
+     },
+     {
+      "title": "Tấm ốp PVC, PS",
+      "tag": "tam-op-pvc-ps"
+     }
+    ]
+   },
+   {
+    "title": "Gạch mosaic",
+    "handle": "gach-mosaic",
+    "l3": [
+     {
+      "title": "Gạch mosaic",
+      "tag": "gach-mosaic"
+     }
+    ]
+   },
+   {
+    "title": "Gạch kính",
+    "handle": "gach-kinh",
+    "l3": [
+     {
+      "title": "Gạch kính",
+      "tag": "gach-kinh"
+     }
+    ]
+   },
+   {
+    "title": "Keo dán & keo chà ron",
+    "handle": "keo-dan-keo-cha-ron",
+    "l3": [
+     {
+      "title": "Keo dán gạch gốc xi măng",
+      "tag": "keo-dan-gach-goc-xi-mang"
+     },
+     {
+      "title": "Keo chà ron",
+      "tag": "keo-cha-ron"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ lát sàn",
+    "handle": "dung-cu-lat-san",
+    "l3": [
+     {
+      "title": "Chất vệ sinh sàn",
+      "tag": "chat-ve-sinh-san"
+     },
+     {
+      "title": "Ke cân gạch",
+      "tag": "ke-can-gach"
+     },
+     {
+      "title": "Máy cắt gạch",
+      "tag": "may-cat-gach"
+     }
+    ]
+   },
+   {
+    "title": "Chất vệ sinh sàn",
+    "handle": "chat-ve-sinh-san",
+    "l3": []
+   },
+   {
+    "title": "Băng dính chống trơn",
+    "handle": "bang-dinh-chong-tron",
+    "l3": [
+     {
+      "title": "Băng dính chống trơn",
+      "tag": "bang-dinh-chong-tron"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "CON",
+  "handle": "vat-lieu",
+  "title": "Vật liệu xây dựng",
+  "icon": "brick",
+  "subs": [
+   {
+    "title": "Thép",
+    "handle": "thep",
+    "l3": [
+     {
+      "title": "Thép lanh tô",
+      "tag": "thep-lanh-to"
+     },
+     {
+      "title": "Song chắn rác",
+      "tag": "song-chan-rac"
+     },
+     {
+      "title": "Thép tròn",
+      "tag": "thep-tron"
+     },
+     {
+      "title": "Thép hộp vuông",
+      "tag": "thep-hop-vuong"
+     },
+     {
+      "title": "Dây kẽm buộc",
+      "tag": "day-kem-buoc"
+     }
+    ]
+   },
+   {
+    "title": "Xi măng",
+    "handle": "xi-mang",
+    "l3": [
+     {
+      "title": "Vữa xây tô",
+      "tag": "vua-xay-to"
+     },
+     {
+      "title": "Xi măng trộn sẵn",
+      "tag": "xi-mang-tron-san"
+     },
+     {
+      "title": "Xi măng Portland",
+      "tag": "xi-mang-portland"
+     },
+     {
+      "title": "Vữa trám khe",
+      "tag": "vua-tram-khe"
+     }
+    ]
+   },
+   {
+    "title": "Gạch xây",
+    "handle": "gach-xay",
+    "l3": [
+     {
+      "title": "Gạch block",
+      "tag": "gach-block"
+     },
+     {
+      "title": "Gạch nhẹ",
+      "tag": "gach-nhe"
+     }
+    ]
+   },
+   {
+    "title": "Tấm thạch cao",
+    "handle": "tam-thach-cao",
+    "l3": [
+     {
+      "title": "Tấm ốp tường",
+      "tag": "tam-op-tuong"
+     },
+     {
+      "title": "Thanh C",
+      "tag": "thanh-c"
+     },
+     {
+      "title": "Tấm trần thả",
+      "tag": "tam-tran-tha"
+     },
+     {
+      "title": "Tấm thạch cao",
+      "tag": "tam-thach-cao"
+     },
+     {
+      "title": "Nắp thăm trần",
+      "tag": "nap-tham-tran"
+     }
+    ]
+   },
+   {
+    "title": "Vật liệu cách nhiệt",
+    "handle": "vat-lieu-cach-nhiet",
+    "l3": [
+     {
+      "title": "Cách âm",
+      "tag": "cach-am"
+     },
+     {
+      "title": "Bông thủy tinh",
+      "tag": "bong-thuy-tinh"
+     },
+     {
+      "title": "Bông khoáng",
+      "tag": "bong-khoang"
+     },
+     {
+      "title": "Mút PE cách nhiệt",
+      "tag": "mut-pe-cach-nhiet"
+     },
+     {
+      "title": "Túi khí cách nhiệt",
+      "tag": "tui-khi-cach-nhiet"
+     },
+     {
+      "title": "Tấm phản nhiệt",
+      "tag": "tam-phan-nhiet"
+     }
+    ]
+   },
+   {
+    "title": "Mái lợp",
+    "handle": "mai-lop",
+    "l3": [
+     {
+      "title": "Mái che tự lắp",
+      "tag": "mai-che-tu-lap"
+     },
+     {
+      "title": "Tấm polycarbonate",
+      "tag": "tam-polycarbonate"
+     },
+     {
+      "title": "Phụ kiện máng xối PVC",
+      "tag": "phu-kien-mang-xoi-pvc"
+     },
+     {
+      "title": "Tấm Future Board",
+      "tag": "tam-future-board"
+     },
+     {
+      "title": "Tấm lấy sáng",
+      "tag": "tam-lay-sang"
+     },
+     {
+      "title": "Phụ kiện bắt mái",
+      "tag": "phu-kien-bat-mai"
+     },
+     {
+      "title": "Đinh mũ lớn",
+      "tag": "dinh-mu-lon"
+     },
+     {
+      "title": "Ngói fibro xi măng",
+      "tag": "ngoi-fibro-xi-mang"
+     },
+     {
+      "title": "Ngói bê tông",
+      "tag": "ngoi-be-tong"
+     },
+     {
+      "title": "Ngói úp nóc",
+      "tag": "ngoi-up-noc"
+     },
+     {
+      "title": "Tôn",
+      "tag": "ton"
+     },
+     {
+      "title": "Mái nhựa",
+      "tag": "mai-nhua"
+     },
+     {
+      "title": "Quả cầu thông gió",
+      "tag": "qua-cau-thong-gio"
+     },
+     {
+      "title": "Ngói gốm",
+      "tag": "ngoi-gom"
+     },
+     {
+      "title": "Khung mái",
+      "tag": "khung-mai"
+     }
+    ]
+   },
+   {
+    "title": "Tấm trang trí",
+    "handle": "tam-trang-tri",
+    "l3": [
+     {
+      "title": "Hàng rào che",
+      "tag": "hang-rao-che"
+     },
+     {
+      "title": "Tấm lát sàn",
+      "tag": "tam-lat-san"
+     },
+     {
+      "title": "Phào trần",
+      "tag": "phao-tran"
+     },
+     {
+      "title": "Tấm ốp ngoài",
+      "tag": "tam-op-ngoai"
+     },
+     {
+      "title": "Thanh lam",
+      "tag": "thanh-lam"
+     },
+     {
+      "title": "Hàng rào",
+      "tag": "hang-rao"
+     },
+     {
+      "title": "Tấm ốp trang trí",
+      "tag": "tam-op-trang-tri"
+     },
+     {
+      "title": "Len tường",
+      "tag": "len-tuong"
+     },
+     {
+      "title": "Diềm mái",
+      "tag": "diem-mai"
+     },
+     {
+      "title": "Ván ốp chồng",
+      "tag": "van-op-chong"
+     },
+     {
+      "title": "Cầu thang",
+      "tag": "cau-thang"
+     },
+     {
+      "title": "Ván ép",
+      "tag": "van-ep"
+     },
+     {
+      "title": "Nẹp kết thúc",
+      "tag": "nep-ket-thuc"
+     }
+    ]
+   },
+   {
+    "title": "Nhà xe lắp ghép",
+    "handle": "nha-xe-lap-ghep",
+    "l3": [
+     {
+      "title": "Mái nhựa",
+      "tag": "mai-nhua"
+     },
+     {
+      "title": "Mái polycarbonate đặc",
+      "tag": "mai-polycarbonate-dac"
+     }
+    ]
+   },
+   {
+    "title": "Cốt liệu xây dựng",
+    "handle": "cot-lieu-xay-dung",
+    "l3": [
+     {
+      "title": "Nhựa đường",
+      "tag": "nhua-duong"
+     },
+     {
+      "title": "Đá cát",
+      "tag": "da-cat"
+     }
+    ]
+   },
+   {
+    "title": "Gạch lát vỉa hè",
+    "handle": "gach-lat-via-he",
+    "l3": [
+     {
+      "title": "Tấm đan",
+      "tag": "tam-dan"
+     },
+     {
+      "title": "Bó vỉa",
+      "tag": "bo-via"
+     },
+     {
+      "title": "Gạch con sâu",
+      "tag": "gach-con-sau"
+     },
+     {
+      "title": "Bê tông dập khuôn",
+      "tag": "be-tong-dap-khuon"
+     }
+    ]
+   },
+   {
+    "title": "Giàn giáo",
+    "handle": "gian-giao",
+    "l3": []
+   },
+   {
+    "title": "Bê tông đúc sẵn",
+    "handle": "be-tong-duc-san",
+    "l3": []
+   },
+   {
+    "title": "Cốp pha",
+    "handle": "cop-pha",
+    "l3": [
+     {
+      "title": "Cốp pha nhựa",
+      "tag": "cop-pha-nhua"
+     }
+    ]
+   },
+   {
+    "title": "Hóa chất xây dựng",
+    "handle": "hoa-chat-xay-dung",
+    "l3": [
+     {
+      "title": "Băng keo nhôm",
+      "tag": "bang-keo-nhom"
+     },
+     {
+      "title": "Keo acrylic",
+      "tag": "keo-acrylic"
+     },
+     {
+      "title": "Bột trét",
+      "tag": "bot-tret"
+     },
+     {
+      "title": "Vữa rót",
+      "tag": "vua-rot"
+     },
+     {
+      "title": "Chất kết nối",
+      "tag": "chat-ket-noi"
+     },
+     {
+      "title": "Keo dán thay đinh",
+      "tag": "keo-dan-thay-dinh"
+     },
+     {
+      "title": "Keo xịt",
+      "tag": "keo-xit"
+     },
+     {
+      "title": "Mỡ bôi trơn",
+      "tag": "mo-boi-tron"
+     },
+     {
+      "title": "Hóa chất khác",
+      "tag": "hoa-chat-khac"
+     }
+    ]
+   },
+   {
+    "title": "Lưới & dây",
+    "handle": "luoi-day",
+    "l3": [
+     {
+      "title": "Lưới nhựa",
+      "tag": "luoi-nhua"
+     },
+     {
+      "title": "Dây thừng",
+      "tag": "day-thung"
+     },
+     {
+      "title": "Cáp thép",
+      "tag": "cap-thep"
+     },
+     {
+      "title": "Ròng rọc",
+      "tag": "rong-roc"
+     },
+     {
+      "title": "Bánh xe cổng",
+      "tag": "banh-xe-cong"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "TOO",
+  "handle": "dung-cu",
+  "title": "Dụng cụ & phụ kiện",
+  "icon": "tools",
+  "subs": [
+   {
+    "title": "Dụng cụ điện",
+    "handle": "dung-cu-dien",
+    "l3": [
+     {
+      "title": "Mũi khoan & khoét lỗ",
+      "tag": "mui-khoan-khoet-lo"
+     },
+     {
+      "title": "Pin & phụ kiện máy pin",
+      "tag": "pin-phu-kien-may-pin"
+     },
+     {
+      "title": "Máy rửa áp lực & phụ kiện",
+      "tag": "may-rua-ap-luc-phu-kien"
+     },
+     {
+      "title": "Máy thổi",
+      "tag": "may-thoi"
+     },
+     {
+      "title": "Máy mài & phụ kiện",
+      "tag": "may-mai-phu-kien"
+     },
+     {
+      "title": "Máy cưa & phụ kiện",
+      "tag": "may-cua-phu-kien"
+     },
+     {
+      "title": "Máy cắt & phụ kiện",
+      "tag": "may-cat-phu-kien"
+     },
+     {
+      "title": "Máy chà nhám & phụ kiện",
+      "tag": "may-cha-nham-phu-kien"
+     },
+     {
+      "title": "Máy bào & phụ kiện",
+      "tag": "may-bao-phu-kien"
+     },
+     {
+      "title": "Máy đục bê tông",
+      "tag": "may-duc-be-tong"
+     },
+     {
+      "title": "Máy khoan pin",
+      "tag": "may-khoan-pin"
+     },
+     {
+      "title": "Máy phun sơn điện",
+      "tag": "may-phun-son-dien"
+     }
+    ]
+   },
+   {
+    "title": "Thang",
+    "handle": "thang",
+    "l3": [
+     {
+      "title": "Thang chữ A 7–8 bậc",
+      "tag": "thang-chu-a-78-bac"
+     },
+     {
+      "title": "Thang ghế sợi thủy tinh",
+      "tag": "thang-ghe-soi-thuy-tinh"
+     },
+     {
+      "title": "Thang đa năng",
+      "tag": "thang-da-nang"
+     },
+     {
+      "title": "Thang ghế thép 4 bậc",
+      "tag": "thang-ghe-thep-4-bac"
+     },
+     {
+      "title": "Thang thẳng",
+      "tag": "thang-thang"
+     },
+     {
+      "title": "Thang giàn giáo",
+      "tag": "thang-gian-giao"
+     },
+     {
+      "title": "Phụ kiện thang",
+      "tag": "phu-kien-thang"
+     }
+    ]
+   },
+   {
+    "title": "Xe đẩy & thiết bị vận chuyển",
+    "handle": "xe-day-thiet-bi-van-chuyen",
+    "l3": [
+     {
+      "title": "Xe đẩy đa năng",
+      "tag": "xe-day-da-nang"
+     },
+     {
+      "title": "Xe nâng tay",
+      "tag": "xe-nang-tay"
+     },
+     {
+      "title": "Xe đẩy",
+      "tag": "xe-day"
+     },
+     {
+      "title": "Xe đẩy sàn nhựa",
+      "tag": "xe-day-san-nhua"
+     },
+     {
+      "title": "Xe đẩy gấp gọn",
+      "tag": "xe-day-gap-gon"
+     },
+     {
+      "title": "Xe đẩy công nghiệp",
+      "tag": "xe-day-cong-nghiep"
+     },
+     {
+      "title": "Tủ đồ nghề di động",
+      "tag": "tu-do-nghe-di-dong"
+     },
+     {
+      "title": "Xe rùa",
+      "tag": "xe-rua"
+     },
+     {
+      "title": "Thiết bị cứu hộ",
+      "tag": "thiet-bi-cuu-ho"
+     },
+     {
+      "title": "Xe đẩy rau củ",
+      "tag": "xe-day-rau-cu"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ cầm tay",
+    "handle": "dung-cu-cam-tay",
+    "l3": [
+     {
+      "title": "Máy đo laser",
+      "tag": "may-do-laser"
+     },
+     {
+      "title": "Bộ dụng cụ cầm tay",
+      "tag": "bo-dung-cu-cam-tay"
+     },
+     {
+      "title": "Kìm tuốt dây",
+      "tag": "kim-tuot-day"
+     },
+     {
+      "title": "Bút thử điện",
+      "tag": "but-thu-dien"
+     },
+     {
+      "title": "Cờ lê",
+      "tag": "co-le"
+     },
+     {
+      "title": "Chậu trộn vữa",
+      "tag": "chau-tron-vua"
+     },
+     {
+      "title": "Búa cao su",
+      "tag": "bua-cao-su"
+     },
+     {
+      "title": "Kẹp chữ C",
+      "tag": "kep-chu-c"
+     },
+     {
+      "title": "Giấy nhám",
+      "tag": "giay-nham"
+     },
+     {
+      "title": "Cưa tay",
+      "tag": "cua-tay"
+     },
+     {
+      "title": "Dao",
+      "tag": "dao"
+     },
+     {
+      "title": "Bộ tuýp",
+      "tag": "bo-tuyp"
+     },
+     {
+      "title": "Xà beng",
+      "tag": "xa-beng"
+     },
+     {
+      "title": "Rìu",
+      "tag": "riu"
+     },
+     {
+      "title": "Khoan tay",
+      "tag": "khoan-tay"
+     },
+     {
+      "title": "Dụng cụ đa năng",
+      "tag": "dung-cu-da-nang"
+     },
+     {
+      "title": "Cân",
+      "tag": "can"
+     }
+    ]
+   },
+   {
+    "title": "Hộp & tủ đồ nghề",
+    "handle": "hop-tu-do-nghe",
+    "l3": [
+     {
+      "title": "Kệ & thiết bị lưu trữ",
+      "tag": "ke-thiet-bi-luu-tru"
+     },
+     {
+      "title": "Hộp đồ nghề",
+      "tag": "hop-do-nghe"
+     },
+     {
+      "title": "Hộp linh kiện có nắp",
+      "tag": "hop-linh-kien-co-nap"
+     },
+     {
+      "title": "Thùng công nghiệp",
+      "tag": "thung-cong-nghiep"
+     },
+     {
+      "title": "Tủ đồ nghề",
+      "tag": "tu-do-nghe"
+     },
+     {
+      "title": "Túi đồ nghề",
+      "tag": "tui-do-nghe"
+     }
+    ]
+   },
+   {
+    "title": "Hàn & hàn thiếc",
+    "handle": "han-han-thiec",
+    "l3": [
+     {
+      "title": "Phụ kiện hàn",
+      "tag": "phu-kien-han"
+     },
+     {
+      "title": "Mỏ hàn thiếc",
+      "tag": "mo-han-thiec"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ xây dựng",
+    "handle": "dung-cu-xay-dung",
+    "l3": [
+     {
+      "title": "Máy đầm",
+      "tag": "may-dam"
+     },
+     {
+      "title": "Máy trộn bê tông",
+      "tag": "may-tron-be-tong"
+     },
+     {
+      "title": "Máy đầm dùi",
+      "tag": "may-dam-dui"
+     },
+     {
+      "title": "Máy trộn vữa",
+      "tag": "may-tron-vua"
+     },
+     {
+      "title": "Máy xoa nền",
+      "tag": "may-xoa-nen"
+     },
+     {
+      "title": "Thước cán bê tông",
+      "tag": "thuoc-can-be-tong"
+     },
+     {
+      "title": "Tời",
+      "tag": "toi"
+     },
+     {
+      "title": "Máy uốn sắt",
+      "tag": "may-uon-sat"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ khí nén & máy nén khí",
+    "handle": "dung-cu-khi-nen-may-nen-khi",
+    "l3": [
+     {
+      "title": "Súng phun sơn",
+      "tag": "sung-phun-son"
+     },
+     {
+      "title": "Máy nén khí không dây",
+      "tag": "may-nen-khi-khong-day"
+     },
+     {
+      "title": "Súng bắn đinh",
+      "tag": "sung-ban-dinh"
+     },
+     {
+      "title": "Súng siết bu lông",
+      "tag": "sung-siet-bu-long"
+     },
+     {
+      "title": "Máy chà nhám khí nén",
+      "tag": "may-cha-nham-khi-nen"
+     },
+     {
+      "title": "Phụ kiện khí nén",
+      "tag": "phu-kien-khi-nen"
+     },
+     {
+      "title": "Máy mài khuôn",
+      "tag": "may-mai-khuon"
+     }
+    ]
+   },
+   {
+    "title": "Động cơ & máy phát điện",
+    "handle": "dong-co-may-phat-dien",
+    "l3": [
+     {
+      "title": "Sạc bình ắc quy",
+      "tag": "sac-binh-ac-quy"
+     },
+     {
+      "title": "Động cơ xăng",
+      "tag": "dong-co-xang"
+     },
+     {
+      "title": "Máy phát điện",
+      "tag": "may-phat-dien"
+     },
+     {
+      "title": "Mô tơ điện",
+      "tag": "mo-to-dien"
+     },
+     {
+      "title": "Máy bơm động cơ",
+      "tag": "may-bom-dong-co"
+     }
+    ]
+   },
+   {
+    "title": "Đồ bảo hộ",
+    "handle": "do-bao-ho",
+    "l3": [
+     {
+      "title": "Camera an ninh",
+      "tag": "camera-an-ninh"
+     },
+     {
+      "title": "Dụng cụ giao thông",
+      "tag": "dung-cu-giao-thong"
+     },
+     {
+      "title": "Mũ bảo hộ",
+      "tag": "mu-bao-ho"
+     }
+    ]
+   },
+   {
+    "title": "Vật tư lắp máy lạnh",
+    "handle": "vat-tu-lap-may-lanh",
+    "l3": [
+     {
+      "title": "Ống gió",
+      "tag": "ong-gio"
+     },
+     {
+      "title": "Gas lạnh",
+      "tag": "gas-lanh"
+     },
+     {
+      "title": "Ống đồng",
+      "tag": "ong-dong"
+     },
+     {
+      "title": "Ống đồng bọc bảo ôn",
+      "tag": "ong-dong-boc-bao-on"
+     },
+     {
+      "title": "Băng quấn ống",
+      "tag": "bang-quan-ong"
+     },
+     {
+      "title": "Chân đỡ dàn nóng",
+      "tag": "chan-do-dan-nong"
+     },
+     {
+      "title": "Mô tơ quạt",
+      "tag": "mo-to-quat"
+     },
+     {
+      "title": "Vật tư khác",
+      "tag": "vat-tu-khac"
+     }
+    ]
+   },
+   {
+    "title": "Ốc vít & đinh",
+    "handle": "oc-vit-dinh",
+    "l3": [
+     {
+      "title": "Vít tự khoan",
+      "tag": "vit-tu-khoan"
+     },
+     {
+      "title": "Tắc kê nhựa",
+      "tag": "tac-ke-nhua"
+     },
+     {
+      "title": "Ty ren",
+      "tag": "ty-ren"
+     },
+     {
+      "title": "Đinh gỗ",
+      "tag": "dinh-go"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "LIG",
+  "handle": "den",
+  "title": "Đèn & bóng đèn",
+  "icon": "bulb",
+  "subs": [
+   {
+    "title": "Bóng đèn",
+    "handle": "bong-den",
+    "l3": [
+     {
+      "title": "Bóng đèn ngắn",
+      "tag": "bong-den-ngan"
+     },
+     {
+      "title": "Bóng đèn dài",
+      "tag": "bong-den-dai"
+     },
+     {
+      "title": "Bóng đèn kiểu mới",
+      "tag": "bong-den-kieu-moi"
+     },
+     {
+      "title": "Dây đèn LED",
+      "tag": "day-den-led"
+     },
+     {
+      "title": "Bóng đèn trang trí",
+      "tag": "bong-den-trang-tri"
+     },
+     {
+      "title": "Bóng đèn tròn",
+      "tag": "bong-den-tron"
+     },
+     {
+      "title": "Bóng đèn nến",
+      "tag": "bong-den-nen"
+     },
+     {
+      "title": "Bóng compact",
+      "tag": "bong-compact"
+     },
+     {
+      "title": "Bóng đèn LED",
+      "tag": "bong-den-led"
+     }
+    ]
+   },
+   {
+    "title": "Đèn tuýp",
+    "handle": "den-tuyp",
+    "l3": [
+     {
+      "title": "Máng đèn",
+      "tag": "mang-den"
+     },
+     {
+      "title": "Bộ đèn tuýp LED",
+      "tag": "bo-den-tuyp-led"
+     },
+     {
+      "title": "Đèn LED chống nước",
+      "tag": "den-led-chong-nuoc"
+     },
+     {
+      "title": "Máng đèn chống nước",
+      "tag": "mang-den-chong-nuoc"
+     }
+    ]
+   },
+   {
+    "title": "Đèn năng lượng mặt trời",
+    "handle": "den-nang-luong-mat-troi",
+    "l3": [
+     {
+      "title": "Đèn gắn tường",
+      "tag": "den-gan-tuong"
+     },
+     {
+      "title": "Đèn tường",
+      "tag": "den-tuong"
+     },
+     {
+      "title": "Đèn trụ",
+      "tag": "den-tru"
+     },
+     {
+      "title": "Đèn trụ thấp",
+      "tag": "den-tru-thap"
+     },
+     {
+      "title": "Đèn cột",
+      "tag": "den-cot"
+     },
+     {
+      "title": "Đèn đường",
+      "tag": "den-duong"
+     },
+     {
+      "title": "Đèn pha",
+      "tag": "den-pha"
+     },
+     {
+      "title": "Đèn trang trí sân vườn",
+      "tag": "den-trang-tri-san-vuon"
+     },
+     {
+      "title": "Đèn thả",
+      "tag": "den-tha"
+     },
+     {
+      "title": "Đèn ốp trần",
+      "tag": "den-op-tran"
+     },
+     {
+      "title": "Đèn máng",
+      "tag": "den-mang"
+     }
+    ]
+   },
+   {
+    "title": "Đèn ngoài trời",
+    "handle": "den-ngoai-troi",
+    "l3": [
+     {
+      "title": "Đèn pha ngoài trời",
+      "tag": "den-pha-ngoai-troi"
+     },
+     {
+      "title": "Đèn sân vườn",
+      "tag": "den-san-vuon"
+     },
+     {
+      "title": "Đèn đường",
+      "tag": "den-duong"
+     },
+     {
+      "title": "Đèn trụ thấp",
+      "tag": "den-tru-thap"
+     },
+     {
+      "title": "Đèn trang trí sân vườn",
+      "tag": "den-trang-tri-san-vuon"
+     },
+     {
+      "title": "Đèn cột",
+      "tag": "den-cot"
+     },
+     {
+      "title": "Đèn gắn tường ngoài trời",
+      "tag": "den-gan-tuong-ngoai-troi"
+     },
+     {
+      "title": "Đèn tường ngoài trời",
+      "tag": "den-tuong-ngoai-troi"
+     },
+     {
+      "title": "Đèn thả",
+      "tag": "den-tha"
+     }
+    ]
+   },
+   {
+    "title": "Đèn âm trần downlight",
+    "handle": "den-am-tran-downlight",
+    "l3": [
+     {
+      "title": "Đèn âm trần",
+      "tag": "den-am-tran"
+     },
+     {
+      "title": "Đèn LED âm trần",
+      "tag": "den-led-am-tran"
+     },
+     {
+      "title": "Đèn ốp nổi",
+      "tag": "den-op-noi"
+     },
+     {
+      "title": "Đèn LED ốp nổi",
+      "tag": "den-led-op-noi"
+     },
+     {
+      "title": "Đèn halogen âm trần",
+      "tag": "den-halogen-am-tran"
+     },
+     {
+      "title": "Đèn halogen LED âm trần",
+      "tag": "den-halogen-led-am-tran"
+     }
+    ]
+   },
+   {
+    "title": "Đèn văn phòng",
+    "handle": "den-van-phong",
+    "l3": [
+     {
+      "title": "Đèn LED panel",
+      "tag": "den-led-panel"
+     },
+     {
+      "title": "Máng đèn",
+      "tag": "mang-den"
+     }
+    ]
+   },
+   {
+    "title": "Đèn trong nhà",
+    "handle": "den-trong-nha",
+    "l3": [
+     {
+      "title": "Đèn ốp trần",
+      "tag": "den-op-tran"
+     },
+     {
+      "title": "Đèn ray",
+      "tag": "den-ray"
+     },
+     {
+      "title": "Quạt trần đèn",
+      "tag": "quat-tran-den"
+     },
+     {
+      "title": "Đèn chùm",
+      "tag": "den-chum"
+     },
+     {
+      "title": "Máng đèn trần",
+      "tag": "mang-den-tran"
+     },
+     {
+      "title": "Đèn rọi trong nhà",
+      "tag": "den-roi-trong-nha"
+     },
+     {
+      "title": "Đèn gắn tường trong nhà",
+      "tag": "den-gan-tuong-trong-nha"
+     }
+    ]
+   },
+   {
+    "title": "Đèn nhà xưởng",
+    "handle": "den-nha-xuong",
+    "l3": [
+     {
+      "title": "Đèn UFO nhà xưởng",
+      "tag": "den-ufo-nha-xuong"
+     },
+     {
+      "title": "Đèn chóa nhà xưởng",
+      "tag": "den-choa-nha-xuong"
+     }
+    ]
+   },
+   {
+    "title": "Đèn bàn & đèn cây",
+    "handle": "den-ban-den-cay",
+    "l3": [
+     {
+      "title": "Đèn học",
+      "tag": "den-hoc"
+     },
+     {
+      "title": "Thiết bị chiếu sáng studio",
+      "tag": "thiet-bi-chieu-sang-studio"
+     },
+     {
+      "title": "Đèn bàn",
+      "tag": "den-ban"
+     },
+     {
+      "title": "Đèn cây",
+      "tag": "den-cay"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện đèn",
+    "handle": "phu-kien-den",
+    "l3": [
+     {
+      "title": "Dụng cụ thay bóng",
+      "tag": "dung-cu-thay-bong"
+     },
+     {
+      "title": "Chấn lưu",
+      "tag": "chan-luu"
+     },
+     {
+      "title": "Tắc te",
+      "tag": "tac-te"
+     },
+     {
+      "title": "Đui đèn",
+      "tag": "dui-den"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "DOW",
+  "handle": "cua",
+  "title": "Cửa & cửa sổ",
+  "icon": "door",
+  "subs": [
+   {
+    "title": "Cửa & khung cửa",
+    "handle": "cua-khung-cua",
+    "l3": [
+     {
+      "title": "Cửa nhựa tổng hợp",
+      "tag": "cua-nhua-tong-hop"
+     },
+     {
+      "title": "Khung cửa nhựa & UPVC",
+      "tag": "khung-cua-nhua-upvc"
+     },
+     {
+      "title": "Cửa cỡ lớn",
+      "tag": "cua-co-lon"
+     },
+     {
+      "title": "Cửa cho thú cưng",
+      "tag": "cua-cho-thu-cung"
+     }
+    ]
+   },
+   {
+    "title": "Cửa nhôm & UPVC",
+    "handle": "cua-nhom-upvc",
+    "l3": [
+     {
+      "title": "Cửa nhôm mở quay",
+      "tag": "cua-nhom-mo-quay"
+     },
+     {
+      "title": "Cửa UPVC trượt",
+      "tag": "cua-upvc-truot"
+     },
+     {
+      "title": "Cửa sổ nhôm trượt",
+      "tag": "cua-so-nhom-truot"
+     },
+     {
+      "title": "Cửa sổ UPVC mở quay",
+      "tag": "cua-so-upvc-mo-quay"
+     },
+     {
+      "title": "Ô kính nhôm",
+      "tag": "o-kinh-nhom"
+     },
+     {
+      "title": "Ô kính UPVC",
+      "tag": "o-kinh-upvc"
+     },
+     {
+      "title": "Thanh trang trí UPVC",
+      "tag": "thanh-trang-tri-upvc"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện khóa cửa",
+    "handle": "phu-kien-khoa-cua",
+    "l3": [
+     {
+      "title": "Khóa đa năng",
+      "tag": "khoa-da-nang"
+     },
+     {
+      "title": "Núm cửa",
+      "tag": "num-cua"
+     },
+     {
+      "title": "Tay nắm cửa",
+      "tag": "tay-nam-cua"
+     },
+     {
+      "title": "Hộp đựng chìa khóa",
+      "tag": "hop-dung-chia-khoa"
+     },
+     {
+      "title": "Tay co thủy lực & bản lề",
+      "tag": "tay-co-thuy-luc-ban-le"
+     },
+     {
+      "title": "Bộ ổ khóa",
+      "tag": "bo-o-khoa"
+     },
+     {
+      "title": "Chốt cửa phòng tắm",
+      "tag": "chot-cua-phong-tam"
+     },
+     {
+      "title": "Khóa chốt",
+      "tag": "khoa-chot"
+     },
+     {
+      "title": "Phụ tùng khóa",
+      "tag": "phu-tung-khoa"
+     },
+     {
+      "title": "Chặn cửa",
+      "tag": "chan-cua"
+     }
+    ]
+   },
+   {
+    "title": "Cửa sổ & khung",
+    "handle": "cua-so-khung",
+    "l3": [
+     {
+      "title": "Ô thông gió",
+      "tag": "o-thong-gio"
+     },
+     {
+      "title": "Cánh cửa sổ gỗ",
+      "tag": "canh-cua-so-go"
+     },
+     {
+      "title": "Khung cửa sổ gỗ",
+      "tag": "khung-cua-so-go"
+     },
+     {
+      "title": "Cửa sổ trượt",
+      "tag": "cua-so-truot"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện cửa",
+    "handle": "phu-kien-cua",
+    "l3": [
+     {
+      "title": "Ron chống côn trùng",
+      "tag": "ron-chong-con-trung"
+     },
+     {
+      "title": "Lưới chống muỗi",
+      "tag": "luoi-chong-muoi"
+     },
+     {
+      "title": "Song sắt chống trộm",
+      "tag": "song-sat-chong-trom"
+     },
+     {
+      "title": "Phụ kiện lưới",
+      "tag": "phu-kien-luoi"
+     },
+     {
+      "title": "Dụng cụ vệ sinh kính",
+      "tag": "dung-cu-ve-sinh-kinh"
+     }
+    ]
+   },
+   {
+    "title": "Cửa may đo",
+    "handle": "cua-may-do",
+    "l3": [
+     {
+      "title": "Cửa nhôm may đo",
+      "tag": "cua-nhom-may-do"
+     },
+     {
+      "title": "Cửa UPVC may đo",
+      "tag": "cua-upvc-may-do"
+     },
+     {
+      "title": "Cửa & khung gỗ may đo",
+      "tag": "cua-khung-go-may-do"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "ELT",
+  "handle": "an-ninh",
+  "title": "Điện & an ninh",
+  "icon": "shield",
+  "subs": [
+   {
+    "title": "Ổ cắm kéo dài & phích chuyển",
+    "handle": "o-cam-keo-dai-phich-chuyen",
+    "l3": [
+     {
+      "title": "Thanh ray ổ cắm",
+      "tag": "thanh-ray-o-cam"
+     },
+     {
+      "title": "Ổ cắm cuộn",
+      "tag": "o-cam-cuon"
+     },
+     {
+      "title": "Ổ cắm kéo dài",
+      "tag": "o-cam-keo-dai"
+     },
+     {
+      "title": "Phích chuyển",
+      "tag": "phich-chuyen"
+     }
+    ]
+   },
+   {
+    "title": "Aptomat & tủ điện",
+    "handle": "aptomat-tu-dien",
+    "l3": [
+     {
+      "title": "Đồng hồ & bảng điện",
+      "tag": "dong-ho-bang-dien"
+     },
+     {
+      "title": "Aptomat chống giật",
+      "tag": "aptomat-chong-giat"
+     },
+     {
+      "title": "Tủ điện trống",
+      "tag": "tu-dien-trong"
+     },
+     {
+      "title": "Cầu chì",
+      "tag": "cau-chi"
+     },
+     {
+      "title": "Tủ phân phối",
+      "tag": "tu-phan-phoi"
+     },
+     {
+      "title": "Tủ điện chống nước",
+      "tag": "tu-dien-chong-nuoc"
+     },
+     {
+      "title": "Cầu dao",
+      "tag": "cau-dao"
+     }
+    ]
+   },
+   {
+    "title": "Dây điện",
+    "handle": "day-dien",
+    "l3": [
+     {
+      "title": "Dây điện THW",
+      "tag": "day-dien-thw"
+     },
+     {
+      "title": "Dây điện THW-A",
+      "tag": "day-dien-thw-a"
+     },
+     {
+      "title": "Dây điện VAF",
+      "tag": "day-dien-vaf"
+     },
+     {
+      "title": "Dây điện VAF-GRD",
+      "tag": "day-dien-vaf-grd"
+     },
+     {
+      "title": "Dây điện NYY",
+      "tag": "day-dien-nyy"
+     },
+     {
+      "title": "Dây điện VCT",
+      "tag": "day-dien-vct"
+     },
+     {
+      "title": "Dây điện thiết bị",
+      "tag": "day-dien-thiet-bi"
+     }
+    ]
+   },
+   {
+    "title": "Điện mặt trời",
+    "handle": "dien-mat-troi",
+    "l3": [
+     {
+      "title": "Bộ điện mặt trời hòa lưới",
+      "tag": "bo-dien-mat-troi-hoa-luoi"
+     },
+     {
+      "title": "Bộ điện mặt trời độc lập",
+      "tag": "bo-dien-mat-troi-doc-lap"
+     },
+     {
+      "title": "Tấm pin mặt trời",
+      "tag": "tam-pin-mat-troi"
+     },
+     {
+      "title": "Thiết bị lắp đặt điện mặt trời",
+      "tag": "thiet-bi-lap-dat-dien-mat-troi"
+     },
+     {
+      "title": "Phụ kiện lắp đặt",
+      "tag": "phu-kien-lap-dat"
+     },
+     {
+      "title": "Cáp điện mặt trời",
+      "tag": "cap-dien-mat-troi"
+     }
+    ]
+   },
+   {
+    "title": "Thiết bị dự phòng điện",
+    "handle": "thiet-bi-du-phong-dien",
+    "l3": [
+     {
+      "title": "Trạm sạc di động",
+      "tag": "tram-sac-di-dong"
+     },
+     {
+      "title": "Bộ lưu điện UPS",
+      "tag": "bo-luu-dien-ups"
+     }
+    ]
+   },
+   {
+    "title": "Sạc xe điện",
+    "handle": "sac-xe-dien",
+    "l3": [
+     {
+      "title": "Bộ sạc xe điện & phụ kiện",
+      "tag": "bo-sac-xe-dien-phu-kien"
+     }
+    ]
+   },
+   {
+    "title": "Pin",
+    "handle": "pin",
+    "l3": [
+     {
+      "title": "Pin khô",
+      "tag": "pin-kho"
+     },
+     {
+      "title": "Pin alkaline",
+      "tag": "pin-alkaline"
+     },
+     {
+      "title": "Pin",
+      "tag": "pin"
+     },
+     {
+      "title": "Bộ sạc pin",
+      "tag": "bo-sac-pin"
+     },
+     {
+      "title": "Pin cúc áo",
+      "tag": "pin-cuc-ao"
+     },
+     {
+      "title": "Pin sạc",
+      "tag": "pin-sac"
+     },
+     {
+      "title": "Pin remote",
+      "tag": "pin-remote"
+     }
+    ]
+   },
+   {
+    "title": "Đèn khẩn cấp & đèn pin",
+    "handle": "den-khan-cap-den-pin",
+    "l3": [
+     {
+      "title": "Đèn khẩn cấp",
+      "tag": "den-khan-cap"
+     },
+     {
+      "title": "Đèn pin",
+      "tag": "den-pin"
+     },
+     {
+      "title": "Đèn làm việc",
+      "tag": "den-lam-viec"
+     },
+     {
+      "title": "Đèn ngủ",
+      "tag": "den-ngu"
+     }
+    ]
+   },
+   {
+    "title": "Ổ cắm & công tắc",
+    "handle": "o-cam-cong-tac",
+    "l3": [
+     {
+      "title": "Phích cắm",
+      "tag": "phich-cam"
+     },
+     {
+      "title": "Bộ ổ cắm",
+      "tag": "bo-o-cam"
+     },
+     {
+      "title": "Công tắc hẹn giờ",
+      "tag": "cong-tac-hen-gio"
+     },
+     {
+      "title": "Mặt chống nước",
+      "tag": "mat-chong-nuoc"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện điện",
+    "handle": "phu-kien-dien",
+    "l3": [
+     {
+      "title": "Thiết bị an toàn",
+      "tag": "thiet-bi-an-toan"
+     },
+     {
+      "title": "Bảng điện",
+      "tag": "bang-dien"
+     },
+     {
+      "title": "Nút nhấn",
+      "tag": "nut-nhan"
+     }
+    ]
+   },
+   {
+    "title": "Ống luồn & phụ kiện",
+    "handle": "ong-luon-phu-kien",
+    "l3": [
+     {
+      "title": "Ống luồn cứng",
+      "tag": "ong-luon-cung"
+     },
+     {
+      "title": "Máng điện",
+      "tag": "mang-dien"
+     },
+     {
+      "title": "Hộp điện",
+      "tag": "hop-dien"
+     },
+     {
+      "title": "Hộp nối",
+      "tag": "hop-noi"
+     },
+     {
+      "title": "Đầu nối",
+      "tag": "dau-noi"
+     },
+     {
+      "title": "Kẹp ống",
+      "tag": "kep-ong"
+     },
+     {
+      "title": "Lò xo uốn ống",
+      "tag": "lo-xo-uon-ong"
+     },
+     {
+      "title": "Ống luồn khác",
+      "tag": "ong-luon-khac"
+     },
+     {
+      "title": "Ống luồn mềm",
+      "tag": "ong-luon-mem"
+     }
+    ]
+   },
+   {
+    "title": "Vật tư điện",
+    "handle": "vat-tu-dien",
+    "l3": [
+     {
+      "title": "Băng keo điện",
+      "tag": "bang-keo-dien"
+     },
+     {
+      "title": "Đồng hồ đo điện",
+      "tag": "dong-ho-do-dien"
+     },
+     {
+      "title": "Dây rút",
+      "tag": "day-rut"
+     },
+     {
+      "title": "Ống xoắn bọc dây",
+      "tag": "ong-xoan-boc-day"
+     },
+     {
+      "title": "Kẹp dây",
+      "tag": "kep-day"
+     },
+     {
+      "title": "Đầu nối dây",
+      "tag": "dau-noi-day"
+     }
+    ]
+   },
+   {
+    "title": "Chuông cửa",
+    "handle": "chuong-cua",
+    "l3": [
+     {
+      "title": "Chuông cửa không dây",
+      "tag": "chuong-cua-khong-day"
+     },
+     {
+      "title": "Chuông cửa có dây",
+      "tag": "chuong-cua-co-day"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "OUT",
+  "handle": "san-vuon",
+  "title": "Ngoài trời & sân vườn",
+  "icon": "leaf",
+  "subs": [
+   {
+    "title": "Nhà kho ngoài trời",
+    "handle": "nha-kho-ngoai-troi",
+    "l3": [
+     {
+      "title": "Nhà lắp ghép",
+      "tag": "nha-lap-ghep"
+     },
+     {
+      "title": "Kho nhựa ngoài trời",
+      "tag": "kho-nhua-ngoai-troi"
+     },
+     {
+      "title": "Tủ nhựa ngoài trời",
+      "tag": "tu-nhua-ngoai-troi"
+     }
+    ]
+   },
+   {
+    "title": "Nội thất ngoài trời",
+    "handle": "noi-that-ngoai-troi",
+    "l3": [
+     {
+      "title": "Bộ bàn ghế sân vườn",
+      "tag": "bo-ban-ghe-san-vuon"
+     },
+     {
+      "title": "Bàn sân vườn",
+      "tag": "ban-san-vuon"
+     },
+     {
+      "title": "Ghế sân vườn",
+      "tag": "ghe-san-vuon"
+     },
+     {
+      "title": "Ghế thư giãn",
+      "tag": "ghe-thu-gian"
+     },
+     {
+      "title": "Xích đu",
+      "tag": "xich-du"
+     },
+     {
+      "title": "Ghế băng",
+      "tag": "ghe-bang"
+     },
+     {
+      "title": "Giường thư giãn",
+      "tag": "giuong-thu-gian"
+     },
+     {
+      "title": "Sofa ngoài trời",
+      "tag": "sofa-ngoai-troi"
+     },
+     {
+      "title": "Bàn ghế ngoài trời",
+      "tag": "ban-ghe-ngoai-troi"
+     },
+     {
+      "title": "Dù sân vườn",
+      "tag": "du-san-vuon"
+     }
+    ]
+   },
+   {
+    "title": "Bàn ghế dã ngoại",
+    "handle": "ban-ghe-da-ngoai",
+    "l3": [
+     {
+      "title": "Bàn ghế sự kiện",
+      "tag": "ban-ghe-su-kien"
+     },
+     {
+      "title": "Bàn ghế dã ngoại",
+      "tag": "ban-ghe-da-ngoai"
+     }
+    ]
+   },
+   {
+    "title": "Bàn ghế nhựa",
+    "handle": "ban-ghe-nhua",
+    "l3": [
+     {
+      "title": "Bàn nhựa",
+      "tag": "ban-nhua"
+     },
+     {
+      "title": "Ghế nhựa",
+      "tag": "ghe-nhua"
+     }
+    ]
+   },
+   {
+    "title": "Nhà bạt & dù che",
+    "handle": "nha-bat-du-che",
+    "l3": [
+     {
+      "title": "Nhà bạt",
+      "tag": "nha-bat"
+     },
+     {
+      "title": "Dù che nắng",
+      "tag": "du-che-nang"
+     }
+    ]
+   },
+   {
+    "title": "Bếp nướng BBQ",
+    "handle": "bep-nuong-bbq",
+    "l3": [
+     {
+      "title": "Bếp nướng gas",
+      "tag": "bep-nuong-gas"
+     },
+     {
+      "title": "Bếp nướng điện",
+      "tag": "bep-nuong-dien"
+     },
+     {
+      "title": "Bếp nướng than",
+      "tag": "bep-nuong-than"
+     },
+     {
+      "title": "Than",
+      "tag": "than"
+     },
+     {
+      "title": "Phụ kiện BBQ",
+      "tag": "phu-kien-bbq"
+     }
+    ]
+   },
+   {
+    "title": "Dã ngoại & cắm trại",
+    "handle": "da-ngoai-cam-trai",
+    "l3": [
+     {
+      "title": "Lều",
+      "tag": "leu"
+     },
+     {
+      "title": "Túi ngủ",
+      "tag": "tui-ngu"
+     },
+     {
+      "title": "Ghế cắm trại",
+      "tag": "ghe-cam-trai"
+     },
+     {
+      "title": "Đèn dầu",
+      "tag": "den-dau"
+     },
+     {
+      "title": "Dụng cụ cắm trại",
+      "tag": "dung-cu-cam-trai"
+     },
+     {
+      "title": "Dao xếp",
+      "tag": "dao-xep"
+     },
+     {
+      "title": "Dụng cụ nấu ăn dã ngoại",
+      "tag": "dung-cu-nau-an-da-ngoai"
+     }
+    ]
+   },
+   {
+    "title": "Vui chơi ngoài trời",
+    "handle": "vui-choi-ngoai-troi",
+    "l3": [
+     {
+      "title": "Bể bơi trẻ em",
+      "tag": "be-boi-tre-em"
+     },
+     {
+      "title": "Phao bơi",
+      "tag": "phao-boi"
+     },
+     {
+      "title": "Phao nổi",
+      "tag": "phao-noi"
+     }
+    ]
+   },
+   {
+    "title": "Trang trí sân vườn",
+    "handle": "trang-tri-san-vuon",
+    "l3": [
+     {
+      "title": "Cây giả",
+      "tag": "cay-gia"
+     },
+     {
+      "title": "Sàn gỗ ngoài trời",
+      "tag": "san-go-ngoai-troi"
+     },
+     {
+      "title": "Hộp thư",
+      "tag": "hop-thu"
+     },
+     {
+      "title": "Chậu cây & phụ kiện",
+      "tag": "chau-cay-phu-kien"
+     },
+     {
+      "title": "Cỏ nhân tạo",
+      "tag": "co-nhan-tao"
+     },
+     {
+      "title": "Hàng rào gỗ",
+      "tag": "hang-rao-go"
+     },
+     {
+      "title": "Kệ để cây",
+      "tag": "ke-de-cay"
+     },
+     {
+      "title": "Tượng sân vườn",
+      "tag": "tuong-san-vuon"
+     },
+     {
+      "title": "Đài phun nước",
+      "tag": "dai-phun-nuoc"
+     },
+     {
+      "title": "Bể cá",
+      "tag": "be-ca"
+     },
+     {
+      "title": "Đá trang trí",
+      "tag": "da-trang-tri"
+     }
+    ]
+   },
+   {
+    "title": "Máy làm vườn",
+    "handle": "may-lam-vuon",
+    "l3": [
+     {
+      "title": "Máy thổi lá",
+      "tag": "may-thoi-la"
+     },
+     {
+      "title": "Máy cắt cỏ điện",
+      "tag": "may-cat-co-dien"
+     },
+     {
+      "title": "Máy cắt cỏ pin",
+      "tag": "may-cat-co-pin"
+     },
+     {
+      "title": "Máy tỉa hàng rào",
+      "tag": "may-tia-hang-rao"
+     },
+     {
+      "title": "Máy cưa xích pin",
+      "tag": "may-cua-xich-pin"
+     },
+     {
+      "title": "Máy xới đất",
+      "tag": "may-xoi-dat"
+     },
+     {
+      "title": "Phụ kiện máy làm vườn",
+      "tag": "phu-kien-may-lam-vuon"
+     },
+     {
+      "title": "Máy cắt cỏ cầm tay",
+      "tag": "may-cat-co-cam-tay"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ làm vườn",
+    "handle": "dung-cu-lam-vuon",
+    "l3": [
+     {
+      "title": "Kéo tỉa cây",
+      "tag": "keo-tia-cay"
+     },
+     {
+      "title": "Nhà kính",
+      "tag": "nha-kinh"
+     },
+     {
+      "title": "Drone nông nghiệp & phụ kiện",
+      "tag": "drone-nong-nghiep-phu-kien"
+     },
+     {
+      "title": "Bình phun",
+      "tag": "binh-phun"
+     },
+     {
+      "title": "Màng phủ nông nghiệp",
+      "tag": "mang-phu-nong-nghiep"
+     },
+     {
+      "title": "Bạt & lưới",
+      "tag": "bat-luoi"
+     },
+     {
+      "title": "Dụng cụ làm vườn khác",
+      "tag": "dung-cu-lam-vuon-khac"
+     },
+     {
+      "title": "Cuốc",
+      "tag": "cuoc"
+     },
+     {
+      "title": "Xẻng",
+      "tag": "xeng"
+     }
+    ]
+   },
+   {
+    "title": "Tưới cây",
+    "handle": "tuoi-cay",
+    "l3": [
+     {
+      "title": "Cuộn ống tưới",
+      "tag": "cuon-ong-tuoi"
+     },
+     {
+      "title": "Hẹn giờ tưới",
+      "tag": "hen-gio-tuoi"
+     },
+     {
+      "title": "Súng phun nước",
+      "tag": "sung-phun-nuoc"
+     },
+     {
+      "title": "Khớp nối ống",
+      "tag": "khop-noi-ong"
+     },
+     {
+      "title": "Bình tưới",
+      "tag": "binh-tuoi"
+     },
+     {
+      "title": "Van đáy",
+      "tag": "van-day"
+     }
+    ]
+   },
+   {
+    "title": "Hạt giống & vật tư trồng cây",
+    "handle": "hat-giong-vat-tu-trong-cay",
+    "l3": [
+     {
+      "title": "Hạt giống",
+      "tag": "hat-giong"
+     },
+     {
+      "title": "Giá thể trồng cây",
+      "tag": "gia-the-trong-cay"
+     },
+     {
+      "title": "Phân bón",
+      "tag": "phan-bon"
+     },
+     {
+      "title": "Chế phẩm vi sinh",
+      "tag": "che-pham-vi-sinh"
+     },
+     {
+      "title": "Xử lý nước",
+      "tag": "xu-ly-nuoc"
+     }
+    ]
+   },
+   {
+    "title": "Thuốc trừ sâu",
+    "handle": "thuoc-tru-sau",
+    "l3": [
+     {
+      "title": "Thuốc diệt côn trùng",
+      "tag": "thuoc-diet-con-trung"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "SPO",
+  "handle": "the-thao",
+  "title": "Thể thao & thể hình",
+  "icon": "ball",
+  "subs": [
+   {
+    "title": "Máy tập thể hình",
+    "handle": "may-tap-the-hinh",
+    "l3": [
+     {
+      "title": "Máy chạy bộ",
+      "tag": "may-chay-bo"
+     },
+     {
+      "title": "Máy tập elip",
+      "tag": "may-tap-elip"
+     },
+     {
+      "title": "Máy đi bộ trên không",
+      "tag": "may-di-bo-tren-khong"
+     },
+     {
+      "title": "Xe đạp tập",
+      "tag": "xe-dap-tap"
+     },
+     {
+      "title": "Máy tập tạ",
+      "tag": "may-tap-ta"
+     },
+     {
+      "title": "Máy chèo thuyền",
+      "tag": "may-cheo-thuyen"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ tập",
+    "handle": "dung-cu-tap",
+    "l3": [
+     {
+      "title": "Tạ tự do",
+      "tag": "ta-tu-do"
+     },
+     {
+      "title": "Dụng cụ tập bụng",
+      "tag": "dung-cu-tap-bung"
+     },
+     {
+      "title": "Xà đơn xà kép",
+      "tag": "xa-don-xa-kep"
+     },
+     {
+      "title": "Máy kéo giãn",
+      "tag": "may-keo-gian"
+     },
+     {
+      "title": "Yoga & Pilates",
+      "tag": "yoga-pilates"
+     },
+     {
+      "title": "Bạt nhún",
+      "tag": "bat-nhun"
+     },
+     {
+      "title": "Máy tập chân",
+      "tag": "may-tap-chan"
+     },
+     {
+      "title": "Dây nhảy",
+      "tag": "day-nhay"
+     },
+     {
+      "title": "Máy tập vai",
+      "tag": "may-tap-vai"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ thể thao",
+    "handle": "dung-cu-the-thao",
+    "l3": [
+     {
+      "title": "Thuyền & phụ kiện",
+      "tag": "thuyen-phu-kien"
+     },
+     {
+      "title": "Bao cát",
+      "tag": "bao-cat"
+     },
+     {
+      "title": "Cầu lông",
+      "tag": "cau-long"
+     },
+     {
+      "title": "Bóng bàn",
+      "tag": "bong-ban"
+     },
+     {
+      "title": "Cầu mây",
+      "tag": "cau-may"
+     },
+     {
+      "title": "Bóng chuyền",
+      "tag": "bong-chuyen"
+     },
+     {
+      "title": "Dụng cụ huấn luyện",
+      "tag": "dung-cu-huan-luyen"
+     },
+     {
+      "title": "Phi tiêu",
+      "tag": "phi-tieu"
+     },
+     {
+      "title": "Mặt nạ",
+      "tag": "mat-na"
+     },
+     {
+      "title": "Đĩa ném",
+      "tag": "dia-nem"
+     },
+     {
+      "title": "Bida",
+      "tag": "bida"
+     }
+    ]
+   },
+   {
+    "title": "Quần áo thể thao",
+    "handle": "quan-ao-the-thao",
+    "l3": [
+     {
+      "title": "Áo bra thể thao",
+      "tag": "ao-bra-the-thao"
+     },
+     {
+      "title": "Áo xông hơi",
+      "tag": "ao-xong-hoi"
+     },
+     {
+      "title": "Áo crop",
+      "tag": "ao-crop"
+     },
+     {
+      "title": "Quần legging",
+      "tag": "quan-legging"
+     },
+     {
+      "title": "Phụ kiện tập",
+      "tag": "phu-kien-tap"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện thể thao",
+    "handle": "phu-kien-the-thao",
+    "l3": [
+     {
+      "title": "Móc khóa & thẻ treo túi",
+      "tag": "moc-khoa-the-treo-tui"
+     },
+     {
+      "title": "Túi tập gym",
+      "tag": "tui-tap-gym"
+     }
+    ]
+   },
+   {
+    "title": "Đồng hồ thông minh",
+    "handle": "dong-ho-thong-minh",
+    "l3": [
+     {
+      "title": "Đồng hồ thông minh",
+      "tag": "dong-ho-thong-minh"
+     },
+     {
+      "title": "Sạc đồng hồ",
+      "tag": "sac-dong-ho"
+     }
+    ]
+   },
+   {
+    "title": "Thực phẩm bổ sung",
+    "handle": "thuc-pham-bo-sung",
+    "l3": [
+     {
+      "title": "Whey protein",
+      "tag": "whey-protein"
+     },
+     {
+      "title": "Bình lắc protein",
+      "tag": "binh-lac-protein"
+     }
+    ]
+   },
+   {
+    "title": "Xe máy",
+    "handle": "xe-may",
+    "l3": [
+     {
+      "title": "Phụ kiện xe máy",
+      "tag": "phu-kien-xe-may"
+     }
+    ]
+   },
+   {
+    "title": "Xe điện",
+    "handle": "xe-dien",
+    "l3": [
+     {
+      "title": "Xe trượt điện",
+      "tag": "xe-truot-dien"
+     },
+     {
+      "title": "Xe đạp điện",
+      "tag": "xe-dap-dien"
+     },
+     {
+      "title": "Xe điện một bánh",
+      "tag": "xe-dien-mot-banh"
+     }
+    ]
+   },
+   {
+    "title": "Xe đạp",
+    "handle": "xe-dap",
+    "l3": [
+     {
+      "title": "Xe đạp đường phố",
+      "tag": "xe-dap-duong-pho"
+     },
+     {
+      "title": "Xe đạp gấp",
+      "tag": "xe-dap-gap"
+     },
+     {
+      "title": "Xe đạp địa hình",
+      "tag": "xe-dap-dia-hinh"
+     },
+     {
+      "title": "Xe đạp bánh béo",
+      "tag": "xe-dap-banh-beo"
+     },
+     {
+      "title": "Mũ bảo hiểm xe đạp",
+      "tag": "mu-bao-hiem-xe-dap"
+     },
+     {
+      "title": "Bơm xe",
+      "tag": "bom-xe"
+     },
+     {
+      "title": "Yên & phụ kiện xe đạp",
+      "tag": "yen-phu-kien-xe-dap"
+     },
+     {
+      "title": "Máy tập đạp xe",
+      "tag": "may-tap-dap-xe"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "HEA",
+  "handle": "suc-khoe",
+  "title": "Sức khỏe",
+  "icon": "health",
+  "subs": [
+   {
+    "title": "Máy đo sức khỏe",
+    "handle": "may-do-suc-khoe",
+    "l3": [
+     {
+      "title": "Máy đo huyết áp",
+      "tag": "may-do-huyet-ap"
+     },
+     {
+      "title": "Nhiệt kế",
+      "tag": "nhiet-ke"
+     },
+     {
+      "title": "Máy đo oxy",
+      "tag": "may-do-oxy"
+     },
+     {
+      "title": "Máy đo đường huyết",
+      "tag": "may-do-duong-huyet"
+     },
+     {
+      "title": "Bộ test cholesterol",
+      "tag": "bo-test-cholesterol"
+     },
+     {
+      "title": "Bộ test nhanh kháng nguyên",
+      "tag": "bo-test-nhanh-khang-nguyen"
+     },
+     {
+      "title": "Que thử thai",
+      "tag": "que-thu-thai"
+     },
+     {
+      "title": "Cân sức khỏe",
+      "tag": "can-suc-khoe"
+     },
+     {
+      "title": "Máy đo nồng độ cồn",
+      "tag": "may-do-nong-do-con"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ hỗ trợ di chuyển",
+    "handle": "dung-cu-ho-tro-di-chuyen",
+    "l3": [
+     {
+      "title": "Xe lăn",
+      "tag": "xe-lan"
+     },
+     {
+      "title": "Khung tập đi có bánh",
+      "tag": "khung-tap-di-co-banh"
+     },
+     {
+      "title": "Khung tập đi",
+      "tag": "khung-tap-di"
+     },
+     {
+      "title": "Gậy chống",
+      "tag": "gay-chong"
+     },
+     {
+      "title": "Phụ kiện xe lăn",
+      "tag": "phu-kien-xe-lan"
+     },
+     {
+      "title": "Xe lăn đẩy tay",
+      "tag": "xe-lan-day-tay"
+     }
+    ]
+   },
+   {
+    "title": "Giường y tế & phụ kiện",
+    "handle": "giuong-y-te-phu-kien",
+    "l3": [
+     {
+      "title": "Giường y tế",
+      "tag": "giuong-y-te"
+     },
+     {
+      "title": "Nệm",
+      "tag": "nem"
+     },
+     {
+      "title": "Nệm hơi",
+      "tag": "nem-hoi"
+     },
+     {
+      "title": "Đệm sưởi",
+      "tag": "dem-suoi"
+     },
+     {
+      "title": "Tấm chuyển bệnh nhân",
+      "tag": "tam-chuyen-benh-nhan"
+     },
+     {
+      "title": "Phụ tùng giường",
+      "tag": "phu-tung-giuong"
+     }
+    ]
+   },
+   {
+    "title": "An toàn phòng tắm",
+    "handle": "an-toan-phong-tam",
+    "l3": [
+     {
+      "title": "Ghế bô vệ sinh",
+      "tag": "ghe-bo-ve-sinh"
+     }
+    ]
+   },
+   {
+    "title": "Tã người lớn",
+    "handle": "ta-nguoi-lon",
+    "l3": [
+     {
+      "title": "Tã người lớn",
+      "tag": "ta-nguoi-lon"
+     },
+     {
+      "title": "Tấm lót",
+      "tag": "tam-lot"
+     },
+     {
+      "title": "Ga trải giường",
+      "tag": "ga-trai-giuong"
+     },
+     {
+      "title": "Khăn ướt",
+      "tag": "khan-uot"
+     }
+    ]
+   },
+   {
+    "title": "Gói khám sức khỏe",
+    "handle": "goi-kham-suc-khoe",
+    "l3": [
+     {
+      "title": "Gói khám sức khỏe",
+      "tag": "goi-kham-suc-khoe"
+     }
+    ]
+   },
+   {
+    "title": "Thực phẩm chức năng",
+    "handle": "thuc-pham-chuc-nang",
+    "l3": [
+     {
+      "title": "Vitamin",
+      "tag": "vitamin"
+     },
+     {
+      "title": "Vitamin cho trẻ",
+      "tag": "vitamin-cho-tre"
+     },
+     {
+      "title": "Thực phẩm bổ sung",
+      "tag": "thuc-pham-bo-sung"
+     },
+     {
+      "title": "Thực phẩm y tế",
+      "tag": "thuc-pham-y-te"
+     }
+    ]
+   },
+   {
+    "title": "Thuốc không kê đơn",
+    "handle": "thuoc-khong-ke-don",
+    "l3": [
+     {
+      "title": "Thuốc long đờm",
+      "tag": "thuoc-long-dom"
+     },
+     {
+      "title": "Thuốc bôi giảm đau, côn trùng cắn",
+      "tag": "thuoc-boi-giam-dau-con-trung-can"
+     }
+    ]
+   },
+   {
+    "title": "Thiết bị cấp cứu",
+    "handle": "thiet-bi-cap-cuu",
+    "l3": [
+     {
+      "title": "Máy khử rung tim AED",
+      "tag": "may-khu-rung-tim-aed"
+     },
+     {
+      "title": "Máy theo dõi sinh hiệu",
+      "tag": "may-theo-doi-sinh-hieu"
+     },
+     {
+      "title": "Thiết bị cấp cứu khác",
+      "tag": "thiet-bi-cap-cuu-khac"
+     }
+    ]
+   },
+   {
+    "title": "Dụng cụ sơ cứu",
+    "handle": "dung-cu-so-cuu",
+    "l3": [
+     {
+      "title": "Bông",
+      "tag": "bong"
+     },
+     {
+      "title": "Gạc",
+      "tag": "gac"
+     },
+     {
+      "title": "Túi chườm nóng lạnh",
+      "tag": "tui-chuom-nong-lanh"
+     },
+     {
+      "title": "Hộp sơ cứu",
+      "tag": "hop-so-cuu"
+     },
+     {
+      "title": "Khác",
+      "tag": "khac"
+     }
+    ]
+   },
+   {
+    "title": "Đai hỗ trợ",
+    "handle": "dai-ho-tro",
+    "l3": [
+     {
+      "title": "Đai hỗ trợ",
+      "tag": "dai-ho-tro"
+     }
+    ]
+   },
+   {
+    "title": "Thiết bị y tế khác",
+    "handle": "thiet-bi-y-te-khac",
+    "l3": [
+     {
+      "title": "Máy xông khí dung",
+      "tag": "may-xong-khi-dung"
+     },
+     {
+      "title": "Máy trợ thính",
+      "tag": "may-tro-thinh"
+     },
+     {
+      "title": "Máy tạo oxy",
+      "tag": "may-tao-oxy"
+     },
+     {
+      "title": "Máy hút đờm",
+      "tag": "may-hut-dom"
+     },
+     {
+      "title": "Hộp chia thuốc",
+      "tag": "hop-chia-thuoc"
+     },
+     {
+      "title": "Túi chườm nóng",
+      "tag": "tui-chuom-nong"
+     },
+     {
+      "title": "Tủ thuốc",
+      "tag": "tu-thuoc"
+     },
+     {
+      "title": "Xe đạp tập mini",
+      "tag": "xe-dap-tap-mini"
+     },
+     {
+      "title": "Quà tặng sức khỏe",
+      "tag": "qua-tang-suc-khoe"
+     },
+     {
+      "title": "Sản phẩm hỗ trợ giấc ngủ",
+      "tag": "san-pham-ho-tro-giac-ngu"
+     },
+     {
+      "title": "Kính mắt",
+      "tag": "kinh-mat"
+     }
+    ]
+   },
+   {
+    "title": "Đồ uống chức năng",
+    "handle": "do-uong-chuc-nang",
+    "l3": [
+     {
+      "title": "Nước khoáng",
+      "tag": "nuoc-khoang"
+     },
+     {
+      "title": "Nước vitamin",
+      "tag": "nuoc-vitamin"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "MOM",
+  "handle": "me-be",
+  "title": "Mẹ & bé",
+  "icon": "baby",
+  "subs": [
+   {
+    "title": "An toàn cho bé",
+    "handle": "an-toan-cho-be",
+    "l3": [
+     {
+      "title": "Ghế ô tô",
+      "tag": "ghe-o-to"
+     },
+     {
+      "title": "Xe đẩy",
+      "tag": "xe-day"
+     },
+     {
+      "title": "Thảm chơi",
+      "tag": "tham-choi"
+     },
+     {
+      "title": "Địu & ba lô",
+      "tag": "diu-ba-lo"
+     },
+     {
+      "title": "Máy báo khóc",
+      "tag": "may-bao-khoc"
+     },
+     {
+      "title": "Thiết bị an toàn",
+      "tag": "thiet-bi-an-toan"
+     },
+     {
+      "title": "Phụ kiện xe đẩy",
+      "tag": "phu-kien-xe-day"
+     },
+     {
+      "title": "Phụ kiện ghế ô tô",
+      "tag": "phu-kien-ghe-o-to"
+     },
+     {
+      "title": "Phụ kiện địu",
+      "tag": "phu-kien-diu"
+     },
+     {
+      "title": "Quây cũi",
+      "tag": "quay-cui"
+     }
+    ]
+   },
+   {
+    "title": "Đồ dùng thiết yếu",
+    "handle": "do-dung-thiet-yeu",
+    "l3": [
+     {
+      "title": "Máy tiệt trùng",
+      "tag": "may-tiet-trung"
+     },
+     {
+      "title": "Máy hâm sữa",
+      "tag": "may-ham-sua"
+     },
+     {
+      "title": "Máy xay đồ ăn dặm",
+      "tag": "may-xay-do-an-dam"
+     },
+     {
+      "title": "Bình sữa & núm ti",
+      "tag": "binh-sua-num-ti"
+     },
+     {
+      "title": "Khăn ướt",
+      "tag": "khan-uot"
+     },
+     {
+      "title": "Dụng cụ rửa bình",
+      "tag": "dung-cu-rua-binh"
+     },
+     {
+      "title": "Tã bỉm",
+      "tag": "ta-bim"
+     },
+     {
+      "title": "Thay tã",
+      "tag": "thay-ta"
+     },
+     {
+      "title": "Đồ vệ sinh cho bé",
+      "tag": "do-ve-sinh-cho-be"
+     },
+     {
+      "title": "Túi cho bé",
+      "tag": "tui-cho-be"
+     }
+    ]
+   },
+   {
+    "title": "Tắm & chăm sóc bé",
+    "handle": "tam-cham-soc-be",
+    "l3": [
+     {
+      "title": "Nước giặt cho bé",
+      "tag": "nuoc-giat-cho-be"
+     },
+     {
+      "title": "Nước xả cho bé",
+      "tag": "nuoc-xa-cho-be"
+     },
+     {
+      "title": "Sữa tắm & xà phòng",
+      "tag": "sua-tam-xa-phong"
+     },
+     {
+      "title": "Chăm sóc da",
+      "tag": "cham-soc-da"
+     },
+     {
+      "title": "Nước lau bề mặt",
+      "tag": "nuoc-lau-be-mat"
+     },
+     {
+      "title": "Bàn chải & kem đánh răng",
+      "tag": "ban-chai-kem-danh-rang"
+     },
+     {
+      "title": "Phấn rôm",
+      "tag": "phan-rom"
+     },
+     {
+      "title": "Chống muỗi",
+      "tag": "chong-muoi"
+     },
+     {
+      "title": "Bông tròn & tăm bông",
+      "tag": "bong-tron-tam-bong"
+     },
+     {
+      "title": "Cồn",
+      "tag": "con"
+     }
+    ]
+   },
+   {
+    "title": "Nệm & chăn ga trẻ em",
+    "handle": "nem-chan-ga-tre-em",
+    "l3": [
+     {
+      "title": "Nôi & đồ chơi treo nôi",
+      "tag": "noi-do-choi-treo-noi"
+     },
+     {
+      "title": "Nệm em bé",
+      "tag": "nem-em-be"
+     },
+     {
+      "title": "Gối trẻ em",
+      "tag": "goi-tre-em"
+     },
+     {
+      "title": "Chăn & khăn quấn",
+      "tag": "chan-khan-quan"
+     },
+     {
+      "title": "Gối bầu",
+      "tag": "goi-bau"
+     },
+     {
+      "title": "Màn chống muỗi",
+      "tag": "man-chong-muoi"
+     },
+     {
+      "title": "Vỏ gối",
+      "tag": "vo-goi"
+     },
+     {
+      "title": "Ga trải giường",
+      "tag": "ga-trai-giuong"
+     },
+     {
+      "title": "Hộp nhạc",
+      "tag": "hop-nhac"
+     }
+    ]
+   },
+   {
+    "title": "Đồ ăn dặm",
+    "handle": "do-an-dam",
+    "l3": [
+     {
+      "title": "Bộ chén ăn",
+      "tag": "bo-chen-an"
+     },
+     {
+      "title": "Khay chia ngăn",
+      "tag": "khay-chia-ngan"
+     },
+     {
+      "title": "Thìa đũa cho bé",
+      "tag": "thia-dua-cho-be"
+     },
+     {
+      "title": "Cốc uống nước",
+      "tag": "coc-uong-nuoc"
+     },
+     {
+      "title": "Hộp trữ đồ ăn",
+      "tag": "hop-tru-do-an"
+     },
+     {
+      "title": "Yếm ăn",
+      "tag": "yem-an"
+     },
+     {
+      "title": "Ghế ăn dặm",
+      "tag": "ghe-an-dam"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện cho bé",
+    "handle": "phu-kien-cho-be",
+    "l3": [
+     {
+      "title": "Cân em bé",
+      "tag": "can-em-be"
+     },
+     {
+      "title": "Lược & tông đơ",
+      "tag": "luoc-tong-do"
+     },
+     {
+      "title": "Dụng cụ hút mũi",
+      "tag": "dung-cu-hut-mui"
+     },
+     {
+      "title": "Chăm sóc móng",
+      "tag": "cham-soc-mong"
+     }
+    ]
+   },
+   {
+    "title": "Sản phẩm cho mẹ",
+    "handle": "san-pham-cho-me",
+    "l3": [
+     {
+      "title": "Máy hút sữa",
+      "tag": "may-hut-sua"
+     },
+     {
+      "title": "Máy nghe tim thai",
+      "tag": "may-nghe-tim-thai"
+     },
+     {
+      "title": "Áo choàng cho con bú",
+      "tag": "ao-choang-cho-con-bu"
+     },
+     {
+      "title": "Phụ kiện cho con bú",
+      "tag": "phu-kien-cho-con-bu"
+     },
+     {
+      "title": "Đai bầu",
+      "tag": "dai-bau"
+     },
+     {
+      "title": "Massage ngực",
+      "tag": "massage-nguc"
+     },
+     {
+      "title": "Miếng lót thấm sữa",
+      "tag": "mieng-lot-tham-sua"
+     },
+     {
+      "title": "Túi trữ sữa",
+      "tag": "tui-tru-sua"
+     },
+     {
+      "title": "Túi giữ nhiệt",
+      "tag": "tui-giu-nhiet"
+     },
+     {
+      "title": "Túi cho mẹ",
+      "tag": "tui-cho-me"
+     },
+     {
+      "title": "Phụ kiện máy hút sữa",
+      "tag": "phu-kien-may-hut-sua"
+     },
+     {
+      "title": "Túi zip",
+      "tag": "tui-zip"
+     },
+     {
+      "title": "Thực phẩm bổ sung cho mẹ",
+      "tag": "thuc-pham-bo-sung-cho-me"
+     }
+    ]
+   },
+   {
+    "title": "Đồ chơi",
+    "handle": "do-choi",
+    "l3": [
+     {
+      "title": "Kệ chơi",
+      "tag": "ke-choi"
+     },
+     {
+      "title": "Xếp hình",
+      "tag": "xep-hinh"
+     },
+     {
+      "title": "Đồ chơi mỹ thuật",
+      "tag": "do-choi-my-thuat"
+     },
+     {
+      "title": "Đồ chơi giáo dục",
+      "tag": "do-choi-giao-duc"
+     },
+     {
+      "title": "Búp bê",
+      "tag": "bup-be"
+     },
+     {
+      "title": "Bể bơi phao",
+      "tag": "be-boi-phao"
+     },
+     {
+      "title": "Phao bơi",
+      "tag": "phao-boi"
+     },
+     {
+      "title": "Đồ chơi ngoài trời",
+      "tag": "do-choi-ngoai-troi"
+     },
+     {
+      "title": "Bảng trắng",
+      "tag": "bang-trang"
+     }
+    ]
+   },
+   {
+    "title": "Quần áo trẻ em",
+    "handle": "quan-ao-tre-em",
+    "l3": [
+     {
+      "title": "Đồ bơi trẻ em",
+      "tag": "do-boi-tre-em"
+     },
+     {
+      "title": "Găng tay & tất",
+      "tag": "gang-tay-tat"
+     },
+     {
+      "title": "Thời trang trẻ em",
+      "tag": "thoi-trang-tre-em"
+     }
+    ]
+   },
+   {
+    "title": "Xe cho bé",
+    "handle": "xe-cho-be",
+    "l3": [
+     {
+      "title": "Xe ô tô cho bé",
+      "tag": "xe-o-to-cho-be"
+     },
+     {
+      "title": "Xe trượt",
+      "tag": "xe-truot"
+     },
+     {
+      "title": "Xe chòi chân",
+      "tag": "xe-choi-chan"
+     },
+     {
+      "title": "Xe thăng bằng",
+      "tag": "xe-thang-bang"
+     },
+     {
+      "title": "Xe đạp địa hình",
+      "tag": "xe-dap-dia-hinh"
+     }
+    ]
+   },
+   {
+    "title": "Sữa & đồ ăn cho bé",
+    "handle": "sua-do-an-cho-be",
+    "l3": [
+     {
+      "title": "Vitamin cho bé",
+      "tag": "vitamin-cho-be"
+     },
+     {
+      "title": "Bánh ăn dặm",
+      "tag": "banh-an-dam"
+     },
+     {
+      "title": "Thực phẩm cho bé",
+      "tag": "thuc-pham-cho-be"
+     }
+    ]
+   },
+   {
+    "title": "Quà tặng mẹ & bé",
+    "handle": "qua-tang-me-be",
+    "l3": [
+     {
+      "title": "Quà tặng cho bé",
+      "tag": "qua-tang-cho-be"
+     },
+     {
+      "title": "Quà tặng mẹ & bé khác",
+      "tag": "qua-tang-me-be-khac"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "PET",
+  "handle": "thu-cung",
+  "title": "Thú cưng",
+  "icon": "pet",
+  "subs": [
+   {
+    "title": "Thức ăn thú cưng",
+    "handle": "thuc-an-thu-cung",
+    "l3": [
+     {
+      "title": "Hạt khô cho chó",
+      "tag": "hat-kho-cho-cho"
+     },
+     {
+      "title": "Pate cho chó",
+      "tag": "pate-cho-cho"
+     },
+     {
+      "title": "Hạt khô cho mèo",
+      "tag": "hat-kho-cho-meo"
+     },
+     {
+      "title": "Pate cho mèo",
+      "tag": "pate-cho-meo"
+     },
+     {
+      "title": "Thức ăn cho chim",
+      "tag": "thuc-an-cho-chim"
+     },
+     {
+      "title": "Thức ăn thú nhỏ",
+      "tag": "thuc-an-thu-nho"
+     },
+     {
+      "title": "Sữa cho thú cưng",
+      "tag": "sua-cho-thu-cung"
+     },
+     {
+      "title": "Thức ăn cho cá",
+      "tag": "thuc-an-cho-ca"
+     }
+    ]
+   },
+   {
+    "title": "Bánh thưởng",
+    "handle": "banh-thuong",
+    "l3": [
+     {
+      "title": "Bánh thưởng cho chó",
+      "tag": "banh-thuong-cho-cho"
+     },
+     {
+      "title": "Bánh thưởng cho mèo",
+      "tag": "banh-thuong-cho-meo"
+     },
+     {
+      "title": "Súp thưởng cho mèo",
+      "tag": "sup-thuong-cho-meo"
+     },
+     {
+      "title": "Xương gặm sạch răng",
+      "tag": "xuong-gam-sach-rang"
+     },
+     {
+      "title": "Bánh thưởng thú nhỏ",
+      "tag": "banh-thuong-thu-nho"
+     }
+    ]
+   },
+   {
+    "title": "Đồ dùng thú cưng",
+    "handle": "do-dung-thu-cung",
+    "l3": [
+     {
+      "title": "Túi & lồng vận chuyển",
+      "tag": "tui-long-van-chuyen"
+     },
+     {
+      "title": "Bát ăn",
+      "tag": "bat-an"
+     },
+     {
+      "title": "Thảm chống trơn",
+      "tag": "tham-chong-tron"
+     },
+     {
+      "title": "Đồ dùng đa năng",
+      "tag": "do-dung-da-nang"
+     },
+     {
+      "title": "Đồ chơi",
+      "tag": "do-choi"
+     },
+     {
+      "title": "Quần áo & phụ kiện",
+      "tag": "quan-ao-phu-kien"
+     },
+     {
+      "title": "Vòng cổ & dây dắt",
+      "tag": "vong-co-day-dat"
+     },
+     {
+      "title": "Bể cá",
+      "tag": "be-ca"
+     },
+     {
+      "title": "Nhà cho thú cưng",
+      "tag": "nha-cho-thu-cung"
+     }
+    ]
+   },
+   {
+    "title": "Cát & vệ sinh",
+    "handle": "cat-ve-sinh",
+    "l3": [
+     {
+      "title": "Tấm lót & tã",
+      "tag": "tam-lot-ta"
+     },
+     {
+      "title": "Cát vệ sinh mèo",
+      "tag": "cat-ve-sinh-meo"
+     },
+     {
+      "title": "Túi nhặt phân",
+      "tag": "tui-nhat-phan"
+     },
+     {
+      "title": "Khay vệ sinh mèo",
+      "tag": "khay-ve-sinh-meo"
+     },
+     {
+      "title": "Xịt huấn luyện đi vệ sinh",
+      "tag": "xit-huan-luyen-di-ve-sinh"
+     }
+    ]
+   },
+   {
+    "title": "Chăm sóc thú cưng",
+    "handle": "cham-soc-thu-cung",
+    "l3": [
+     {
+      "title": "Khăn ướt",
+      "tag": "khan-uot"
+     },
+     {
+      "title": "Khử mùi & tẩy vết bẩn",
+      "tag": "khu-mui-tay-vet-ban"
+     },
+     {
+      "title": "Vệ sinh tai, mắt, miệng",
+      "tag": "ve-sinh-tai-mat-mieng"
+     },
+     {
+      "title": "Phòng ve rận",
+      "tag": "phong-ve-ran"
+     },
+     {
+      "title": "Vitamin",
+      "tag": "vitamin"
+     }
+    ]
+   },
+   {
+    "title": "Tắm & cắt tỉa",
+    "handle": "tam-cat-tia",
+    "l3": [
+     {
+      "title": "Sữa tắm & dầu xả",
+      "tag": "sua-tam-dau-xa"
+     },
+     {
+      "title": "Máy sấy & tông đơ",
+      "tag": "may-say-tong-do"
+     },
+     {
+      "title": "Vòi tắm",
+      "tag": "voi-tam"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "code": "BED",
+  "handle": "phong-ngu",
+  "title": "Phòng ngủ & chăn ga",
+  "icon": "bed",
+  "subs": [
+   {
+    "title": "Nệm",
+    "handle": "nem",
+    "l3": [
+     {
+      "title": "Nệm may đo",
+      "tag": "nem-may-do"
+     },
+     {
+      "title": "Giường gấp & điều chỉnh",
+      "tag": "giuong-gap-dieu-chinh"
+     },
+     {
+      "title": "Đế nệm",
+      "tag": "de-nem"
+     },
+     {
+      "title": "Tấm topper",
+      "tag": "tam-topper"
+     },
+     {
+      "title": "Nệm hơi",
+      "tag": "nem-hoi"
+     },
+     {
+      "title": "Giường dã ngoại",
+      "tag": "giuong-da-ngoai"
+     },
+     {
+      "title": "Nệm",
+      "tag": "nem"
+     }
+    ]
+   },
+   {
+    "title": "Chăn ga gối",
+    "handle": "chan-ga-goi",
+    "l3": [
+     {
+      "title": "Tấm bảo vệ nệm",
+      "tag": "tam-bao-ve-nem"
+     },
+     {
+      "title": "Bộ chăn ga",
+      "tag": "bo-chan-ga"
+     },
+     {
+      "title": "Ga trải giường",
+      "tag": "ga-trai-giuong"
+     },
+     {
+      "title": "Ga bọc topper",
+      "tag": "ga-boc-topper"
+     },
+     {
+      "title": "Chăn",
+      "tag": "chan"
+     },
+     {
+      "title": "Chăn bông",
+      "tag": "chan-bong"
+     },
+     {
+      "title": "Vỏ chăn",
+      "tag": "vo-chan"
+     },
+     {
+      "title": "Chăn chần",
+      "tag": "chan-chan"
+     },
+     {
+      "title": "Vỏ gối",
+      "tag": "vo-goi"
+     },
+     {
+      "title": "Vỏ gối ôm",
+      "tag": "vo-goi-om"
+     },
+     {
+      "title": "Vỏ gối dài",
+      "tag": "vo-goi-dai"
+     }
+    ]
+   },
+   {
+    "title": "Gối & gối ôm",
+    "handle": "goi-goi-om",
+    "l3": [
+     {
+      "title": "Gối ngủ",
+      "tag": "goi-ngu"
+     },
+     {
+      "title": "Gối sức khỏe",
+      "tag": "goi-suc-khoe"
+     },
+     {
+      "title": "Gối ôm",
+      "tag": "goi-om"
+     },
+     {
+      "title": "Gối dài",
+      "tag": "goi-dai"
+     },
+     {
+      "title": "Gối trẻ em",
+      "tag": "goi-tre-em"
+     }
+    ]
+   },
+   {
+    "title": "Phụ kiện giường ngủ",
+    "handle": "phu-kien-giuong-ngu",
+    "l3": [
+     {
+      "title": "Tấm phủ giường",
+      "tag": "tam-phu-giuong"
+     },
+     {
+      "title": "Thanh chắn & dây giữ ga",
+      "tag": "thanh-chan-day-giu-ga"
+     },
+     {
+      "title": "Gối tựa đầu giường",
+      "tag": "goi-tua-dau-giuong"
+     }
+    ]
+   },
+   {
+    "title": "Dép đi trong nhà",
+    "handle": "dep-di-trong-nha",
+    "l3": [
+     {
+      "title": "Dép đi trong nhà",
+      "tag": "dep-di-trong-nha"
+     }
+    ]
+   }
+  ]
+ }
+]

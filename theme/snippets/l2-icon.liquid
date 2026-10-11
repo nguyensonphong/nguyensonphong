@@ -1,0 +1,41 @@
+{%- comment -%} Icon cho nhóm cấp 2 theo handle (tạo tự động) {%- endcomment -%}
+{%- case handle -%}
+{%- when 'noi-that-phong-ngu' -%}{%- assign ic = 'table' -%}
+{%- when 'noi-that-phong-khach' -%}{%- assign ic = 'sofa' -%}
+{%- when 'noi-that-phong-an' -%}{%- assign ic = 'table' -%}
+{%- when 'noi-that-van-phong' -%}{%- assign ic = 'table' -%}
+{%- when 'noi-that-gaming' -%}{%- assign ic = 'table' -%}
+{%- when 'noi-that-tre-em' -%}{%- assign ic = 'table' -%}
+{%- when 'noi-that-ngoai-troi' -%}{%- assign ic = 'sofa' -%}
+{%- when 'may-lanh', 'vat-tu-lap-may-lanh' -%}{%- assign ic = 'ac' -%}
+{%- when 'may-giat-may-say', 'giat-giu' -%}{%- assign ic = 'washer' -%}
+{%- when 'tu-lanh', 'tu-ruou', 'tu-dong', 'tu-mat', 'tu-trung-bay-banh-tu-lanh-mini' -%}{%- assign ic = 'fridge' -%}
+{%- when 'quat-dien', 'quat', 'may-loc-khong-khi', 'quat-thong-gio', 'khu-mui-hut-am' -%}{%- assign ic = 'fan' -%}
+{%- when 'lo-vi-song-lo-nuong', 'noi-com-dien', 'may-pha-ca-phe-tra', 'noi-bep-dien', 'may-xay-may-ep', 'may-che-bien-thuc-pham', 'may-lam-da', 'may-nuong-banh-mi-sandwich', 'am-sieu-toc-binh-thuy-dien', 'phu-kien-noi-that', 'dong-co-may-phat-dien' -%}{%- assign ic = 'pot' -%}
+{%- when 'may-hut-bui', 'do-gia-dung-khac', 'may-say-toc-tao-kieu', 'may-suoi', 'thiet-bi-kinh-doanh', 'hop-ke-luu-tru', 'du-lich', 'do-cung-duong', 'may-may-phu-kien' -%}{%- assign ic = 'box' -%}
+{%- when 'ban-ui-ban-la-hoi-nuoc', 'ban-tho', 'ban-ghe-da-nang', 'den-ban-den-cay', 'ban-ghe-da-ngoai', 'ban-ghe-nhua' -%}{%- assign ic = 'table' -%}
+{%- when 'goi-tua-nem-ngoi' -%}{%- assign ic = 'sofa' -%}
+{%- when 'tu-ke-luu-tru', 'sap-xep-quan-ao', 'hop-tu-do-nghe' -%}{%- assign ic = 'wardrobe' -%}
+{%- when 'buong-lam-viec-van-phong', 'van-phong-pham', 'voi-nuoc', 'van-van-khoa', 'may-loc-nuoc', 'cay-nuoc-nong-lanh', 'may-bom-nuoc', 'bon-chua-xu-ly-nuoc-thai', 'ong-phu-kien', 'thoat-san', 'van-nuoc', 'keo-phu-kien-ong-nuoc', 'xe-day-thiet-bi-van-chuyen', 'den-van-phong', 'tuoi-cay' -%}{%- assign ic = 'pipe' -%}
+{%- when 'rem-cua-manh', 'cua-khung-cua', 'cua-nhom-upvc', 'phu-kien-khoa-cua', 'cua-so-khung', 'phu-kien-cua', 'cua-may-do', 'chuong-cua' -%}{%- assign ic = 'door' -%}
+{%- when 'vach-ngan', 'giay-dan-tuong-decal', 'do-trang-tri-nha', 'tham', 'tham-chui-chan', 'bien-hieu', 'giay-ve-sinh-khan-giay', 'thung-rac-tui-rac', 'chat-tay-rua-gia-dung', 'diet-con-trung', 'dep-di-trong-nha' -%}{%- assign ic = 'home' -%}
+{%- when 'tivi-man-hinh', 'loa-thanh', 'phu-kien-tivi', 'loa', 'giai-tri-tai-gia', 'tai-nghe', 'dau-thu-ang-ten', 'day-cap', 'dau-phat-ghi', 'micro', 'hi-fi-karaoke', 'loa-hoi-truong', 'thiet-bi-dj', 'man-hinh-thuong-mai' -%}{%- assign ic = 'tv' -%}
+{%- when 'game-thiet-bi-choi-game', 'may-tap-the-hinh', 'dung-cu-tap', 'dung-cu-the-thao', 'quan-ao-the-thao', 'phu-kien-the-thao', 'dong-ho-thong-minh' -%}{%- assign ic = 'ball' -%}
+{%- when 'dung-cu-phoi-do', 'dung-cu-ve-sinh', 'thang', 'dung-cu-cam-tay', 'han-han-thiec', 'dung-cu-xay-dung', 'dung-cu-khi-nen-may-nen-khi', 'dung-cu-lam-vuon', 'dung-cu-ho-tro-di-chuyen', 'dung-cu-so-cuu' -%}{%- assign ic = 'tools' -%}
+{%- when 'vat-lieu-dong-goi', 'thep', 'xi-mang', 'tam-thach-cao', 'vat-lieu-cach-nhiet', 'mai-lop', 'tam-trang-tri', 'nha-xe-lap-ghep', 'cot-lieu-xay-dung', 'gian-giao', 'be-tong-duc-san', 'cop-pha', 'hoa-chat-xay-dung', 'luoi-day' -%}{%- assign ic = 'brick' -%}
+{%- when 'bon-cau', 'chau-rua-lavabo', 'cabin-tam', 'bon-tam', 'bon-tieu', 'sen-tam', 'voi-xit-ve-sinh', 'phu-kien-phong-tam', 'guong', 'do-phong-tam-may-do', 'rem-phong-tam', 'phu-tung-phong-tam', 'khan-tam-ao-choang', 'chat-tay-rua-phong-tam', 'may-nuoc-nong', 'chau-rua-chen-phu-kien', 'an-toan-phong-tam' -%}{%- assign ic = 'bath' -%}
+{%- when 'thiet-bi-nha-bep', 'tu-bep', 'bep-mini', 'dung-cu-nau-nuong', 'bo-do-an', 'luu-tru-nha-bep', 'hop-dung-thuc-pham', 'binh-nuoc-thung-giu-nhiet', 'chat-tay-rua-nha-bep', 'may-loc-nuoc-nha-bep', 'bep-nuong-bbq' -%}{%- assign ic = 'pan' -%}
+{%- when 'gach-op-lat', 'san-nhua-vinyl', 'san-go', 'san-go-cong-nghiep-spc', 'trang-tri-san-tuong', 'gach-mosaic', 'gach-kinh', 'keo-dan-keo-cha-ron', 'dung-cu-lat-san', 'chat-ve-sinh-san', 'bang-dinh-chong-tron', 'gach-xay', 'gach-lat-via-he', 'trang-tri-san-vuon', 'san-pham-cho-me' -%}{%- assign ic = 'tile' -%}
+{%- when 'dung-cu-dien', 'o-cam-keo-dai-phich-chuyen', 'aptomat-tu-dien', 'day-dien', 'dien-mat-troi', 'thiet-bi-du-phong-dien', 'sac-xe-dien', 'pin', 'o-cam-cong-tac', 'phu-kien-dien', 'ong-luon-phu-kien', 'vat-tu-dien', 'xe-dien' -%}{%- assign ic = 'bolt' -%}
+{%- when 'do-bao-ho' -%}{%- assign ic = 'shield' -%}
+{%- when 'oc-vit-dinh' -%}{%- assign ic = 'wrench' -%}
+{%- when 'bong-den', 'den-tuyp', 'den-nang-luong-mat-troi', 'den-ngoai-troi', 'den-am-tran-downlight', 'den-trong-nha', 'den-nha-xuong', 'phu-kien-den', 'den-khan-cap-den-pin' -%}{%- assign ic = 'bulb' -%}
+{%- when 'nha-kho-ngoai-troi', 'nha-bat-du-che', 'da-ngoai-cam-trai', 'vui-choi-ngoai-troi', 'may-lam-vuon', 'hat-giong-vat-tu-trong-cay', 'thuoc-tru-sau' -%}{%- assign ic = 'leaf' -%}
+{%- when 'thuc-pham-bo-sung', 'may-do-suc-khoe', 'ta-nguoi-lon', 'goi-kham-suc-khoe', 'thuc-pham-chuc-nang', 'thuoc-khong-ke-don', 'thiet-bi-cap-cuu', 'dai-ho-tro', 'thiet-bi-y-te-khac', 'do-uong-chuc-nang' -%}{%- assign ic = 'health' -%}
+{%- when 'xe-may', 'xe-dap', 'xe-cho-be' -%}{%- assign ic = 'car' -%}
+{%- when 'giuong-y-te-phu-kien', 'nem-chan-ga-tre-em', 'nem', 'chan-ga-goi', 'goi-goi-om', 'phu-kien-giuong-ngu' -%}{%- assign ic = 'bed' -%}
+{%- when 'an-toan-cho-be', 'do-dung-thiet-yeu', 'tam-cham-soc-be', 'do-an-dam', 'phu-kien-cho-be', 'do-choi', 'quan-ao-tre-em', 'sua-do-an-cho-be', 'qua-tang-me-be' -%}{%- assign ic = 'baby' -%}
+{%- when 'thuc-an-thu-cung', 'banh-thuong', 'do-dung-thu-cung', 'cat-ve-sinh', 'cham-soc-thu-cung', 'tam-cat-tia' -%}{%- assign ic = 'pet' -%}
+{%- else -%}{%- assign ic = 'box' -%}
+{%- endcase -%}
+{% render 'icon', name: ic %}

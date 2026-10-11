@@ -14,7 +14,7 @@
         "main_menu": "main-menu",
         "shortcut_menu": "category-shortcuts",
         "mega_menu": "all-categories",
-        "mega_icons": "ac,pot,tv,sofa,bed,bath,brick,tools,bulb,shield,leaf"
+        "mega_icons": "ac,pot,sofa,tv,box,bath,pipe,pan,tile,brick,tools,bulb,door,shield,leaf,ball,health,baby,pet,bed"
       }
     }
   },
