@@ -709,6 +709,16 @@ a.icard:hover{border-color:var(--hp-blue)}
 .mcards--image .mcard b{color:var(--hp-blue);font-size:17px;font-weight:600}
 .mcards--image .mcard__img{border-radius:10px}
 .mcards--image .mcard:hover b{color:var(--hp-orange)}
+/* Shopify image_tag gắn sẵn width/height gốc → ép height:auto để tỉ lệ 4:3 có hiệu lực */
+.nav__tile img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.mcard__img img,.landing__banner img,.subcat__ic img{height:100%!important;width:100%}
+/* Dropdown ảnh chỉ hiện 2 hàng như HomePro, phần còn lại cuộn trong panel.
+   Chiều cao 1 hàng = ảnh 4:3 (rộng = (panel - padding - 4 khoảng cách)/5) + 12px + dòng tên 26px */
+.nav__panel:has(.nav__tiles){overflow:hidden;max-height:none;padding-right:12px}
+.nav__tiles{--tw:calc((min(1280px,96vw) - 48px - 12px - 88px) / 5);--rh:calc(var(--tw) * .75 + 38px);
+  max-height:calc(var(--rh) * 2 + 28px);overflow-y:auto;padding-right:12px;scrollbar-width:thin;scrollbar-color:var(--hp-blue) transparent}
+.nav__tiles::-webkit-scrollbar{width:6px}.nav__tiles::-webkit-scrollbar-thumb{background:var(--hp-blue);border-radius:3px}
+.nav__panel:has(.nav__tiles) .nav__all{display:none}
 </style>
 <div class="topbar">
   <div class="container topbar__inner"><a href="" >Thẻ thành viên</a><a href="" >Trở thành người bán</a><a href="" >Tìm cửa hàng</a><div class="topbar__help">
