@@ -81,6 +81,9 @@ linklists['main-menu'] = { links: toLinks(MENUS.main) };
 linklists['shop-by-room'] = { links: toLinks(MENUS.room) };
 linklists['diy-menu'] = { links: toLinks(MENUS.diy) };
 linklists['special-services'] = { links: toLinks(MENUS.spec) };
+// Menu danh mục gợi ý của từng phòng ("room-<handle>")
+const ROOM_MENUS = JSON.parse(read(path.join(ROOT, 'tools', 'menus', 'room-menus.json')));
+for (const [h, m] of Object.entries(ROOM_MENUS)) linklists['room-' + h] = { links: toLinks(m.items) };
 // Vendor mẫu cho trang Thương hiệu
 const VENDORS = ['LG', 'Samsung', 'Electrolux', 'Panasonic', 'Daikin', 'Toshiba', 'Sharp', 'Philips', 'Tefal', 'Sunhouse', 'Kangaroo', 'TOTO', 'INAX', 'Caesar', 'Bosch', 'Makita', 'Stanley', 'Rạng Đông', 'Điện Quang', 'Hòa Phát'];
 for (const l of linklists['all-categories'].links) l.object = { all_vendors: VENDORS.slice(0, 4 + (l.title.length % 9)) };
@@ -149,6 +152,8 @@ const pages = {
   index: {},
   'collection.landing': { collection: { ...C('Điện máy', popular), url: '/collections/dien-may', description: '', all_products_count: 394 } },
   'page.shipping': {}, 'page.compare': {}, 'page.promotions': {}, 'page.services': {}, 'page.repair': {}, 'page.trade-in': {},
+  'collection.room': { collection: { title: 'Phòng ngủ', handle: 'khong-gian-phong-ngu', url: '/collections/khong-gian-phong-ngu', image: { src: ROOM_IMG['/collections/khong-gian-phong-ngu'] }, products: popular },
+    collections: new Proxy({}, { get: (_, h) => (typeof h === 'string' ? { products: popular.slice(0, 5) } : undefined) }) },
   'page.rooms': {}, 'page.brands': {}, 'page.diy': {}, 'page.special': {},
 };
 fs.mkdirSync(path.join(ROOT, 'preview'), { recursive: true });

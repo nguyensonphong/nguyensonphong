@@ -717,3 +717,22 @@ a.icard:hover{border-color:var(--hp-blue)}
   max-height:calc(var(--rh) * 2 + 28px);overflow-y:auto;padding-right:12px;scrollbar-width:thin;scrollbar-color:var(--hp-blue) transparent}
 .nav__tiles::-webkit-scrollbar{width:6px}.nav__tiles::-webkit-scrollbar-thumb{background:var(--hp-blue);border-radius:3px}
 .nav__panel:has(.nav__tiles) .nav__all{display:none}
+/* Trang từng phòng (HomePro Shop by Room) */
+.room-hero{position:relative;margin-top:16px;border-radius:10px;overflow:hidden;aspect-ratio:1280/300;background:var(--hp-soft)}
+.room-hero img{width:100%;height:100%!important;object-fit:cover}
+.room-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.85) 0%,rgba(255,255,255,.4) 35%,rgba(255,255,255,0) 60%)}
+.room-hero h1{position:absolute;left:5%;top:50%;transform:translateY(-50%);z-index:1;margin:0;font-size:clamp(28px,3.4vw,48px);font-weight:600;color:#3a3a3d}
+.room-cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 22px}
+.room-cat{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:14px;color:#525255;text-align:center}
+.room-cat__img{width:100%;aspect-ratio:16/10;border:1px solid var(--hp-line);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden}
+.room-cat__img img{width:100%;height:100%!important;object-fit:contain;padding:10px}
+.room-cat__img svg{width:30%;height:30%;color:var(--hp-blue)}
+.room-cat:hover .room-cat__img{border-color:var(--hp-blue)}
+.room-promo{display:block;border-radius:10px;overflow:hidden;aspect-ratio:1280/360}
+.room-promo img,.room-promo .ph{width:100%;height:100%!important;object-fit:cover}
+.tabs--pill{display:flex;gap:8px;overflow-x:auto;margin-bottom:16px;border:0}
+.tabs--pill .tab{border:1px solid var(--hp-line);border-radius:999px;padding:6px 16px;background:#fff;color:#525255;white-space:nowrap;font-size:14px}
+.tabs--pill .tab.is-active{background:var(--hp-blue);border-color:var(--hp-blue);color:#fff}
+.room-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gap)}
+.room-empty{grid-column:1/-1;color:var(--hp-mute)}
+@media (max-width:900px){.room-cats{grid-template-columns:repeat(2,1fr)}.room-grid{grid-template-columns:repeat(2,1fr)}.room-hero{aspect-ratio:16/7}}

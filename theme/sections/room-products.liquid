@@ -1,0 +1,29 @@
+{%- comment -%} "Sản phẩm phổ biến" của phòng: mỗi tab = 1 danh mục trong menu "room-<handle>". Không có menu thì hiện sản phẩm của chính collection phòng. {%- endcomment -%}
+{%- assign room_menu = 'room-' | append: collection.handle -%}
+{%- assign links = linklists[room_menu].links -%}
+<section class="container sec" data-tabs id="products">
+  <div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>
+  {%- if links.size > 0 -%}
+    <div class="tabs tabs--pill" role="tablist">
+      {%- for l in links limit: 8 -%}<button class="tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" data-tab="{{ forloop.index }}">{{ l.title }}</button>{%- endfor -%}
+    </div>
+    {%- for l in links limit: 8 -%}
+      {%- assign h = l.url | split: '/' | last -%}
+      <div class="room-grid" data-panel="{{ forloop.index }}" {% unless forloop.first %}hidden{% endunless %}>
+        {%- for product in collections[h].products limit: section.settings.limit -%}{% render 'product-card', product: product, style: 'popular' %}
+        {%- else -%}<p class="room-empty">Sản phẩm đang được cập nhật. <a href="{{ l.url }}">Xem danh mục {{ l.title }}</a></p>{%- endfor -%}
+      </div>
+    {%- endfor -%}
+  {%- else -%}
+    <div class="room-grid">{%- for product in collection.products limit: section.settings.limit -%}{% render 'product-card', product: product, style: 'popular' %}{%- endfor -%}</div>
+  {%- endif -%}
+</section>
+{% schema %}
+{
+  "name": "Trang phòng – sản phẩm",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Tiêu đề", "default": "Sản phẩm phổ biến" },
+    { "type": "range", "id": "limit", "label": "Số sản phẩm mỗi tab", "min": 5, "max": 20, "step": 5, "default": 10 }
+  ]
+}
+{% endschema %}

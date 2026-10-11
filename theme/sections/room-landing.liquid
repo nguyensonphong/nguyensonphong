@@ -1,0 +1,50 @@
+{%- comment -%}
+  Trang từng phòng (bố cục theo HomePro "Shop by Room"):
+  1. Banner rộng, tên phòng bên trái  2. "Danh mục gợi ý" 4 cột  3. Banner khuyến mãi
+  Danh mục lấy từ menu "room-<handle collection>" (Navigation → "Phòng – …"). Ảnh ô: ảnh collection, không có thì ảnh sản phẩm đầu tiên.
+{%- endcomment -%}
+{%- assign room_menu = 'room-' | append: collection.handle -%}
+{%- assign links = linklists[room_menu].links -%}
+<nav class="container crumbs" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">Trang chủ</a> › <a href="/pages/mua-theo-phong">Mua theo phòng</a> › <span>{{ collection.title }}</span></nav>
+<section class="container">
+  <div class="room-hero">
+    {%- if collection.image -%}{{ collection.image | image_url: width: 1800 | image_tag: alt: collection.title }}{%- endif -%}
+    <h1>{{ collection.title }}</h1>
+  </div>
+</section>
+{%- if links.size > 0 -%}
+<section class="container sec">
+  <div class="sec__head"><h2 class="sec__title">{{ section.settings.cat_title }}</h2></div>
+  <div class="room-cats">
+    {%- for l in links limit: 8 -%}
+      {%- assign h = l.url | split: '/' | last -%}
+      {%- assign c = collections[h] -%}
+      {%- assign img = c.image | default: c.products.first.featured_image -%}
+      <a class="room-cat" href="{{ l.url }}">
+        <span class="room-cat__img">{%- if img -%}{{ img | image_url: width: 400 | image_tag: loading: 'lazy', alt: l.title }}{%- else -%}{% render 'l2-icon', handle: h %}{%- endif -%}</span>
+        <span>{{ l.title }}</span>
+      </a>
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
+{%- if section.settings.promo_src != blank or section.settings.promo_image -%}
+<section class="container sec">
+  <a class="room-promo" href="{{ section.settings.promo_link }}">
+    {% render 'placeholder', image: section.settings.promo_image, src: section.settings.promo_src, title: section.settings.promo_title, sub: section.settings.promo_sub, width: 1600 %}
+  </a>
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Trang phòng – đầu trang",
+  "settings": [
+    { "type": "text", "id": "cat_title", "label": "Tiêu đề danh mục", "default": "Danh mục gợi ý" },
+    { "type": "image_picker", "id": "promo_image", "label": "Banner khuyến mãi" },
+    { "type": "text", "id": "promo_src", "label": "Link ảnh banner minh hoạ", "default": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3" },
+    { "type": "text", "id": "promo_title", "label": "Chữ lớn trên banner", "default": "Xu hướng nội thất 2026" },
+    { "type": "text", "id": "promo_sub", "label": "Chữ nhỏ", "default": "Làm mới không gian với ưu đãi đến 50%" },
+    { "type": "url", "id": "promo_link", "label": "Link banner", "default": "/pages/khuyen-mai" }
+  ]
+}
+{% endschema %}

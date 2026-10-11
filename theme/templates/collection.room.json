@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "landing": {
+      "type": "room-landing",
+      "settings": {}
+    },
+    "products": {
+      "type": "room-products",
+      "settings": {}
+    }
+  },
+  "order": [
+    "landing",
+    "products"
+  ]
+}
