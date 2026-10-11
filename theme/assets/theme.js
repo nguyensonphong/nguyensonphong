@@ -231,3 +231,21 @@ document.querySelectorAll('[data-cart-form] [data-step]').forEach((b) => b.addEv
   box.querySelectorAll('[data-auth-show]').forEach((b) => b.addEventListener('click', () => show(b.dataset.authShow)));
   if (location.hash === '#recover' || box.querySelector('[data-auth-recover] .contact__ok')) show('recover');
 })();
+
+/* Thanh cuộn ngang có nút ở 2 đầu (tab danh mục trang phòng): ẩn nút khi đã chạm đầu/cuối */
+document.querySelectorAll('[data-hscroll]').forEach((wrap) => {
+  const track = wrap.querySelector('[data-hscroll-track]');
+  const prev = wrap.querySelector('[data-hscroll-prev]');
+  const next = wrap.querySelector('[data-hscroll-next]');
+  if (!track) return;
+  const update = () => {
+    prev.hidden = track.scrollLeft <= 2;
+    next.hidden = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+  };
+  const step = () => Math.max(200, track.clientWidth * 0.7);
+  prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+});

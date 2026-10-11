@@ -4,8 +4,12 @@
 <section class="container sec" data-tabs id="products">
   <div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>
   {%- if links.size > 0 -%}
-    <div class="tabs tabs--pill" role="tablist">
+    <div class="tabs-scroll" data-hscroll>
+      <button class="tabs-scroll__btn tabs-scroll__btn--prev" type="button" data-hscroll-prev aria-label="Cuộn trái" hidden>‹</button>
+      <div class="tabs tabs--pill" data-hscroll-track role="tablist">
       {%- for l in links limit: 10 -%}<button class="tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" data-tab="{{ forloop.index }}">{{ l.title }}</button>{%- endfor -%}
+    </div>
+      <button class="tabs-scroll__btn tabs-scroll__btn--next" type="button" data-hscroll-next aria-label="Cuộn phải">›</button>
     </div>
     {%- for l in links limit: 10 -%}
       {%- assign h = l.url | split: '/' | last -%}

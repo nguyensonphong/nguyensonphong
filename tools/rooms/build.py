@@ -11,7 +11,7 @@ for c in d['cats']:
       productOptions=[dict(name="Title",values=[dict(name="Default Title")])],
       variants=[dict(optionValues=[dict(optionName="Title",name="Default Title")],price=str(p),compareAtPrice=str(cp))]))
 n=0
-for b in range(0,len(items),10):
-  ch=items[b:b+10]
+for b in range(0,len(items),16):
+  ch=items[b:b+16]
   json.dump({f"p{k}":x for k,x in enumerate(ch)},open(f"{out}/b{n}.json",'w'),ensure_ascii=False); n+=1
-print(len(items),'products in',n,'batches; counts per batch:',[len(items[b:b+10]) for b in range(0,len(items),10)])
+print(len(items),'products in',n,'batches; counts per batch:',[len(items[b:b+16]) for b in range(0,len(items),16)])

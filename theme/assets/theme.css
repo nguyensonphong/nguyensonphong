@@ -736,3 +736,11 @@ a.icard:hover{border-color:var(--hp-blue)}
 .room-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gap)}
 .room-empty{grid-column:1/-1;color:var(--hp-mute)}
 @media (max-width:900px){.room-cats{grid-template-columns:repeat(2,1fr)}.room-grid{grid-template-columns:repeat(2,1fr)}.room-hero{aspect-ratio:16/7}}
+/* Nút cuộn 2 đầu cho thanh tab */
+.tabs-scroll{position:relative;margin-bottom:16px}
+.tabs-scroll .tabs--pill{margin-bottom:0;scroll-behavior:smooth;scrollbar-width:none;padding:2px 0}
+.tabs-scroll .tabs--pill::-webkit-scrollbar{display:none}
+.tabs-scroll__btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:36px;height:36px;border-radius:50%;border:1px solid var(--hp-line);background:#fff;color:var(--hp-blue);font-size:22px;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.12);display:grid;place-items:center;cursor:pointer}
+.tabs-scroll__btn:hover{background:var(--hp-blue);color:#fff}
+.tabs-scroll__btn--prev{left:-6px}.tabs-scroll__btn--next{right:-6px}
+.tabs-scroll__btn[hidden]{display:none!important}
