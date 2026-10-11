@@ -55,16 +55,18 @@
         {%- endfor -%}
       </ul>
       {%- for group in linklists[section.settings.mega_menu].links -%}
+        {%- comment -%}
+          Cấp 2 + cấp 3 của mỗi ngành lấy từ menu riêng "cat-<handle ngành>" (Navigation → "Danh mục con – …").
+          Không có menu riêng thì dùng các link con ngay trong menu mega.
+        {%- endcomment -%}
+        {%- assign l1h = group.url | split: '/' | last -%}
+        {%- assign cat_menu = 'cat-' | append: l1h -%}
+        {%- assign cols = linklists[cat_menu].links -%}
+        {%- if cols == blank or cols.size == 0 -%}{%- assign cols = group.links -%}{%- endif -%}
         <div class="mega__panel" data-mega-panel="{{ forloop.index }}" {% unless forloop.first %}hidden{% endunless %}>
-          {%- for col in group.links -%}
+          {%- for col in cols -%}
             <div><h4><a href="{{ col.url }}">{{ col.title }}</a></h4>
-              {%- if col.links.size > 0 -%}
-                {%- for item in col.links -%}<a href="{{ item.url }}">{{ item.title }}</a>{%- endfor -%}
-              {%- else -%}
-                {%- comment -%} Menu chỉ có 2 cấp: lấy cấp 3 theo cây danh mục (snippet mega-l3) {%- endcomment -%}
-                {%- assign l2h = col.url | split: '/' | last -%}
-                {% render 'mega-l3', handle: l2h %}
-              {%- endif -%}
+              {%- for item in col.links -%}<a href="{{ item.url }}">{{ item.title }}</a>{%- endfor -%}
             </div>
           {%- else -%}
             <div><h4><a href="{{ group.url }}">{{ group.title }}</a></h4></div>

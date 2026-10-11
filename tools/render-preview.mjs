@@ -72,6 +72,10 @@ const linklists = {
   'footer-policy': { links: L("Điều khoản sử dụng", "Chính sách giao hàng", "Chính sách bảo mật", "Chính sách đổi trả") },
   'footer-about': { links: L("Giới thiệu", "Hệ thống cửa hàng", "Tuyển dụng", "Liên hệ") },
 };
+// Menu cấp 2 + 3 cho từng ngành ("cat-<handle>"), giống trên Shopify
+for (const c of JSON.parse(read(path.join(ROOT, 'tools', 'categories', 'categories.json')))) {
+  linklists['cat-' + c.handle] = { links: c.subs.map((x) => ({ title: x.title, url: '/collections/' + x.handle, links: x.l3.map((t) => ({ title: t.title, url: '/collections/' + x.handle + '/' + t.tag, links: [] })) })) };
+}
 const globals = {
   shop: { name: 'GKMALL' }, cart: { item_count: 0 }, customer: null, search: {},
   request: { locale: { iso_code: 'vi' } }, localization: { available_languages: [] },
