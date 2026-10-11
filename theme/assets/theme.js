@@ -249,3 +249,17 @@ document.querySelectorAll('[data-hscroll]').forEach((wrap) => {
   window.addEventListener('resize', update);
   update();
 });
+// Trang sản phẩm: ô số lượng −/+, sao chép link, đếm ngược flash sale đến hết ngày
+document.querySelectorAll('[data-qstep]').forEach((b) => b.addEventListener('click', () => {
+  const i = b.parentElement.querySelector('input');
+  i.value = Math.max(1, (parseInt(i.value, 10) || 1) + Number(b.dataset.qstep));
+}));
+document.querySelectorAll('[data-copy-link]').forEach((b) => b.addEventListener('click', () => navigator.clipboard?.writeText(b.dataset.copyLink)));
+document.querySelectorAll('[data-countdown]').forEach((el) => {
+  const tick = () => {
+    const n = new Date(), e = new Date(n); e.setHours(24, 0, 0, 0);
+    const s = Math.floor((e - n) / 1000), p = (x) => String(x).padStart(2, '0');
+    el.textContent = `${p(Math.floor(s / 3600))}:${p(Math.floor(s / 60) % 60)}:${p(s % 60)}`;
+  };
+  tick(); setInterval(tick, 1000);
+});

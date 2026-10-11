@@ -15,26 +15,18 @@
       {%- else -%}{% render 'icon', name: 'box' %}{%- endif -%}
     </a>
     {%- if style == 'new' -%}<span class="pcard__tag pcard__tag--new">NEW</span>
-    {%- elsif style == 'popular' and product.tags contains 'best-price' -%}<span class="pcard__tag">Best Price</span>
+    {%- elsif product.tags contains 'best-price' -%}<span class="pcard__tag">Best Price</span>
     {%- elsif off > 0 -%}<span class="pcard__tag">-{{ off }}%</span>{%- endif -%}
-    {%- if style == 'shock' -%}<span class="pcard__brand">{{ product.vendor }}</span>
-    {%- else -%}<button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav>{% render 'icon', name: 'heart' %}</button>{%- endif -%}
-    {%- if style == 'popular' -%}<span class="pcard__vendor">{{ product.vendor }}</span>{%- endif -%}
-    <button class="pcard__cmp" type="button" data-compare="{{ product.handle }}">{% render 'icon', name: 'compare' %}So sánh</button>
+    <button class="pcard__fav" type="button" aria-label="Yêu thích" data-fav>{% render 'icon', name: 'heart' %}</button>
+    <span class="pcard__vendor">{{ product.vendor }}</span>
     <a href="{{ product.url }}"><h3 class="pcard__title">{{ product.title }}</h3></a>
-    {%- if style == 'popular' -%}
-      <div class="pcard__meta">
-        {%- if product.metafields.reviews.rating.value -%}<span class="stars">★★★★★</span> {{ product.metafields.reviews.rating.value.rating }}{%- endif -%}
-        {%- if product.metafields.custom.sold != blank -%}<span>Đã bán {{ product.metafields.custom.sold }} sp</span>{%- endif -%}
-      </div>
-      <div class="chips">
-        {%- if product.tags contains 'free-install' -%}<span class="chip">Lắp đặt miễn phí</span>{%- endif -%}
-        {%- if product.tags contains 'free-shipping' -%}<span class="chip">Freeship</span>{%- endif -%}
-      </div>
-    {%- endif -%}
+    <div class="pcard__chips">
+      {%- if product.tags contains 'free-install' -%}<span class="chip">Lắp đặt miễn phí</span>{%- endif -%}
+      {%- if product.tags contains 'free-shipping' or product.price >= 50000000 -%}<span class="chip">Miễn phí giao hàng</span>{%- endif -%}
+    </div>
     <div class="pcard__price">
       <div class="price">
-        {%- if style == 'flash' -%}⚡{%- endif -%}{{ product.price | money_without_trailing_zeros }}
+        <span>{{ product.price | money_without_trailing_zeros }}{%- if style == 'flash' -%}<i class="pcard__bolt">⚡</i>{%- endif -%}</span>
         {%- if off > 0 -%}<s>{{ product.compare_at_price | money_without_trailing_zeros }}</s>{%- endif -%}
       </div>
       <form method="post" action="{{ routes.cart_add_url }}" data-add-form>
@@ -43,7 +35,14 @@
       </form>
     </div>
     {%- if product.metafields.custom.final_price != blank -%}<div class="pcard__final">Giá cuối* {{ product.metafields.custom.final_price | money_without_trailing_zeros }}</div>{%- endif -%}
-    {%- if product.metafields.custom.extra_offer != blank -%}<div class="pcard__extra">{{ product.metafields.custom.extra_offer }}</div>{%- endif -%}
+    <div class="pcard__extra">
+      {%- if product.price >= 300000000 -%}Trả góp 0%{%- endif -%}
+      {%- if product.metafields.custom.extra_offer != blank -%}{% if product.price >= 300000000 %}, {% endif %}{{ product.metafields.custom.extra_offer }}{%- endif -%}
+    </div>
+    <div class="pcard__foot">
+      <span class="pcard__ship" title="Giao tận nhà · Nhận tại cửa hàng · Giao tiêu chuẩn">{% render 'icon', name: 'truck' %}{% render 'icon', name: 'store' %}{% render 'icon', name: 'box' %}</span>
+      <button class="pcard__cmp" type="button" data-compare="{{ product.handle }}" aria-label="So sánh">{% render 'icon', name: 'compare' %}So sánh</button>
+    </div>
   </article>
 {%- else -%}
   <article class="pcard">

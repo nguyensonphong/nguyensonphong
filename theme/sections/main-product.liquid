@@ -17,6 +17,8 @@
   <div class="pdp__main">
     <div class="pdp__gallery" data-gallery>
       <div class="pdp__stage">
+        {%- if v.compare_at_price > v.price -%}<span class="pdp__badge">FLASH ⚡ SALE</span>{%- endif -%}
+        <button class="pdp__fav" type="button" aria-label="Yêu thích" data-fav>{% render 'icon', name: 'heart' %}</button>
         {%- if product.featured_media -%}
           {{ product.featured_media | image_url: width: 1200 | image_tag: loading: 'eager', data-stage: '' }}
         {%- else -%}<div class="pcard__img">{% render 'icon', name: 'box' %}</div>{%- endif -%}
@@ -28,6 +30,12 @@
           {%- endfor -%}
         </div>
       {%- endif -%}
+      <div class="pdp__share">
+        <span>Chia sẻ</span>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url | append: product.url | url_encode }}" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://zalo.me/share?url={{ shop.url | append: product.url | url_encode }}" target="_blank" rel="noopener" aria-label="Zalo">Z</a>
+        <button type="button" aria-label="Sao chép link" data-copy-link="{{ shop.url | append: product.url }}">🔗</button>
+      </div>
     </div>
 
     {%- assign bundle = section.settings.bundle_collection -%}
@@ -42,11 +50,11 @@
 
     <div class="pdp__box" data-tabs>
       <div class="tabs" role="tablist">
-        <button class="tab is-active" type="button" data-tab="1">Mô tả</button>
-        <button class="tab" type="button" data-tab="2">Thông số</button>
-        <button class="tab" type="button" data-tab="3">Điều kiện lắp đặt</button>
+        <button class="tab is-active" type="button" data-tab="1">Thông tin sản phẩm</button>
+        <button class="tab" type="button" data-tab="2">Thông số kỹ thuật</button>
+        {%- if product.tags contains 'free-install' -%}<button class="tab" type="button" data-tab="3">Điều kiện lắp đặt</button>{%- endif -%}
       </div>
-      <div class="rte" data-panel="1">{{ product.description | default: '<p>Chưa có mô tả.</p>' }}</div>
+      <div class="rte" data-panel="1"><h2 class="pdp__ptitle">{{ product.title }}</h2>{{ product.description | default: '<p>Chưa có mô tả.</p>' }}</div>
       <div data-panel="2" hidden>
         {%- assign specs = product.metafields.custom.specs.value | default: product.metafields.custom.specs -%}
         {%- if specs != blank -%}
@@ -68,13 +76,18 @@
   </div>
 
   <aside class="buybox">
-    <a class="pcard__vendor" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
-    <h1 class="buybox__title">{{ product.title }}</h1>
-    <div class="buybox__meta">
-      {%- if v.sku != blank -%}<span>SKU: {{ v.sku }}</span>{%- endif -%}
-      <span>Bán bởi: <b>{{ shop.name }}</b></span>
-      {%- if product.metafields.custom.sold != blank -%}<span>Đã bán {{ product.metafields.custom.sold }}</span>{%- endif -%}
-      <button class="link-btn" type="button" data-compare="{{ product.handle }}">{% render 'icon', name: 'compare' %}So sánh</button>
+    {%- if v.compare_at_price > v.price -%}
+      <div class="buybox__flash"><b>{{ shop.name }}</b><span>FLASH ⚡ SALE</span><em>Kết thúc trong <i data-countdown>23:59:59</i></em></div>
+    {%- endif -%}
+    <div class="buybox__head">
+      <a class="pcard__vendor" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+      <h1 class="buybox__title">{{ product.title }}</h1>
+      <div class="buybox__meta">
+        {%- assign pid = product.id | append: '' -%}<span>SKU: {{ v.sku | default: pid }}</span>
+        <span>Bán bởi: <b>{{ shop.name }}</b></span>
+        {%- if product.metafields.reviews.rating.value -%}<span class="stars">★★★★★ <small>{{ product.metafields.reviews.rating.value.rating }} ({{ product.metafields.reviews.rating_count | default: 0 }})</small></span>{%- endif -%}
+      </div>
+      <button class="link-btn buybox__cmp" type="button" data-compare="{{ product.handle }}">{% render 'icon', name: 'compare' %}So sánh</button>
     </div>
     <div class="chips">
       {%- if product.tags contains 'free-install' -%}<span class="chip">Lắp đặt miễn phí</span>{%- endif -%}
@@ -82,6 +95,7 @@
       {%- if product.tags contains 'best-price' -%}<span class="chip chip--hot">Best Price</span>{%- endif -%}
     </div>
 
+    {%- if product.metafields.custom.sold != blank -%}<div class="buybox__sold">Đã bán trong tháng <b>{{ product.metafields.custom.sold }}</b></div>{%- endif -%}
     <div class="buybox__price">
       <span class="price" data-price>{{ v.price | money_without_trailing_zeros }}</span>
       {%- if v.compare_at_price > v.price -%}
@@ -90,6 +104,8 @@
         <s>{{ v.compare_at_price | money_without_trailing_zeros }}</s>
         <div class="buybox__save">Bạn tiết kiệm {{ save | money_without_trailing_zeros }} (-{{ pct }}%)</div>
       {%- endif -%}
+      {%- if product.metafields.custom.final_price != blank -%}<div class="buybox__final">Giá cuối* <b>{{ product.metafields.custom.final_price | money_without_trailing_zeros }}</b> /Cái</div>{%- endif -%}
+      {%- if v.price >= 300000000 -%}<div class="buybox__inst">Trả góp 0% chỉ từ <b>{{ v.price | divided_by: 10 | money_without_trailing_zeros }}</b>/tháng (10 tháng)</div>{%- endif -%}
       {%- if product.metafields.custom.extra_offer != blank -%}<div class="pcard__extra">{{ product.metafields.custom.extra_offer }}</div>{%- endif -%}
     </div>
 
@@ -105,10 +121,13 @@
 
     <form method="post" action="{{ routes.cart_add_url }}" data-add-form>
       {%- unless product.has_only_default_variant -%}
-        <label class="buybox__label" for="variant-{{ section.id }}">Phiên bản</label>
-        <select id="variant-{{ section.id }}" name="items[0][id]" class="field">
-          {%- for variant in product.variants -%}<option value="{{ variant.id }}" {% if variant == v %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>{{ variant.title }} — {{ variant.price | money_without_trailing_zeros }}</option>{%- endfor -%}
-        </select>
+        <div class="buybox__label">{{ product.options.first | upcase }}</div>
+        <div class="vchips">
+          {%- for variant in product.variants -%}
+            <label class="vchip"><input type="radio" name="items[0][id]" value="{{ variant.id }}" {% if variant == v %}checked{% endif %} {% unless variant.available %}disabled{% endunless %}>
+              <span>{%- if variant.image -%}{{ variant.image | image_url: width: 120 | image_tag }}{%- endif -%}<em>{{ variant.title }}</em></span></label>
+          {%- endfor -%}
+        </div>
       {%- else -%}<input type="hidden" name="items[0][id]" value="{{ v.id }}">{%- endunless -%}
 
       {%- if product.tags contains 'free-install' or addon -%}
@@ -123,11 +142,11 @@
 
       <div class="buybox__qty">
         <label class="buybox__label" for="qty-{{ section.id }}">Số lượng</label>
-        <input id="qty-{{ section.id }}" class="field" type="number" name="items[0][quantity]" value="1" min="1">
-        {%- if v.inventory_management == 'shopify' and v.inventory_quantity > 0 -%}<small>Còn {{ v.inventory_quantity }} sản phẩm</small>{%- endif -%}
+        <div class="qty"><button type="button" data-qstep="-1" aria-label="Giảm">−</button><input id="qty-{{ section.id }}" type="number" name="items[0][quantity]" value="1" min="1"><button type="button" data-qstep="1" aria-label="Tăng">+</button></div>
+        <small>{%- if v.available -%}Còn hàng{%- if v.inventory_management == 'shopify' and v.inventory_quantity > 0 %} <b>{{ v.inventory_quantity }}</b> Cái{%- endif -%}{%- else -%}Hết hàng{%- endif -%}</small>
       </div>
       <div class="buybox__actions">
-        <button class="btn btn--lg" type="submit" {% unless v.available %}disabled{% endunless %}>{% if v.available %}Thêm vào giỏ{% else %}Hết hàng{% endif %}</button>
+        <button class="btn btn--lg buybox__add" type="submit" {% unless v.available %}disabled{% endunless %}>{% if v.available %}THÊM VÀO GIỎ{% else %}HẾT HÀNG{% endif %}</button>
         {%- if section.settings.installment_link != blank -%}<a class="btn btn--outline btn--lg" href="{{ section.settings.installment_link }}">Trả góp 0%</a>{%- endif -%}
       </div>
     </form>
