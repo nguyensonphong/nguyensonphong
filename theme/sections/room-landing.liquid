@@ -30,7 +30,7 @@
 {%- endif -%}
 {%- if section.settings.promo_src != blank or section.settings.promo_image -%}
 <section class="container sec">
-  <a class="room-promo" href="{{ section.settings.promo_link }}">
+  <a class="room-promo" href="{{ section.settings.promo_link | default: '/pages/khuyen-mai' }}">
     {% render 'placeholder', image: section.settings.promo_image, src: section.settings.promo_src, title: section.settings.promo_title, sub: section.settings.promo_sub, width: 1600 %}
   </a>
 </section>
@@ -44,7 +44,7 @@
     { "type": "text", "id": "promo_src", "label": "Link ảnh banner minh hoạ", "default": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3" },
     { "type": "text", "id": "promo_title", "label": "Chữ lớn trên banner", "default": "Xu hướng nội thất 2026" },
     { "type": "text", "id": "promo_sub", "label": "Chữ nhỏ", "default": "Làm mới không gian với ưu đãi đến 50%" },
-    { "type": "url", "id": "promo_link", "label": "Link banner", "default": "/pages/khuyen-mai" }
+    { "type": "url", "id": "promo_link", "label": "Link banner" }
   ]
 }
 {% endschema %}
