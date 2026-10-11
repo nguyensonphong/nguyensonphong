@@ -803,3 +803,6 @@ a.icard:hover{border-color:var(--hp-blue)}
 .buybox__add{width:100%;background:#1f5ba8;font-size:17px;letter-spacing:.03em;border-radius:10px;min-height:50px}
 .buybox__actions .btn--outline{width:100%}
 @media (max-width:900px){.buybox{position:static}}
+.pdp__box .row-scroll{grid-auto-columns:minmax(190px,calc((100% - 3*var(--gap))/4))}
+.pdp__gallery:not(:has(.pdp__thumbs)){grid-template-columns:minmax(0,1fr)}
+.pdp__gallery:not(:has(.pdp__thumbs)) .pdp__stage{grid-column:1}
