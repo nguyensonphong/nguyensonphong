@@ -11,12 +11,17 @@
       {%- if collection.image -%}{{ collection.image | image_url: width: 1800 | image_tag: class: 'blp__heroimg', alt: collection.title, loading: 'eager' }}{%- endif -%}
       <div class="blp__herotext">
         <div class="blp__logo">{%- if b.logo.value -%}{{ b.logo.value | image_url: width: 400 | image_tag: alt: collection.title }}{%- else -%}<b>{{ collection.title }}</b>{%- endif -%}</div>
-        <p class="blp__slogan">{{ section.settings.slogan | default: b.tagline.value }}</p>
+        <p class="blp__slogan">{{ section.settings.slogan | default: b.slogan.value | default: b.tagline.value }}</p>
         {%- if b -%}<a class="blp__about" href="{{ b.system.url }}">Câu chuyện thương hiệu ›</a>{%- endif -%}
       </div>
     </div>
 
-    {%- assign types = collection.all_types -%}
+    {%- comment -%} Thứ tự ngành hàng: theo danh sách ưu tiên, rồi các loại còn lại {%- endcomment -%}
+    {%- assign pref = section.settings.type_order | split: ',' -%}
+    {%- assign joined = '' -%}
+    {%- for t in pref -%}{%- assign tt = t | strip -%}{%- if collection.all_types contains tt -%}{%- assign joined = joined | append: tt | append: '|' -%}{%- endif -%}{%- endfor -%}
+    {%- for t in collection.all_types -%}{%- assign key = t | append: '|' -%}{%- unless joined contains key -%}{%- assign joined = joined | append: key -%}{%- endunless -%}{%- endfor -%}
+    {%- assign types = joined | split: '|' -%}
     <nav class="blp__icons" aria-label="Ngành hàng {{ collection.title }}">
       {%- for t in types -%}
         {%- case t -%}
@@ -65,7 +70,8 @@
 {
   "name": "Landing thương hiệu",
   "settings": [
-    { "type": "text", "id": "slogan", "label": "Slogan (để trống = lấy giới thiệu ngắn của thương hiệu)" }
+    { "type": "text", "id": "slogan", "label": "Slogan (để trống = lấy slogan của thương hiệu)" },
+    { "type": "text", "id": "type_order", "label": "Thứ tự ngành hàng (cách nhau dấu phẩy)", "default": "Tivi,Tủ lạnh,Máy giặt,Điều hòa,Robot hút bụi,Máy hút bụi,Lò vi sóng,Nồi cơm điện,Quạt" }
   ]
 }
 {% endschema %}
