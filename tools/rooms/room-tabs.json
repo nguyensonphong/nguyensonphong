@@ -1,0 +1,17 @@
+{
+ "khong-gian-phong-ngu": ["nem","chan-ga-goi","goi-goi-om","phu-kien-giuong-ngu","noi-that-phong-ngu","sap-xep-quan-ao","den-trong-nha","may-lanh","quat","may-loc-khong-khi"],
+ "khong-gian-nha-bep": ["thiet-bi-nha-bep","noi-com-dien","tu-bep","chau-rua-chen-phu-kien","may-loc-nuoc-nha-bep","dung-cu-nau-nuong","luu-tru-nha-bep","tu-lanh","lo-vi-song-lo-nuong","may-xay-may-ep"],
+ "khong-gian-phong-lam-viec": ["noi-that-van-phong","den-ban-den-cay","van-phong-pham","hop-ke-luu-tru","tu-ke-luu-tru","buong-lam-viec-van-phong","o-cam-keo-dai-phich-chuyen","thiet-bi-du-phong-dien","may-loc-khong-khi"],
+ "khong-gian-phong-khach": ["tivi-man-hinh","loa-thanh","noi-that-phong-khach","goi-tua-nem-ngoi","tham","do-trang-tri-nha","den-trong-nha","giai-tri-tai-gia","quat","may-lanh"],
+ "khong-gian-phong-tam": ["bon-cau","chau-rua-lavabo","sen-tam","voi-nuoc","bon-tam","cabin-tam","guong","phu-kien-phong-tam","may-nuoc-nong","khan-tam-ao-choang"],
+ "khong-gian-phong-an": ["noi-that-phong-an","may-pha-ca-phe-tra","giay-ve-sinh-khan-giay","bo-do-an","binh-nuoc-thung-giu-nhiet","hop-dung-thuc-pham","thung-rac-tui-rac","den-trong-nha"],
+ "khong-gian-giat-ui": ["may-giat-may-say","ban-ui-ban-la-hoi-nuoc","dung-cu-phoi-do","giat-giu","sap-xep-quan-ao","chat-tay-rua-gia-dung","khu-mui-hut-am"],
+ "khong-gian-luu-tru": ["hop-ke-luu-tru","tu-ke-luu-tru","sap-xep-quan-ao","hop-tu-do-nghe","phu-kien-noi-that","thung-rac-tui-rac"],
+ "khong-gian-the-thao": ["may-tap-the-hinh","dung-cu-tap","dung-cu-the-thao","quan-ao-the-thao","phu-kien-the-thao","dong-ho-thong-minh","xe-dap","thuc-pham-bo-sung","may-loc-khong-khi"],
+ "khong-gian-thu-cung": ["thuc-an-thu-cung","banh-thuong","do-dung-thu-cung","cat-ve-sinh","cham-soc-thu-cung","tam-cat-tia"],
+ "khong-gian-gaming": ["tivi-man-hinh","noi-that-gaming","game-thiet-bi-choi-game","tai-nghe","loa","micro","den-trong-nha","o-cam-keo-dai-phich-chuyen","thiet-bi-du-phong-dien"],
+ "khong-gian-phong-tre": ["an-toan-cho-be","nem-chan-ga-tre-em","noi-that-tre-em","do-an-dam","san-pham-cho-me","tam-cham-soc-be","do-dung-thiet-yeu","do-choi"],
+ "khong-gian-nguoi-cao-tuoi": ["dung-cu-ho-tro-di-chuyen","giuong-y-te-phu-kien","an-toan-phong-tam","may-do-suc-khoe","ta-nguoi-lon","dai-ho-tro","thiet-bi-cap-cuu","dung-cu-so-cuu","thuc-pham-chuc-nang"],
+ "khong-gian-phong-tho": ["ban-tho","do-cung-duong","tham","goi-tua-nem-ngoi","vach-ngan","tu-ke-luu-tru","den-trong-nha"],
+ "khong-gian-san-vuon": ["nha-kho-ngoai-troi","noi-that-ngoai-troi","nha-bat-du-che","bep-nuong-bbq","may-lam-vuon","tuoi-cay","dung-cu-lam-vuon","hat-giong-vat-tu-trong-cay","den-ngoai-troi","trang-tri-san-vuon"]
+}
