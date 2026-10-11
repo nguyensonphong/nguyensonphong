@@ -5,7 +5,7 @@
   Tag dùng: free-install, free-shipping, best-price
 {%- endcomment -%}
 {%- assign v = product.selected_or_first_available_variant -%}
-{%- assign brand_col = collections[product.vendor | handleize] -%}
+{%- assign brand_h = product.vendor | handleize -%}{%- assign brand_col = collections[brand_h] -%}
 {%- if brand_col and brand_col.template_suffix == 'brand' -%}{%- assign brand_url = brand_col.url -%}{%- else -%}{%- assign brand_url = product.vendor | url_for_vendor -%}{%- endif -%}
 {%- comment -%} Dịch vụ cộng thêm: chọn riêng từng sản phẩm qua metafield custom.addon_product; không có thì dùng mặc định của template (nếu đặt) {%- endcomment -%}
 {%- assign addon = product.metafields.custom.addon_product.value | default: section.settings.addon_product -%}
