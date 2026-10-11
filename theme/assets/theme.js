@@ -173,9 +173,19 @@
 })();
 
 // Trang chi tiết: đổi ảnh khi bấm thumbnail
+// Video đứng đầu: bấm ảnh thì dừng video, bấm thumbnail video thì phát lại
+const stageVideo = document.querySelector('[data-stage-video]');
+const setActive = (b) => document.querySelectorAll('.pdp__thumbs button').forEach((x) => x.classList.toggle('is-active', x === b));
 document.querySelectorAll('[data-thumb]').forEach((b) => b.addEventListener('click', () => {
   const img = document.querySelector('[data-stage]');
-  if (img) { img.src = b.dataset.thumb; img.removeAttribute('srcset'); }
+  if (img) { img.src = b.dataset.thumb; img.removeAttribute('srcset'); img.hidden = false; }
+  if (stageVideo) { stageVideo.pause(); stageVideo.hidden = true; }
+  setActive(b);
+}));
+document.querySelectorAll('[data-thumb-video]').forEach((b) => b.addEventListener('click', () => {
+  const img = document.querySelector('[data-stage]'); if (img) img.hidden = true;
+  if (stageVideo) { stageVideo.hidden = false; stageVideo.currentTime = 0; stageVideo.play(); }
+  setActive(b);
 }));
 // Trang danh mục: tự áp dụng khi đổi bộ lọc / sắp xếp, "Xem thêm", mở bộ lọc trên điện thoại
 const filterForm = document.querySelector('[data-filters]');

@@ -813,3 +813,10 @@ a.icard:hover{border-color:var(--hp-blue)}
   .pcard .addcart{width:32px;height:32px}
   .pcard__foot .pcard__cmp{font-size:0;gap:0}
 }
+/* Video sản phẩm đặt đầu gallery */
+.pdp__video{width:100%;height:100%;object-fit:contain;background:#000;display:block}
+.pdp__stage img[hidden],.pdp__video[hidden]{display:none}
+.pdp__thumbs button.is-active{border-color:#1f5ba8;box-shadow:0 0 0 1px #1f5ba8}
+.pdp__vthumb{position:relative}
+.pdp__vthumb span{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.35);border-radius:inherit;color:#fff}
+.pdp__vthumb svg{width:26px;height:26px}

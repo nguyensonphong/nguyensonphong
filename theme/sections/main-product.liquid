@@ -19,17 +19,21 @@
       <div class="pdp__stage">
         {%- if v.compare_at_price > v.price -%}<span class="pdp__badge">FLASH ⚡ SALE</span>{%- endif -%}
         <button class="pdp__fav" type="button" aria-label="Yêu thích" data-fav>{% render 'icon', name: 'heart' %}</button>
-        {%- if product.featured_media -%}
-          {{ product.featured_media | image_url: width: 1200 | image_tag: loading: 'eager', data-stage: '' }}
-        {%- else -%}<div class="pcard__img">{% render 'icon', name: 'box' %}</div>{%- endif -%}
+        {%- comment -%} Video đặt đầu: video của sản phẩm nếu có, không thì video demo chung (cài trong section) {%- endcomment -%}
+        {%- assign pvideo = product.media | where: 'media_type', 'video' | first -%}
+        {%- if pvideo -%}{%- assign vsrc = pvideo.sources | where: 'format', 'mp4' | first -%}{%- assign vurl = vsrc.url -%}{%- assign vposter = pvideo.preview_image | image_url: width: 1200 -%}
+        {%- else -%}{%- assign vurl = section.settings.demo_video_url | default: 'product-demo.mp4' -%}{%- if section.settings.demo_video_url == blank -%}{%- assign vurl = 'product-demo.mp4' | asset_url -%}{%- endif -%}{%- endif -%}
+        <video class="pdp__video" src="{{ vurl }}" {% if vposter %}poster="{{ vposter }}"{% endif %} autoplay muted loop playsinline controls preload="metadata" data-stage-video></video>
+        {%- if product.featured_image -%}
+          {{ product.featured_image | image_url: width: 1200 | image_tag: loading: 'eager', data-stage: '', hidden: '' }}
+        {%- endif -%}
       </div>
-      {%- if product.media.size > 1 -%}
-        <div class="pdp__thumbs">
-          {%- for m in product.media limit: 8 -%}
-            <button type="button" data-thumb="{{ m | image_url: width: 1200 }}" aria-label="Ảnh {{ forloop.index }}">{{ m | image_url: width: 120 | image_tag }}</button>
-          {%- endfor -%}
-        </div>
-      {%- endif -%}
+      <div class="pdp__thumbs">
+        <button type="button" class="pdp__vthumb is-active" data-thumb-video aria-label="Video sản phẩm">{%- if product.featured_image -%}{{ product.featured_image | image_url: width: 120 | image_tag }}{%- endif -%}<span>{% render 'icon', name: 'play' %}</span></button>
+        {%- for m in product.media limit: 8 -%}{%- if m.media_type == 'image' -%}
+          <button type="button" data-thumb="{{ m | image_url: width: 1200 }}" aria-label="Ảnh {{ forloop.index }}">{{ m | image_url: width: 120 | image_tag }}</button>
+        {%- endif -%}{%- endfor -%}
+      </div>
       <div class="pdp__share">
         <span>Chia sẻ</span>
         <a href="https://www.facebook.com/sharer/sharer.php?u={{ shop.url | append: product.url | url_encode }}" target="_blank" rel="noopener" aria-label="Facebook">f</a>
@@ -168,6 +172,7 @@
   "name": "Chi tiết sản phẩm",
   "settings": [
     { "type": "product", "id": "addon_product", "label": "Dịch vụ cộng thêm mặc định (tuỳ chọn)", "info": "Nên để trống và chọn riêng ở từng sản phẩm (trường 'Dịch vụ cộng thêm'). Chỉ dùng khi sản phẩm chưa chọn." },
+    { "type": "url", "id": "demo_video_url", "label": "Video demo mặc định (mp4)", "info": "Dùng cho sản phẩm chưa có video riêng. Để trống = video demo 5 giây có sẵn trong theme." },
     { "type": "collection", "id": "bundle_collection", "label": "Sản phẩm mua kèm" },
     { "type": "url", "id": "installment_link", "label": "Link trang trả góp" },
     { "type": "text", "id": "tradein_text", "label": "Thu cũ đổi mới: mô tả", "default": "trợ giá đến 1.000.000₫ khi đổi máy cũ", "info": "Hiện với sản phẩm có tag trade-in" },
