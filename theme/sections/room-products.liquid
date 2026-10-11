@@ -5,9 +5,9 @@
   <div class="sec__head"><h2 class="sec__title">{{ section.settings.title }}</h2></div>
   {%- if links.size > 0 -%}
     <div class="tabs tabs--pill" role="tablist">
-      {%- for l in links limit: 8 -%}<button class="tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" data-tab="{{ forloop.index }}">{{ l.title }}</button>{%- endfor -%}
+      {%- for l in links limit: 10 -%}<button class="tab{% if forloop.first %} is-active{% endif %}" type="button" role="tab" data-tab="{{ forloop.index }}">{{ l.title }}</button>{%- endfor -%}
     </div>
-    {%- for l in links limit: 8 -%}
+    {%- for l in links limit: 10 -%}
       {%- assign h = l.url | split: '/' | last -%}
       <div class="room-grid" data-panel="{{ forloop.index }}" {% unless forloop.first %}hidden{% endunless %}>
         {%- for product in collections[h].products limit: section.settings.limit -%}{% render 'product-card', product: product, style: 'popular' %}

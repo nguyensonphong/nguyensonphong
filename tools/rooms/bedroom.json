@@ -1,0 +1,26 @@
+{
+ "room": "khong-gian-phong-ngu",
+ "banner": "photo-1633944095397-878622ebc01c",
+ "cats": [
+  {"tag":"nem","title":"Nệm","img":["photo-1647376036543-f9f543601a1d","photo-1759176171441-7afca44a5558","photo-1759176170879-6bd7073ab4f4"],
+   "products":[["Nệm lò xo túi độc lập 160x200 cm dày 25 cm","MOCHI SLEEP",8990000,12490000],["Nệm foam cao su non 180x200 cm dày 20 cm","MOCHI SLEEP",6490000,8990000],["Nệm cao su thiên nhiên 160x200 cm dày 15 cm","GK HOME",11990000,15990000],["Nệm bông ép gấp 3 tấm 120x200 cm","GK HOME",1890000,2490000]]},
+  {"tag":"chan-ga-goi","title":"Chăn ga gối","img":["photo-1601276174812-63280a55656e","photo-1564019472231-4586c552dc27","photo-1698746044395-85beb2b04522"],
+   "products":[["Bộ ga gối cotton 100% 1m6 x 2m màu trắng","GK HOME",890000,1290000],["Chăn lông vũ nhân tạo 200x220 cm","MOCHI SLEEP",1290000,1790000],["Bộ chăn ga Tencel 5 món 1m8","GK HOME",2190000,2990000],["Ga chống thấm 1m6 x 2m bo chun","GK HOME",390000,550000]]},
+  {"tag":"goi-goi-om","title":"Gối & gối ôm","img":["photo-1584100936595-c0654b55a2e2","photo-1600414428640-f78a67c2aa3b","photo-1559051668-9024c9b5e84b"],
+   "products":[["Gối cao su non định hình 40x60 cm","MOCHI SLEEP",450000,650000],["Gối lông vũ nhân tạo 50x70 cm (cặp 2 chiếc)","GK HOME",590000,790000],["Gối ôm bông gòn 100 cm","GK HOME",250000,350000],["Gối tựa lưng sofa 45x45 cm","GK HOME",190000,290000]]},
+  {"tag":"phu-kien-giuong-ngu","title":"Phụ kiện giường ngủ","img":["photo-1595770972554-a21ab8487c29","photo-1581448361195-86be336c9ab8","photo-1759176170879-6bd7073ab4f4"],
+   "products":[["Tấm topper làm mềm nệm 160x200 cm dày 5 cm","MOCHI SLEEP",1490000,1990000],["Tấm bảo vệ nệm chần bông 160x200 cm","GK HOME",490000,690000],["Màn tuyn chụp tự bung 1m8","GK HOME",320000,450000],["Ruột chăn bốn mùa 200x220 cm","MOCHI SLEEP",790000,1090000]]},
+  {"tag":"noi-that-phong-ngu","title":"Bộ phòng ngủ","img":["photo-1633944095397-878622ebc01c","photo-1560185128-e173042f79dd","photo-1717860477853-9538cf52833c"],
+   "products":[["Giường gỗ sồi kiểu Nhật 1m6 x 2m","GK HOME",6990000,8990000],["Giường bệt pallet gỗ thông 1m8","GK HOME",3490000,4590000],["Tab đầu giường gỗ 2 ngăn kéo","GK HOME",1290000,1690000],["Bàn trang điểm kèm gương và ghế","GK HOME",2490000,3290000]]},
+  {"tag":"sap-xep-quan-ao","title":"Tủ & sắp xếp quần áo","img":["photo-1672137233327-37b0c1049e77","photo-1577020914435-7ae6b1091ebd","photo-1618236444721-4a8dba415c15","photo-1715678292272-5b68599825e0"],
+   "products":[["Tủ quần áo 3 cánh gỗ MDF 120 cm","GK HOME",4990000,6490000],["Kệ treo quần áo khung thép 2 tầng","GK HOME",690000,890000],["Hộp vải đựng quần áo có nắp 66 lít (bộ 3)","GK HOME",390000,550000],["Móc treo quần áo nhung chống trượt (bộ 20)","GK HOME",150000,220000]]},
+  {"tag":"den-trong-nha","title":"Đèn trang trí & đèn ngủ","img":["photo-1611668190893-5131136df0a8","photo-1614635884840-85cf80d23844","photo-1589335429144-328a42be176e","photo-1612736228052-80e7f381690c"],
+   "products":[["Đèn ngủ để bàn chao vải ánh sáng vàng","LUMI",390000,550000],["Đèn bàn gốm men trắng chân gỗ","LUMI",590000,790000],["Đèn ngủ LED cảm biến chạm 3 mức sáng","LUMI",250000,350000],["Đèn thả trần đồng thau phòng ngủ","LUMI",1290000,1690000]]},
+  {"tag":"may-lanh","title":"Máy lạnh","img":["photo-1759772238012-9d5ad59ae637","photo-1726614846573-c1ac2e6161d1"],
+   "products":[["Máy lạnh Inverter 1 HP chế độ ngủ êm","KAZE",7490000,9290000],["Máy lạnh Inverter 2 HP lọc bụi mịn","KAZE",14990000,18490000]]},
+  {"tag":"quat","title":"Quạt","img":["photo-1565151443833-29bf2ba5dd8d","photo-1568392816241-44d223d4d490","photo-1618941716939-553df3c6c278","photo-1564510182791-29645da7fac4"],
+   "products":[["Quạt đứng 5 cánh điều khiển từ xa","KAZE",890000,1190000],["Quạt bàn mini kẹp đầu giường","KAZE",290000,390000],["Quạt tháp không cánh hẹn giờ 8 tiếng","KAZE",1690000,2190000],["Quạt bàn cổ điển lồng kim loại 30 cm","KAZE",590000,790000]]},
+  {"tag":"may-loc-khong-khi","title":"Máy lọc không khí","img":["photo-1632928274371-878938e4d825","photo-1436473849883-bb3464c23e93","photo-1709745634912-2a79b938f3c2","photo-1662454378069-fb8a9c6c0c88"],
+   "products":[["Máy lọc không khí HEPA phòng 30 m²","AIRWIN",2490000,3290000],["Máy lọc không khí kèm tạo ẩm 40 m²","AIRWIN",3990000,4990000],["Máy lọc không khí mini để bàn","AIRWIN",990000,1290000],["Máy lọc không khí ion âm 50 m²","AIRWIN",5490000,6990000]]}
+ ]
+}
