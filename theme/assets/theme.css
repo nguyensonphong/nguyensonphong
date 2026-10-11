@@ -806,3 +806,10 @@ a.icard:hover{border-color:var(--hp-blue)}
 .pdp__box .row-scroll{grid-auto-columns:minmax(190px,calc((100% - 3*var(--gap))/4))}
 .pdp__gallery:not(:has(.pdp__thumbs)){grid-template-columns:minmax(0,1fr)}
 .pdp__gallery:not(:has(.pdp__thumbs)) .pdp__stage{grid-column:1}
+@media (max-width:600px){
+  .grid-products{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .pcard{padding:10px 8px 8px}
+  .pcard .price{font-size:16px}
+  .pcard .addcart{width:32px;height:32px}
+  .pcard__foot .pcard__cmp{font-size:0;gap:0}
+}
