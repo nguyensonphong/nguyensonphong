@@ -9,7 +9,8 @@
   {%- if section.settings.intro != blank -%}<p class="sec__intro">{{ section.settings.intro }}</p>{%- endif -%}
   <div class="mcards mcards--{{ section.settings.style }}" style="--cols:{{ section.settings.columns }}">
     {%- for link in links -%}
-      {%- assign img = link.object.image | default: link.object.featured_image -%}
+      {%- assign lh = link.url | split: '/' | last -%}
+      {%- assign img = link.object.image | default: link.object.featured_image | default: collections[lh].image -%}
       <a class="mcard" href="{{ link.url }}">
         {%- if section.settings.style == 'image' -%}
           <span class="mcard__img">

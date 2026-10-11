@@ -694,3 +694,16 @@ a.icard:hover{border-color:var(--hp-blue)}
 .buybox__price .price{flex-direction:row;align-items:baseline;gap:6px;font-size:30px}
 .buybox__price .price::after{content:"/Cái";font-size:15px;font-weight:400;color:var(--hp-text)}
 @media (max-width:900px){.pdp__gallery{grid-template-columns:1fr}.pdp__thumbs{grid-column:1;grid-row:2;flex-direction:row;overflow-x:auto}.pdp__stage{grid-column:1}}
+/* Dropdown Mua theo phòng kiểu HomePro: 5 cột ảnh lớn 4:3, tên phòng xanh căn giữa, panel bo góc, nền trang mờ */
+.nav__panel{left:50%;right:auto;transform:translateX(-50%);width:min(1280px,96vw);border-top:0;border-radius:0 0 12px 12px;padding:28px 24px;max-height:calc(100vh - 160px);overflow-y:auto}
+.nav__panel>.container{padding:0;max-width:none}
+.nav__tiles{grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 22px}
+.nav__tile{gap:12px;font-size:17px;font-weight:600;color:var(--hp-blue)}
+.nav__tile img{border-radius:10px;aspect-ratio:4/3}
+.nav__item[aria-haspopup]::after{content:" ⌄"}
+.nav__drop:hover>.nav__item{color:var(--hp-orange);text-decoration:none;box-shadow:inset 0 -3px var(--hp-orange)}
+/* Trang Mua theo phòng: thẻ ảnh không viền, tên xanh dưới ảnh */
+.mcards--image .mcard{border:0;padding:0;background:none;gap:12px}
+.mcards--image .mcard b{color:var(--hp-blue);font-size:17px;font-weight:600}
+.mcards--image .mcard__img{border-radius:10px}
+.mcards--image .mcard:hover b{color:var(--hp-orange)}

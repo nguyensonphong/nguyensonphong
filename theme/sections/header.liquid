@@ -40,14 +40,20 @@
       {%- endcomment -%}
       {%- for link in linklists[section.settings.main_menu].links -%}
         {%- if link.links.size > 0 -%}
-          {%- assign first_img = link.links.first.object.image -%}
+          {%- comment -%} Link dạng web (HTTP) không có object → tìm collection theo handle cuối đường dẫn {%- endcomment -%}
+          {%- assign fh = link.links.first.url | split: '/' | last -%}
+          {%- assign first_img = link.links.first.object.image | default: collections[fh].image -%}
           <div class="nav__drop">
             <a class="nav__item" href="{{ link.url }}" aria-haspopup="true">{{ link.title }}</a>
             <div class="nav__panel">
               <div class="container">
                 {%- if first_img -%}
                   <div class="nav__tiles">
-                    {%- for c in link.links -%}<a class="nav__tile" href="{{ c.url }}">{%- if c.object.image -%}{{ c.object.image | image_url: width: 300 | image_tag: loading: 'lazy', alt: c.title }}{%- endif -%}<span>{{ c.title }}</span></a>{%- endfor -%}
+                    {%- for c in link.links -%}
+                      {%- assign chh = c.url | split: '/' | last -%}
+                      {%- assign cimg = c.object.image | default: collections[chh].image -%}
+                      <a class="nav__tile" href="{{ c.url }}">{%- if cimg -%}{{ cimg | image_url: width: 480 | image_tag: loading: 'lazy', alt: c.title }}{%- endif -%}<span>{{ c.title }}</span></a>
+                    {%- endfor -%}
                   </div>
                 {%- else -%}
                   <div class="nav__cols">
