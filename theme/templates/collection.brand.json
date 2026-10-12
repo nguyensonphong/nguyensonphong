@@ -1,1 +1,1 @@
-{"sections": {"landing": {"type": "brand-landing", "settings": {}}, "main": {"type": "main-collection", "settings": {"per_page": 24, "sub_menu": "all-categories"}}}, "order": ["landing", "main"]}
+{"sections": {"landing": {"type": "brand-landing", "settings": {}}, "main": {"type": "brand-products", "settings": {"per_page": 24}}}, "order": ["landing", "main"]}

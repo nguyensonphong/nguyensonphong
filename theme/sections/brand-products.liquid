@@ -1,0 +1,166 @@
+{%- comment -%}
+  Danh sách sản phẩm trên landing thương hiệu – bộ lọc theo HomePro:
+  Danh mục · Thương hiệu · Màu sắc · Đánh giá · Cửa hàng · Giá, thanh "Mua theo hình thức giao",
+  số kết quả, sắp xếp, số sản phẩm/trang và chip bộ lọc đang chọn.
+  Lọc danh mục/màu/giao hàng dùng tag sản phẩm (loai-*, mau-*, giao-*, free-shipping) qua URL /collections/<handle>/<tag+tag>,
+  lọc giá dùng bộ lọc chuẩn của Shopify.
+{%- endcomment -%}
+{%- assign base = collections[collection.handle] -%}
+{%- assign base_url = collection.url -%}
+{%- assign tags_now = current_tags | join: ',' | split: ',' -%}
+{%- capture qs -%}{% if collection.sort_by != blank %}?sort_by={{ collection.sort_by }}{% endif %}{%- endcapture -%}
+
+{%- comment -%} Danh sách danh mục (tag loai-* → tên loại) và màu từ toàn bộ sản phẩm của hãng {%- endcomment -%}
+{%- assign cats = '' -%}{%- assign colors = '' -%}
+{%- for p in base.products -%}
+  {%- for t in p.tags -%}
+    {%- if t contains 'loai-' -%}{%- assign key = t | append: '::' | append: p.type -%}{%- unless cats contains key -%}{%- assign cats = cats | append: key | append: '||' -%}{%- endunless -%}{%- endif -%}
+    {%- if t contains 'mau-' -%}{%- unless colors contains t -%}{%- assign colors = colors | append: t | append: '||' -%}{%- endunless -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign cat_list = cats | split: '||' -%}
+{%- assign color_list = colors | split: '||' -%}
+{%- assign ship_list = 'giao-nhanh|Giao nhanh|07:30 – 20:00,giao-trong-ngay|Giao trong ngày|Đặt trước 20:30,free-shipping|Giao tiêu chuẩn|Miễn phí giao hàng' | split: ',' -%}
+
+<section class="container bp" id="products">
+  {%- comment -%} Thanh "Mua theo hình thức giao" {%- endcomment -%}
+  <div class="blp__ship bp__ship">
+    <b>Mua theo<br>hình thức giao</b><span aria-hidden="true">⇢</span>
+    {%- for s in ship_list -%}
+      {%- assign sp = s | split: '|' -%}
+      {%- assign others = '' -%}
+      {%- for t in current_tags -%}{%- unless t == 'giao-nhanh' or t == 'giao-trong-ngay' or t == 'free-shipping' -%}{%- assign others = others | append: t | append: '+' -%}{%- endunless -%}{%- endfor -%}
+      {%- if current_tags contains sp[0] -%}{%- assign tgt = others -%}{%- else -%}{%- assign tgt = others | append: sp[0] -%}{%- endif -%}
+      {%- assign tgt = tgt | remove_last: '+' | split: '+' | join: '+' -%}
+      <a class="{% if current_tags contains sp[0] %}is-active{% endif %}" href="{{ base_url }}{% if tgt != blank %}/{{ tgt }}{% endif %}{{ qs }}#products">
+        {%- case forloop.index -%}{%- when 1 -%}{% render 'icon', name: 'bolt' %}{%- when 2 -%}{% render 'icon', name: 'truck' %}{%- else -%}{% render 'icon', name: 'box' %}{%- endcase -%}
+        <p><b>{{ sp[1] }}</b><small>{{ sp[2] }}</small></p>
+      </a>
+    {%- endfor -%}
+  </div>
+
+  {%- paginate collection.products by section.settings.per_page -%}
+  <div class="bp__top">
+    <span class="bp__count">Tìm thấy <b>{{ collection.products_count }}</b> kết quả</span>
+    <label class="bp__sel">Sắp xếp:
+      <select class="field" data-nav-select>
+        {%- assign cur = collection.sort_by | default: collection.default_sort_by -%}
+        {%- for o in collection.sort_options -%}<option value="?sort_by={{ o.value }}" {% if o.value == cur %}selected{% endif %}>{{ o.name }}</option>{%- endfor -%}
+      </select>
+    </label>
+    <label class="bp__sel">Số sản phẩm:
+      <select class="field" data-nav-select>
+        <option value="?view=brand{{ qs | replace: '?', '&' }}" {% if template.suffix == 'brand' %}selected{% endif %}>24</option>
+        <option value="?view=brand48{{ qs | replace: '?', '&' }}" {% if template.suffix == 'brand48' %}selected{% endif %}>48</option>
+      </select>
+    </label>
+  </div>
+
+  {%- comment -%} Chip bộ lọc đang chọn {%- endcomment -%}
+  {%- assign has_price = false -%}
+  {%- for f in collection.filters -%}{%- if f.type == 'price_range' and f.min_value.value or f.type == 'price_range' and f.max_value.value -%}{%- assign has_price = true -%}{%- assign price_f = f -%}{%- endif -%}{%- endfor -%}
+  <div class="bp__chips">
+    <span class="bp__chip bp__chip--fixed">Thương hiệu: {{ collection.title }}</span>
+    {%- for t in current_tags -%}
+      {%- assign rest = current_tags | join: '+' | split: '+' -%}
+      {%- assign others = '' -%}{%- for r in rest -%}{%- if r != t -%}{%- assign others = others | append: r | append: '+' -%}{%- endif -%}{%- endfor -%}
+      {%- assign others = others | remove_last: '+' -%}
+      {%- assign label = t -%}
+      {%- for c in cat_list -%}{%- assign cp = c | split: '::' -%}{%- if cp[0] == t -%}{%- assign label = cp[1] -%}{%- endif -%}{%- endfor -%}
+      {%- for s in ship_list -%}{%- assign sp = s | split: '|' -%}{%- if sp[0] == t -%}{%- assign label = sp[1] -%}{%- endif -%}{%- endfor -%}
+      {%- if t contains 'mau-' -%}{% capture label %}Màu: {% render 'color-name', tag: t %}{% endcapture %}{%- endif -%}
+      <a class="bp__chip" href="{{ base_url }}{% if others != blank %}/{{ others }}{% endif %}{{ qs }}#products">{{ label }} ✕</a>
+    {%- endfor -%}
+    {%- if has_price -%}<a class="bp__chip" href="{{ price_f.url_to_remove }}">Giá ✕</a>{%- endif -%}
+    {%- if current_tags.size > 0 or has_price -%}<a class="bp__clear" href="{{ base_url }}#products">Xóa tất cả</a>{%- endif -%}
+  </div>
+
+  <div class="plp bp__layout">
+    <aside class="plp__filters bp__filters" id="filters-panel">
+      {%- comment -%} Danh mục {%- endcomment -%}
+      <details class="facet" open>
+        <summary>Danh mục</summary>
+        {%- for c in cat_list -%}
+          {%- assign cp = c | split: '::' -%}
+          {%- assign others = '' -%}
+          {%- for t in current_tags -%}{%- unless t contains 'loai-' -%}{%- assign others = others | append: t | append: '+' -%}{%- endunless -%}{%- endfor -%}
+          {%- if current_tags contains cp[0] -%}{%- assign tgt = others | remove_last: '+' -%}{%- else -%}{%- assign tgt = others | append: cp[0] -%}{%- endif -%}
+          {%- assign n = 0 -%}
+          {%- for p in base.products -%}{%- if p.tags contains cp[0] -%}{%- assign ok = true -%}{%- for t in current_tags -%}{%- unless t contains 'loai-' -%}{%- unless p.tags contains t -%}{%- assign ok = false -%}{%- endunless -%}{%- endunless -%}{%- endfor -%}{%- if ok -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endif -%}{%- endfor -%}
+          <a class="facet__opt facet__link{% if forloop.index > 5 %} is-more{% endif %}{% if current_tags contains cp[0] %} is-on{% endif %}{% if n == 0 %} is-off{% endif %}" href="{{ base_url }}{% if tgt != blank %}/{{ tgt }}{% endif %}{{ qs }}#products"><i></i>{{ cp[1] }}<em>({{ n }})</em></a>
+        {%- endfor -%}
+        {%- if cat_list.size > 5 -%}<button class="facet__more" type="button" data-more>Xem thêm</button>{%- endif -%}
+      </details>
+
+      {%- comment -%} Thương hiệu {%- endcomment -%}
+      <details class="facet" open>
+        <summary>Thương hiệu</summary>
+        <a class="facet__opt facet__link is-on" href="{{ base_url }}#products"><i></i>{{ collection.title | upcase }}<em>({{ base.products_count }})</em></a>
+      </details>
+
+      {%- comment -%} Màu sắc {%- endcomment -%}
+      {%- if color_list.size > 0 -%}
+      <details class="facet" open>
+        <summary>Màu sắc</summary>
+        {%- for c in color_list -%}
+          {%- assign others = '' -%}
+          {%- for t in current_tags -%}{%- unless t contains 'mau-' -%}{%- assign others = others | append: t | append: '+' -%}{%- endunless -%}{%- endfor -%}
+          {%- if current_tags contains c -%}{%- assign tgt = others | remove_last: '+' -%}{%- else -%}{%- assign tgt = others | append: c -%}{%- endif -%}
+          {%- assign n = 0 -%}
+          {%- for p in base.products -%}{%- if p.tags contains c -%}{%- assign ok = true -%}{%- for t in current_tags -%}{%- unless t contains 'mau-' -%}{%- unless p.tags contains t -%}{%- assign ok = false -%}{%- endunless -%}{%- endunless -%}{%- endfor -%}{%- if ok -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endif -%}{%- endfor -%}
+          <a class="facet__opt facet__link{% if current_tags contains c %} is-on{% endif %}{% if n == 0 %} is-off{% endif %}" href="{{ base_url }}{% if tgt != blank %}/{{ tgt }}{% endif %}{{ qs }}#products"><i></i>{% render 'color-name', tag: c %}<em>({{ n }})</em></a>
+        {%- endfor -%}
+      </details>
+      {%- endif -%}
+
+      {%- comment -%} Đánh giá (theo metafield reviews.rating) {%- endcomment -%}
+      <details class="facet" open>
+        <summary>Đánh giá</summary>
+        {%- for s in (1..5) reversed -%}
+          {%- assign n = 0 -%}
+          {%- for p in collection.products -%}{%- assign r = p.metafields.reviews.rating.value.rating | default: 0 | floor -%}{%- if r == s -%}{%- assign n = n | plus: 1 -%}{%- endif -%}{%- endfor -%}
+          <span class="facet__opt facet__stars{% if n == 0 %} is-off{% endif %}"><b>{%- for i in (1..5) -%}{% if i <= s %}★{% else %}<u>★</u>{% endif %}{%- endfor -%}</b><em>({{ n }})</em></span>
+        {%- endfor -%}
+      </details>
+
+      {%- comment -%} Cửa hàng {%- endcomment -%}
+      <details class="facet" open>
+        <summary>Cửa hàng</summary>
+        <span class="facet__opt facet__link is-on"><i></i>{{ shop.name | upcase }}<em>({{ collection.products_count }})</em></span>
+      </details>
+
+      {%- comment -%} Giá (bộ lọc chuẩn Shopify) {%- endcomment -%}
+      <form class="facet bp__price" action="{{ collection.url }}#products" method="get">
+        <b class="facet__title">Giá</b>
+        {%- for f in collection.filters -%}{%- if f.type == 'price_range' -%}
+          <div class="facet__price">
+            <input class="field" type="number" name="{{ f.min_value.param_name }}" value="{{ f.min_value.value | divided_by: 100 }}" placeholder="Từ" aria-label="Giá từ">
+            <span>–</span>
+            <input class="field" type="number" name="{{ f.max_value.param_name }}" value="{{ f.max_value.value | divided_by: 100 }}" placeholder="Đến" aria-label="Giá đến">
+          </div>
+        {%- endif -%}{%- endfor -%}
+        {%- if collection.sort_by != blank -%}<input type="hidden" name="sort_by" value="{{ collection.sort_by }}">{%- endif -%}
+        <button class="btn btn--outline" type="submit">Tìm</button>
+      </form>
+      <a class="bp__clearall" href="{{ base_url }}#products">Xóa tất cả</a>
+    </aside>
+
+    <div class="plp__main">
+      <button class="btn btn--outline btn--sm plp__toggle" type="button" data-bp-toggle>Bộ lọc</button>
+      <div class="grid-products">
+        {%- for product in collection.products -%}{% render 'product-card', product: product, style: 'popular' %}{%- else -%}<p>Không có sản phẩm phù hợp. <a href="{{ base_url }}#products" style="color:var(--hp-blue)">Xóa bộ lọc</a></p>{%- endfor -%}
+      </div>
+      {%- if paginate.pages > 1 -%}<div class="center pager">{{ paginate | default_pagination: next: 'Sau ›', previous: '‹ Trước' }}</div>{%- endif -%}
+    </div>
+  </div>
+  {%- endpaginate -%}
+</section>
+
+{% schema %}
+{
+  "name": "Sản phẩm thương hiệu",
+  "settings": [
+    { "type": "range", "id": "per_page", "label": "Sản phẩm mỗi trang", "min": 12, "max": 48, "step": 4, "default": 24 }
+  ]
+}
+{% endschema %}

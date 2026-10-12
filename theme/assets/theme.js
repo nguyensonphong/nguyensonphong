@@ -291,3 +291,6 @@ document.querySelectorAll('[data-bhub]').forEach((hub) => {
   const q = new URLSearchParams(location.search).get('topic');
   if (q) apply(q);
 });
+// Trang thương hiệu: select điều hướng (sắp xếp, số sản phẩm/trang) và mở bộ lọc trên điện thoại
+document.querySelectorAll('[data-nav-select]').forEach((s) => s.addEventListener('change', () => { location.href = location.pathname + s.value + '#products'; }));
+document.querySelectorAll('[data-bp-toggle]').forEach((b) => b.addEventListener('click', () => document.getElementById('filters-panel')?.classList.toggle('is-open')));

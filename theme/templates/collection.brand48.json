@@ -1,0 +1,1 @@
+{"sections": {"landing": {"type": "brand-landing", "settings": {}}, "main": {"type": "brand-products", "settings": {"per_page": 48}}}, "order": ["landing", "main"]}

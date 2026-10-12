@@ -1,0 +1,5 @@
+{%- comment -%} Tên màu từ tag mau-* {%- endcomment -%}
+{%- case tag -%}
+  {%- when 'mau-den' -%}Đen{%- when 'mau-trang' -%}Trắng{%- when 'mau-bac' -%}Bạc{%- when 'mau-xam' -%}Xám{%- when 'mau-be' -%}Be{%- when 'mau-xanh' -%}Xanh{%- when 'mau-hong' -%}Hồng{%- when 'mau-vang' -%}Vàng{%- when 'mau-do' -%}Đỏ
+  {%- else -%}{{ tag | remove_first: 'mau-' | capitalize }}
+{%- endcase -%}

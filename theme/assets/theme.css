@@ -928,3 +928,27 @@ a.icard:hover{border-color:var(--hp-blue)}
 .article__brand{display:grid;grid-template-columns:240px 1fr;gap:24px;align-items:center;border:1px solid var(--hp-line);border-radius:12px;padding:20px;margin:16px 0 24px}
 .article__brand .brand__logo{aspect-ratio:3/2}
 @media (max-width:900px){.article__brand{grid-template-columns:1fr}}
+/* Bộ lọc trang thương hiệu kiểu HomePro */
+.bp{margin-top:8px}
+.bp__ship a{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #d5dfec;border-radius:10px;padding:10px 14px;text-decoration:none}
+.bp__ship a svg{width:28px;height:28px;color:#1f5ba8;flex:none}
+.bp__ship a.is-active{border-color:#1f5ba8;box-shadow:0 0 0 2px #1f5ba8 inset;background:#f2f7ff}
+.bp__top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:18px 0 10px}
+.bp__count{font-size:14px;color:#2b3242;border-right:1px solid var(--hp-line);padding-right:16px}
+.bp__sel{display:flex;align-items:center;gap:8px;font-size:14px;color:#2b3242}
+.bp__sel .field{min-width:150px}
+.bp__chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.bp__chip{display:inline-flex;align-items:center;gap:6px;border:1px solid #9ec0ea;color:#1f5ba8;background:#f2f7ff;border-radius:6px;padding:4px 10px;font-size:13px;text-decoration:none}
+.bp__chip--fixed{border-color:var(--hp-line);color:#2b3242;background:#f6f7f9}
+.bp__clear,.bp__clearall{color:#1f5ba8;font-size:13px;text-decoration:underline}
+.bp__filters{border:1px solid var(--hp-line);border-radius:10px;padding:6px 14px 14px;background:#fff}
+.facet__link{color:#2b3242;text-decoration:none}
+.facet__link i{width:16px;height:16px;border:1.5px solid #9aa3b2;border-radius:3px;flex:none;display:inline-block}
+.facet__link.is-on i{background:#1f5ba8;border-color:#1f5ba8;box-shadow:inset 0 0 0 3px #fff}
+.facet__link.is-on{color:#1f5ba8;font-weight:600}
+.facet__opt.is-off{opacity:.45;pointer-events:none}
+.facet__stars b{color:#f5a400;letter-spacing:1px;font-size:15px}.facet__stars u{text-decoration:none;color:#d6d9df}
+.bp__price{display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--hp-line);padding:10px 0}
+.facet__title{color:var(--hp-head);font-weight:600}
+.bp__clearall{display:block;margin-top:10px}
+@media (max-width:900px){.bp__count{border:0;padding:0;width:100%}}
