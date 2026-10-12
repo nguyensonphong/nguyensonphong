@@ -17,4 +17,15 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm ci --omit=dev
+      - name: Kiểm tra chuỗi kết nối (không in mật khẩu)
+        run: |
+          node -e '
+          const raw = process.env.SUPABASE_DB_URL || "";
+          console.log("độ dài chuỗi:", raw.length, "| khoảng trắng đầu/cuối:", raw !== raw.trim());
+          const m = raw.trim().match(/^postgres(?:ql)?:\/\/([^:]+):(.*)@([^@]+)$/);
+          if (!m) { console.log("SAI ĐỊNH DẠNG chuỗi"); process.exit(0); }
+          const [, user, pw, host] = m;
+          console.log("user:", user, "| host:", host);
+          console.log("mật khẩu dài:", pw.length, "ký tự | có [ ]:", /[\[\]]/.test(pw), "| có ký tự đặc biệt:", /[^A-Za-z0-9]/.test(pw), "| là chữ YOUR-PASSWORD:", /YOUR-PASSWORD/i.test(pw));
+          '
       - run: npm run sync:shopify
