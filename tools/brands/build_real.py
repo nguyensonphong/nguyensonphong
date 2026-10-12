@@ -1,6 +1,8 @@
 """Sản phẩm thật từ trang hãng VN -> ProductSetInput. Usage: build_real.py raw.json Vendor out.json"""
 import json, sys, re
 raw = json.load(open(sys.argv[1])); vendor = sys.argv[2]
+LINKTXT = sys.argv[5] if len(sys.argv) > 5 else 'xem trên website hãng'
+SRC = sys.argv[4] if len(sys.argv) > 4 else f'Thông số và giá niêm yết tham khảo từ trang chính thức của {vendor} Việt Nam'
 num = lambda s: int(re.sub(r'\D','',s)) if s else 0
 out = {}; i = 0
 for t, items in raw.items():
@@ -15,7 +17,7 @@ for t, items in raw.items():
         if j == 0: tags.append("best-price")
         if price >= 9000000 and t in ("Tivi", "Điều hòa", "Tủ lạnh", "Máy giặt", "Máy sấy", "Máy rửa bát", "Máy hút mùi"): tags.append("free-install")
         desc = (f"<p><strong>{x['name']}</strong> – mã sản phẩm <strong>{model}</strong>, hàng chính hãng {vendor} Việt Nam, bảo hành theo chính sách của hãng.</p>"
-                f"<p>Thông số và giá niêm yết tham khảo từ trang chính thức của {vendor} Việt Nam: <a href=\"{x['link']}\" target=\"_blank\" rel=\"nofollow noopener\">xem trên website hãng</a>.</p>")
+                f"<p>{SRC}: <a href=\"{x['link']}\" target=\"_blank\" rel=\"nofollow noopener\">{LINKTXT}</a>.</p>")
         v = {"optionValues": [{"optionName": "Title", "name": "Default Title"}], "price": str(price), "sku": model}
         if cmp > price: v["compareAtPrice"] = str(cmp)
         out[f"p{i}"] = {"title": title, "vendor": vendor, "status": "ACTIVE", "productType": t, "tags": tags, "descriptionHtml": desc,
