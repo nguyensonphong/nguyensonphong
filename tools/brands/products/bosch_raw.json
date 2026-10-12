@@ -1,0 +1,75 @@
+{
+"Máy giặt": [
+{
+"name": "Máy giặt Bosch cửa trước Series 6",
+"model": "WGB254A0SG",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/washersanddryers/washingmachines/frontloader/WGB254A0SG",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/22108897_WGB254A0SG_STP_def.webp"
+},
+{
+"name": "Máy giặt Bosch cửa trước Series 6 9 kg",
+"model": "WGG24401SG",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/washersanddryers/washingmachines/frontloader/WGG24401SG",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/25113869_WGG24401SG_STP_def.webp"
+}
+],
+"Tủ lạnh": [
+{
+"name": "Tủ lạnh Bosch cửa Pháp ngăn đá dưới",
+"model": "KFN96APEAG",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/fridgesandfreezers/fridgefreezers/freestandingfridgefreezerswithfreezeratbottom/KFN96APEAG",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/17653301_KFN96APEA_STP_def.webp"
+},
+{
+"name": "Tủ lạnh Bosch French Door cửa kính màu đen",
+"model": "KMC85LBEA",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/fridgesandfreezers/fridgefreezers/freestandingfridgefreezerswithfreezeratbottom/KMC85LBEA",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/22897728_KMC85LBEA_STP_def.webp"
+}
+],
+"Máy rửa bát": [
+{
+"name": "Máy rửa bát độc lập Bosch Series 2 60 cm",
+"model": "SMS26AI01F",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/dishwashers/freestandingdishwashers/fsdishwasherswith60cmwidth/SMS26AI01F",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/24799293_SMS26AI01F_STP_def.webp"
+},
+{
+"name": "Máy rửa bát độc lập Bosch Series 4 60 cm",
+"model": "SMS4ECI01P",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/dishwashers/freestandingdishwashers/fsdishwasherswith60cmwidth/SMS4ECI01P",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/25775557_SMS4ECI01P_STP_def.webp"
+}
+],
+"Lò vi sóng": [
+{
+"name": "Lò vi sóng âm tủ Bosch có nướng màu đen",
+"model": "BEL554MB2",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/cookingandbaking/microwaves/builtinmicrowave/BEL554MB2",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/25607443_BEL554MB2_STP_def.webp"
+}
+],
+"Máy hút bụi": [
+{
+"name": "Máy hút bụi không túi Bosch",
+"model": "BGS41POW1",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/vacuumcleaners/canistervacuumcleanersbagless/BGS41POW1",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/16708547_BGS41POW1_STP_def.webp"
+},
+{
+"name": "Máy hút bụi cầm tay sạc điện Bosch Flexxo",
+"model": "BCH3K2851",
+"price": "1.000.000",
+"link": "https://www.bosch-home.com.vn/vi/mkt-product/vacuumcleaners/rechargeablefloorvacuumcleaners/flexxo/BCH3K2851",
+"img": "https://media3.bsh-group.com/Product_Shots/1200x/16392364_BCH3K2851_STP_def.webp"
+}
+]
+}
