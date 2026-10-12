@@ -41,7 +41,8 @@
     {%- for t in types -%}
       {%- assign items = collection.products | where: 'type', t -%}
       {%- if items.size == 0 -%}{%- continue -%}{%- endif -%}
-      {%- assign filter_url = collection.url | append: '?filter.p.product_type=' | append: t | url_escape | append: '#products' -%}
+      {%- assign cat_tag = '' -%}{%- for tg in items.first.tags -%}{%- if tg contains 'loai-' -%}{%- assign cat_tag = tg -%}{%- endif -%}{%- endfor -%}
+      {%- assign filter_url = collection.url | append: '/' | append: cat_tag | append: '#products' -%}
       <section class="blp__show {% cycle '', 'is-flip' %}" id="blp-{{ t | handleize }}">
         <a class="blp__big" href="{{ filter_url }}">
           {%- if items.first.featured_image -%}{{ items.first.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: t }}{%- endif -%}
