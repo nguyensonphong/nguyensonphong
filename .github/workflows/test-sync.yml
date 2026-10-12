@@ -1,0 +1,19 @@
+name: Test Shopify -> Supabase
+on:
+  push:
+    branches: [claude/gracious-goldberg-bo8fn3]
+    paths: ['.github/workflows/test-sync.yml', 'integrations/sync/**']
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      SHOPIFY_STORE: gkmall-store.myshopify.com
+      SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
+      SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci --omit=dev
+      - run: npm run sync:shopify
