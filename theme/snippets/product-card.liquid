@@ -9,7 +9,7 @@
     {%- assign off = product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round -%}
   {%- endif -%}
   <article class="pcard">
-    <a class="pcard__img" href="{{ product.url }}">
+    <a class="pcard__img{% if product.tags contains 'hang-chinh-hang' %} pcard__img--zoom{% endif %}" href="{{ product.url }}">
       {%- if product.featured_image -%}
         {{ product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: product.title }}
       {%- else -%}{% render 'icon', name: 'box' %}{%- endif -%}

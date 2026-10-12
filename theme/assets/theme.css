@@ -952,3 +952,8 @@ a.icard:hover{border-color:var(--hp-blue)}
 .facet__title{color:var(--hp-head);font-weight:600}
 .bp__clearall{display:block;margin-top:10px}
 @media (max-width:900px){.bp__count{border:0;padding:0;width:100%}}
+/* Ảnh chính hãng (nhiều khoảng trắng) phóng to 60% trong khung thẻ */
+.pcard__img--zoom{overflow:hidden}
+.pcard__img--zoom img{transform:scale(1.6);transition:transform .25s}
+.pcard:hover .pcard__img--zoom img{transform:scale(1.7)}
+.blp__tileimg img{transform:scale(1.25)}
