@@ -5,8 +5,40 @@
     <h1>{{ article.title }}</h1>
     <span class="muted">{{ article.published_at | date: '%d/%m/%Y' }}{% if article.author %} · {{ article.author }}{% endif %}</span>
   </header>
-  {%- if article.image -%}<div class="article__hero">{{ article.image | image_url: width: 1400 | image_tag: loading: 'eager' }}</div>{%- endif -%}
-  <div class="rte article__body">{{ article.content }}</div>
+  {%- comment -%} Bài thương hiệu (tag thuong-hieu): nội dung lấy từ metaobject brand có handle = handle bài bỏ tiền tố "thuong-hieu-" {%- endcomment -%}
+  {%- assign bh = article.handle | remove_first: 'thuong-hieu-' -%}
+  {%- assign b = nil -%}
+  {%- if article.tags contains 'thuong-hieu' -%}{%- assign b = shop.metaobjects.brand[bh] -%}{%- endif -%}
+  {%- if b -%}
+    <div class="article__brand">
+      <div class="brand__logo">{%- if b.logo.value -%}{{ b.logo.value | image_url: width: 400 | image_tag: alt: b.name.value }}{%- endif -%}</div>
+      <div>
+        <p class="brand__tagline">{{ b.tagline.value }}</p>
+        <ul class="brand__facts">
+          {%- if b.country.value != blank -%}<li><small>Xuất xứ</small><b>{{ b.country.value }}</b></li>{%- endif -%}
+          {%- if b.founded.value != blank -%}<li><small>Thành lập</small><b>{{ b.founded.value }}</b></li>{%- endif -%}
+          {%- if b.headquarters.value != blank -%}<li><small>Trụ sở</small><b>{{ b.headquarters.value }}</b></li>{%- endif -%}
+          {%- if b.category.value != blank -%}<li><small>Thế mạnh</small><b>{{ b.category.value }}</b></li>{%- endif -%}
+        </ul>
+      </div>
+    </div>
+    <div class="rte article__body">
+      <h2>Lịch sử thương hiệu {{ b.name.value }}</h2>
+      {{ b.history | metafield_tag }}
+      <h2>{{ b.name.value }} có những dòng sản phẩm nào? Nên mua loại nào?</h2>
+      {{ b.products_guide | metafield_tag }}
+    </div>
+    {%- assign bc = collections[bh] -%}
+    {%- if bc and bc.products_count > 0 -%}
+      <div class="pdp__box"><h2 class="pdp__h">Sản phẩm {{ b.name.value }} đang bán</h2>
+        <div class="row-scroll">{%- for p in bc.products limit: 8 -%}{% render 'product-card', product: p %}{%- endfor -%}</div>
+        <p><a class="sec__more" href="{{ bc.url }}">Xem tất cả sản phẩm {{ b.name.value }} ›</a></p></div>
+    {%- endif -%}
+    {%- if b.logo_credit.value != blank -%}<p class="brand__credit">Logo: {{ b.logo_credit.value }}. Logo là nhãn hiệu thuộc sở hữu của {{ b.name.value }}.</p>{%- endif -%}
+  {%- else -%}
+    {%- if article.image -%}<div class="article__hero">{{ article.image | image_url: width: 1400 | image_tag: loading: 'eager' }}</div>{%- endif -%}
+    <div class="rte article__body">{{ article.content }}</div>
+  {%- endif -%}
   {%- assign rel = section.settings.collection -%}
   {%- if rel and rel.products_count > 0 -%}
     <div class="pdp__box"><h2 class="pdp__h">Sản phẩm gợi ý</h2>

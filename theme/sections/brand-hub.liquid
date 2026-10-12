@@ -26,7 +26,7 @@
       <ul class="bhub__feed">
         {%- for o in brands -%}
           <li data-topics="|{{ o.topics.value | join: '|' }}|" class="{% if forloop.first %}is-lead{% endif %}">
-            <a href="{{ o.system.url }}">
+            <a href="/blogs/cam-nang/thuong-hieu-{{ o.system.handle }}">
               <span class="bhub__img">{%- if o.logo.value -%}{{ o.logo.value | image_url: width: 400 | image_tag: alt: o.name.value, loading: 'lazy' }}{%- else -%}<b>{{ o.name.value }}</b>{%- endif -%}</span>
               <span class="bhub__txt">
                 <b>{{ o.name.value }}: lịch sử thương hiệu và tư vấn chọn mua</b>

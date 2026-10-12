@@ -12,7 +12,7 @@
       <div class="blp__herotext">
         <div class="blp__logo">{%- if b.logo.value -%}{{ b.logo.value | image_url: width: 400 | image_tag: alt: collection.title }}{%- else -%}<b>{{ collection.title }}</b>{%- endif -%}</div>
         <p class="blp__slogan">{{ section.settings.slogan | default: b.slogan.value | default: b.tagline.value }}</p>
-        {%- if b -%}<a class="blp__about" href="{{ b.system.url }}">Câu chuyện thương hiệu ›</a>{%- endif -%}
+        {%- assign art = '/blogs/cam-nang/thuong-hieu-' | append: collection.handle -%}{%- if b -%}<a class="blp__about" href="{{ art }}">Tìm hiểu thương hiệu trong Cẩm nang ›</a>{%- endif -%}
       </div>
     </div>
 

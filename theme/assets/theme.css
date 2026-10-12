@@ -925,3 +925,6 @@ a.icard:hover{border-color:var(--hp-blue)}
   .blp__ship{grid-template-columns:1fr}.blp__ship>span{display:none}
   .bstory{grid-template-columns:1fr}
 }
+.article__brand{display:grid;grid-template-columns:240px 1fr;gap:24px;align-items:center;border:1px solid var(--hp-line);border-radius:12px;padding:20px;margin:16px 0 24px}
+.article__brand .brand__logo{aspect-ratio:3/2}
+@media (max-width:900px){.article__brand{grid-template-columns:1fr}}

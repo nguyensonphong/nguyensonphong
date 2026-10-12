@@ -1,5 +1,1 @@
-{"sections":{
- "landing":{"type":"brand-landing","settings":{}},
- "main":{"type":"main-collection","settings":{"per_page":24,"sub_menu":"all-categories"}},
- "story":{"type":"brand-story","settings":{}}
-},"order":["landing","main","story"]}
+{"sections": {"landing": {"type": "brand-landing", "settings": {}}, "main": {"type": "main-collection", "settings": {"per_page": 24, "sub_menu": "all-categories"}}}, "order": ["landing", "main"]}
