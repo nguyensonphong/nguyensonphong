@@ -1,5 +1,5 @@
 name: Test Shopify -> Supabase
-# rerun after secret update
+# rerun 3
 on:
   push:
     branches: [claude/gracious-goldberg-bo8fn3]
