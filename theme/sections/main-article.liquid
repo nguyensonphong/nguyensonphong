@@ -9,6 +9,7 @@
   {%- assign bh = article.handle | remove_first: 'thuong-hieu-' -%}
   {%- assign b = nil -%}
   {%- if article.tags contains 'thuong-hieu' -%}{%- assign b = shop.metaobjects.brand[bh] -%}{%- endif -%}
+  <!--dbg {{ bh }}|{{ article.tags | join: ',' }}|{{ shop.metaobjects.brand[bh].name.value }}|{{ shop.metaobjects.brand.samsung.name.value }}-->
   {%- if b -%}
     <div class="article__brand">
       <div class="brand__logo">{%- if b.logo.value -%}{{ b.logo.value | image_url: width: 400 | image_tag: alt: b.name.value }}{%- endif -%}</div>
