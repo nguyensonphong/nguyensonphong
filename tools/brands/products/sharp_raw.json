@@ -1,0 +1,105 @@
+{
+"Tivi": [
+{
+"name": "Google Tivi Sharp 4K 75 inch",
+"model": "4T-C75JJ5000X",
+"price": "1.000.000",
+"link": "https://vn.sharp/tivi/4t-c75jj5000x",
+"img": "https://vn.sharp/sites/default/files/2026-08/4T-C75JJ5000X.png"
+},
+{
+"name": "Google Tivi Sharp 4K 65 inch",
+"model": "4T-C65JJ5000X",
+"price": "1.000.000",
+"link": "https://vn.sharp/tivi/4t-c65jj5000x",
+"img": "https://vn.sharp/sites/default/files/2026-08/4T-C65JJ5000X.png"
+},
+{
+"name": "Google Tivi Sharp 4K 55 inch",
+"model": "4T-C55JJ5000X",
+"price": "1.000.000",
+"link": "https://vn.sharp/tivi/4t-c55jj5000x",
+"img": "https://vn.sharp/sites/default/files/2026-08/4T-C55JJ5000X.png"
+}
+],
+"Tủ lạnh": [
+{
+"name": "Tủ lạnh Sharp Inverter 4 cửa",
+"model": "SJ-FXP650VG-SL",
+"price": "1.000.000",
+"link": "https://vn.sharp/tu-lanh/sj-fxp650vg-sl",
+"img": "https://vn.sharp/sites/default/files/2025-10/SJ-FXP650VG-SL_%282%29.jpg"
+},
+{
+"name": "Tủ lạnh Sharp Inverter 4 cửa màu đen",
+"model": "SJ-FXP560VG-BK",
+"price": "1.000.000",
+"link": "https://vn.sharp/tu-lanh/sj-fxp560vg-bk",
+"img": "https://vn.sharp/sites/default/files/2025-08/SJ-FXP560VG-BK_1.jpg"
+}
+],
+"Điều hòa": [
+{
+"name": "Điều hòa Sharp Inverter 1.5 HP",
+"model": "AH-XP13DPW",
+"price": "1.000.000",
+"link": "https://vn.sharp/may-lanh/ah-xp13dpw",
+"img": "https://vn.sharp/sites/default/files/2026-02/AH-XP13DPW.jpg"
+},
+{
+"name": "Điều hòa Sharp Inverter 2 HP",
+"model": "AH-XP18CHW",
+"price": "1.000.000",
+"link": "https://vn.sharp/may-lanh/ah-xp18chw",
+"img": "https://vn.sharp/sites/default/files/2025-01/AH-XP10131824CHW.jpg"
+}
+],
+"Máy giặt": [
+{
+"name": "Máy giặt Sharp Inverter cửa trước 12.5 kg",
+"model": "ES-FKC125ED-DG",
+"price": "1.000.000",
+"link": "https://vn.sharp/may-giat/es-fkc125ed-dg",
+"img": "https://vn.sharp/sites/default/files/2026-06/ES-FKC125ED-DG.jpg"
+},
+{
+"name": "Máy giặt Sharp cửa trên 11 kg",
+"model": "ES-FM110CB-SB",
+"price": "1.000.000",
+"link": "https://vn.sharp/may-giat/es-fm110cb-sb",
+"img": "https://vn.sharp/sites/default/files/2024-10/ES-FM110CB-SB-1.jpg"
+}
+],
+"Máy lọc không khí": [
+{
+"name": "Máy lọc không khí tạo ion Plasmacluster Sharp",
+"model": "FX-S82V-B",
+"price": "1.000.000",
+"link": "https://vn.sharp/may-loc-khi/fx-s82v-b-l",
+"img": "https://vn.sharp/sites/default/files/2026-08/FX-S82V-B-0.png"
+},
+{
+"name": "Máy lọc không khí Sharp màu trắng",
+"model": "FX-S80V-W",
+"price": "1.000.000",
+"link": "https://vn.sharp/may-loc-khi/fx-s80v-w-h",
+"img": "https://vn.sharp/sites/default/files/2026-08/FX-S80V-W-0.png"
+}
+],
+"Nồi cơm điện": [
+{
+"name": "Nồi cơm điện tử Sharp 1.8L",
+"model": "KS-XW181V-S",
+"price": "1.000.000",
+"link": "https://vn.sharp/noi-com-dien/ks-xw181v-s",
+"img": "https://vn.sharp/sites/default/files/2026-03/KS-XW181V-S.jpg"
+},
+{
+"name": "Nồi cơm điện cao tần Sharp 1.8L",
+"model": "KS-IH181V-RG",
+"price": "1.000.000",
+"link": "https://vn.sharp/noi-com/ks-ih181v-rg",
+"img": "https://vn.sharp/sites/default/files/2026-01/KS-IH181V-RG.jpg"
+}
+]
+}

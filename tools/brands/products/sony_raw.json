@@ -1,0 +1,78 @@
+{
+"Tivi": [
+{
+"name": "Google Tivi Sony BRAVIA 9 II True RGB",
+"model": "K-75XR90M2",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/bravia/products/bravia-9m2",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/TVFY26_B9II_Primary_image?$S7Product$&fmt=png-alpha"
+},
+{
+"name": "Google Tivi Sony BRAVIA 7 II 4K RGB LED",
+"model": "K-65XR70M2",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/bravia/products/bravia-7m2",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/TVFY26_B7II_Primary_image?$S7Product$&fmt=png-alpha"
+},
+{
+"name": "Google Tivi Sony BRAVIA 8 II OLED 4K",
+"model": "K-65XR80M2",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/bravia/products/bravia-8m2",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/TVFY25_BRAVIA8II_Primary_image?$S7Product$&fmt=png-alpha"
+},
+{
+"name": "Google Tivi Sony BRAVIA 5 Mini LED 4K",
+"model": "K-65XR50",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/bravia/products/bravia-5",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/TVFY25_BRAVIA5_Primary_image?$S7Product$&fmt=png-alpha"
+}
+],
+"Tai nghe": [
+{
+"name": "Tai nghe chống ồn Sony màu đen",
+"model": "WH-1000XM6",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/headphones/products/wh-1000xm6",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/WH1000XM6_Primary_image_Black?$S7Product$&fmt=png-alpha"
+},
+{
+"name": "Tai nghe true wireless chống ồn Sony màu đen",
+"model": "WF-1000XM6",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/headphones/products/wf-1000xm6",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/WF-1000XM6_black-1?$S7Product$&fmt=png-alpha"
+},
+{
+"name": "Tai nghe chống ồn không dây Sony màu đen",
+"model": "WH-CH730N",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/headphones/products/wh-ch730n",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/Primary_image_Black-4?$S7Product$&fmt=png-alpha"
+}
+],
+"Loa": [
+{
+"name": "Loa bluetooth Sony ULT FIELD 5 màu đen",
+"model": "SRS-ULT50",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/wireless-speakers/products/ult-field-5",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/Primary-image_black-1?$S7Product$&fmt=png-alpha"
+},
+{
+"name": "Loa bluetooth Sony ULT FIELD 3 màu đen",
+"model": "SRS-ULT30",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/wireless-speakers/products/ult-field-3",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/Primary-image_black?$S7Product$&fmt=png-alpha"
+},
+{
+"name": "Đầu đĩa than Sony Bluetooth",
+"model": "PS-LX3BT",
+"price": "1.000.000",
+"link": "https://www.sony.com.vn/audio-components/products/ps-lx3bt",
+"img": "https://sony.scene7.com/is/image/sonyglobalsolutions/PS-LX3BT_Primary_image?$S7Product$&fmt=png-alpha"
+}
+]
+}
