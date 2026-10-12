@@ -1,0 +1,102 @@
+{
+"Máy giặt": [
+{
+"name": "Máy giặt cửa ngang Electrolux 9kg UltimateCare 100 trắng",
+"model": "EWF9025DQWB",
+"price": "7.490.000",
+"link": "https://www.electrolux.vn/thiet-bi/may-giat/ewf9025dqwb/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/ewf9025dqwb-img-vn.jpg"
+},
+{
+"name": "Máy giặt cửa ngang Electrolux 9kg UltimateCare 500 trắng",
+"model": "EWF9023P5WC",
+"price": "9.490.000",
+"link": "https://www.electrolux.vn/thiet-bi/may-giat/ewf9023p5wc/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/ewf9023p5wc-img-vn.jpg"
+}
+],
+"Máy sấy": [
+{
+"name": "Máy sấy quần áo Electrolux thông hơi 9kg trắng",
+"model": "EDV904H3WC",
+"price": "10.490.000",
+"link": "https://www.electrolux.vn/thiet-bi/may-say/edv904h3wc/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/edv904h3wc-img-vn.jpg"
+},
+{
+"name": "Máy sấy quần áo Electrolux thông hơi 9kg UltimateCare 300 xám",
+"model": "EDV904N3SC",
+"price": "11.490.000",
+"link": "https://www.electrolux.vn/thiet-bi/may-say/edv904n3sc/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/edv904n3sc-img-vn.jpg"
+}
+],
+"Tủ lạnh": [
+{
+"name": "Tủ lạnh mini Electrolux 94L UltimateTaste 300 đen nhám",
+"model": "EUM0930BD",
+"price": "3.850.000",
+"link": "https://www.electrolux.vn/thiet-bi/tu-lanh/eum0930bd/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/eum0930bd-img-vn.jpg"
+},
+{
+"name": "Tủ lạnh mini Electrolux 45L UltimateTaste 300 xám",
+"model": "EUM0500AD-VN",
+"price": "3.150.000",
+"link": "https://www.electrolux.vn/thiet-bi/tu-lanh/eum0500ad-vn/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/eum0500ad-vn-img-vn.jpg"
+}
+],
+"Máy hút bụi": [
+{
+"name": "Máy hút bụi cầm tay không dây Electrolux ErgoMini",
+"model": "EFH32405SW",
+"price": "1.890.000",
+"link": "https://www.electrolux.vn/thiet-bi/may-hut-bui/efh32405sw/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/efh32405sw-img-vn.jpg"
+},
+{
+"name": "Máy hút bụi dạng hộp không túi Electrolux 1600W vàng",
+"model": "Z1231",
+"price": "1.540.000",
+"link": "https://www.electrolux.vn/thiet-bi/may-hut-bui/z1231/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/z1231-img-vn.jpg"
+}
+],
+"Nồi cơm điện": [
+{
+"name": "Nồi cơm điện Electrolux",
+"model": "E4RC1-350B",
+"price": "1.090.000",
+"link": "https://www.electrolux.vn/thiet-bi/noi-com-dien/e4rc1-350b/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/e4rc1-350b-img-vn.jpg"
+}
+],
+"Máy lọc không khí": [
+{
+"name": "Máy lọc không khí Electrolux phòng 26m² UH300 HEPA",
+"model": "FA31-200WT",
+"price": "3.490.000",
+"link": "https://www.electrolux.vn/thiet-bi/may-loc-khong-khi/fa31-200wt/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/fa31-200wt-img-vn.jpg"
+}
+],
+"Lò vi sóng": [
+{
+"name": "Lò vi sóng để bàn Electrolux 20L UltimateTaste 300",
+"model": "EMM20K22B",
+"price": "1.790.000",
+"link": "https://www.electrolux.vn/thiet-bi/lo-vi-song/emm20k22b/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/emm20k22b-img-vn.jpg"
+}
+],
+"Máy rửa bát": [
+{
+"name": "Máy rửa bát để bàn Electrolux 8 bộ UltimateCare 300 bạc",
+"model": "EFC3862MS",
+"price": "8.490.000",
+"link": "https://www.electrolux.vn/thiet-bi/may-rua-bat/efc3862ms/",
+"img": "https://www.electrolux.vn/globalassets/importimageproduct/d79522-oct-2026---vn/efc3862ms-img-vn.jpg"
+}
+]
+}
