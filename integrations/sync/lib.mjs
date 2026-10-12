@@ -5,10 +5,23 @@ const need = (k) => { const v = process.env[k]; if (!v) throw new Error(`Missing
 
 export const db = new pg.Pool({ connectionString: need('SUPABASE_DB_URL'), ssl: { rejectUnauthorized: false } });
 
+// Token: SHOPIFY_ADMIN_TOKEN (app cũ tạo trong admin) hoặc SHOPIFY_CLIENT_ID + SHOPIFY_CLIENT_SECRET
+// (app tạo ở Dev Dashboard, lấy token 24h bằng client credentials grant)
+let shopToken = process.env.SHOPIFY_ADMIN_TOKEN;
+async function shopifyToken() {
+  if (shopToken) return shopToken;
+  const r = await fetch(`https://${need('SHOPIFY_STORE')}/admin/oauth/access_token`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ client_id: need('SHOPIFY_CLIENT_ID'), client_secret: need('SHOPIFY_CLIENT_SECRET'), grant_type: 'client_credentials' }),
+  });
+  if (!r.ok) throw new Error(`Shopify token: ${r.status} ${await r.text()}`);
+  return (shopToken = (await r.json()).access_token);
+}
+
 export async function shopify(query, variables = {}) {
   const res = await fetch(`https://${need('SHOPIFY_STORE')}/admin/api/2025-10/graphql.json`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'X-Shopify-Access-Token': need('SHOPIFY_ADMIN_TOKEN') },
+    headers: { 'Content-Type': 'application/json', 'X-Shopify-Access-Token': await shopifyToken() },
     body: JSON.stringify({ query, variables }),
   });
   const json = await res.json();

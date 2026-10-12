@@ -26,10 +26,15 @@ Schema đã được áp dụng lên project Supabase `GK_project` (file `supaba
 
 ## Cài đặt
 
-### 1. Shopify — tạo Custom App
-Settings → Apps → Develop apps → Create app. Admin API scopes:
-`read_products, write_products, read_inventory, read_discounts, read_metaobjects, read_content, write_content, read_online_store_pages, write_online_store_pages`.
-Cài app, lấy **Admin API access token** (`shpat_…`).
+### 1. Shopify — tạo app ở Dev Dashboard
+Shopify không cho tạo custom app mới trong admin nữa (Apps → Develop apps chỉ còn cho app cũ).
+1. Admin → Settings → Apps → **Develop apps** → *Build apps in Dev Dashboard* (hoặc vào https://dev.shopify.com).
+2. **Create app** → *Start from Dev Dashboard* → tên `GKMALL Data Hub`.
+3. Tab **Versions** → bỏ trống App URL → **Scopes**:
+   `read_products, write_products, read_inventory, read_discounts, read_metaobjects, read_content, write_content, read_online_store_pages, write_online_store_pages` → **Release**.
+4. **Home** → *Install app* → chọn store `gkmall-store` → Install.
+5. **Settings** → copy **Client ID** và **Client secret** → `SHOPIFY_CLIENT_ID`, `SHOPIFY_CLIENT_SECRET`.
+Script tự đổi 2 khoá này lấy access token (hạn 24h, tự xin lại mỗi lần chạy).
 
 ### 2. Supabase
 - Lấy connection string: Project Settings → Database → Connection string (Session pooler) → `SUPABASE_DB_URL`.
