@@ -9,7 +9,9 @@
   "country": "Hàn Quốc",
   "hq": "Suwon",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Samsung_wordmark.svg/500px-Samsung_wordmark.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.samsung.com/vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "LG",
@@ -21,7 +23,9 @@
   "country": "Hàn Quốc",
   "hq": "Seoul",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/LG_Electronics.svg/500px-LG_Electronics.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.lg.com/vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Panasonic",
@@ -33,7 +37,9 @@
   "country": "Nhật Bản",
   "hq": "Kadoma",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Panasonic_Group_logo.svg/500px-Panasonic_Group_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.panasonic.com/vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Sony",
@@ -45,7 +51,9 @@
   "country": "Nhật Bản",
   "hq": "Minato",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Sony_Group_logo.svg/500px-Sony_Group_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.sony.com.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Toshiba",
@@ -57,7 +65,9 @@
   "country": "Nhật Bản",
   "hq": "Minato",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Toshiba_logo.svg/500px-Toshiba_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.toshiba-lifestyle.com/vn",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Sharp",
@@ -69,7 +79,9 @@
   "country": "Nhật Bản",
   "hq": "Ōsaka",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Logo_of_the_Sharp_Corporation.svg/500px-Logo_of_the_Sharp_Corporation.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://vn.sharp/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Hitachi",
@@ -81,7 +93,9 @@
   "country": "Nhật Bản",
   "hq": "Marunouchi",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Hitachi_2025_logo.svg/500px-Hitachi_2025_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.hitachiaircon.com/vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Mitsubishi Electric",
@@ -93,7 +107,9 @@
   "country": "Nhật Bản",
   "hq": "Chiyoda",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Mitsubishi_Electric_logo.svg/500px-Mitsubishi_Electric_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.mitsubishi-electric.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Daikin",
@@ -105,7 +121,9 @@
   "country": "Nhật Bản",
   "hq": "Umeda",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/DAIKIN_logo.svg/500px-DAIKIN_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.daikin.com.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Carrier",
@@ -117,7 +135,9 @@
   "country": "Hoa Kỳ",
   "hq": "Charlotte",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Logo_of_the_Carrier_Corporation.svg/500px-Logo_of_the_Carrier_Corporation.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.carrier.com/commercial/vi/vn/",
+  "vn_distribution": "Carrier Việt Nam (website VN cho mảng thương mại)"
  },
  {
   "name": "Electrolux",
@@ -129,7 +149,9 @@
   "country": "Thụy Điển",
   "hq": "Stockholm",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Electrolux_2015.svg/500px-Electrolux_2015.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.electrolux.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Whirlpool",
@@ -141,7 +163,9 @@
   "country": "Hoa Kỳ",
   "hq": "Benton Harbor",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Whirlpool_Corporation_Logo_%28as_of_2017%29.svg/500px-Whirlpool_Corporation_Logo_%28as_of_2017%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.whirlpool.com/",
+  "vn_distribution": "Nhà phân phối độc quyền: Digiworld (Thế Giới Số)"
  },
  {
   "name": "Bosch",
@@ -153,7 +177,9 @@
   "country": "Đức",
   "hq": "Gerlingen",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logo.svg/500px-Bosch-logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.bosch-home.com.vn/vi",
+  "vn_distribution": "BSH Việt Nam"
  },
  {
   "name": "Haier",
@@ -165,7 +191,9 @@
   "country": "Trung Quốc",
   "hq": "Thanh Đảo",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Haier_logo.svg/500px-Haier_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.haier.com/vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Hisense",
@@ -177,7 +205,9 @@
   "country": "Trung Quốc",
   "hq": "Thanh Đảo",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Hisense.svg/500px-Hisense.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "http://hisense.com.vn/",
+  "vn_distribution": "Hisense Việt Nam (nhà máy tại Đồng Nai)"
  },
  {
   "name": "TCL",
@@ -189,7 +219,9 @@
   "country": "Trung Quốc",
   "hq": "Huệ Châu",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Logo_of_the_TCL_Corporation.svg/500px-Logo_of_the_TCL_Corporation.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.tcl.com/vn/vi",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Xiaomi",
@@ -201,7 +233,9 @@
   "country": "Trung Quốc",
   "hq": "Bắc Kinh",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/500px-Xiaomi_logo_%282021-%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.mi.com/vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Philips",
@@ -213,7 +247,9 @@
   "country": "Hà Lan",
   "hq": "Amsterdam",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Philips_shield_%282013%29.svg/500px-Philips_shield_%282013%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.philips.com.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Tefal",
@@ -225,7 +261,9 @@
   "country": "Pháp",
   "hq": null,
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Tefal_logo.svg/500px-Tefal_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.tefal.com.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "De'Longhi",
@@ -237,7 +275,9 @@
   "country": "Ý",
   "hq": "Treviso",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/De%E2%80%99Longhi.svg/500px-De%E2%80%99Longhi.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://delonghi.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Smeg",
@@ -249,7 +289,9 @@
   "country": "Ý",
   "hq": "Guastalla",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Smeg_logo.svg/500px-Smeg_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://smeg.com.vn/",
+  "vn_distribution": "Nhà phân phối độc quyền: Häfele Việt Nam (từ 2019)"
  },
  {
   "name": "Dyson",
@@ -261,7 +303,9 @@
   "country": "Anh",
   "hq": "St James Power Station",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Dyson_logo.svg/500px-Dyson_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.dyson.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Lock&Lock",
@@ -273,7 +317,9 @@
   "country": "Hàn Quốc",
   "hq": "Seoul",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/LOCK%26LOCK_LOGO.jpg/500px-LOCK%26LOCK_LOGO.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "CC BY-SA 4.0"
+  "logo_license": "CC BY-SA 4.0",
+  "vn_site": "https://www.locknlock.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Bose",
@@ -285,7 +331,9 @@
   "country": "Hoa Kỳ",
   "hq": "Framingham",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Bose_logo.svg/500px-Bose_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.bose.com/",
+  "vn_distribution": "Bose Store và đại lý ủy quyền (chưa có website VN riêng)"
  },
  {
   "name": "Marshall",
@@ -297,7 +345,9 @@
   "country": "Anh",
   "hq": "Luân Đôn",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Marshall_logo.svg/500px-Marshall_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.marshall.com/vn/en",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Kohler",
@@ -309,7 +359,9 @@
   "country": "Hoa Kỳ",
   "hq": "Kohler",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Kohler_logo.svg/500px-Kohler_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.kohler.com.vn/vn",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "TOTO",
@@ -321,7 +373,9 @@
   "country": "Nhật Bản",
   "hq": "Kokurakita, Kitakyūshū",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/TOTO_logo.svg/500px-TOTO_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://vn.toto.com/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "American Standard",
@@ -333,7 +387,9 @@
   "country": "Hoa Kỳ",
   "hq": "Piscataway",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/American_Standard_Companies_logo.svg/500px-American_Standard_Companies_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.americanstandard.com.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Grohe",
@@ -345,7 +401,9 @@
   "country": "Đức",
   "hq": "Düsseldorf",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Grohe.svg/500px-Grohe.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.grohe.com/vi-VN",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Häfele",
@@ -357,7 +415,9 @@
   "country": "Đức",
   "hq": "Nagold",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Haefele_Logo.png/500px-Haefele_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "CC BY-SA 4.0"
+  "logo_license": "CC BY-SA 4.0",
+  "vn_site": "https://www.hafele.com.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Teka",
@@ -369,7 +429,9 @@
   "country": "Đức",
   "hq": "Haiger",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Teka_New_Logo_2019.png/500px-Teka_New_Logo_2019.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.teka.com/vi-vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Ariston",
@@ -381,7 +443,9 @@
   "country": "Ý",
   "hq": "Fabriano",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Ariston_Group.svg/500px-Ariston_Group.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.ariston.com/vi-vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Stiebel Eltron",
@@ -393,7 +457,9 @@
   "country": "Đức",
   "hq": "Holzminden",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Stiebel-eltron.svg/500px-Stiebel-eltron.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.stiebel-eltron.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "3M",
@@ -405,7 +471,9 @@
   "country": "Hoa Kỳ",
   "hq": "Maplewood",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/3M_wordmark.svg/500px-3M_wordmark.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.3m.com.vn/",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  },
  {
   "name": "Jotun",
@@ -417,6 +485,8 @@
   "country": "Na Uy",
   "hq": "Sandefjord",
   "logo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Jotun_logo.jpg/500px-Jotun_logo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-  "logo_license": "Public domain"
+  "logo_license": "Public domain",
+  "vn_site": "https://www.jotun.com/vn-vi",
+  "vn_distribution": "Văn phòng / công ty con chính thức tại Việt Nam"
  }
 ]
