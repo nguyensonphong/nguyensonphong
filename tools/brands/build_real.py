@@ -1,5 +1,8 @@
 """Sản phẩm thật từ trang hãng VN -> ProductSetInput. Usage: build_real.py raw.json Vendor out.json"""
-import json, sys, re
+import json, sys, re, unicodedata
+def slug(s):
+    s = unicodedata.normalize("NFD", s.lower().replace("đ", "d"))
+    return re.sub(r"[^a-z0-9]+", "-", "".join(c for c in s if unicodedata.category(c) != "Mn")).strip("-")
 raw = json.load(open(sys.argv[1])); vendor = sys.argv[2]
 LINKTXT = sys.argv[5] if len(sys.argv) > 5 else 'xem trên website hãng'
 SRC = sys.argv[4] if len(sys.argv) > 4 else f'Thông số và giá niêm yết tham khảo từ trang chính thức của {vendor} Việt Nam'
@@ -13,7 +16,7 @@ for t, items in raw.items():
         price = num(x['price']); o = num(x.get('orig', '')); cmp = o if o > price else price + o
         title = x['name'] if vendor.lower() in x['name'].lower() else f"{x['name']} {vendor}"
         title = f"{title} {model}"
-        tags = [f"brand-{vendor.lower()}", "hang-chinh-hang", "free-shipping"]
+        tags = [f"brand-{slug(vendor)}", "hang-chinh-hang", "free-shipping"]
         if j == 0: tags.append("best-price")
         if price >= 9000000 and t in ("Tivi", "Điều hòa", "Tủ lạnh", "Máy giặt", "Máy sấy", "Máy rửa bát", "Máy hút mùi"): tags.append("free-install")
         desc = (f"<p><strong>{x['name']}</strong> – mã sản phẩm <strong>{model}</strong>, hàng chính hãng {vendor} Việt Nam, bảo hành theo chính sách của hãng.</p>"
