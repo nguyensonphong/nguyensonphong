@@ -1,0 +1,48 @@
+{
+"Điều hòa": [
+{
+"name": "Điều hòa Carrier treo tường Inverter 2 chiều",
+"model": "42QHA-38QHF",
+"price": "1.000.000",
+"link": "https://www.carrier.com/commercial/vi/vn/products/residential/carrier-hi-wall/inverter-co-heatpump/",
+"img": "https://images.carriercms.com/image/upload/v1630418776/carrier/commercial-hvac-middle-east/products/air-handlers/HW1.jpg"
+},
+{
+"name": "Điều hòa Carrier treo tường 2 chiều tốc độ cố định",
+"model": "42QHF",
+"price": "1.000.000",
+"link": "https://www.carrier.com/commercial/vi/vn/products/residential/carrier-hi-wall/fixed-speed-co-heatpump/",
+"img": "https://images.carriercms.com/image/upload/v1630418776/carrier/commercial-hvac-middle-east/products/air-handlers/HW2.jpg"
+},
+{
+"name": "Điều hòa Carrier dàn lạnh âm trần cassette",
+"model": "42GWC",
+"price": "1.000.000",
+"link": "https://www.carrier.com/commercial/vi/vn/products/commercial-products/air-side/fan-coils/42gwc/",
+"img": "https://images.carriercms.com/image/upload/v1548599149/carrier/commercial-hvac-asia/products/fan-coils/carrier-42gwc-fan-coil.jpg"
+}
+],
+"Máy lọc không khí": [
+{
+"name": "Máy lọc không khí Carrier có đèn UV",
+"model": "AP61UVRE",
+"price": "1.000.000",
+"link": "https://www.carrier.com/commercial/vi/vn/products/residential/carrier-air-purifier/ap61uvre/ap61uvre-with-uv-light.html",
+"img": "https://images.carriercms.com/image/upload/v1629965304/carrier/commercial-hvac-middle-east/products/air-purifiers/AP61-1.jpg"
+},
+{
+"name": "Máy lọc không khí Carrier UV công suất lớn",
+"model": "AP410UVLC",
+"price": "1.000.000",
+"link": "https://www.carrier.com/commercial/vi/vn/products/residential/carrier-air-purifier/ap410uvlc/ap410uvlc.html",
+"img": "https://images.carriercms.com/image/upload/v1629969193/carrier/commercial-hvac-middle-east/products/air-purifiers/AP410.png"
+},
+{
+"name": "Máy lọc không khí Carrier màng lọc HEPA",
+"model": "AP80PRRE",
+"price": "1.000.000",
+"link": "https://www.carrier.com/commercial/vi/vn/products/residential/carrier-air-purifier/ap80prre/ap80prre.html",
+"img": "https://images.carriercms.com/image/upload/v1629969149/carrier/commercial-hvac-middle-east/products/air-purifiers/AP80-1.jpg"
+}
+]
+}
