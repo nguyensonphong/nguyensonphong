@@ -31,7 +31,12 @@ async function shopifyToken() {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ client_id: need('SHOPIFY_CLIENT_ID'), client_secret: need('SHOPIFY_CLIENT_SECRET'), grant_type: 'client_credentials' }),
   });
-  if (!r.ok) throw new Error(`Shopify token: ${r.status} ${await r.text()}`);
+  if (!r.ok) {
+    const body = await r.text();
+    if (/app_not_installed/.test(body))
+      throw new Error(`Shopify token: app chưa được cài vào store ${need('SHOPIFY_STORE')}. Vào dev.shopify.com → app → Home → Install app → chọn store này.`);
+    throw new Error(`Shopify token: ${r.status} ${body.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').slice(0, 500)}`);
+  }
   return (shopToken = (await r.json()).access_token);
 }
 
