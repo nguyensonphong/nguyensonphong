@@ -1,8 +1,8 @@
 name: Test Shopify -> Supabase
-# rerun 3
 on:
   push:
-    branches: [claude/gracious-goldberg-bo8fn3]
+    branches: [claude/gracious-goldberg-bo8fn3, claude/fix-supabase-pooler-host]
+  workflow_dispatch:
     paths: ['.github/workflows/test-sync.yml', 'integrations/sync/**']
 jobs:
   sync:
@@ -27,5 +27,16 @@ jobs:
           const [, user, pw, host] = m;
           console.log("user:", user, "| host:", host);
           console.log("mật khẩu dài:", pw.length, "ký tự | có [ ]:", /[\[\]]/.test(pw), "| có ký tự đặc biệt:", /[^A-Za-z0-9]/.test(pw), "| là chữ YOUR-PASSWORD:", /YOUR-PASSWORD/i.test(pw));
+          '
+      - name: Dò host pooler đúng (mật khẩu giả, chỉ xem pooler có nhận project không)
+        run: |
+          node -e '
+          const pg = require("pg");
+          const user = (process.env.SUPABASE_DB_URL || "").match(/\/\/([^:]+):/)?.[1] || "postgres.fkgbwhruhnmghlevjxex";
+          (async () => { for (const h of ["aws-0", "aws-1"]) {
+            const c = new pg.Client({ host: h + "-ap-south-1.pooler.supabase.com", port: 5432, user, password: "probe-wrong-password", database: "postgres", ssl: { rejectUnauthorized: false }, connectionTimeoutMillis: 10000 });
+            try { await c.connect(); console.log(h, "kết nối được (?)"); await c.end(); }
+            catch (e) { const ok = /password authentication failed/i.test(e.message); console.log(h + "-ap-south-1:", ok ? "ĐÚNG HOST (pooler nhận project, chỉ sai mật khẩu giả)" : "sai host", "|", e.message); }
+          } })();
           '
       - run: npm run sync:shopify

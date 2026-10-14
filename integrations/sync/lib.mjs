@@ -5,6 +5,23 @@ const need = (k) => { const v = process.env[k]; if (!v) throw new Error(`Missing
 
 export const db = new pg.Pool({ connectionString: need('SUPABASE_DB_URL'), ssl: { rejectUnauthorized: false } });
 
+// Gợi ý cách sửa khi không kết nối được Supabase (in trước stack trace, không in mật khẩu)
+export function dbErrorHint(e) {
+  const msg = String(e?.message || e);
+  const host = (process.env.SUPABASE_DB_URL || '').split('@').pop();
+  if (/tenant\/user .* not found/i.test(msg))
+    return `Sai host pooler (${host}). Dùng đúng host trong Supabase → Connect → Session pooler, ví dụ aws-0-ap-south-1.pooler.supabase.com:5432/postgres, user postgres.<project-ref>.`;
+  if (/password authentication failed/i.test(msg))
+    return 'Sai mật khẩu database. Đặt lại ở Supabase → Project Settings → Database → Reset database password rồi cập nhật secret SUPABASE_DB_URL.';
+  if (e?.code === 'ENOTFOUND' && /getaddrinfo/.test(msg))
+    return `Không phân giải được host ${host}. Kiểm tra lại phần host trong SUPABASE_DB_URL.`;
+  return null;
+}
+process.on('uncaughtExceptionMonitor', (e) => {
+  const hint = dbErrorHint(e);
+  if (hint) console.error(`\n[Supabase] ${hint}\n`);
+});
+
 // Token: SHOPIFY_ADMIN_TOKEN (app cũ tạo trong admin) hoặc SHOPIFY_CLIENT_ID + SHOPIFY_CLIENT_SECRET
 // (app tạo ở Dev Dashboard, lấy token 24h bằng client credentials grant)
 let shopToken = process.env.SHOPIFY_ADMIN_TOKEN;

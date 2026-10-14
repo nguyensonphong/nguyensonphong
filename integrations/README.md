@@ -37,7 +37,9 @@ Shopify không cho tạo custom app mới trong admin nữa (Apps → Develop ap
 Script tự đổi 2 khoá này lấy access token (hạn 24h, tự xin lại mỗi lần chạy).
 
 ### 2. Supabase
-- Lấy connection string: Project Settings → Database → Connection string (Session pooler) → `SUPABASE_DB_URL`.
+- Lấy connection string: nút **Connect** → Session pooler → `SUPABASE_DB_URL`. Dạng đúng:
+  `postgresql://postgres.fkgbwhruhnmghlevjxex:<MẬT_KHẨU>@aws-0-ap-south-1.pooler.supabase.com:5432/postgres`
+  (host là `aws-0-...`, không phải `aws-1-...`; lỗi `tenant/user ... not found` nghĩa là sai host).
 - Chạy `supabase/migrations/002_nocodb_role.sql` trong SQL Editor (đổi mật khẩu) để tạo user `nocodb`.
 
 ### 3. NocoDB (chỉnh sửa / nhập liệu)
