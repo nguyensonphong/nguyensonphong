@@ -2,8 +2,8 @@ name: Test Shopify -> Supabase
 on:
   push:
     branches: [claude/gracious-goldberg-bo8fn3, claude/fix-supabase-pooler-host]
-  workflow_dispatch:
     paths: ['.github/workflows/test-sync.yml', 'integrations/sync/**']
+  workflow_dispatch:
 jobs:
   sync:
     runs-on: ubuntu-latest
