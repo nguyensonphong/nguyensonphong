@@ -1,0 +1,68 @@
+{
+"Máy giặt": [
+{
+"name": "Máy giặt Xiaomi Mijia cửa trước 8kg",
+"model": "MIJIA-FL8",
+"price": "1.000.000",
+"link": "https://www.mi.com/vn/product/mijia-front-load-washer-8kg/",
+"img": "https://i02.appmifile.com/154_operatorx_operatorx_xm/27/05/2026/9419eb984f039599e76ec092bbcc3818.png"
+},
+{
+"name": "Máy giặt sấy Xiaomi Mijia Pro 12.5kg",
+"model": "MIJIA-FLD-PRO12.5",
+"price": "1.000.000",
+"link": "https://www.mi.com/vn/product/mijia-front-load-washer-dryer-pro-12-5-kg/",
+"img": "https://i02.appmifile.com/624_item_vn/18/08/2026/17e665c3c5f14b9f7c03793314b87e35.png"
+},
+{
+"name": "Máy giặt Xiaomi Mijia cửa trên 13kg",
+"model": "MIJIA-TL13",
+"price": "1.000.000",
+"link": "https://www.mi.com/vn/product/mijia-top-load-washer-13-kg/",
+"img": "https://i02.appmifile.com/479_item_vn/21/05/2026/61930a8ac5d55b2398558c6262d68d5f.png"
+}
+],
+"Máy lọc không khí": [
+{
+"name": "Máy lọc không khí Xiaomi Mijia thông minh 6 Plus",
+"model": "MIJIA-AP6PLUS",
+"price": "1.000.000",
+"link": "https://www.mi.com/vn/product/mijia-smart-air-purifier-6-plus/",
+"img": "https://i02.appmifile.com/360_item_vn/30/07/2026/f03b40e6af13dd785d2a120add2acb6f.png"
+}
+],
+"Điện thoại": [
+{
+"name": "Điện thoại Xiaomi REDMI Note 17 Pro 5G",
+"model": "REDMI-NOTE17PRO",
+"price": "1.000.000",
+"link": "https://www.mi.com/vn/product/redmi-note-17-pro-5g/",
+"img": "https://i02.appmifile.com/532_operatorx_operatorx_xm/25/08/2026/f28c373b006a39469f60a5a7a2c530dc.png"
+}
+],
+"Tai nghe": [
+{
+"name": "Tai nghe không dây Xiaomi Buds 6",
+"model": "BUDS6",
+"price": "1.000.000",
+"link": "https://www.mi.com/vn/product/xiaomi-buds-6/",
+"img": "https://i02.appmifile.com/257_item_vn/26/05/2026/d1e35e1558648710931571550099db57.png"
+}
+],
+"Đồng hồ thông minh": [
+{
+"name": "Đồng hồ thông minh Xiaomi Watch S5 46mm",
+"model": "WATCH-S5-46",
+"price": "1.000.000",
+"link": "https://www.mi.com/vn/product/xiaomi-watch-s5-46mm/",
+"img": "https://i02.appmifile.com/333_item_vn/15/05/2026/964496b4f168d41bf396289a8e72a851.png"
+},
+{
+"name": "Vòng đeo tay Xiaomi Smart Band 10 Pro Ceramic",
+"model": "BAND10PRO",
+"price": "1.000.000",
+"link": "https://www.mi.com/vn/product/xiaomi-smart-band-10-pro/",
+"img": "https://i02.appmifile.com/415_item_vn/25/05/2026/3a6b806d07c6e4899201f819bdc84b8a.png"
+}
+]
+}

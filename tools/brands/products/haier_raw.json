@@ -1,0 +1,82 @@
+{
+"Tivi": [
+{
+"name": "Google Tivi Haier QD-MiniLED AI 4K 65 inch",
+"model": "H65M92GUX",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/tvs/h65m92gux.shtml",
+"img": "https://image.haier.com/vn/tvs/W020260518614758959169_1200_q_p1911.png"
+},
+{
+"name": "Google Tivi Haier QLED AI 4K 55 inch",
+"model": "H55S85GUX",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/tvs/h55s85gux.shtml",
+"img": "https://image.haier.com/vn/tvs/W020260520514213145341_1200_q_p1911.png"
+}
+],
+"Tủ lạnh": [
+{
+"name": "Tủ lạnh Haier 4 cửa",
+"model": "HM720AGWVNU1",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/refrigerators/hm720agwvnu1.shtml",
+"img": "https://image.haier.com/vn/refrigerators/W020260524578557718304_1200_q_p1911.png"
+},
+{
+"name": "Tủ lạnh Haier 4 cửa",
+"model": "HM610AGBVNU1",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/refrigerators/hm610agbvnu1.shtml",
+"img": "https://image.haier.com/vn/refrigerators/W020260429543348594173_1200_q_p1911.png"
+}
+],
+"Máy giặt": [
+{
+"name": "Máy giặt Haier X9 11kg",
+"model": "HW110-BD14387GNU1",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/washing-machines/hw110-bd14387gnu1.shtml",
+"img": "https://image.haier.com/vn/washing-machines/W020250516669245194021_1200_q_p1911.png"
+},
+{
+"name": "Máy giặt sấy Haier X9 14/8kg",
+"model": "HWD140-BD14387GNU1",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/washing-machines/hwd140-bd14387gnu1.shtml",
+"img": "https://image.haier.com/vn/washing-machines/W020251202648646564649_1200_q_p1911.png"
+},
+{
+"name": "Máy giặt Haier Iris 12kg",
+"model": "HWM120-B2698B",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/washing-machines/hwm120-b2698b.shtml",
+"img": "https://image.haier.com/vn/washing-machines/W020260707684913886619_1200_q_p1911.png"
+}
+],
+"Điều hòa": [
+{
+"name": "Điều hòa Haier Inverter 1HP Comfort Cool",
+"model": "HR-10VSA",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/air-conditioners/hr-10vsa.shtml",
+"img": "https://image.haier.com/vn/air-conditioners/W020251222612946516766_1200_q_p1911.png"
+},
+{
+"name": "Điều hòa Haier 1.5HP Intelligent Cool",
+"model": "HR-13VQI",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/air-conditioners/hr-13vqi.shtml",
+"img": "https://image.haier.com/vn/air-conditioners/W020251222619532558456_1200_q_p1911.png"
+}
+],
+"Máy rửa bát": [
+{
+"name": "Máy rửa bát Haier",
+"model": "HDWA18-686BK5VN",
+"price": "1.000.000",
+"link": "https://www.haier.com/vn/cookers/hdwa18-686bk5vn.shtml",
+"img": "https://image.haier.com/vn/cookers/W020260202445173379304_1200_q_p1911.png"
+}
+]
+}

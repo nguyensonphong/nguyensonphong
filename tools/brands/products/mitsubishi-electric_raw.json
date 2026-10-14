@@ -1,0 +1,89 @@
+{
+"Quạt": [
+{
+"name": "Quạt treo tường Mitsubishi Electric có điều khiển",
+"model": "W16A-RC",
+"price": "2.401.000",
+"link": "https://www.mitsubishi-electric.vn/quat-dien-treo-tuong-w16a-rc-prd729",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/w16a-rc-front-classy-grey-8ef8b60f-5171-40df-a2e8-2dd16869bff6.jpg"
+},
+{
+"name": "Quạt lửng Mitsubishi Electric",
+"model": "R16A-GC",
+"price": "1.846.000",
+"link": "https://www.mitsubishi-electric.vn/quat-lung-r16a-gc-prd728",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/mitsu-r16a-001-grey-bfa39be9-278d-4820-8bcf-0f134dba00b1.jpg"
+},
+{
+"name": "Quạt đứng Mitsubishi Electric",
+"model": "LV16-RB",
+"price": "3.120.000",
+"link": "https://www.mitsubishi-electric.vn/quat-dung-lv16-rb-prd721",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/1-8bd9bac0-4e75-4fc9-8cd6-2b3e70edd0b9.png"
+}
+],
+"Tủ lạnh": [
+{
+"name": "Tủ lạnh Mitsubishi Electric 3 cửa làm đá tự động",
+"model": "MR-CX46ER",
+"price": "17.100.000",
+"link": "https://www.mitsubishi-electric.vn/dong-tu-lanh-3-cua-ngan-da-duoi-voi-cong-nghe-lam-da-tu-dong-prd682",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/mr-cx41ej-brw-lowres-591e9e37-72ab-45ca-8623-b62d1a14722a.jpg"
+},
+{
+"name": "Tủ lạnh Mitsubishi Electric 3 cửa mặt gương",
+"model": "MR-CGX56EP",
+"price": "25.580.000",
+"link": "https://www.mitsubishi-electric.vn/tu-lanh-cgx56ep-prd675",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/mrcgx56-d386e8c6-b4a7-44f5-af60-071fb2cc725f.jpg"
+},
+{
+"name": "Tủ lạnh Mitsubishi Electric 2 cửa Inverter mặt gương",
+"model": "MR-FX43EN",
+"price": "13.290.000",
+"link": "https://www.mitsubishi-electric.vn/tu-lanh-fx43en-prd71",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/fx43en-229e1b85-0ec6-4393-b4e6-64c591bb2857.png"
+}
+],
+"Điều hòa": [
+{
+"name": "Điều hòa Mitsubishi Electric Inverter 2HP",
+"model": "MSY-JA50VF",
+"price": "22.218.643",
+"link": "https://www.mitsubishi-electric.vn/dieu-hoa-khong-khi-mitsubishi-electric-msy-ja50vf---2hp-18000-btuh-prd731",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/mevn-sp-bo-sung00304-copy-3863cc77-b44b-4f60-9593-38fd874e06b1.jpg"
+},
+{
+"name": "Điều hòa Mitsubishi Electric Inverter 1.5HP",
+"model": "MSY-JA35VF",
+"price": "14.205.456",
+"link": "https://www.mitsubishi-electric.vn/dieu-hoa-khong-khi-mitsubishi-electric-msy-ja35vf---15hp-12000-btuh-prd732",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/mevn-sp-bo-sung00304-copy-8a373856-696a-49f2-bb0e-f217af510540.jpg"
+},
+{
+"name": "Điều hòa Mitsubishi Electric Inverter 1HP",
+"model": "MSY-JA25VF",
+"price": "11.456.935",
+"link": "https://www.mitsubishi-electric.vn/dieu-hoa-khong-khi-mitsubishi-electric-msy-ja25vf---1hp-9000-btuh-prd733",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/mevn-sp-bo-sung00304-copy-f65c2ff4-a459-44b6-977f-0053f90d8271.jpg"
+}
+],
+"Quạt thông gió": [
+{
+"name": "Quạt thông gió ốp tường Mitsubishi Electric",
+"model": "EX-20RH5T",
+"price": "1.445.000",
+"link": "https://www.mitsubishi-electric.vn/ex-20rh5t-prd569",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/ex-20rh5t-8cb9702e-00c9-4021-994d-fe0e72f6b724.png"
+}
+],
+"Máy sấy tay": [
+{
+"name": "Máy sấy tay mini Mitsubishi Electric",
+"model": "JT-MC206GS-W-E",
+"price": "7.690.000",
+"link": "https://www.mitsubishi-electric.vn/may-say-tay-mitsubishi-electric-jt-sb206gs-prd19",
+"img": "https://web-api.mitsubishi-electric.vn/Uploads/s/jt-mc206gs-7ade26de-5305-412f-bbd9-65c5154fe951-1bf6068c-36c2-4be9-a19e-534386f884cf.png"
+}
+]
+}
