@@ -1,0 +1,95 @@
+{
+"Máy rửa bát": [
+{
+"name": "Máy rửa bát Teka lắp âm toàn phần 14 bộ",
+"model": "DFI 46750",
+"price": "25.090.000",
+"link": "https://www.teka.com/vi-vn/san-pham/dfi-46750_114270030/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/1/PR113280BI21647_114270030_DFI_46750_SZ2.png"
+}
+],
+"Máy hút mùi": [
+{
+"name": "Máy hút mùi Teka áp tường kính",
+"model": "DSJ 950",
+"price": "11.790.000",
+"link": "https://www.teka.com/vi-vn/san-pham/dsj-950_40484832/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/7/PR16036BI18869_40484832_DSJ_950_SZ2.jpg"
+},
+{
+"name": "Máy hút mùi Teka áp tường nghiêng",
+"model": "DVT 98660 TBS BK",
+"price": "22.190.000",
+"link": "https://www.teka.com/vi-vn/san-pham/dvt-98660-tbs_112930043/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/4/PR63784BI21487_112930043_DVT_Pro_98660_TBS_BK_SZ2.png"
+}
+],
+"Lò vi sóng": [
+{
+"name": "Lò vi sóng Teka kết hợp nướng lắp âm",
+"model": "ML 822 BIS L",
+"price": "31.449.000",
+"link": "https://www.teka.com/vi-vn/san-pham/ml-822-bis-l_112030006/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/2/PR421318BI17962_112030006_ML_822_BIS_L_SZ2.png"
+}
+],
+"Bếp từ": [
+{
+"name": "Bếp từ Teka 2 vùng nấu",
+"model": "IBC 7320 S",
+"price": "12.390.000",
+"link": "https://www.teka.com/vi-vn/san-pham/ibc-7320-s_112510041/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/2/PR421339BI33147_112510041_IBC_7320_S_SZ2.png"
+},
+{
+"name": "Bếp từ Teka 2 vùng nấu 73cm",
+"model": "IZC 72610 MST BK",
+"price": "16.490.000",
+"link": "https://www.teka.com/vi-vn/san-pham/izc-72610-mst-bk_112500059/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/PR425293BI41702_112500059_IZC_72610_MST_BK_SZ2.png"
+}
+],
+"Chậu rửa bát": [
+{
+"name": "Chậu rửa bát Teka inox 2 hộc lắp âm",
+"model": "BE 2B 785",
+"price": "11.690.000",
+"link": "https://www.teka.com/vi-vn/san-pham/be-2b-785_10125025/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/1/PR11611BI34280_10125025_BE_2B_785_SZ2.png"
+}
+],
+"Lò nướng": [
+{
+"name": "Lò nướng Teka đối lưu 9 chức năng",
+"model": "HLB 8415 BK",
+"price": "30.290.000",
+"link": "https://www.teka.com/vi-vn/san-pham/hlb-8415-bk_111000052/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/1/PR104717BI27551_111000052_HLB_8415_SZ2.png"
+},
+{
+"name": "Lò nướng Teka đa năng tích hợp AirFry",
+"model": "HLC 8406 BK",
+"price": "26.690.000",
+"link": "https://www.teka.com/vi-vn/san-pham/airfry-hlc-8406-bk_111130011/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/1/PR422622BI36077_111130011_AirFry_HLC_8406_BK_SZ2.png"
+}
+],
+"Tủ lạnh": [
+{
+"name": "Tủ lạnh Teka 2 cánh Van Gogh",
+"model": "RBF 88670 VG",
+"price": "49.990.000",
+"link": "https://www.teka.com/vi-vn/san-pham/van-gogh-rbf-88670-vg_113400045/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/PR426938BI45136_113400045_Van_Gogh_RBF_88670_VG_SZ2.png"
+}
+],
+"Vòi chậu": [
+{
+"name": "Vòi rửa bát Teka nóng lạnh",
+"model": "ARK 938",
+"price": "7.890.000",
+"link": "https://www.teka.com/vi-vn/san-pham/ark-938_239381210/",
+"img": "https://d7rh5s3nxmpy4.cloudfront.net/CMP1219/17/PR13750BI14855_239381210_ARK_938_SZ2.jpg"
+}
+]
+}

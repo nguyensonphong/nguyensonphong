@@ -1,0 +1,81 @@
+{
+"Máy nước nóng": [
+{
+"name": "Máy nước nóng gián tiếp Ariston 30 lít",
+"model": "ANDRIS2 LUX-D 30",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/binh-nuoc-nong-gian-tiep/andris/andris2-lux-d-15-30",
+"img": "https://www.ariston.com/media_1b18d66c28bbf19289c09d3efdae5083836c5fc76.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng gián tiếp Ariston 30 lít",
+"model": "ANDRIS2 RS 30",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/binh-nuoc-nong-gian-tiep/andris/andris2-rs-15-30",
+"img": "https://www.ariston.com/media_112f8c2a6a91fb3405c912d48a687f3fc8b31daec.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng gián tiếp Ariston Wifi 30 lít",
+"model": "ANDRIS2 TOP WIFI 30",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/binh-nuoc-nong-gian-tiep/andris/andris2-top-wifi-15-30",
+"img": "https://www.ariston.com/media_1e8d7cb7306a55b663638e1a16e125599689c3d53.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng gián tiếp Ariston 30 lít",
+"model": "ANDRIS3 LUX 30",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/binh-nuoc-nong-gian-tiep/andris/andris3-lux-15-30",
+"img": "https://www.ariston.com/media_1005e31a8791d714ddbaff2227d69ddb1d3825a4c.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng gián tiếp Ariston Wifi 30 lít",
+"model": "ANDRIS3 TOP WIFI 30",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/binh-nuoc-nong-gian-tiep/andris/andris3-top-wifi-30",
+"img": "https://www.ariston.com/media_10197568d542fc97ba5158d7aeea0d046872fbfb2.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng gián tiếp Ariston dáng mỏng Wifi 30 lít",
+"model": "SLIM3 TOP WIFI 30",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/binh-nuoc-nong-gian-tiep/slim/slim3-top-wifi-20-30",
+"img": "https://www.ariston.com/media_1f4f664c1c6bdf32840697c7d638ad4561d9be01d.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Bình nước nóng gián tiếp Ariston 100 lít",
+"model": "PRO RS 100",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/binh-nuoc-nong-gian-tiep/chuyen-nghiep/pro-rs-30-40-56-80-100",
+"img": "https://www.ariston.com/media_1905b030ec21905d832a6ee3c27760ea85ba3a4a6.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng bơm nhiệt Ariston Wifi 200 lít",
+"model": "NUOS PLUS WIFI 200",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/may-nuoc-nong-bom-nhiet/noi-dia/nuos-plus-wifi-200-250",
+"img": "https://www.ariston.com/media_1b264a8b50cbbfb414517a0a914c74956a7c59b59.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng trực tiếp Ariston",
+"model": "AURES EASY",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/may-nuoc-nong-truc-tiep/aures-2-0/aures-easy/",
+"img": "https://www.ariston.com/media_10b68fe52a37e7840b306c50a9d9f3d76d889e96c.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng trực tiếp Ariston có bơm trợ lực",
+"model": "AURES PREMIUM PLUS",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/may-nuoc-nong-truc-tiep/aures-2-0/aures-premium-plus/",
+"img": "https://www.ariston.com/media_115dc92584698b03944239f8b948ea1a7ab25d5e3.png?width=750&format=png&optimize=medium"
+},
+{
+"name": "Máy nước nóng trực tiếp Ariston cao cấp",
+"model": "AURES TOP",
+"price": "1.000.000",
+"link": "https://www.ariston.com/vi-vn/san-pham/may-nuoc-nong-truc-tiep/aures-2-0/aures-top",
+"img": "https://www.ariston.com/media_10ed65bccd5f824f53e09f8fbde556e1d3db6e386.png?width=750&format=png&optimize=medium"
+}
+]
+}
