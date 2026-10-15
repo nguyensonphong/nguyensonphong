@@ -1,5 +1,5 @@
 name: Test Shopify -> Supabase
-# rerun 3
+# rerun 4
 on:
   push:
     branches: [claude/gracious-goldberg-bo8fn3]
