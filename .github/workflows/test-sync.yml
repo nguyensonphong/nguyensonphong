@@ -1,0 +1,42 @@
+name: Test Shopify -> Supabase
+on:
+  push:
+    branches: [claude/gracious-goldberg-bo8fn3, claude/fix-supabase-pooler-host]
+    paths: ['.github/workflows/test-sync.yml', 'integrations/sync/**']
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      SHOPIFY_STORE: gkmall-store.myshopify.com
+      SHOPIFY_CLIENT_ID: ${{ secrets.SHOPIFY_CLIENT_ID }}
+      SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci --omit=dev
+      - name: Kiểm tra chuỗi kết nối (không in mật khẩu)
+        run: |
+          node -e '
+          const raw = process.env.SUPABASE_DB_URL || "";
+          console.log("độ dài chuỗi:", raw.length, "| khoảng trắng đầu/cuối:", raw !== raw.trim());
+          const m = raw.trim().match(/^postgres(?:ql)?:\/\/([^:]+):(.*)@([^@]+)$/);
+          if (!m) { console.log("SAI ĐỊNH DẠNG chuỗi"); process.exit(0); }
+          const [, user, pw, host] = m;
+          console.log("user:", user, "| host:", host);
+          console.log("mật khẩu dài:", pw.length, "ký tự | có [ ]:", /[\[\]]/.test(pw), "| có ký tự đặc biệt:", /[^A-Za-z0-9]/.test(pw), "| là chữ YOUR-PASSWORD:", /YOUR-PASSWORD/i.test(pw));
+          '
+      - name: Dò host pooler đúng (mật khẩu giả, chỉ xem pooler có nhận project không)
+        run: |
+          node -e '
+          const pg = require("pg");
+          const user = (process.env.SUPABASE_DB_URL || "").match(/\/\/([^:]+):/)?.[1] || "postgres.fkgbwhruhnmghlevjxex";
+          (async () => { for (const h of ["aws-0", "aws-1"]) {
+            const c = new pg.Client({ host: h + "-ap-south-1.pooler.supabase.com", port: 5432, user, password: "probe-wrong-password", database: "postgres", ssl: { rejectUnauthorized: false }, connectionTimeoutMillis: 10000 });
+            try { await c.connect(); console.log(h, "kết nối được (?)"); await c.end(); }
+            catch (e) { const ok = /password authentication failed/i.test(e.message); console.log(h + "-ap-south-1:", ok ? "ĐÚNG HOST (pooler nhận project, chỉ sai mật khẩu giả)" : "sai host", "|", e.message); }
+          } })();
+          '
+      - run: npm run sync:shopify

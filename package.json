@@ -2,6 +2,16 @@
   "name": "homestyle-theme",
   "private": true,
   "type": "module",
-  "scripts": { "preview": "node tools/render-preview.mjs" },
-  "devDependencies": { "liquidjs": "10.19.0" }
+  "scripts": {
+    "preview": "node tools/render-preview.mjs",
+    "sync:shopify": "node integrations/sync/shopify-to-supabase.mjs",
+    "sync:lark": "node integrations/sync/lark-sync.mjs",
+    "apply:approved": "node integrations/sync/apply-approved.mjs"
+  },
+  "devDependencies": {
+    "liquidjs": "10.19.0"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
 }
