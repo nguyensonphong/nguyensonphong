@@ -1,61 +1,91 @@
 {%- comment -%}
   Landing page thương hiệu (collection template "brand", collection tự động theo Vendor).
-  Bố cục theo HomePro: banner hãng → dải icon ngành hàng → khối trưng bày từng ngành (ảnh lớn + ô sản phẩm "Mua ngay")
-  → thanh hình thức giao hàng. Bên dưới là danh sách sản phẩm có bộ lọc (section main-collection).
-  Nội dung hãng (logo, slogan) lấy từ metaobject "brand" có handle trùng handle collection.
+  Bố cục theo HomePro /brand/<hãng>:
+    1. Banner trượt (slide giới thiệu hãng + slide các ngành hàng nổi bật)
+    2. Dải icon nét mảnh theo ngành hàng
+    3. Khối trưng bày từng ngành: banner lớn (tiêu đề to + nút "Mua ngay") + lưới 2×2 ô sản phẩm, đổi bên luân phiên
+  Danh sách sản phẩm có bộ lọc nằm ở section brand-products bên dưới.
+  Logo, slogan lấy từ metaobject "brand" có handle trùng handle collection.
 {%- endcomment -%}
 {%- assign b = shop.metaobjects.brand[collection.handle] -%}
+{%- assign tints = '#eef3fb,#f5efe8,#eef6f1,#f4eef6,#fbf3e6,#eaf4f6' | split: ',' -%}
+
+{%- comment -%} Thứ tự ngành hàng: theo danh sách ưu tiên, rồi các loại còn lại (chỉ loại có sản phẩm) {%- endcomment -%}
+{%- assign pref = section.settings.type_order | split: ',' -%}
+{%- assign joined = '' -%}
+{%- for t in pref -%}{%- assign tt = t | strip -%}{%- if collection.all_types contains tt -%}{%- assign joined = joined | append: tt | append: '|' -%}{%- endif -%}{%- endfor -%}
+{%- for t in collection.all_types -%}{%- assign key = t | append: '|' -%}{%- unless joined contains key -%}{%- assign joined = joined | append: key -%}{%- endunless -%}{%- endfor -%}
+{%- assign all = joined | split: '|' -%}
+{%- assign joined = '' -%}
+{%- for t in all -%}{%- assign has = collection.products | where: 'type', t -%}{%- if has.size > 0 -%}{%- assign joined = joined | append: t | append: '|' -%}{%- endif -%}{%- endfor -%}
+{%- assign types = joined | split: '|' -%}
+
 <section class="blp">
   <div class="container">
-    <div class="blp__hero">
-      {%- if collection.image -%}{{ collection.image | image_url: width: 1800 | image_tag: class: 'blp__heroimg', alt: collection.title, loading: 'eager' }}{%- endif -%}
-      <div class="blp__herotext">
-        <div class="blp__logo">{%- if b.logo.value -%}{{ b.logo.value | image_url: width: 400 | image_tag: alt: collection.title }}{%- else -%}<b>{{ collection.title }}</b>{%- endif -%}</div>
-        <p class="blp__slogan">{{ section.settings.slogan | default: b.slogan.value | default: b.tagline.value }}</p>
-        {%- assign art = '/blogs/cam-nang/thuong-hieu-' | append: collection.handle -%}{%- if b -%}<a class="blp__about" href="{{ art }}">Tìm hiểu thương hiệu trong Cẩm nang ›</a>{%- endif -%}
+
+    {%- comment -%} 1. Banner trượt {%- endcomment -%}
+    <div class="blp__slider" data-blp-slider>
+      <div class="blp__track">
+        <div class="blp__slide" style="--tint:{{ tints[0] }}">
+          <div class="blp__slidetext">
+            <div class="blp__logo">{%- if b.logo.value -%}{{ b.logo.value | image_url: width: 400 | image_tag: alt: collection.title }}{%- else -%}<b>{{ collection.title }}</b>{%- endif -%}</div>
+            <p class="blp__slogan">{{ section.settings.slogan | default: b.slogan.value | default: b.tagline.value }}</p>
+            <a class="blp__btn" href="#products">Mua sắm ngay</a>
+            {%- if b -%}<a class="blp__about" href="/blogs/cam-nang/thuong-hieu-{{ collection.handle }}">Tìm hiểu thương hiệu trong Cẩm nang ›</a>{%- endif -%}
+          </div>
+          <div class="blp__slideimg">{%- if collection.image -%}{{ collection.image | image_url: width: 900 | image_tag: alt: collection.title, loading: 'eager' }}{%- endif -%}</div>
+        </div>
+        {%- for t in types limit: 3 -%}
+          {%- assign items = collection.products | where: 'type', t -%}
+          {%- assign p = items.last -%}
+          <a class="blp__slide" href="#blp-{{ t | handleize }}" style="--tint:{{ tints[forloop.index] }}">
+            <span class="blp__slidetext">
+              <small>{{ collection.title }} chính hãng</small>
+              <b class="blp__slidetitle">{{ t }}</b>
+              <span class="blp__slidesub">{{ items.size }} sản phẩm · giá từ {{ items | map: 'price' | sort | first | money_without_trailing_zeros }}</span>
+              <span class="blp__btn">Mua ngay</span>
+            </span>
+            <span class="blp__slideimg">{%- if p.featured_image -%}{{ p.featured_image | image_url: width: 900 | image_tag: alt: t, loading: 'lazy' }}{%- endif -%}</span>
+          </a>
+        {%- endfor -%}
       </div>
+      <div class="blp__dots" role="tablist"></div>
     </div>
 
-    {%- comment -%} Thứ tự ngành hàng: theo danh sách ưu tiên, rồi các loại còn lại {%- endcomment -%}
-    {%- assign pref = section.settings.type_order | split: ',' -%}
-    {%- assign joined = '' -%}
-    {%- for t in pref -%}{%- assign tt = t | strip -%}{%- if collection.all_types contains tt -%}{%- assign joined = joined | append: tt | append: '|' -%}{%- endif -%}{%- endfor -%}
-    {%- for t in collection.all_types -%}{%- assign key = t | append: '|' -%}{%- unless joined contains key -%}{%- assign joined = joined | append: key -%}{%- endunless -%}{%- endfor -%}
-    {%- assign types = joined | split: '|' -%}
+    {%- comment -%} 2. Dải icon ngành hàng {%- endcomment -%}
     <nav class="blp__icons" aria-label="Ngành hàng {{ collection.title }}">
       {%- for t in types -%}
-        {%- assign has = collection.products | where: 'type', t -%}{%- if has.size == 0 -%}{%- continue -%}{%- endif -%}
-        {%- case t -%}
-          {%- when 'Tivi' -%}{%- assign ic = 'tv' -%}
-          {%- when 'Tủ lạnh' -%}{%- assign ic = 'fridge' -%}
-          {%- when 'Máy giặt' -%}{%- assign ic = 'washer' -%}
-          {%- when 'Điều hòa' -%}{%- assign ic = 'ac' -%}
-          {%- when 'Lò vi sóng' -%}{%- assign ic = 'pot' -%}
-          {%- when 'Quạt' -%}{%- assign ic = 'fan' -%}
-          {%- else -%}{%- assign ic = 'home' -%}
-        {%- endcase -%}
-        <a href="#blp-{{ t | handleize }}">{% render 'icon', name: ic %}<span>{{ t }}</span></a>
+        {%- assign items = collection.products | where: 'type', t -%}
+        <a href="#blp-{{ t | handleize }}"><span class="blp__ic">{% render 'type-icon', type: t, fallback: items.first %}</span><span>{{ t }}</span></a>
       {%- endfor -%}
     </nav>
 
+    {%- comment -%} 3. Khối trưng bày từng ngành {%- endcomment -%}
     {%- for t in types -%}
       {%- assign items = collection.products | where: 'type', t -%}
-      {%- if items.size == 0 -%}{%- continue -%}{%- endif -%}
       {%- assign cat_tag = '' -%}{%- for tg in items.first.tags -%}{%- if tg contains 'loai-' -%}{%- assign cat_tag = tg -%}{%- endif -%}{%- endfor -%}
-      {%- assign filter_url = collection.url | append: '/' | append: cat_tag | append: '#products' -%}
-      <section class="blp__show {% cycle '', 'is-flip' %}" id="blp-{{ t | handleize }}">
-        <a class="blp__big" href="{{ filter_url }}">
-          {%- if items.first.featured_image -%}{{ items.first.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: t }}{%- endif -%}
-          <span class="blp__bigtxt"><b>{{ t }}</b><em>Mua ngay</em></span>
+      {%- if cat_tag != '' -%}{%- assign filter_url = collection.url | append: '/' | append: cat_tag | append: '#products' -%}{%- else -%}{%- assign filter_url = '#products' -%}{%- endif -%}
+      {%- assign ti = forloop.index0 | modulo: tints.size -%}
+      <section class="blp__show{% cycle '', ' is-flip' %}" id="blp-{{ t | handleize }}">
+        <a class="blp__big" href="{{ filter_url }}" style="--tint:{{ tints[ti] }}">
+          <span class="blp__bigtxt">
+            <b>{{ t }}</b>
+            <small>{{ items.size }} sản phẩm {{ collection.title }}</small>
+            <em>Mua ngay</em>
+          </span>
+          <span class="blp__bigimg">{%- if items.first.featured_image -%}{{ items.first.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', alt: t }}{%- endif -%}</span>
         </a>
         <div class="blp__tiles">
           {%- for p in items limit: 4 -%}
+            {%- assign short = p.title | remove_first: t | remove_first: collection.title | strip -%}
             <a class="blp__tile" href="{{ p.url }}">
-              <span class="blp__tilehead"><b>{{ p.title | remove: 'Samsung ' | remove: collection.title | truncate: 34 }}</b><em>Mua ngay</em></span>
+              <span class="blp__tilehead"><b>{{ short | truncate: 30 }}</b><em>Mua ngay</em></span>
               <span class="blp__tileimg">{%- if p.featured_image -%}{{ p.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: p.title }}{%- endif -%}</span>
-              <span class="blp__tileprice">{{ p.price | money_without_trailing_zeros }}</span>
             </a>
           {%- endfor -%}
+          {%- if items.size < 4 -%}
+            <a class="blp__tile blp__tile--more" href="{{ filter_url }}"><span>Xem tất cả<br><b>{{ t }}</b> ›</span></a>
+          {%- endif -%}
         </div>
       </section>
     {%- endfor -%}
@@ -67,7 +97,7 @@
   "name": "Landing thương hiệu",
   "settings": [
     { "type": "text", "id": "slogan", "label": "Slogan (để trống = lấy slogan của thương hiệu)" },
-    { "type": "text", "id": "type_order", "label": "Thứ tự ngành hàng (cách nhau dấu phẩy)", "default": "Tivi,Tủ lạnh,Máy giặt,Điều hòa,Robot hút bụi,Máy hút bụi,Lò vi sóng,Nồi cơm điện,Quạt" }
+    { "type": "text", "id": "type_order", "label": "Thứ tự ngành hàng (cách nhau dấu phẩy)", "default": "Tivi,Tủ lạnh,Máy giặt,Máy sấy,Điều hòa,Máy lọc không khí,Robot hút bụi,Máy hút bụi,Lò vi sóng,Nồi cơm điện,Quạt" }
   ]
 }
 {% endschema %}

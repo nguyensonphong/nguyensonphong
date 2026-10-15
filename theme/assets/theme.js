@@ -294,3 +294,24 @@ document.querySelectorAll('[data-bhub]').forEach((hub) => {
 // Trang thương hiệu: select điều hướng (sắp xếp, số sản phẩm/trang) và mở bộ lọc trên điện thoại
 document.querySelectorAll('[data-nav-select]').forEach((s) => s.addEventListener('change', () => { location.href = location.pathname + s.value + '#products'; }));
 document.querySelectorAll('[data-bp-toggle]').forEach((b) => b.addEventListener('click', () => document.getElementById('filters-panel')?.classList.toggle('is-open')));
+
+/* Banner trượt trang thương hiệu: chấm điều hướng + tự chuyển 5s */
+document.querySelectorAll('[data-blp-slider]').forEach(function (el) {
+  var track = el.querySelector('.blp__track'), slides = track.children, dots = el.querySelector('.blp__dots');
+  if (slides.length < 2) return;
+  var cur = 0, timer;
+  function go(i) { cur = (i + slides.length) % slides.length; track.scrollTo({ left: slides[cur].offsetLeft, behavior: 'smooth' }); }
+  Array.prototype.forEach.call(slides, function (_, i) {
+    var b = document.createElement('button'); b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-label', 'Banner ' + (i + 1));
+    b.addEventListener('click', function () { go(i); restart(); }); dots.appendChild(b);
+  });
+  function mark() {
+    cur = Math.round(track.scrollLeft / track.clientWidth);
+    Array.prototype.forEach.call(dots.children, function (d, i) { d.setAttribute('aria-selected', i === cur ? 'true' : 'false'); });
+  }
+  function restart() { clearInterval(timer); timer = setInterval(function () { go(cur + 1); }, 5000); }
+  track.addEventListener('scroll', function () { window.requestAnimationFrame(mark); }, { passive: true });
+  el.addEventListener('mouseenter', function () { clearInterval(timer); });
+  el.addEventListener('mouseleave', restart);
+  mark(); restart();
+});

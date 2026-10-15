@@ -1,0 +1,40 @@
+{%- comment -%}
+  Icon nét mảnh theo ngành hàng (kiểu HomePro). Dùng: render 'type-icon', type: 'Tủ lạnh', fallback: product
+  Không có icon riêng → hiện ảnh sản phẩm đầu tiên.
+{%- endcomment -%}
+{%- assign k = type | downcase -%}
+{%- capture d -%}
+  {%- if k contains 'tivi' or k contains 'màn hình' -%}<rect x="6" y="12" width="52" height="32" rx="2"/><path d="M24 52h16M32 44v8"/>
+  {%- elsif k contains 'tủ lạnh' or k contains 'tủ đông' -%}<rect x="16" y="6" width="32" height="52" rx="3"/><path d="M16 26h32M32 6v52M28 14v6M36 14v6M28 32v6M36 32v6"/>
+  {%- elsif k contains 'máy giặt' or k contains 'máy sấy' -%}<rect x="12" y="6" width="40" height="52" rx="3"/><path d="M12 16h40"/><circle cx="32" cy="37" r="12"/><circle cx="32" cy="37" r="6"/><path d="M18 11h4M44 11h2"/>
+  {%- elsif k contains 'điều hòa' -%}<rect x="4" y="16" width="56" height="20" rx="4"/><path d="M10 30h44M18 44l-2 6M32 44v6M46 44l2 6"/>
+  {%- elsif k contains 'lọc không khí' or k contains 'hút ẩm' -%}<rect x="18" y="6" width="28" height="52" rx="6"/><path d="M24 16h16M24 22h16M24 28h16"/><circle cx="32" cy="44" r="6"/>
+  {%- elsif k contains 'robot' -%}<circle cx="32" cy="34" r="22"/><circle cx="32" cy="34" r="8"/><path d="M20 22l4 4"/>
+  {%- elsif k contains 'hút bụi' -%}<path d="M40 6l-8 38M22 44h20l4 8H18z"/><circle cx="40" cy="6" r="2"/><path d="M38 14h6"/>
+  {%- elsif k contains 'lò vi sóng' or k contains 'lò nướng' -%}<rect x="6" y="14" width="52" height="34" rx="3"/><rect x="12" y="20" width="30" height="22" rx="2"/><path d="M50 22v2M50 30v2M50 38v2"/>
+  {%- elsif k contains 'nồi cơm' -%}<path d="M12 28h40v18a10 10 0 01-10 10H22a10 10 0 01-10-10z"/><path d="M10 28a22 12 0 0144 0"/><path d="M28 18h8"/>
+  {%- elsif k contains 'chiên' -%}<rect x="14" y="8" width="36" height="48" rx="10"/><rect x="20" y="30" width="24" height="18" rx="3"/><circle cx="32" cy="18" r="4"/>
+  {%- elsif k contains 'xay' or k contains 'ép' or k contains 'vắt' -%}<path d="M20 8h24l-4 32H24z"/><rect x="18" y="40" width="28" height="16" rx="3"/><circle cx="32" cy="48" r="3"/>
+  {%- elsif k contains 'ấm' or k contains 'bình đun' or k contains 'bình thủy' -%}<path d="M18 18h24l4 36H14z"/><path d="M42 24h6a4 4 0 014 4v8a4 4 0 01-4 4h-4"/><path d="M24 10h12v8H24z"/>
+  {%- elsif k contains 'rửa bát' -%}<rect x="10" y="6" width="44" height="52" rx="3"/><path d="M10 16h44M16 11h6"/><path d="M18 26h28M18 34h28M18 42h28"/>
+  {%- elsif k contains 'hút mùi' -%}<path d="M26 6h12v16H26zM8 34l18-12h12l18 12z"/><path d="M8 34h48v6H8z"/>
+  {%- elsif k contains 'bếp' -%}<rect x="6" y="14" width="52" height="36" rx="3"/><circle cx="22" cy="32" r="8"/><circle cx="44" cy="32" r="6"/>
+  {%- elsif k contains 'cà phê' -%}<rect x="14" y="6" width="36" height="12" rx="2"/><path d="M18 18v26h28V18M24 32h16v10H24zM14 52h36"/>
+  {%- elsif k contains 'quạt' -%}<circle cx="32" cy="24" r="16"/><circle cx="32" cy="24" r="3"/><path d="M32 40v14M22 56h20"/>
+  {%- elsif k contains 'tai nghe' -%}<path d="M12 40v-8a20 20 0 0140 0v8"/><rect x="8" y="38" width="10" height="16" rx="3"/><rect x="46" y="38" width="10" height="16" rx="3"/>
+  {%- elsif k contains 'loa' -%}<rect x="16" y="6" width="32" height="52" rx="4"/><circle cx="32" cy="40" r="9"/><circle cx="32" cy="18" r="4"/>
+  {%- elsif k contains 'nước nóng' -%}<rect x="18" y="4" width="28" height="44" rx="10"/><path d="M26 48v8M38 48v8"/><circle cx="32" cy="18" r="4"/>
+  {%- elsif k contains 'lọc nước' or k contains 'cây nước' -%}<rect x="18" y="16" width="28" height="42" rx="3"/><path d="M24 4h16v12H24zM26 30h4M34 30h4"/>
+  {%- elsif k contains 'bồn cầu' or k contains 'nắp rửa' -%}<path d="M16 6h20v18H16z"/><path d="M10 28h40a20 14 0 01-40 0z"/><path d="M22 42l-2 14h16l-2-14"/>
+  {%- elsif k contains 'lavabo' or k contains 'chậu' -%}<path d="M6 26h52a26 18 0 01-52 0z"/><path d="M32 6v12M26 10h12"/>
+  {%- elsif k contains 'vòi' or k contains 'sen' -%}<path d="M14 56V20a10 10 0 0110-10h16a10 10 0 0110 10v6"/><path d="M42 26h16M46 34v4M54 34v4M50 34v6"/>
+  {%- elsif k contains 'bàn ủi' or k contains 'bàn là' -%}<path d="M8 44h46a4 4 0 004-4c0-10-10-20-24-20H22"/><path d="M8 44c0-10 6-18 14-20M30 20v-8h14"/>
+  {%- elsif k contains 'điện thoại' -%}<rect x="18" y="4" width="28" height="56" rx="4"/><path d="M28 52h8"/>
+  {%- elsif k contains 'hộp' or k contains 'bình giữ' -%}<rect x="10" y="22" width="44" height="30" rx="4"/><path d="M8 16h48v6H8z"/>
+  {%- endif -%}
+{%- endcapture -%}
+{%- if d != blank -%}
+  <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ d }}</svg>
+{%- elsif fallback.featured_image -%}
+  {{ fallback.featured_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}
+{%- endif -%}
