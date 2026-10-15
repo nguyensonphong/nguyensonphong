@@ -42,7 +42,8 @@
         {%- if link.links.size > 0 -%}
           {%- comment -%} Link dạng web (HTTP) không có object → tìm collection theo handle cuối đường dẫn {%- endcomment -%}
           {%- assign fh = link.links.first.url | split: '/' | last -%}
-          {%- assign first_img = link.links.first.object.image | default: collections[fh].image -%}
+          {%- assign first_img = nil -%}
+          {%- if link.links.first.type == 'collection_link' -%}{%- assign first_img = link.links.first.object.image -%}{%- elsif link.links.first.type == 'http_link' and link.links.first.url contains '/collections/' -%}{%- assign first_img = collections[fh].image -%}{%- endif -%}
           <div class="nav__drop">
             <a class="nav__item" href="{{ link.url }}" aria-haspopup="true">{{ link.title }}</a>
             <div class="nav__panel">
@@ -51,7 +52,8 @@
                   <div class="nav__tiles">
                     {%- for c in link.links -%}
                       {%- assign chh = c.url | split: '/' | last -%}
-                      {%- assign cimg = c.object.image | default: collections[chh].image -%}
+                      {%- assign cimg = nil -%}
+                      {%- if c.type == 'collection_link' -%}{%- assign cimg = c.object.image -%}{%- elsif c.url contains '/collections/' -%}{%- assign cimg = collections[chh].image -%}{%- endif -%}
                       <a class="nav__tile" href="{{ c.url }}">{%- if cimg -%}{{ cimg | image_url: width: 480 | image_tag: loading: 'lazy', alt: c.title }}{%- endif -%}<span>{{ c.title }}</span></a>
                     {%- endfor -%}
                   </div>
@@ -65,6 +67,25 @@
                   </div>
                 {%- endif -%}
                 <a class="nav__all" href="{{ link.url }}">Xem tất cả {{ link.title | downcase }} →</a>
+              </div>
+            </div>
+          </div>
+        {%- elsif link.url contains '/pages/thuong-hieu' -%}
+          {%- comment -%} Mua theo thương hiệu (kiểu HomePro): lưới logo các hãng có trang riêng {%- endcomment -%}
+          <div class="nav__drop">
+            <a class="nav__item" href="{{ link.url }}" aria-haspopup="true">{{ link.title }}</a>
+            <div class="nav__panel">
+              <div class="container">
+                <div class="nav__brands">
+                  {%- for br in shop.metaobjects.brand.values -%}
+                    {%- assign bc = collections[br.system.handle] -%}
+                    {%- if bc == blank or bc.template_suffix != 'brand' or bc.products_count == 0 -%}{%- continue -%}{%- endif -%}
+                    <a href="{{ bc.url }}" title="{{ br.name.value }}">
+                      {%- if br.logo.value -%}{{ br.logo.value | image_url: width: 240 | image_tag: loading: 'lazy', alt: br.name.value }}{%- else -%}<b>{{ br.name.value }}</b>{%- endif -%}
+                    </a>
+                  {%- endfor -%}
+                </div>
+                <a class="nav__all" href="{{ link.url }}">Xem tất cả thương hiệu →</a>
               </div>
             </div>
           </div>
