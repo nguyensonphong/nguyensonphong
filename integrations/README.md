@@ -17,12 +17,12 @@ Không ai sửa thẳng Shopify qua NocoDB, nên mọi thay đổi giá/nội du
 
 | Nhóm | Schema | Bảng | Nguồn Shopify |
 |---|---|---|---|
-| **1. Sản phẩm / Dịch vụ** | `catalog` | `products` (cột `is_service` = không cần vận chuyển), `variants` (SKU, barcode, tồn kho), `collections`, `product_collections`, `brands` (metaobject *Thương hiệu*) | Product, Variant, Collection, Metaobject `brand` |
+| **1. Sản phẩm / Dịch vụ** | `catalog` | `products` (cột `is_service` = không cần vận chuyển), `variants` (SKU, barcode, tồn kho), `collections`, `product_collections`, `brands` (metaobject *Thương hiệu*), `product_media` (link ảnh, video, 3D theo thứ tự; file vẫn nằm trên Shopify CDN) | Product, Variant, Collection, Metaobject `brand`, Product media |
 | **2. Giá cả / Khuyến mãi** | `pricing` | `variant_prices` (giá bán, giá gốc, giá vốn, `discount_pct` tự tính), `price_history` (trigger tự ghi mỗi lần giá đổi), `discounts` (mã/tự động, %/số tiền, BXGY, freeship) | Variant price/compareAtPrice, InventoryItem.unitCost, Discounts |
 | **3. Content** | `content` | `product_content` (mô tả HTML, SEO title/description), `articles` (blog *News*, *Cẩm nang nhà đẹp*), `pages` | descriptionHtml, seo, Article, Page |
-| Vận hành | `ops` | `change_requests` (đề xuất & phê duyệt), `sync_log`, view `v_product_report` | — |
+| Vận hành | `ops` | `change_requests` (đề xuất & phê duyệt), `sync_log`, view `v_product_report`, view `v_product_media_check` (số ảnh/video, thiếu alt text) | — |
 
-Schema đã được áp dụng lên project Supabase `GK_project` (file `supabase/migrations/001_gkmall_schema.sql`). Hiện cửa hàng có 467 sản phẩm, 280 collection, 4 discount, 35 thương hiệu, 20 page, 2 blog.
+Schema đã được áp dụng lên project Supabase `GK_project` (file `supabase/migrations/001_gkmall_schema.sql`, bảng media ở `003_product_media.sql`). Hiện cửa hàng có 467 sản phẩm, 280 collection, 4 discount, 35 thương hiệu, 20 page, 2 blog.
 
 ## Cài đặt
 
@@ -69,7 +69,7 @@ Trường hỗ trợ áp dụng tự động:
 ```bash
 cp integrations/.env.example .env   # điền giá trị
 npm install
-node --env-file=.env integrations/sync/shopify-to-supabase.mjs        # hoặc: ... catalog | pricing | content
+node --env-file=.env integrations/sync/shopify-to-supabase.mjs        # hoặc: ... catalog | pricing | content | media
 node --env-file=.env integrations/sync/lark-sync.mjs                  # push-report | push-requests | pull-approvals
 node --env-file=.env integrations/sync/apply-approved.mjs
 ```

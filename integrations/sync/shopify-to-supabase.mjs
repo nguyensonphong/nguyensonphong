@@ -34,6 +34,55 @@ const ARTICLES = `query($after:String){ articles(first:50, after:$after){ pageIn
 const PAGES = `query($after:String){ pages(first:50, after:$after){ pageInfo{hasNextPage endCursor} nodes{
   id handle title body isPublished } } }`;
 
+// Ảnh/video: truy vấn riêng để không làm nặng truy vấn sản phẩm
+const MEDIA = `query($after:String){ products(first:25, after:$after){ pageInfo{hasNextPage endCursor} nodes{
+  id media(first:50){ nodes{ id mediaContentType alt status preview{image{url width height}}
+    ... on MediaImage{ mimeType image{url width height} }
+    ... on Video{ duration sources{url mimeType width height} }
+    ... on ExternalVideo{ host originUrl }
+    ... on Model3d{ sources{url mimeType} } } } } } }`;
+
+function mediaRow(m) {
+  const prev = m.preview?.image;
+  const base = { url: null, mime: null, width: prev?.width ?? null, height: prev?.height ?? null, duration: null, host: null };
+  if (m.mediaContentType === 'IMAGE')
+    return { ...base, url: m.image?.url ?? prev?.url, mime: m.mimeType, width: m.image?.width ?? base.width, height: m.image?.height ?? base.height };
+  if (m.mediaContentType === 'VIDEO') {
+    const best = [...(m.sources ?? [])].sort((a, b) => (b.width ?? 0) - (a.width ?? 0))[0];
+    return { ...base, url: best?.url, mime: best?.mimeType, width: best?.width ?? base.width, height: best?.height ?? base.height, duration: m.duration };
+  }
+  if (m.mediaContentType === 'EXTERNAL_VIDEO') return { ...base, url: m.originUrl, host: m.host };
+  if (m.mediaContentType === 'MODEL_3D') return { ...base, url: m.sources?.[0]?.url, mime: m.sources?.[0]?.mimeType };
+  return base;
+}
+
+// Một file có thể gắn vào nhiều sản phẩm, nên khoá chính là (product_id, shopify_id)
+const syncMedia = () => logJob('media', async () => {
+  let n = 0;
+  for await (const p of paginate(MEDIA, 'products')) {
+    const list = p.media.nodes;
+    const c = await db.connect();
+    try {
+      await c.query('begin');
+      for (const [i, m] of list.entries()) {
+        const r = mediaRow(m);
+        await c.query(`insert into catalog.product_media(shopify_id,product_id,position,media_type,url,preview_url,alt,mime_type,
+          width,height,duration_ms,host,status,synced_at) select $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,now()
+          where exists (select 1 from catalog.products where shopify_id=$2)
+          on conflict(product_id,shopify_id) do update set position=excluded.position,media_type=excluded.media_type,
+          url=excluded.url,preview_url=excluded.preview_url,alt=excluded.alt,mime_type=excluded.mime_type,width=excluded.width,
+          height=excluded.height,duration_ms=excluded.duration_ms,host=excluded.host,status=excluded.status,synced_at=now()`,
+          [m.id, p.id, i + 1, m.mediaContentType, r.url, m.preview?.image?.url ?? null, m.alt, r.mime,
+           r.width, r.height, r.duration, r.host, m.status]);
+      }
+      await c.query('delete from catalog.product_media where product_id=$1 and not (shopify_id = any($2))', [p.id, list.map((m) => m.id)]);
+      await c.query('commit');
+    } catch (e) { await c.query('rollback'); throw e; } finally { c.release(); }
+    n += list.length;
+  }
+  return n;
+});
+
 const syncCollections = () => logJob('collections', async () => {
   let n = 0;
   for await (const c of paginate(COLLECTIONS, 'collections')) {
@@ -143,9 +192,10 @@ const syncPages = () => logJob('pages', async () => {
   return n;
 });
 
-const only = process.argv[2]; // catalog | pricing | content | (all)
+const only = process.argv[2]; // catalog | pricing | content | media | (all)
 try {
   if (!only || only === 'catalog' || only === 'pricing') { await syncCollections(); await syncBrands(); await syncProducts(); }
+  if (!only || only === 'catalog' || only === 'media') await syncMedia();
   if (!only || only === 'pricing') await syncDiscounts();
   if (!only || only === 'content') { await syncArticles(); await syncPages(); }
 } finally { await db.end(); }
